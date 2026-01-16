@@ -1,0 +1,65 @@
+= Reports
+
+Manage and search your battle reports.
+
+== Importing Reports
+
+=== Automatic Import (Recommended)
+
+With the userscript installed:
+
+. Play the game normally
+. View any battle report in-game
+. The report is automatically saved to TW Forge
+
+=== Manual Import
+
+. Copy a battle report from the game
+. Go to **Reports** → **Import**
+. Paste the report
+. Click **Import**
+
+== Browsing Reports
+
+All your imported reports appear in the list.
+
+* **Sort** by date, type, or result
+* **Filter** by attack/defense/support
+* **Search** by player or village name
+
+== Report Details
+
+Click any report to see:
+
+* Full battle details
+* Units sent and lost
+* Resources captured
+* Building damage
+* Loyalty changes
+
+== Filtering Reports
+
+Use filters to find specific reports:
+
+. Click **Filters**
+. Set your criteria:
+** Date range
+** Report type (attack, defense, support, scout)
+** Outcome (win, loss)
+** Player or village
+. Click **Apply**
+
+== Exporting Data
+
+To export your reports:
+
+. Apply filters to select reports
+. Click **Export**
+. Choose format (CSV, etc.)
+. Download the file
+
+== Tips
+
+* Install the userscript for automatic import
+* Use date filters to focus on recent operations
+* Check reports before planning new attacks

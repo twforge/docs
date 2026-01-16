@@ -1,0 +1,60 @@
+= Getting Started
+
+This guide walks you through setting up TW Forge and adding your first world.
+
+== Creating Your Account
+
+. Go to https://twforge.net[twforge.net]
+. Click **Login** or **Sign Up**
+. Sign in with your preferred method (Google, Discord, etc.)
+
+== Adding a World
+
+After logging in, you'll see the world selection screen.
+
+. Click **Add World**
+. Select your game server (e.g., de, en, nl)
+. Choose your world from the list
+. Follow the instructions to connect your account
+
+TIP: You can add multiple worlds and switch between them anytime.
+
+== Navigating the App
+
+Once you've added a world, you'll see the main menu with all available features:
+
+* **Action Planner** – Plan and coordinate attacks
+* **Map** – Interactive world map
+* **Reports** – Battle report management
+* **Analyser** – Defense analysis tools
+* **Planner** – Timing calculator
+* **Tribe Construct** – Tribe overview
+
+Click any feature in the menu to get started.
+
+== Syncing Your Data
+
+TW Forge automatically syncs data from your world:
+
+* Village information
+* Player and tribe data
+* Your battle reports (with userscript)
+
+To keep data current, the app periodically refreshes in the background.
+
+== Installing the Userscript (Optional)
+
+For automatic report import, install the TW Forge userscript:
+
+. Install a userscript manager (Tampermonkey, Violentmonkey)
+. Go to **Account** → **Userscript**
+. Click **Install Userscript**
+. Play the game normally – reports are captured automatically
+
+== Next Steps
+
+Ready to dive in? Check out these guides:
+
+* xref:features/action-planner.adoc[Plan your first attack]
+* xref:features/reports.adoc[Import battle reports]
+* xref:features/map.adoc[Explore the map]

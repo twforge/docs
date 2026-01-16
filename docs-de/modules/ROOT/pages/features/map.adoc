@@ -1,0 +1,56 @@
+= Karte
+
+Die interaktive Karte zeigt alle Dörfer in deiner Welt.
+
+== Karte ansehen
+
+. Gehe zur **Karte** im Menü
+. Die Karte lädt und zeigt deine Umgebung
+. Nutze deine Maus zur Navigation:
+** **Scrollen** zum Herein-/Herauszoomen
+** **Ziehen** zum Bewegen
+** **Klicken** auf ein Dorf für Details
+
+== Dörfer finden
+
+Um ein bestimmtes Dorf zu finden:
+
+. Nutze die Suchleiste oben
+. Gib einen Dorfnamen, Koordinaten oder Spielernamen ein
+. Klicke auf das Ergebnis um dorthin zu springen
+
+TIP: Gib Koordinaten wie `500|500` ein um direkt zu diesem Punkt zu springen.
+
+== Farben verstehen
+
+Dörfer sind nach Besitz eingefärbt:
+
+* **Deine Dörfer** – Deutlich hervorgehoben
+* **Stammesmitglieder** – Gleiche Farbe wie dein Stamm
+* **Feindliche Stämme** – Verschiedene Farben pro Stamm
+* **Barbarendörfer** – Neutrale Farbe
+
+== Overlays nutzen
+
+Overlays fügen zusätzliche Informationen zur Karte hinzu:
+
+. Klicke auf den **Ebenen**-Button
+. Schalte Overlays ein/aus:
+** Stammesterritorien
+** Kontinentgrenzen
+** Eigene Markierungen
+
+== Ziele markieren
+
+Um Dörfer für Operationen zu markieren:
+
+. Klicke auf ein Dorf
+. Klicke auf **Als Ziel markieren**
+. Das Dorf zeigt eine Markierung auf der Karte
+. Nutze diese Markierungen bei der Planung im Action Planner
+
+== Tipps
+
+* Zoome heraus um das große Bild zu sehen
+* Nutze Stammesfärbung um feindliche Cluster zu erkennen
+* Kombiniere mit dem Action Planner für Angriffsvisualisierung

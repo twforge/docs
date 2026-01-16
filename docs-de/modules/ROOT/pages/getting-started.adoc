@@ -1,0 +1,60 @@
+= Erste Schritte
+
+Diese Anleitung führt dich durch die Einrichtung von TW Forge und das Hinzufügen deiner ersten Welt.
+
+== Konto erstellen
+
+. Gehe zu https://twforge.net[twforge.net]
+. Klicke auf **Login** oder **Registrieren**
+. Melde dich mit deiner bevorzugten Methode an (Google, Discord, etc.)
+
+== Eine Welt hinzufügen
+
+Nach dem Login siehst du die Weltauswahl.
+
+. Klicke auf **Welt hinzufügen**
+. Wähle deinen Spielserver (z.B. de, en, nl)
+. Wähle deine Welt aus der Liste
+. Folge den Anweisungen um dein Konto zu verbinden
+
+TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln.
+
+== Navigation in der App
+
+Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfügbaren Features:
+
+* **Action Planner** – Angriffe planen und koordinieren
+* **Karte** – Interaktive Weltkarte
+* **Berichte** – Kampfberichtsverwaltung
+* **Analyser** – Verteidigungsanalyse-Tools
+* **Planner** – Zeitrechner
+* **Stammeskonstrukt** – Stammesübersicht
+
+Klicke auf ein Feature im Menü um loszulegen.
+
+== Daten synchronisieren
+
+TW Forge synchronisiert automatisch Daten aus deiner Welt:
+
+* Dorfinformationen
+* Spieler- und Stammesdaten
+* Deine Kampfberichte (mit Userscript)
+
+Um die Daten aktuell zu halten, aktualisiert die App regelmäßig im Hintergrund.
+
+== Userscript installieren (Optional)
+
+Für automatischen Berichtsimport installiere das TW Forge Userscript:
+
+. Installiere einen Userscript-Manager (Tampermonkey, Violentmonkey)
+. Gehe zu **Konto** → **Userscript**
+. Klicke auf **Userscript installieren**
+. Spiele das Spiel normal – Berichte werden automatisch erfasst
+
+== Nächste Schritte
+
+Bereit loszulegen? Schau dir diese Anleitungen an:
+
+* xref:features/action-planner.adoc[Plane deinen ersten Angriff]
+* xref:features/reports.adoc[Kampfberichte importieren]
+* xref:features/map.adoc[Die Karte erkunden]

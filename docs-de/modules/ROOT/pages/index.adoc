@@ -1,0 +1,50 @@
+= TW Forge Benutzerhandbuch
+
+Willkommen bei TW Forge – dein Toolset für Koordination und Planung in Die Stämme.
+
+== Was ist TW Forge?
+
+TW Forge hilft dir und deinem Stamm:
+
+* Koordinierte Angriffe planen
+* Kampfberichte analysieren
+* Die Spielkarte visualisieren
+* Stammesoperationen verwalten
+
+== Erste Schritte
+
+Neu bei TW Forge? Starte hier:
+
+. xref:getting-started.adoc[Erstelle dein Konto]
+. Füge deine erste Welt hinzu
+. Erkunde die Features unten
+
+== Features
+
+[cols="1,2"]
+|===
+|Feature |Was du tun kannst
+
+|xref:features/action-planner.adoc[Action Planner]
+|Angriffe planen, Timing koordinieren, Kampagnen verwalten
+
+|xref:features/map.adoc[Karte]
+|Weltkarte ansehen, Dörfer finden, Stammesterritorien sehen
+
+|xref:features/reports.adoc[Berichte]
+|Kampfberichte importieren und durchsuchen
+
+|xref:features/analyser.adoc[Analyser]
+|Feindliche Verteidigungen analysieren und Angriffe optimieren
+
+|xref:features/planner.adoc[Planner]
+|Abschickzeiten berechnen und Ankünfte koordinieren
+
+|xref:features/tribe-construct.adoc[Stammeskonstrukt]
+|Stammesmitglieder und Statistiken ansehen
+|===
+
+== Brauchst du Hilfe?
+
+* Schau dir die Feature-Anleitungen im Menü an
+* Besuche https://twforge.net[twforge.net]

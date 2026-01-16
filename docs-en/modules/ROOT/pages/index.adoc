@@ -1,0 +1,50 @@
+= TW Forge User Guide
+
+Welcome to TW Forge – your toolset for Tribal Wars coordination and planning.
+
+== What is TW Forge?
+
+TW Forge helps you and your tribe:
+
+* Plan coordinated attacks
+* Analyze battle reports
+* Visualize the game map
+* Manage tribe operations
+
+== Get Started
+
+New to TW Forge? Start here:
+
+. xref:getting-started.adoc[Create your account]
+. Add your first world
+. Explore the features below
+
+== Features
+
+[cols="1,2"]
+|===
+|Feature |What you can do
+
+|xref:features/action-planner.adoc[Action Planner]
+|Plan attacks, coordinate timing, manage campaigns
+
+|xref:features/map.adoc[Map]
+|View the world map, find villages, see tribe territories
+
+|xref:features/reports.adoc[Reports]
+|Import and search your battle reports
+
+|xref:features/analyser.adoc[Analyser]
+|Analyze enemy defenses and optimize attacks
+
+|xref:features/planner.adoc[Planner]
+|Calculate send times and coordinate arrivals
+
+|xref:features/tribe-construct.adoc[Tribe Construct]
+|View tribe members and statistics
+|===
+
+== Need Help?
+
+* Check the feature guides in the menu
+* Visit https://twforge.net[twforge.net]

@@ -1,0 +1,51 @@
+= Stammeskonstrukt
+
+Sieh die Mitglieder und Statistiken deines Stammes.
+
+== Mitgliederliste
+
+Sieh alle Stammesmitglieder auf einen Blick:
+
+. Gehe zum **Stammeskonstrukt**
+. Durchsuche die Mitgliederliste
+
+Für jedes Mitglied siehst du:
+
+* Spielername
+* Anzahl der Dörfer
+* Gesamtpunkte
+* Rang im Stamm
+
+== Sortieren und Filtern
+
+Organisiere die Liste nach:
+
+* Punkten (höchste/niedrigste)
+* Dorfanzahl
+* Name (alphabetisch)
+* Aktivität
+
+Nutze Filter um bestimmte Mitglieder schnell zu finden.
+
+== Stammesstatistiken
+
+Sieh allgemeine Stammesstatistiken:
+
+* Gesamtmitglieder
+* Kombinierte Punkte
+* Gesamtdörfer
+* Stammesrangliste
+
+== Mitgliederdetails
+
+Klicke auf ein Mitglied um zu sehen:
+
+* Ihre Dörfer auf der Karte
+* Kürzliche Aktivität
+* Beitrag zum Stamm
+
+== Tipps
+
+* Prüfe Mitgliederaktivität bevor du Operationsrollen zuweist
+* Nutze die Kartenansicht um zu sehen wer welches Gebiet abdeckt
+* Beobachte das Stammeswachstum über Zeit

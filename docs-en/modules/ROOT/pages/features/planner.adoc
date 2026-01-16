@@ -1,0 +1,42 @@
+= Planner
+
+Calculate timing for coordinated attacks.
+
+== Time Calculator
+
+Figure out when to send attacks:
+
+. Go to **Planner**
+. Enter your **source village**
+. Enter the **target village**
+. Select the **slowest unit** in your attack
+. Enter the desired **arrival time**
+. Click **Calculate**
+
+The Planner shows exactly when to send your attack.
+
+== Multiple Waves
+
+To coordinate several attacks landing together:
+
+. Add multiple source villages
+. Set the same arrival time for all
+. The Planner calculates each send time
+. Send each attack at its calculated time
+
+== Travel Time Reference
+
+Quickly check travel times:
+
+. Enter source and target
+. Select a unit type
+. See the travel duration instantly
+
+Use this to estimate how far in advance to plan.
+
+== Tips
+
+* Account for your reaction time when planning
+* Double-check server time vs. your local time
+* For large operations, give yourself buffer time
+* Coordinate with tribe members on exact timing

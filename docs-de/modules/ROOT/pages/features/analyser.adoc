@@ -1,0 +1,57 @@
+= Analyser
+
+Analysiere Ziele um bessere Angriffe zu planen.
+
+== Was er macht
+
+Der Analyser hilft dir:
+
+* Feindliche Verteidigungen einzuschätzen
+* Angriffshistorie auf Ziele zu sehen
+* Zu entscheiden wie viele Truppen du senden sollst
+
+== Ein Ziel analysieren
+
+. Gehe zum **Analyser**
+. Gib ein Zieldorf ein oder wähle es aus
+. Klicke auf **Analysieren**
+
+Der Analyser zeigt:
+
+* Kürzliche Angriffe auf dieses Dorf
+* Geschätzte Verteidigungsstärke
+* Angriffsempfehlungen
+
+== Ergebnisse verstehen
+
+=== Verteidigungsschätzung
+
+Basierend auf verfügbaren Berichten schätzt der Analyser:
+
+* Wahrscheinliche Truppenanzahl
+* Wallstufe
+* Gesamte Verteidigungsstärke
+
+NOTE: Schätzungen basieren auf Berichten. Mehr Berichte = bessere Schätzungen.
+
+=== Angriffshistorie
+
+Siehe alle aufgezeichneten Angriffe auf das Ziel:
+
+* Wann Angriffe stattfanden
+* Was gesendet wurde
+* Das Ergebnis
+
+== Deinen Angriff planen
+
+Nutze die Analyse um zu entscheiden:
+
+* **Truppenanzahl** – Sende genug um die geschätzte Verteidigung zu überwinden
+* **Angriffsart** – Vollangriff vs. erst spähen
+* **Timing** – Koordiniere mit dem Stamm wenn die Verteidigung stark ist
+
+== Tipps
+
+* Importiere Berichte vor der Analyse für beste Ergebnisse
+* Analysiere nach neuen Angriffen erneut für aktualisierte Schätzungen
+* Kombiniere mit dem Action Planner um Angriffspläne zu erstellen

@@ -1,0 +1,9 @@
+* xref:index.adoc[Startseite]
+* xref:getting-started.adoc[Erste Schritte]
+* Features
+** xref:features/action-planner.adoc[Action Planner]
+** xref:features/map.adoc[Karte]
+** xref:features/reports.adoc[Berichte]
+** xref:features/analyser.adoc[Analyser]
+** xref:features/planner.adoc[Planner]
+** xref:features/tribe-construct.adoc[Stammeskonstrukt]

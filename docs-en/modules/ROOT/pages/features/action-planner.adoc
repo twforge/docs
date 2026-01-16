@@ -1,0 +1,67 @@
+= Action Planner
+
+The Action Planner helps you coordinate attacks with your tribe.
+
+== Overview
+
+Use the Action Planner to:
+
+* Create attack plans with precise timing
+* Organize attacks into campaigns
+* Share plans with tribe members
+* Track which attacks have been sent
+
+== Creating a Campaign
+
+Campaigns group related attacks together.
+
+. Go to **Action Planner**
+. Click **New Campaign**
+. Enter a name (e.g., "Operation North")
+. Click **Create**
+
+TIP: Create separate campaigns for different operations to stay organized.
+
+== Adding Attack Plans
+
+. Open your campaign
+. Click **Add Plan**
+. Select your **source village** (where troops come from)
+. Select the **target village**
+. Choose the **units** to send
+. Set the **arrival time**
+. Click **Save**
+
+The system calculates the send time automatically based on unit speed.
+
+== Coordinating Multiple Attacks
+
+To land multiple attacks at the same time:
+
+. Add all your attack plans to the campaign
+. Set the same arrival time for each
+. The Action Planner shows each plan's send time
+. Send your attacks at the calculated times
+
+== Sharing with Your Tribe
+
+. Open your campaign
+. Click **Share**
+. Copy the share link
+. Send it to your tribe members
+
+Shared campaigns let others see the plan and add their own attacks.
+
+== Tracking Execution
+
+As you send attacks:
+
+. Mark each plan as **Sent** when you launch it
+. The campaign shows progress at a glance
+. Review completed attacks after the operation
+
+== Tips
+
+* Plan attacks a day ahead to give everyone time to prepare
+* Use filters to find specific villages quickly
+* Export plans to spreadsheets if needed

@@ -1,0 +1,51 @@
+= Tribe Construct
+
+View your tribe's members and statistics.
+
+== Member List
+
+See all tribe members at a glance:
+
+. Go to **Tribe Construct**
+. Browse the member list
+
+For each member you can see:
+
+* Player name
+* Number of villages
+* Total points
+* Rank in tribe
+
+== Sorting and Filtering
+
+Organize the list by:
+
+* Points (highest/lowest)
+* Village count
+* Name (alphabetical)
+* Activity
+
+Use filters to find specific members quickly.
+
+== Tribe Statistics
+
+View overall tribe stats:
+
+* Total members
+* Combined points
+* Total villages
+* Tribe ranking
+
+== Member Details
+
+Click a member to see:
+
+* Their villages on the map
+* Recent activity
+* Contribution to tribe
+
+== Tips
+
+* Check member activity before assigning operation roles
+* Use the map view to see who covers which area
+* Monitor tribe growth over time

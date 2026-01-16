@@ -1,0 +1,56 @@
+= Map
+
+The interactive map shows all villages in your world.
+
+== Viewing the Map
+
+. Go to **Map** from the menu
+. The map loads showing your area
+. Use your mouse to navigate:
+** **Scroll** to zoom in/out
+** **Drag** to move around
+** **Click** a village for details
+
+== Finding Villages
+
+To locate a specific village:
+
+. Use the search bar at the top
+. Enter a village name, coordinates, or player name
+. Click the result to jump to that location
+
+TIP: Enter coordinates like `500|500` to jump directly to that spot.
+
+== Understanding Colors
+
+Villages are colored by ownership:
+
+* **Your villages** – Highlighted distinctly
+* **Tribe members** – Same color as your tribe
+* **Enemy tribes** – Different colors per tribe
+* **Barbarian villages** – Neutral color
+
+== Using Overlays
+
+Overlays add extra information to the map:
+
+. Click the **Layers** button
+. Toggle overlays on/off:
+** Tribe territories
+** Continent borders
+** Custom markers
+
+== Marking Targets
+
+To mark villages for operations:
+
+. Click a village
+. Click **Mark as Target**
+. The village shows a marker on the map
+. Use these markers when planning in Action Planner
+
+== Tips
+
+* Zoom out to see the big picture
+* Use tribe coloring to spot enemy clusters
+* Combine with Action Planner for attack visualization

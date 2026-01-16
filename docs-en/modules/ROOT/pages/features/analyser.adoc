@@ -1,0 +1,57 @@
+= Analyser
+
+Analyze targets to plan better attacks.
+
+== What It Does
+
+The Analyser helps you:
+
+* Estimate enemy defenses
+* See attack history on targets
+* Decide how many troops to send
+
+== Analyzing a Target
+
+. Go to **Analyser**
+. Enter or select a target village
+. Click **Analyze**
+
+The Analyser shows:
+
+* Recent attacks on this village
+* Estimated defense strength
+* Attack recommendations
+
+== Understanding Results
+
+=== Defense Estimate
+
+Based on available reports, the Analyser estimates:
+
+* Likely troop count
+* Wall level
+* Overall defense strength
+
+NOTE: Estimates are based on reports. More reports = better estimates.
+
+=== Attack History
+
+See all recorded attacks on the target:
+
+* When attacks happened
+* What was sent
+* The outcome
+
+== Planning Your Attack
+
+Use the analysis to decide:
+
+* **Troop count** – Send enough to overcome estimated defense
+* **Attack type** – Full attack vs. scout first
+* **Timing** – Coordinate with tribe if defense is strong
+
+== Tips
+
+* Import reports before analyzing for best results
+* Re-analyze after new attacks for updated estimates
+* Combine with Action Planner to create attack plans

@@ -1,0 +1,38 @@
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{{siteRootPath}}/en/index.html">TW Forge</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Language</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#" onclick="switchLang('en'); return false;">English</a>
+            <a class="navbar-item" href="#" onclick="switchLang('de'); return false;">Deutsch</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="https://twforge.net" target="_blank">Go to TW Forge</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<script>
+function switchLang(lang) {
+  var path = window.location.pathname;
+  var newPath = path.replace(/^\/(en|de)\//, '/' + lang + '/');
+  if (newPath === path) {
+    newPath = '/' + lang + '/index.html';
+  }
+  window.location.href = newPath;
+}
+</script>
