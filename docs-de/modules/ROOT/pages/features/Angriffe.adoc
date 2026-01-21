@@ -36,7 +36,7 @@ Diese Informationen werden kombiniert, um eine möglichst realistische Einschät
 == Konfiguration der Bewertungsgrenzen
 
 Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
-Sie können unter *Settings → Angriffe* individuell angepasst werden, um sie an die jeweilige Welt, Spielweise oder individuelle Präferenzen anzupassen.
+Sie können unter *Settings → Angriffe* individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
 
 == Filter- und Sortiermöglichkeiten
 
