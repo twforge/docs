@@ -4,6 +4,6 @@
 ** xref:features/action-planner.adoc[Action Planner]
 ** xref:features/map.adoc[Karte]
 ** xref:features/reports.adoc[Berichte]
-** xref:features/angriffe.adoc[Angriffe]
+** xref:features/analyser.adoc[Angriffe]
 ** xref:features/planner.adoc[Planner]
 ** xref:features/tribe-construct.adoc[Stammeskonstrukt]
