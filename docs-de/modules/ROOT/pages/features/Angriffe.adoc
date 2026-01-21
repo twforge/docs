@@ -1,0 +1,82 @@
+= Angriffe – Übersicht und Bewertung eingehender Incs
+:page-navtitle: Angriffe
+:description: Zentrale Übersicht zur Anzeige, Bewertung und Filterung eingehender Angriffe (Incs) in TW Forge.
+:keywords: Angriffe, Incs, Gefahrenbewertung, Filter, Offgröße
+
+Die Seite *Angriffe* dient als zentrale Angriffsübersicht in TW Forge.
+Hier werden alle eingelesenen und hochgeladenen eingehenden Angriffe (Incs) gesammelt dargestellt und automatisiert ausgewertet.
+
+== Anzeige und Interpretation der Angriffe
+
+Jeder Angriff wird von TW Forge anhand einer *maximal möglichen Offgröße* interpretiert.
+Diese maximale Offgröße wird anhand der Kennzahl "maximale Äxte" / "maximale LKav" angegeben.
+
+Auf Basis dieser Berechnung wird jedem Angriff eine *Gefahrenbewertung* zugewiesen, die farblich visualisiert wird:
+
+* *Grün* – sehr hoher Fake-Verdacht / sicherer Fake
+* *Gelb* – kleine bis mittlere mögliche Off
+* *Orange* – mittelgroße mögliche Off
+* *Rot* – große mögliche Off
+
+== Faktoren der Gefahrenbewertung
+
+Die Bewertung eines Angriffs basiert unter anderem auf folgenden Faktoren:
+
+* *Letzte Adelung des Herkunftsdorfes*  
+  Kürzlich geadelte Dörfer besitzen in der Regel weniger Off-Potenzial.
+
+* *Bekannter Tod von Off-Truppen*  
+  Verluste aus vorherigen Kämpfen werden berücksichtigt.
+
+* *Bereits eingeschlagene Angriffe*  
+  Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwendet werden.
+
+Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern.
+
+== Konfiguration der Bewertungsgrenzen
+
+Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
+Sie können unter *Settings → Angriffe* individuell angepasst werden, um sie an die jeweilige Welt, Spielweise oder individuelle Präferenzen anzupassen.
+
+== Filter- und Sortiermöglichkeiten
+
+Die Angriffsübersicht bietet umfangreiche Filterfunktionen, um große Mengen an Incs gezielt auszuwerten.
+
+=== Filter nach Benennung
+
+* z. B. „Ramme tabben“
+* freie Textsuche in der Inc-Bezeichnung
+
+=== Filter nach Herkunft oder Ziel
+
+* nach *Spieler*
+* nach *Stamm*
+
+=== Filter nach bestätigter Inc-Größe
+
+* bekannte, sichtbare Incgrößen (wenn Befehle einsehbar sind)
+* Filterung nach klein (grün), mittelgroß (orange) und groß (rot)
+
+=== Filter nach von TW-Forge errechneten Maximalgrößen
+
+* Filterung nach klein (grün), mittel (gelb), mittelgroß (orange) und groß (rot)
+
+=== Filter nach Laufzeit / Einheitentyp
+
+* z. B. Späher / Rammen
+
+== Eigene Angriffe und Account-Bezug
+
+Zusätzlich können Angriffe nach persönlichem Bezug gefiltert werden:
+
+* *Eigene*  
+  Zeigt nur die Angriffe an, die vom aktuellen Nutzer selbst hochgeladen wurden.
+
+* *Eigener Account*  
+  Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
+
+Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
+
+== Upload
+
+Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden. Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden.
