@@ -1,82 +1,65 @@
-= Angriffe – Übersicht und Bewertung eingehender Incs
-:page-navtitle: Angriffe
-:description: Zentrale Übersicht zur Anzeige, Bewertung und Filterung eingehender Angriffe (Incs) in TW Forge.
-:keywords: Angriffe, Incs, Gefahrenbewertung, Filter, Offgröße
+= Berichte
 
-Die Seite *Angriffe* dient als zentrale Angriffsübersicht in TW Forge.
-Hier werden alle eingelesenen und hochgeladenen eingehenden Angriffe (Incs) gesammelt dargestellt und automatisiert ausgewertet.
+Verwalte und durchsuche deine Kampfberichte.
 
-== Anzeige und Interpretation der Angriffe
+== Berichte importieren
 
-Jeder Angriff wird von TW Forge anhand einer *maximal möglichen Offgröße* interpretiert.
-Diese maximale Offgröße wird anhand der Kennzahl "maximale Äxte" / "maximale LKav" angegeben.
+=== Automatischer Import (Empfohlen)
 
-Auf Basis dieser Berechnung wird jedem Angriff eine *Gefahrenbewertung* zugewiesen, die farblich visualisiert wird:
+Mit installiertem Userscript:
 
-* *Grün* – sehr hoher Fake-Verdacht / sicherer Fake
-* *Gelb* – kleine bis mittlere mögliche Off
-* *Orange* – mittelgroße mögliche Off
-* *Rot* – große mögliche Off
+. Spiele das Spiel normal
+. Schaue dir einen Kampfbericht im Spiel an
+. Der Bericht wird automatisch in TW Forge gespeichert
 
-== Faktoren der Gefahrenbewertung
+=== Manueller Import
 
-Die Bewertung eines Angriffs basiert unter anderem auf folgenden Faktoren:
+. Kopiere einen Kampfbericht aus dem Spiel
+. Gehe zu **Berichte** → **Import**
+. Füge den Bericht ein
+. Klicke auf **Importieren**
 
-* *Letzte Adelung des Herkunftsdorfes*  
-  Kürzlich geadelte Dörfer besitzen in der Regel weniger Off-Potenzial.
+== Berichte durchsuchen
 
-* *Bekannter Tod von Off-Truppen*  
-  Verluste aus vorherigen Kämpfen werden berücksichtigt.
+Alle importierten Berichte erscheinen in der Liste.
 
-* *Bereits eingeschlagene Angriffe*  
-  Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwendet werden.
+* **Sortiere** nach Datum, Typ oder Ergebnis
+* **Filtere** nach Angriff/Verteidigung/Unterstützung
+* **Suche** nach Spieler- oder Dorfname
 
-Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern.
+== Berichtsdetails
 
-== Konfiguration der Bewertungsgrenzen
+Klicke auf einen Bericht um zu sehen:
 
-Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
-Sie können unter *Settings → Angriffe* individuell angepasst werden, um sie an die jeweilige Welt, Spielweise oder individuelle Präferenzen anzupassen.
+* Vollständige Kampfdetails
+* Gesendete und verlorene Einheiten
+* Erbeutete Ressourcen
+* Gebäudeschaden
+* Zustimmungsänderungen
 
-== Filter- und Sortiermöglichkeiten
+== Berichte filtern
 
-Die Angriffsübersicht bietet umfangreiche Filterfunktionen, um große Mengen an Incs gezielt auszuwerten.
+Nutze Filter um bestimmte Berichte zu finden:
 
-=== Filter nach Benennung
+. Klicke auf **Filter**
+. Setze deine Kriterien:
+** Datumsbereich
+** Berichtstyp (Angriff, Verteidigung, Unterstützung, Späher)
+** Ergebnis (Sieg, Niederlage)
+** Spieler oder Dorf
+. Klicke auf **Anwenden**
 
-* z. B. „Ramme tabben“
-* freie Textsuche in der Inc-Bezeichnung
+== Daten exportieren
 
-=== Filter nach Herkunft oder Ziel
+Um Berichte zu exportieren:
 
-* nach *Spieler*
-* nach *Stamm*
+. Wende Filter an um Berichte auszuwählen
+. Klicke auf **Exportieren**
+. Wähle das Format (CSV, etc.)
+. Lade die Datei herunter
 
-=== Filter nach bestätigter Inc-Größe
+== Tipps
 
-* bekannte, sichtbare Incgrößen (wenn Befehle einsehbar sind)
-* Filterung nach klein (grün), mittelgroß (orange) und groß (rot)
-
-=== Filter nach von TW-Forge errechneten Maximalgrößen
-
-* Filterung nach klein (grün), mittel (gelb), mittelgroß (orange) und groß (rot)
-
-=== Filter nach Laufzeit / Einheitentyp
-
-* z. B. Späher / Rammen
-
-== Eigene Angriffe und Account-Bezug
-
-Zusätzlich können Angriffe nach persönlichem Bezug gefiltert werden:
-
-* *Eigene*  
-  Zeigt nur die Angriffe an, die vom aktuellen Nutzer selbst hochgeladen wurden.
-
-* *Eigener Account*  
-  Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
-
-Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
-
-== Upload
-
-Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden. Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden.
+* Installiere das Userscript für automatischen Import
+* Nutze Datumsfilter um dich auf aktuelle Operationen zu konzentrieren
+* Prüfe Berichte bevor du neue Angriffe planst
