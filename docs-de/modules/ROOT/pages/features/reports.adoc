@@ -1,6 +1,6 @@
 = Berichte
 
-Verwalte und durchsuche deine Kampfberichte.
+Verwalte und durchsuche deine Kampfberichte. Hallo
 
 == Berichte importieren
 
