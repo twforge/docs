@@ -34,7 +34,7 @@ Neu bei TW Forge? Starte hier:
 |xref:features/reports.adoc[Berichte]
 |Kampfberichte importieren und durchsuchen
 
-|xref:features/analyser.adoc[Analyser]
+|xref:features/analyser.adoc[Angriffe]
 |Feindliche Verteidigungen analysieren und Angriffe optimieren
 
 |xref:features/planner.adoc[Planner]
