@@ -5,6 +5,10 @@
 
 Hier findest du alle wichtigen Informationen sowie Einstellungsmöglichkeiten für Accountbezogene Settings.
 
-Du kannst einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit deinem Ingame-Account verknüpft sind, du kannst sehen, wenn für deinen Account eine Urlaubsvertretung eingetragen ist, kannst Urlaubsvertretungen hinzufügen, Accounttruppen einlesen sowie Discord mit deinem Accountdiscord verknüpfen und welten- und accountbezogene Einstellungen für den Discord Bot vornehmen.
+. Einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit dem Ingame Account verknüpft sind
+. Einsicht, ob dein verknüpfter Ingame Account als Urlaubsvertretung bei einem anderen Account verknüpft ist
+. Hinzufügen von Urlaubsvertretungen
+. Einlesen von Accounttruppen
+. Discordeinstellungen für Accountdiscords
 
 //tbd.

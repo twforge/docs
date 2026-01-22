@@ -2,6 +2,7 @@
 :page-title: Karte
 :description: Geplantes Feature zur grafischen Darstellung der Weltkarte sowie zusätzlicher Funktionen
 :keywords: Karte, Übersicht, Markierungen
+
 [NOTE]
 ====
 Dieses Feature ist aktuell noch nicht verfügbar.

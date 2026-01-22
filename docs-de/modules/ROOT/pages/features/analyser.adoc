@@ -48,14 +48,14 @@ Die Angriffsübersicht bietet umfangreiche Filterfunktionen, um große Mengen an
 
 === Filter nach Benennung
 
-image:../../assets/images/features/analyser/filter_by_name_analyser.png[Filterung nach Name]
+image::features/analyser/filter_by_name_analyser.png[Filterung nach Name]
 
 * z. B. „Ramme tabben“
 * freie Textsuche in der Inc-Bezeichnung
 
 === Filter nach Herkunft oder Ziel
 
-image:../../assets/images/features/analyser/filter_by_herkunft-or-ziel_analyser.png[Filterung nach Herkunt oder Ziel]
+image::features/analyser/filter_by_herkunft-or-ziel_analyser.png[Filterung nach Herkunt oder Ziel]
 
 * nach *Spieler*
 * nach *Stamm*
@@ -63,26 +63,26 @@ image:../../assets/images/features/analyser/filter_by_herkunft-or-ziel_analyser.
 
 === Filter nach bestätigter Inc-Größe
 
-image:../../assets/images/features/analyser/filter_by_known_size_analyser.png[Filterung nach bekannter Größe]
+image::features/analyser/filter_by_known_size_analyser.png[Filterung nach bekannter Größe]
 
 * bekannte, sichtbare Incgrößen (wenn Befehle einsehbar sind)
 * Filterung nach klein (grün), mittelgroß (orange) und groß (rot)
 
 === Filter nach von TW-Forge errechneten Maximalgrößen
 
-image:../../assets/images/features/analyser/filter_by_calculated_max_size_analyser.png[Filterung nach maximaler Offgröße]
+image::features/analyser/filter_by_calculated_max_size_analyser.png[Filterung nach maximaler Offgröße]
 
 * Filterung nach klein (grün), mittel (gelb), mittelgroß (orange) und groß (rot)
 
 === Filter nach Laufzeit / Einheitentyp
 
-image:../../assets/images/features/analyser/filter_by_unit_type_analyser.png[Filterung nach Einheitentyp]
+image::features/analyser/filter_by_unit_type_analyser.png[Filterung nach Einheitentyp]
 
 * z. B. Späher / Rammen
 
 == Eigene Angriffe und Account-Bezug
 
-image:../../assets/images/features/analyser/filter_by_own_account_or_upload_analyser.png[Filterung nach eigenem Upload oder eigenem Account]
+image::features/analyser/filter_by_own_account_or_upload_analyser.png[Filterung nach eigenem Upload oder eigenem Account]
 
 Zusätzlich können Angriffe nach persönlichem Bezug gefiltert werden:
 
@@ -98,16 +98,16 @@ Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordi
 
 Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden. Dies geschieht über das Submenü "Import".
 
-image:../../assets/images/features/analyser/upload_incs_analyser.png[Incs hochladen]
+image::features/analyser/upload_incs_analyser.png[Incs hochladen]
 
 Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden. Zum erstellen der SOS-Anfrage geh in "Die-Stämme"ingame auf "Eintreffend", markiere die gewünschten Incs und dann drücke auf "Unterstützung anfordern".
 
-image:../../assets/images/features/analyser/create_sos_request_1_analyser.png[Erstellen einer SOS-Anfrage]
+image::features/analyser/create_sos_request_1_analyser.png[Erstellen einer SOS-Anfrage]
 
 Danach muss der gesamte Text der SOS-Anfrage kopiert und auf TW-Forge eingefügt werden. 
 
-image:../../assets/images/features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-Anfrage]
+image::features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-Anfrage]
 
-image:../../assets/images/features/analyser/sos_twforge_paste_analyser.png[Einfügen auf TW-Forge]
+image::features/analyser/sos_twforge_paste_analyser.png[Einfügen auf TW-Forge]
 
 

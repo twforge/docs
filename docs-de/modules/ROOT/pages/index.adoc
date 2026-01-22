@@ -39,9 +39,6 @@ Neu bei TW Forge? Starte hier:
 |xref:features/analyser.adoc[Angriffe]
 |Feindliche Verteidigungen analysieren und Angriffe optimieren
 
-|xref:features/planner.adoc[Planner]
-|Abschickzeiten berechnen und Ankünfte koordinieren
-
 |xref:features/tribe-construct.adoc[Stammeskonstrukt]
 |Stammesmitglieder und Statistiken ansehen
 |===

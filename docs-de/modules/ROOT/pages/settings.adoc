@@ -6,7 +6,7 @@
 // hier einen Screenshot von dem Screen "Settingsoverview"
 
 Auf dieser Seite werden alle verfügbaren weltenübergreifenden Einstellungen in TW Forge erklärt.
-Einstellungen beeinflussen die Anzeige von ausgewertetenAngriffen, die Darstellung im Interface, Discord-Verbindungen und Notifications.
+Einstellungen beeinflussen die Anzeige von ausgewerteten Angriffen, die Darstellung im Interface, Discord-Verbindungen und Notifications.
 
 == Allgemein
 
@@ -25,7 +25,7 @@ und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
 
 == Account
 
-image::../assets/images/settings/account_settings.png[Accounteinstellungen in TW Forge]
+image::settings/account_settings.png[Accounteinstellungen in TW Forge]
 
 Unter diesem Punkt werden accountbezogene Einstellungen vorgenommen. 
 
@@ -34,26 +34,27 @@ Unter diesem Punkt werden accountbezogene Einstellungen vorgenommen.
 
 == Angriffe
 
-image::../assets/images/settings/angriffe_settings.png[Einstellung der farblichen Markierungen für eingehende Angriffe]
+image::settings/angriffe_settings.png[Einstellung der farblichen Markierungen für eingehende Angriffe]
 
 Unter diesem Punkt kann definiert werden, ab welchen maximal errechneten Truppen TW-Forge die farblichen Markierungen für die Incs vornimmt. Diese Einstellbarkeit sorgt dafür, dass individuelle Präferenzen umgesetzt werden können. 
 
 "Kleine Angriffe" können durch den Regler angepasst werden, diese verschiebt dann wiederum die Untergrenze für klein-mittlere Angriffe, der Regler der klein-mittleren Angriffe verschiebt wiederum die eigene Obergrenze sowie die Untergrenze für mittlere Incs usw. 
 
-Die Einstellungen,welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf die Anzeige auf TW-Forge unter xref:features/analyser.adoc#filterung[Angriffe] als auch auf die Anzeige Ingame durch das erlaubte Userscript. 
-
-// Das Userscript dann noch verlinken, wenn die entsprechende Seite erstellt worden ist
+Die Einstellungen, welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf die Anzeige auf TW-Forge unter xref:features/analyser.adoc#filterung[Angriffe] als auch auf die Anzeige Ingame durch das erlaubte Userscript. 
 
 == Planer
 
 // Bild ist hier noch überflüssig, da es noch nicht viele Features gibt
 
-Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen im xref:features/planner.doc[Planer] angezeigt werden bzw. welche ausgeblendet werden sollen.
+Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen unter xref:features/planner/angriffspläne_planner.adoc[Angriffspläne] angezeigt werden bzw. welche ausgeblendet werden sollen.
 
 == Discord
 
-image:../assets/images/settings/discord_no_connection_settings.png[Keine Discordverknüpfung, width=48%]
-image:../assets/images/settings/discord_connected_account.png[Keine Discordverknüpfung, width=48%]
+[cols="1,1", frame=none, grid=none]
+|===
+a| image::settings/discord_no_connection_settings.png[Keine Discordverknüpfung, width=100%]
+a| image::settings/discord_connected_account.png[Discord verknüpft, width=100%]
+|===
 
 Unter diesem Punkt kann zunächst ein Discord Account verknüpft werden. Hierzu einfach auf den Button drücken und im Browser seinen Discord Account anmelden und der Verknüpfung zustimmen. So sind die Accounts erfolgreich verknüpft.
 
