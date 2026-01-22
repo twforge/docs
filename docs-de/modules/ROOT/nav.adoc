@@ -12,6 +12,7 @@
 ** xref:features/tribe-construct.adoc[Stammeskonstrukt]
 ** xref:features/userscript.adoc[Userscript]
 ** Aktionsplanungen
-*** xref:features/action_planner.adoc[Aktionsplanungen]
+*** xref:features/action-planner.adoc[Aktionsplanungen]
 // hier kommt noch mehr
-* xref:pages/settings.adoc[Einstellungen]
+* xref:settings.adoc[Einstellungen]
+
