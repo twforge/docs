@@ -1,67 +1,11 @@
-= Action Planner
+= Aktionsplaner
+:page-navtitle: Aktionsplaner
+:description: Tool zur Erstellung von Angriffsplänen von einzelnen Accounts bis hin zu Plänen für ganze Stämme
+:keywords: Planung, Offaktionen, Angriffspläne, etc.
 
-Der Action Planner hilft dir, Angriffe mit deinem Stamm zu koordinieren.
+Im Aktionsplaner können Offaktionen geplant werden. Von Aktionen für einzelne Accounts bis hin zu Aktionen für ganze Stämme ist alles möglich.
 
-== Übersicht
+Durch genaue  Zeitangaben, unterschiedlichen Möglichkeiten zur Definition von Herkunfts- und Zieldörfern, mögliche Abhängigkeiten von verschiedenen Plänen, Template Auswahl für das leichte Abschicken, Verplanung von vorhandenen Truppen sowie viele weitere Features ist das Tool in der Lage, durch einen von bis zu dreien Berechnungsalgorithmen eine Offplanung zu erstellen,  wie sie von keinem anderen Tool geplant werden kann.
 
-Nutze den Action Planner um:
-
-* Angriffspläne mit präzisem Timing zu erstellen
-* Angriffe in Kampagnen zu organisieren
-* Pläne mit Stammesmitgliedern zu teilen
-* Zu verfolgen welche Angriffe gesendet wurden
-
-== Eine Kampagne erstellen
-
-Kampagnen gruppieren zusammenhängende Angriffe.
-
-. Gehe zum **Action Planner**
-. Klicke auf **Neue Kampagne**
-. Gib einen Namen ein (z.B. "Operation Nord")
-. Klicke auf **Erstellen**
-
-TIP: Erstelle separate Kampagnen für verschiedene Operationen um organisiert zu bleiben.
-
-== Angriffspläne hinzufügen
-
-. Öffne deine Kampagne
-. Klicke auf **Plan hinzufügen**
-. Wähle dein **Quelldorf** (wo die Truppen herkommen)
-. Wähle das **Zieldorf**
-. Wähle die **Einheiten** die gesendet werden sollen
-. Setze die **Ankunftszeit**
-. Klicke auf **Speichern**
-
-Das System berechnet die Abschickzeit automatisch basierend auf der Einheitengeschwindigkeit.
-
-== Mehrere Angriffe koordinieren
-
-Um mehrere Angriffe gleichzeitig landen zu lassen:
-
-. Füge alle Angriffspläne zur Kampagne hinzu
-. Setze die gleiche Ankunftszeit für jeden
-. Der Action Planner zeigt die Abschickzeit jedes Plans
-. Sende deine Angriffe zu den berechneten Zeiten
-
-== Mit dem Stamm teilen
-
-. Öffne deine Kampagne
-. Klicke auf **Teilen**
-. Kopiere den Teilen-Link
-. Sende ihn an deine Stammesmitglieder
-
-Geteilte Kampagnen erlauben anderen den Plan zu sehen und eigene Angriffe hinzuzufügen.
-
-== Ausführung verfolgen
-
-Während du Angriffe sendest:
-
-. Markiere jeden Plan als **Gesendet** wenn du ihn abschickst
-. Die Kampagne zeigt den Fortschritt auf einen Blick
-. Überprüfe abgeschlossene Angriffe nach der Operation
-
-== Tipps
-
-* Plane Angriffe einen Tag vorher um allen Zeit zur Vorbereitung zu geben
-* Nutze Filter um bestimmte Dörfer schnell zu finden
-* Exportiere Pläne bei Bedarf in Tabellenkalkulationen
+// kommt als letztes weil sehr aufwändig
+// ich will vermutlich einmal nen Gesamtüberblick über Planung geben (in diesem Dokument),ich kann mir allerdings vorstellen, dass es Sinn macht, hier nochmal zu untergliedern (Pläne Verwalten (Erstellen, Löschen etc.), Planung allgemein (Templates etc.) und dann zu jedem Unterpunkt (Herkunft, Ziel, Zeiten etc.) ein eigene Datei zu machen )

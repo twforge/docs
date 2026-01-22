@@ -1,0 +1,61 @@
+= Einstellungen - Personalisierung von TW-Forge
+:page-navtitle: Einstellungen
+:description: Globale Einstellungen, die Weltenübergreifend für den TW-Forge Account gelten
+:keywords: Einstellungen, Settings, Lightmode, Darkmode, Discord, Farben, Tabellen
+
+// hier einen Screenshot von dem Screen "Settingsoverview"
+
+Auf dieser Seite werden alle verfügbaren weltenübergreifenden Einstellungen in TW Forge erklärt.
+Einstellungen beeinflussen die Anzeige von ausgewertetenAngriffen, die Darstellung im Interface, Discord-Verbindungen und Notifications.
+
+== Allgemein
+
+// hier ggf. nen Screenshot von den allgemeinen Settings (atm noch unnötig weil zu wenig Einstellmöglichkeiten
+
+Unter diesem Punkt können grundlegende Anzeigeeinstellungen der Applikation vorgenommen werden.
+
+Hier lässt sich das Erscheinungsbild von TW Forge festlegen. Zur Auswahl stehen:
+
+- *Light Mode*
+- *Dark Mode*
+- *Browser-Standard*
+
+Die gewählte Einstellung wirkt sich ausschließlich auf die Darstellung der Benutzeroberfläche aus
+und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
+
+== Account
+
+image::../assets/images/settings/account_settings.png[Accounteinstellungen in TW Forge]
+
+Unter diesem Punkt werden accountbezogene Einstellungen vorgenommen. 
+
+- Einsicht / Änderung des Anzeigenamens
+- Einsicht / Einstellbarkeit von verknüpften Welten
+
+== Angriffe
+
+image::../assets/images/settings/angriffe_settings.png[Einstellung der farblichen Markierungen für eingehende Angriffe]
+
+Unter diesem Punkt kann definiert werden, ab welchen maximal errechneten Truppen TW-Forge die farblichen Markierungen für die Incs vornimmt. Diese Einstellbarkeit sorgt dafür, dass individuelle Präferenzen umgesetzt werden können. 
+
+"Kleine Angriffe" können durch den Regler angepasst werden, diese verschiebt dann wiederum die Untergrenze für klein-mittlere Angriffe, der Regler der klein-mittleren Angriffe verschiebt wiederum die eigene Obergrenze sowie die Untergrenze für mittlere Incs usw. 
+
+Die Einstellungen,welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf die Anzeige auf TW-Forge unter xref:features/analyser.adoc#filterung[Angriffe] als auch auf die Anzeige Ingame durch das erlaubte Userscript. 
+
+// Das Userscript dann noch verlinken, wenn die entsprechende Seite erstellt worden ist
+
+== Planer
+
+// Bild ist hier noch überflüssig, da es noch nicht viele Features gibt
+
+Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen im xref:features/planner.doc[Planer] angezeigt werden bzw. welche ausgeblendet werden sollen.
+
+== Discord
+
+image:../assets/images/settings/discord_no_connection_settings.png[Keine Discordverknüpfung, width=48%]
+image:../assets/images/settings/discord_connected_account.png[Keine Discordverknüpfung, width=48%]
+
+Unter diesem Punkt kann zunächst ein Discord Account verknüpft werden. Hierzu einfach auf den Button drücken und im Browser seinen Discord Account anmelden und der Verknüpfung zustimmen. So sind die Accounts erfolgreich verknüpft.
+
+Jetzt hat man die Möglichkeit, entweder die Verknüpfung wieder zu löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzuzufügen. Außerdem besteht hier die Möglichkeit, dem Community-Discord "TW-Forge" zu joinen, um Fragen zu stellen sowie Feedback einzubringen.
+

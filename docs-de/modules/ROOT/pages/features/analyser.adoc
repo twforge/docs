@@ -1,7 +1,9 @@
-= Angriffe – Übersicht und Bewertung eingehender Incs
+= Angriffe - Übersicht und Bewertung eingehender Incs
 :page-navtitle: Angriffe
 :description: Zentrale Übersicht zur Anzeige, Bewertung und Filterung eingehender Angriffe (Incs) in TW Forge.
 :keywords: Angriffe, Incs, Gefahrenbewertung, Filter, Offgröße
+
+// hier einen Screenshot von einer Angriffseite, die befüllt ist und verschiedene Informationen enthält
 
 Die Seite *Angriffe* dient als zentrale Angriffsübersicht in TW Forge.
 Hier werden alle eingelesenen und hochgeladenen eingehenden Angriffe (Incs) gesammelt dargestellt und automatisiert ausgewertet.
@@ -13,10 +15,10 @@ Diese maximale Offgröße wird anhand der Kennzahl "maximale Äxte" / "maximale 
 
 Auf Basis dieser Berechnung wird jedem Angriff eine *Gefahrenbewertung* zugewiesen, die farblich visualisiert wird:
 
-* *Grün* – sehr hoher Fake-Verdacht / sicherer Fake
-* *Gelb* – kleine bis mittlere mögliche Off
-* *Orange* – mittelgroße mögliche Off
-* *Rot* – große mögliche Off
+* *Grün* - sehr hoher Fake-Verdacht / sicherer Fake
+* *Gelb* - kleine bis mittlere mögliche Off
+* *Orange* - mittelgroße mögliche Off
+* *Rot* - große mögliche Off
 
 == Faktoren der Gefahrenbewertung
 
@@ -31,12 +33,14 @@ Die Bewertung eines Angriffs basiert unter anderem auf folgenden Faktoren:
 * *Bereits eingeschlagene Angriffe*  
   Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwendet werden.
 
-Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern.
+Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern. Sofern ein Angriff durch einen dieser Faktoren eingeschränkt werden kann, wird die Erklärung, durch welche Information der Inc eingeschätzt wird, in einem Informationsfeld angezeigt.
+
+// Hier noch einen Screenshot einügen, an dem man ein Beispiel für die Information in dem "I" erkennen kann 
 
 == Konfiguration der Bewertungsgrenzen
 
 Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
-Sie können unter *Settings → Angriffe* individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
+Sie können unter xref:../settings.adoc#angriffe[Settings -> Angriffe] individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
 
 == Filter- und Sortiermöglichkeiten
 
@@ -44,28 +48,41 @@ Die Angriffsübersicht bietet umfangreiche Filterfunktionen, um große Mengen an
 
 === Filter nach Benennung
 
+image:../../assets/images/features/analyser/filter_by_name_analyser.png[Filterung nach Name]
+
 * z. B. „Ramme tabben“
 * freie Textsuche in der Inc-Bezeichnung
 
 === Filter nach Herkunft oder Ziel
 
+image:../../assets/images/features/analyser/filter_by_herkunft-or-ziel_analyser.png[Filterung nach Herkunt oder Ziel]
+
 * nach *Spieler*
 * nach *Stamm*
+* nach *Koordinate*
 
 === Filter nach bestätigter Inc-Größe
+
+image:../../assets/images/features/analyser/filter_by_known_size_analyser.png[Filterung nach bekannter Größe]
 
 * bekannte, sichtbare Incgrößen (wenn Befehle einsehbar sind)
 * Filterung nach klein (grün), mittelgroß (orange) und groß (rot)
 
 === Filter nach von TW-Forge errechneten Maximalgrößen
 
+image:../../assets/images/features/analyser/filter_by_calculated_max_size_analyser.png[Filterung nach maximaler Offgröße]
+
 * Filterung nach klein (grün), mittel (gelb), mittelgroß (orange) und groß (rot)
 
 === Filter nach Laufzeit / Einheitentyp
 
+image:../../assets/images/features/analyser/filter_by_unit_type_analyser.png[Filterung nach Einheitentyp]
+
 * z. B. Späher / Rammen
 
 == Eigene Angriffe und Account-Bezug
+
+image:../../assets/images/features/analyser/filter_by_own_account_or_upload_analyser.png[Filterung nach eigenem Upload oder eigenem Account]
 
 Zusätzlich können Angriffe nach persönlichem Bezug gefiltert werden:
 
@@ -79,4 +96,18 @@ Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordi
 
 == Upload
 
-Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden. Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden.
+Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden. Dies geschieht über das Submenü "Import".
+
+image:../../assets/images/features/analyser/upload_incs_analyser.png[Incs hochladen]
+
+Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden. Zum erstellen der SOS-Anfrage geh in "Die-Stämme"ingame auf "Eintreffend", markiere die gewünschten Incs und dann drücke auf "Unterstützung anfordern".
+
+image:../../assets/images/features/analyser/create_sos_request_1_analyser.png[Erstellen einer SOS-Anfrage]
+
+Danach muss der gesamte Text der SOS-Anfrage kopiert und auf TW-Forge eingefügt werden. 
+
+image:../../assets/images/features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-Anfrage]
+
+image:../../assets/images/features/analyser/sos_twforge_paste_analyser.png[Einfügen auf TW-Forge]
+
+

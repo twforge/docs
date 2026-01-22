@@ -2,33 +2,44 @@
 
 Diese Anleitung führt dich durch die Einrichtung von TW Forge und das Hinzufügen deiner ersten Welt.
 
-== Konto erstellen
+== 1. Konto erstellen
 
 . Gehe zu https://twforge.net[twforge.net]
-. Klicke auf **Login** oder **Registrieren**
-. Melde dich mit deiner bevorzugten Methode an (Google, Discord, etc.)
+. Klicke auf **Jetzt anmelden**, danach melde dich entweder mit einem bereits bestehenden Konto an oder Registriere ein neues.
+
+IMPORTANT: Jeder Spieler sollte seinen eigenen Account erstellen, Accountsharing ist untersagt und kann zum Ausschluss von TW-Forge führen.
+
 
 == Eine Welt hinzufügen
 
 Nach dem Login siehst du die Weltauswahl.
 
-. Klicke auf **Welt hinzufügen**
-. Wähle deinen Spielserver (z.B. de, en, nl)
-. Wähle deine Welt aus der Liste
+. Wähle deine gewünschte Welt aus (z.B. de250, de251)
 . Folge den Anweisungen um dein Konto zu verbinden
 
 TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln.
+
+=== Verknüpfung von TW-Forge mit dem Ingame Account
+
+Um TW-Forge nutzen zu können, musst du deinen TW-Forge Account mit deinem Ingame-"Die-Stämme"- Account verknüpfen. Das funktioniert folgendermaßen:
+
+. Gib deinen Spielername ein und drücke auf "Nächster Schritt"
+. Logge dich in "die Stämme" ein und öffne dein Profil. Füge den in TW-Forge angezeigten Code in dein Profil ein und klicke auf Speichern. Hierbei muss das Profil nicht leer sein, du kannst den Code einfach zu dem bestehenden Profil hinzufügen.
+. Drücke in TW-Forge auf "Überprüfen". Wenn du alle Schritte korrekt ausgeführt hast, ist dein Profil jetzt korrekt verbunden - **Herzlichen Glückwunsch**, du kannst TW-Forge jetzt nutzen. Den Code, welcher in das Profil kopiert werden musste, kann nun wieder entfernt werden.
 
 == Navigation in der App
 
 Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfügbaren Features:
 
-* **Action Planner** – Angriffe planen und koordinieren
-* **Karte** – Interaktive Weltkarte
-* **Berichte** – Kampfberichtsverwaltung
-* **Analyser** – Verteidigungsanalyse-Tools
-* **Planner** – Zeitrechner
-* **Stammeskonstrukt** – Stammesübersicht
+
+* *xref:features/analyser.adoc[Angriffe]* - Eingehenden Angriffe einlesen und auswerten
+* *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
+* *xref:features/reports.adoc[Berichte]* - Hochladen und Durchsuchen von Berichten
+* *Planner* – Übersicht über **xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]**, deine **xref:features/planner/abfrage_planner.adoc[Abfragen]**, die **xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB]** und Start des **xref:features/action-planner.adoc[Aktionsplaner]**
+* *xref:features/tribe-construct.adoc[Stammeskonstrukt]* - Erstelle ein Stammeskonstrukt oder tritt einem bestehenden Konstrukt bei!
+* *xref:features/userscript.adoc[Userscript]* - Angriffs-Auswertung ingame anzeigen
+
+// Verlinkungen sollten so passen, Sortierung ist jetzt nach dem Menü (ggf. ändern wenn erwünscht)
 
 Klicke auf ein Feature im Menü um loszulegen.
 
@@ -38,23 +49,24 @@ TW Forge synchronisiert automatisch Daten aus deiner Welt:
 
 * Dorfinformationen
 * Spieler- und Stammesdaten
-* Deine Kampfberichte (mit Userscript)
 
 Um die Daten aktuell zu halten, aktualisiert die App regelmäßig im Hintergrund.
 
 == Userscript installieren (Optional)
 
-Für automatischen Berichtsimport installiere das TW Forge Userscript:
+Um dir ausgewertete Angriffe ingame anzeigen zu lassen, installiere das xref:features/userscript.adoc[Userscript].
 
 . Installiere einen Userscript-Manager (Tampermonkey, Violentmonkey)
-. Gehe zu **Konto** → **Userscript**
-. Klicke auf **Userscript installieren**
-. Spiele das Spiel normal – Berichte werden automatisch erfasst
+. Erstelle ein neues, leeres Userscript.
+. Kopiere das Userscript aus dem Menüpunkt "Userscript" und füge es in dein neues (leeres) Userscript ein.
+. Logge dich in "Die Stämme" ein und gehe auf Einstellungen. Klicke auf "Datenbank Settings" und füge dort den API-Key ein.
+. Weitere Informationen zur Installation und zum Script findest du xref:features/userscript.adoc[hier]!
 
 == Nächste Schritte
 
 Bereit loszulegen? Schau dir diese Anleitungen an:
 
-* xref:features/action-planner.adoc[Plane deinen ersten Angriff]
-* xref:features/reports.adoc[Kampfberichte importieren]
-* xref:features/map.adoc[Die Karte erkunden]
+* xref:features/reports.adoc[Importiere die ersten Berichte]!
+* xref:features/map.adoc[Erkunde die Ingame Karte!]!
+* xref:features/tribe-construct[Tritt einem Stamm bei oder gründe dein eigenes Konstrukt]!
+* xref:features/action-planner.adoc[Plane deine erste Offaktion!]
