@@ -3,7 +3,14 @@
 :description: Organisation des Stammeskonstruktes inkl. Membermanagement, Rollenmanagement, Stammestruppen einlesen, Angaben prüfen uvm.
 :keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Truppenimport, Planungsvorbereitung
 
-Unter dem Menüpunkt Stammeskonstrukt kann ein Stammeskonstrukt erstellt und verwaltet werden, in dem die hochgeladenen Berichte und eingehende Angriffe miteinander geteilt werden, Abfragen für Aktionen berücksichtigt werden können.
+Unter dem Menüpunkt Stammeskonstrukt kann ein Stammeskonstrukt erstellt und verwaltet werden. Das Stammeskonstrukt vereint die gemeinsame Verwendung von TW Forge durch mehrere Accounts:
+
+- Hochgeladenen Berichte und eingehende Angriffe werden miteinander geteilt
+- Abfragen für Aktionen zur Berücksichtigung der Abschickzeiten etc. der individuellen Accounts
+- Teilen der Angriffspläne von berechneten Aktionen
+- Verwaltung von Bündnissen zu anderen Stammeskonstrukten
+- etc...
+
 
 WARNING: Um einen Stammeskonstrukt gründen zu können, benötigst du einen Premium-Zugang 
 
