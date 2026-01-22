@@ -5,7 +5,7 @@
 
 Im Aktionsplaner können Offaktionen geplant werden. Von Aktionen für einzelne Accounts bis hin zu Aktionen für ganze Stämme ist alles möglich.
 
-Durch genaue  Zeitangaben, unterschiedlichen Möglichkeiten zur Definition von Herkunfts- und Zieldörfern, mögliche Abhängigkeiten von verschiedenen Plänen, Template Auswahl für das leichte Abschicken, Verplanung von vorhandenen Truppen sowie viele weitere Features ist das Tool in der Lage, durch einen von bis zu dreien Berechnungsalgorithmen eine Offplanung zu erstellen,  wie sie von keinem anderen Tool geplant werden kann.
+Durch genaue  Zeitangaben, unterschiedlichen Möglichkeiten zur Definition von Herkunfts- und Zieldörfern, mögliche Abhängigkeiten von verschiedenen Plänen, Template Auswahl für das leichte Abschicken, Verplanung von vorhandenen Truppen sowie viele weitere Features ist der Aktionsplaner in der Lage, durch einen von bis zu dreien Berechnungsalgorithmen eine Offplanung zu erstellen,  wie sie von keinem anderen Tool geplant werden kann.
 
 // kommt als letztes weil sehr aufwändig
 // ich will vermutlich einmal nen Gesamtüberblick über Planung geben (in diesem Dokument),ich kann mir allerdings vorstellen, dass es Sinn macht, hier nochmal zu untergliedern (Pläne Verwalten (Erstellen, Löschen etc.), Planung allgemein (Templates etc.) und dann zu jedem Unterpunkt (Herkunft, Ziel, Zeiten etc.) ein eigene Datei zu machen )
