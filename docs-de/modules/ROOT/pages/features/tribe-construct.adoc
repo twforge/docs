@@ -5,7 +5,7 @@
 
 Unter dem Menüpunkt Stammeskonstrukt kann ein Stammeskonstrukt erstellt und verwaltet werden, in dem die hochgeladenen Berichte und eingehende Angriffe miteinander geteilt werden, Abfragen für Aktionen berücksichtigt werden können.
 
-WARNING: Um einen Stammeskonstrukt gründen zu können, benötigst du einen Premium-Zugang 
+IMPORTANT: Um einen Stammeskonstrukt gründen zu können, benötigst du einen Premium-Zugang 
 
 // Verlinkung zur Premium Datei
 
