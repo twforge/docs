@@ -1,0 +1,9 @@
+= Abfrage
+:page-navtitle: Abfrage
+:description: Tool zum Angeben von Informationen für eine Offaktionsplanung (AGs, Abschickzeiten, nicht zu verplanende Offs)
+:keywords: Planung, Abfrage, Zeiten, Abschickzeiten, AGs, Ausplanen, Angeben
+
+Hier werden die Informationen angegeben, die für eine Offaktion notwendig sind. Diese Informationen können für alle verknüpften Accounts (Main Account sowie Urlaubsvertretungen) angegeben werden und danach bei der Offaktionsplanung berücksichtigt werden.
+
+// Verlinkung Urlaubsvertretungen zur späteren Datei
+// tbd.

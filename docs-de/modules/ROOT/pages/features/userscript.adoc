@@ -1,0 +1,12 @@
+= Userscript
+:page-navtitle: Aktionsplaner
+:description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
+:keywords: Userscript, Script, Installation, Tampermonkey, Angriffe anzeigen, API-Key, API
+
+Hier findest du alle Informationen zum Userscript, welches Informationen wie die Bewertung der Incs, Berichte zu den Dörfern sowie weitere Informationen ingame direkt anzeigt.
+
+[IMPORTANT] 
+
+Das Script ist 100% legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden. Teilt euren API-Key mit niemand anderem.
+
+//tbd.

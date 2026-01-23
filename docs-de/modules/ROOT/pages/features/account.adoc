@@ -1,0 +1,14 @@
+= Account - Alle Informationen und Einstellungen zu deinem Ingame / TW-Forge Account
+:page-navtitle: Account
+:description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
+:keywords: Account, UV, Urlaubsvertretung, Discord, Truppen einlesen, Planungsvorbereitung
+
+Hier findest du alle wichtigen Informationen sowie Einstellungsmöglichkeiten für Accountbezogene Settings.
+
+. Einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit dem Ingame Account verknüpft sind
+. Einsicht, ob dein verknüpfter Ingame Account als Urlaubsvertretung bei einem anderen Account verknüpft ist
+. Hinzufügen von Urlaubsvertretungen
+. Einlesen von Accounttruppen
+. Discordeinstellungen für Accountdiscords
+
+//tbd.

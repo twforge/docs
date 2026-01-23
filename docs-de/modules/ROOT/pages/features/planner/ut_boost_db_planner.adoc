@@ -1,0 +1,8 @@
+= UT-Boost-Datenbank
+:page-navtitle: UT-Boost-Datenbank
+:description: Trage festgestellte UT-Boosts in eine Konstruktbezogene Datenbank ein.
+:keywords: Datenbank, Unterstützungen, Anpassen, UT-Boost, Stammesskill, Banner der Bedrängnis, Bammer
+
+Hier findest du alle Informationen zu der UT-Boost-Datenbank. Diese ermöglicht, festgestellte UT-Boosts durch Stammesskill oder das Banner der Bedrängnis  direkt in die Datenbank zu übernehmen,sodass jedem Mitglied des Konstruktes die Möglichkeit gegegeben wird, diese sowohl bei der Planung als auch beim Abschicken von bereits erstellten Plänen zurück berücksichtigen. 
+
+// tbd.

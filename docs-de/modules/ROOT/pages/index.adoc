@@ -1,3 +1,5 @@
+//Startseite
+
 = TW Forge Benutzerhandbuch
 
 Willkommen bei TW Forge – dein Toolset für Koordination und Planung in Die Stämme.
@@ -36,9 +38,6 @@ Neu bei TW Forge? Starte hier:
 
 |xref:features/analyser.adoc[Angriffe]
 |Feindliche Verteidigungen analysieren und Angriffe optimieren
-
-|xref:features/planner.adoc[Planner]
-|Abschickzeiten berechnen und Ankünfte koordinieren
 
 |xref:features/tribe-construct.adoc[Stammeskonstrukt]
 |Stammesmitglieder und Statistiken ansehen

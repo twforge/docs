@@ -1,65 +1,8 @@
-= Berichte
+= Berichte - Datenbank für alle Berichte
+:page-title: Berichte 
+:description: Datenbank für alle hochgeladenen Bericht des Stammes, filterbar nach verschiedenen Kriterien
+:keywords: Berichte, Import, Durchsuchen, Datenbank, Filtern
 
-Verwalte und durchsuche deine Kampfberichte.
+Die Seite "Berichte" dient als Anlaufpunkt für die Suche nach Dorfinformationen und Berichten und bietet gleichzeitig die Möglichkeit für den Upload der Berichte an.
 
-== Berichte importieren
-
-=== Automatischer Import (Empfohlen)
-
-Mit installiertem Userscript:
-
-. Spiele das Spiel normal
-. Schaue dir einen Kampfbericht im Spiel an
-. Der Bericht wird automatisch in TW Forge gespeichert
-
-=== Manueller Import
-
-. Kopiere einen Kampfbericht aus dem Spiel
-. Gehe zu **Berichte** → **Import**
-. Füge den Bericht ein
-. Klicke auf **Importieren**
-
-== Berichte durchsuchen
-
-Alle importierten Berichte erscheinen in der Liste.
-
-* **Sortiere** nach Datum, Typ oder Ergebnis
-* **Filtere** nach Angriff/Verteidigung/Unterstützung
-* **Suche** nach Spieler- oder Dorfname
-
-== Berichtsdetails
-
-Klicke auf einen Bericht um zu sehen:
-
-* Vollständige Kampfdetails
-* Gesendete und verlorene Einheiten
-* Erbeutete Ressourcen
-* Gebäudeschaden
-* Zustimmungsänderungen
-
-== Berichte filtern
-
-Nutze Filter um bestimmte Berichte zu finden:
-
-. Klicke auf **Filter**
-. Setze deine Kriterien:
-** Datumsbereich
-** Berichtstyp (Angriff, Verteidigung, Unterstützung, Späher)
-** Ergebnis (Sieg, Niederlage)
-** Spieler oder Dorf
-. Klicke auf **Anwenden**
-
-== Daten exportieren
-
-Um Berichte zu exportieren:
-
-. Wende Filter an um Berichte auszuwählen
-. Klicke auf **Exportieren**
-. Wähle das Format (CSV, etc.)
-. Lade die Datei herunter
-
-== Tipps
-
-* Installiere das Userscript für automatischen Import
-* Nutze Datumsfilter um dich auf aktuelle Operationen zu konzentrieren
-* Prüfe Berichte bevor du neue Angriffe planst
+// tbd.

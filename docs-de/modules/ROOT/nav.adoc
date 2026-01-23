@@ -1,9 +1,18 @@
 * xref:index.adoc[Startseite]
 * xref:getting-started.adoc[Erste Schritte]
 * Features
-** xref:features/action-planner.adoc[Action Planner]
-** xref:features/map.adoc[Karte]
 ** xref:features/reports.adoc[Berichte]
+** xref:features/map.adoc[Karte]
 ** xref:features/analyser.adoc[Angriffe]
-** xref:features/planner.adoc[Planner]
+** Planer
+*** xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]
+*** xref:features/planner/abfrage_planner.adoc[Abfrage]
+*** xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-Datenbank]
+** xref:features/account.adoc[Account]
 ** xref:features/tribe-construct.adoc[Stammeskonstrukt]
+** xref:features/userscript.adoc[Userscript]
+** Aktionsplanungen
+*** xref:features/action-planner.adoc[Aktionsplanungen]
+// hier kommt noch mehr
+* xref:settings.adoc[Einstellungen]
+
