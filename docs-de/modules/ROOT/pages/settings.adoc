@@ -20,8 +20,7 @@ Hier lässt sich das Erscheinungsbild von TW Forge festlegen. Zur Auswahl stehen
 - *Dark Mode*
 - *Browser-Standard*
 
-Die gewählte Einstellung wirkt sich ausschließlich auf die Darstellung der Benutzeroberfläche aus
-und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
+Die gewählte Einstellung wirkt sich ausschließlich auf die Darstellung der Benutzeroberfläche aus und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
 
 == Account
 
