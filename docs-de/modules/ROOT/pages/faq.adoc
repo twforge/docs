@@ -1,0 +1,24 @@
+= FAQ
+:page-title: FAQ
+:description: Häufig gestellte Fragen und Antworten zu TW Forge.
+:keywords: FAQ, Hilfe, Support, Probleme, Fragen
+
+
+[TIP]
+====
+Nutze die Suche (Browser: `Strg` + `F`), um schnell Antworten auf deine Fragen zu finden.
+====
+
+== Fragen und Antworten:
+
+=== Warum kann ich kein Stammeskonstrukt erstellen?
+
+Man benötigt dafür einen Premium-Zugang. Für weitere Informationen klicke hier.
+
+// das hier noch Verlinken zur Premium Erklärung
+
+=== Warum können meine Member die Berichte nicht sehen?
+
+Das liegt vermutlich daran, dass ihr euch entweder nicht im gleichen Konstrukt befindet, oder dass die betreffenden Member noch nicht das erforderliche Mindest-Rechtelevel (Mitglied) besitzen. Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#mitglieder[hier].
+
+// TODO 

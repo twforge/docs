@@ -7,7 +7,7 @@ Diese Anleitung führt dich durch die Einrichtung von TW Forge und das Hinzufüg
 . Gehe zu https://twforge.net[twforge.net]
 . Klicke auf **Jetzt anmelden**, danach melde dich entweder mit einem bereits bestehenden Konto an oder Registriere ein neues.
 
-IMPORTANT: Jeder Spieler sollte seinen eigenen Account erstellen, Accountsharing ist untersagt und kann zum Ausschluss von TW-Forge führen.
+WARNING: Jeder Spieler muss seinen eigenen Account erstellen, Accountsharing ist untersagt und kann zum Ausschluss von TW-Forge führen.
 
 
 == Eine Welt hinzufügen
@@ -19,7 +19,7 @@ Nach dem Login siehst du die Weltauswahl.
 
 TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln.
 
-=== Verknüpfung von TW-Forge mit dem Ingame Account
+=== Verknüpfung von TW-Forge mit dem Ingame Account[[verknuepfung]]
 
 Um TW-Forge nutzen zu können, musst du deinen TW-Forge Account mit deinem Ingame-"Die-Stämme"- Account verknüpfen. Das funktioniert folgendermaßen:
 
@@ -54,7 +54,7 @@ Um die Daten aktuell zu halten, aktualisiert die App regelmäßig im Hintergrund
 
 == Userscript installieren (Optional)
 
-Um dir ausgewertete Angriffe ingame anzeigen zu lassen, installiere das xref:features/userscript.adoc[Userscript].
+Um dir ausgewertete Angriffe sowie Dorfinformationen ingame anzeigen zu lassen, installiere das xref:features/userscript.adoc[Userscript].
 
 . Installiere einen Userscript-Manager (Tampermonkey, Violentmonkey)
 . Erstelle ein neues, leeres Userscript.

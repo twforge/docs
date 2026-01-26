@@ -1,0 +1,136 @@
+/* nav-left.css — Antora left nav panel only */
+
+/* Panel */
+.nav-panel-menu {
+  padding: 12px 10px;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.92), rgba(12, 12, 12, 0.92));
+  backdrop-filter: blur(8px);
+
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.18) transparent;
+}
+
+/* Scrollbar (WebKit) */
+.nav-panel-menu::-webkit-scrollbar { width: 10px; }
+.nav-panel-menu::-webkit-scrollbar-track { background: transparent; }
+.nav-panel-menu::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.nav-panel-menu::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.20);
+  background-clip: padding-box;
+}
+
+/* Card feeling */
+.nav-panel-menu .nav-menu {
+  border-radius: 12px;
+  padding: 10px;
+}
+
+/* Title (TW Forge Doku Deutsch) */
+.nav-panel-menu .nav-menu h3.title {
+  color: rgba(255, 140, 64, 1) !important;
+  font-weight: 700;
+  text-shadow:
+    0 0 4px rgba(255, 140, 64, 0.55),
+    0 0 10px rgba(255, 70, 70, 0.25);
+}
+
+/* Lists */
+.nav-panel-menu .nav-menu .nav-list {
+  margin: 6px 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.nav-panel-menu .nav-menu .nav-list .nav-list {
+  margin: 4px 0;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Links */
+.nav-panel-menu .nav-menu .nav-link {
+  display: block;
+  padding: 8px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  line-height: 1.25;
+  transition: background-color 140ms ease, color 140ms ease;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.nav-panel-menu .nav-menu .nav-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Current page */
+.nav-panel-menu .nav-menu .is-current-page > .nav-link,
+.nav-panel-menu .nav-menu .nav-item.is-current-page > .nav-link {
+  background: rgba(255, 255, 255, 0.10);
+  color: rgba(255, 255, 255, 0.98);
+  font-weight: 600;
+  position: relative;
+}
+
+.nav-panel-menu .nav-menu .is-current-page > .nav-link::before,
+.nav-panel-menu .nav-menu .nav-item.is-current-page > .nav-link::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 8px;
+  bottom: 8px;
+  width: 3px;
+  border-radius: 3px;
+  background: linear-gradient(180deg, rgba(255, 140, 64, 1), rgba(255, 70, 70, 1));
+}
+
+/* Section headers */
+.nav-panel-menu .nav-menu .nav-text {
+  display: block;
+  padding: 10px 10px 6px 10px;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+/* Toggle caret centering */
+.nav-panel-menu .nav-item { position: relative; }
+
+/* Caret (Ausklappen) sauber an der Zeile ausrichten (nicht vertikal sticky/mittig) */
+/* Caret: nicht mit translateY arbeiten, damit rotate-state sauber bleibt */
+.nav-panel-menu .nav-item-toggle {
+  top: 0.55em;
+  transform: none;      /* KEIN !important */
+  margin-top: 0;
+}
+
+/* Active: Pfeil nach unten (rotate) */
+.nav-panel-menu .nav-item.is-active > .nav-item-toggle {
+  transform: rotate(90deg);
+}
+
+/* Mobile */
+@media (max-width: 1024px) {
+  .nav-panel-menu .nav-menu .nav-link {
+    padding: 10px 12px;
+  }
+}
+
+/* Nav-menu-toggle Icon (background-image) -> weiß via invert */
+.nav-panel-menu .nav-menu-toggle {
+  filter: invert(1) brightness(1.1) contrast(1.1) !important;
+  opacity: 0.9;
+  visibility: visible !important;
+}
+
+
+
+
+

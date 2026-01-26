@@ -2,11 +2,16 @@
 :page-navtitle: Angriffe
 :description: Zentrale Übersicht zur Anzeige, Bewertung und Filterung eingehender Angriffe (Incs) in TW Forge.
 :keywords: Angriffe, Incs, Gefahrenbewertung, Filter, Offgröße
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
 
 // hier einen Screenshot von einer Angriffseite, die befüllt ist und verschiedene Informationen enthält
 
 Die Seite *Angriffe* dient als zentrale Angriffsübersicht in TW Forge.
 Hier werden alle eingelesenen und hochgeladenen eingehenden Angriffe (Incs) gesammelt dargestellt und automatisiert ausgewertet.
+
+toc::[]
 
 == Anzeige und Interpretation der Angriffe
 

@@ -1,0 +1,119 @@
+/* ===== Content TOC (Inhalt) styling ===== */
+
+#toc.toc {
+  background: rgba(20, 20, 20, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  margin: 1rem 0 1.25rem 0;
+}
+
+/* Titel "Inhalt" */
+#toc.toc .title {
+  font-weight: 700;
+  margin: 0 0 0.6rem 0;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+/* Liste: keine Bulletpoints, nicer spacing */
+#toc.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#toc.toc li {
+  margin: 0.15rem 0;
+}
+
+/* Links: nicht knallblau, sondern clean */
+#toc.toc a {
+  display: inline-block;
+  padding: 0.35rem 0.5rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.78);
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+#toc.toc a:hover {
+  background: rgba(255, 140, 64, 0.12);
+  color: rgba(0, 0, 0, 0.90);
+}
+
+/* Optional: kleine "Marker"-Leiste links pro Eintrag */
+#toc.toc a {
+  position: relative;
+  padding-left: 0.75rem;
+}
+
+#toc.toc a::before {
+  content: "";
+  position: absolute;
+  left: 0.35rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 60%;
+  border-radius: 3px;
+  background: rgba(255, 140, 64, 0.55);
+  opacity: 0;
+  transition: opacity 140ms ease;
+}
+
+#toc.toc a:hover::before {
+  opacity: 1;
+}
+
+/* Unterpunkte (verschachtelte TOC) etwas einrücken */
+#toc.toc ul ul {
+  margin-top: 0.25rem;
+  margin-left: 0.75rem;
+  padding-left: 0.75rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Nummerierte TOC (1, 2, 3...) ===== */
+
+#toc.toc ul {
+  list-style: none;
+  counter-reset: toc-counter;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hauptpunkte nummerieren */
+#toc.toc li {
+  counter-increment: toc-counter;
+  margin: 0.25rem 0;
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Nummer darstellen */
+#toc.toc li::before {
+  content: counter(toc-counter) ".";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: rgba(255, 140, 64, 1);
+  font-weight: 600;
+  font-size: 0.90rem;
+}
+
+/* Hover-Effekt bleibt */
+#toc.toc a:hover {
+  background: rgba(255, 140, 64, 0.12);
+}
+
+/* Unterpunkte leicht einrücken, ohne Nummern */
+#toc.toc ul ul li::before {
+  content: "";
+}
+#toc.toc ul ul li {
+  padding-left: 1rem;
+  border-left: 2px solid rgba(255, 140, 64, 0.25);
+}
+

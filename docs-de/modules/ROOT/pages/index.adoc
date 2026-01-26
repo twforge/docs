@@ -1,49 +1,89 @@
-//Startseite
+= TW Forge - Dokumentation
+:page-navtitle: Startseite
 
-= TW Forge Benutzerhandbuch
 
-Willkommen bei TW Forge – dein Toolset für Koordination und Planung in Die Stämme.
+Willkommen in der Dokumentation von *TW Forge*.
 
-== Was ist TW Forge?
+TW Forge ist ein strategisches Analyse-, Verwaltungs- und Planungstool für *Die Stämme*, das Spieler und Stämme bei der Auswertung von Angriffen, der Planung von Aktionen und der Organisation komplexer Spielsituationen unterstützt.
 
-TW Forge hilft dir und deinem Stamm:
+Diese Dokumentation erklärt Aufbau, Funktionsweise und Nutzung der einzelnen Module von TW Forge.
 
-* Koordinierte Angriffe planen
-* Kampfberichte analysieren
-* Die Spielkarte visualisieren
-* Stammesoperationen verwalten
+== Überblick
+
+TW Forge bündelt mehrere Werkzeuge in einer zentralen Anwendung:
+
+* Auswertung eingehender Angriffe (Incs)
+* Visuelle Darstellung auf einer interaktiven Karte
+* Planung und Berechnung von Angriffs- und Aktionsplänen
+* Verwaltung von Berichten, Accounts und Stammesstrukturen
+
+Der Fokus liegt auf Übersichtlichkeit, Nachvollziehbarkeit und der Unterstützung von Entscheidungsprozessen im Stamm.
 
 == Erste Schritte
 
-Neu bei TW Forge? Starte hier:
+Wenn du neu in TW Forge bist, empfehlen wir folgenden Einstieg:
 
-. xref:getting-started.adoc[Erstelle dein Konto]
-. Füge deine erste Welt hinzu
-. Erkunde die Features unten
+* xref:getting-started.adoc[Erste Schritte]
+* xref:features/account.adoc[Account & Rollen]
+* xref:features/tribe-construct.adoc[Stammeskonstrukt erstellen und verwalten]
 
-== Features
+== Zentrale Funktionen
 
-[cols="1,2"]
-|===
-|Feature |Was du tun kannst
+=== Angriffe
 
-|xref:features/action-planner.adoc[Action Planner]
-|Angriffe planen, Timing koordinieren, Kampagnen verwalten
+Das Modul *Angriffe* dient zur Erfassung, Interpretation und Bewertung eingehender Angriffe.
 
-|xref:features/map.adoc[Karte]
-|Weltkarte ansehen, Dörfer finden, Stammesterritorien sehen
+* Automatisierte Gefahrenbewertung
+* Berücksichtigung bekannter Off / Deff -Informationen
+* Farblich hervorgehobene Risikostufen
 
-|xref:features/reports.adoc[Berichte]
-|Kampfberichte importieren und durchsuchen
+→ xref:features/analyser.adoc[Zur Angriffsübersicht]
 
-|xref:features/analyser.adoc[Angriffe]
-|Feindliche Verteidigungen analysieren und Angriffe optimieren
+=== Karte
 
-|xref:features/tribe-construct.adoc[Stammeskonstrukt]
-|Stammesmitglieder und Statistiken ansehen
-|===
+Die interaktive Karte bietet eine räumliche Übersicht über Dörfer, Angriffe und relevante Spielinformationen.
 
-== Brauchst du Hilfe?
+* Visuelle Analyse von Angriffsschwerpunkten
+* Schnelle Orientierung bei komplexen Lagen
 
-* Schau dir die Feature-Anleitungen im Menü an
-* Besuche https://twforge.net[twforge.net]
+→ xref:features/map.adoc[Zur Karte]
+
+=== Berichte
+
+Im Bereich *Berichte* können Kampfberichte hochgeladen, durchsucht und ausgewertet werden.
+
+* Zentrale Sammlung relevanter Reports
+* Grundlage für fundierte Angriffs- und Verteidigungsentscheidungen
+
+→ xref:features/reports.adoc[Zu den Berichten]
+
+=== Planer
+
+Der Planer unterstützt bei der Vorbereitung und Koordination von Aktionen:
+
+* Angriffspläne
+* Abfragen
+* UT-Boost-Datenbank
+* Aktionsplanungen
+
+→ xref:features/planner/angriffspläne_planner.adoc[Zum Planer]
+
+== Account- und Stammesverwaltung
+
+TW Forge bietet verschiedene Verwaltungsbereiche:
+
+* Accountverwaltung
+* Urlaubsvertretungen
+* Verwaltung von Stammeskonstrukte
+
+→ xref:features/account.adoc[Accountverwaltung] / xref:features/tribe-construct.adoc[Stammesverwaltung]
+
+== Hinweis zum Entwicklungsstand
+
+TW Forge befindet sich in aktiver Weiterentwicklung.  
+Einzelne Funktionen können sich noch im Ausbau befinden oder je nach Benutzerrolle variieren.
+
+Nicht implementierte oder geplante Features sind in der Dokumentation entsprechend gekennzeichnet.
+
+---
+

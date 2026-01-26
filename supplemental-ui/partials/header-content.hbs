@@ -1,7 +1,9 @@
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
-      <a class="navbar-item" href="{{siteRootPath}}/en/index.html">TW Forge</a>
+      <a class="navbar-item" href="{{siteRootPath}}/de/index.html">
+       <img src="{{uiRootPath}}/img/tw-forge-logo-schrift-rechts.png" alt="TW Forge" class="twf-brand-logo">
+      </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
         <span></span>
@@ -11,15 +13,22 @@
     <div id="topbar-nav" class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link" href="#">Language</a>
-          <div class="navbar-dropdown">
-            <a class="navbar-item" href="#" onclick="switchLang('en'); return false;">English</a>
-            <a class="navbar-item" href="#" onclick="switchLang('de'); return false;">Deutsch</a>
+          <a class="navbar-link twf-lang-trigger" href="#">Language</a>
+          <div class="navbar-dropdown twf-lang-dropdown">
+            <a class="navbar-item lang-item" href="#" data-lang="en">
+              <img src="{{uiRootPath}}/img/flags/flag-gb.svg" class="lang-flag" alt="English"/>
+              English
+            </a>
+
+            <a class="navbar-item lang-item" href="#" data-lang="de">
+              <img src="{{uiRootPath}}/img/flags/flag-de.svg" class="lang-flag" alt="Deutsch"/>
+              Deutsch
+            </a>
           </div>
         </div>
         <div class="navbar-item">
           <span class="control">
-            <a class="button is-primary" href="https://twforge.net" target="_blank">Go to TW Forge</a>
+            <a class="twf-cta" href="https://twforge.net" target="_blank" rel="noopener noreferrer">Open TW Forge</a>
           </span>
         </div>
       </div>

@@ -1,5 +1,6 @@
 * xref:index.adoc[Startseite]
 * xref:getting-started.adoc[Erste Schritte]
+* xref:settings.adoc[Einstellungen]
 * Features
 ** xref:features/reports.adoc[Berichte]
 ** xref:features/map.adoc[Karte]
@@ -13,6 +14,6 @@
 ** xref:features/userscript.adoc[Userscript]
 ** Aktionsplanungen
 *** xref:features/action-planner.adoc[Aktionsplanungen]
+* xref:faq.adoc[FAQ]
 // hier kommt noch mehr
-* xref:settings.adoc[Einstellungen]
 
