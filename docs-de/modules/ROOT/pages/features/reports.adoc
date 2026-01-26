@@ -53,7 +53,7 @@ Um Berichte in die Datenbank zu laden, gibt es grundsätzlich 2 Wege:
 
 === Hochladen von Berichten über Discord
 
-Wenn Links von Berichten in einen Discord geposted werden, der mit deinem Konstrukt verbunden ist, wierden diese automatisch zur Datenbank hinzugefügt. Weitere Infos zum Discordbot findest du xref:discordbot.adoc[hier].
+Wenn Links von Berichten in einen Discord geposted werden, der mit deinem Konstrukt verbunden ist, wierden diese automatisch zur Datenbank hinzugefügt. Weitere Infos zum Discordbot findest du xref:features/discordbot.adoc[hier].
 
 === Hochladen von Berichten über TW-Forge
 
