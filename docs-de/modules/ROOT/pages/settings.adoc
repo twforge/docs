@@ -2,11 +2,14 @@
 :page-navtitle: Einstellungen
 :description: Globale Einstellungen, die Weltenübergreifend für den TW-Forge Account gelten
 :keywords: Einstellungen, Settings, Lightmode, Darkmode, Discord, Farben, Tabellen
-
-// hier einen Screenshot von dem Screen "Settingsoverview"
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
 
 Auf dieser Seite werden alle verfügbaren weltenübergreifenden Einstellungen in TW Forge erklärt.
 Einstellungen beeinflussen die Anzeige von ausgewerteten Angriffen, die Darstellung im Interface, Discord-Verbindungen und Notifications.
+
+toc::[]
 
 == Allgemein
 
@@ -45,7 +48,9 @@ Die Einstellungen, welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf
 
 // Bild ist hier noch überflüssig, da es noch nicht viele Features gibt
 
-Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen unter xref:features/planner/angriffspläne_planner.adoc[Angriffspläne] angezeigt werden bzw. welche ausgeblendet werden sollen.
+Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen unter 
+xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]
+angezeigt werden bzw. welche ausgeblendet werden sollen.
 
 == Discord
 
@@ -57,5 +62,6 @@ a| image::settings/discord_connected_account.png[Discord verknüpft, width=100%]
 
 Unter diesem Punkt kann zunächst ein Discord Account verknüpft werden. Hierzu einfach auf den Button drücken und im Browser seinen Discord Account anmelden und der Verknüpfung zustimmen. So sind die Accounts erfolgreich verknüpft.
 
-Jetzt hat man die Möglichkeit, entweder die Verknüpfung wieder zu löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzuzufügen. Außerdem besteht hier die Möglichkeit, dem Community-Discord "TW-Forge" zu joinen, um Fragen zu stellen sowie Feedback einzubringen.
+Jetzt hat man die Möglichkeit, entweder die Verknüpfung wieder zu löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzuzufügen.
+ Außerdem besteht hier die Möglichkeit, dem Community-Discord "TW-Forge" zu joinen, um Fragen zu stellen sowie Feedback einzubringen.
 

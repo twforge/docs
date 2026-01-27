@@ -1,17 +1,17 @@
-= Account - Alle Informationen und Einstellungen zu deinem Ingame / TW-Forge Account
+= Account 
 :page-navtitle: Account
 :description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
 :keywords: Account, UV, Urlaubsvertretung, Discord, Truppen einlesen, Planungsvorbereitung
 
 Hier findest du alle wichtigen Informationen sowie Einstellungsmöglichkeiten für Accountbezogene Settings.
 
-. Einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit dem Ingame Account verknüpft sind
-. Einsicht, ob dein verknüpfter Ingame Account als Urlaubsvertretung bei einem anderen Account verknüpft ist
-. Hinzufügen von Urlaubsvertretungen
-. Einlesen von Accounttruppen
-. Discordeinstellungen für Accountdiscords
+* Einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit dem Ingame Account verknüpft sind
+* Einsicht, ob dein verknüpfter Ingame Account als Urlaubsvertretung bei einem anderen Account verknüpft ist
+* Hinzufügen von Urlaubsvertretungen
+* Einlesen von Accounttruppen
+* Discordeinstellungen für Accountdiscords
 
-== 1. Accountbezogene Informationen und Verwaltung
+== Accountbezogene Informationen und Verwaltung
 
 Im Bereich *Account* wird angezeigt, welche TW-Forge-Accounts auf der aktuell ausgewählten Welt mit demselben Ingame-Account verbunden sind wie der eigene.
 
@@ -22,11 +22,12 @@ Folgende Funktionen stehen zur Verfügung:
 * Möglichkeit, **alle Member aus dem Account zu löschen**
 
 [TIP]
-
+====
 Das Entfernen aller Member ist besonders wichtig, wenn sich ungewollte Personen im Account befinden oder die Übersicht über die verbundenen Accounts nicht mehr gegeben ist. 
+====
 
 Nach dem Entfernen aller Member ist eine erneute Anmeldung ausschließlich über die Authentifizierung per Code möglich  
-(siehe xref:../getting-started.adoc#verknuepfung[Erste Schritte]).
+(siehe xref:getting-started.adoc#verknuepfung[Erste Schritte]).
 
 IMPORTANT: Für diese Authentifizierung wird das Ingame-Passwort benötigt.  
 Damit ist sichergestellt, dass der Owner des Ingame-Accounts jederzeit die volle Kontrolle über die Mitglieder in TW-Forge behält.
@@ -36,7 +37,7 @@ Durch ein Ändern des Stämme-Passworts können alle bisherigen Zugriffe effekti
 Zusätzlich wird angezeigt, ob der eigene Account bei anderen Accounts als *Urlaubsvertretung* eingetragen ist.
 Diese Einträge können bei Bedarf selbstständig entfernt werden.
 
-== 2. Truppen
+== Truppen
 
 In diesem Bereich können für den eigenen Account Truppen hinterlegt werden.
 
@@ -49,15 +50,19 @@ Diese Truppenangaben können unter anderem für folgende Funktionen verwendet we
 
 === Truppen einlesen
 
-Das Einlesen der Truppen geschieht über ein Copy-Paste aus der accountinternen Truppenübersicht. Hierzu gehe entweder ingame auf Übersicht -> Truppen -> Alle und wähle die "Alle" Gruppe aus.
+Das Einlesen der Truppen geschieht über ein Copy-Paste aus der accountinternen Truppenübersicht. 
+Hierzu gehe entweder ingame auf Übersicht -> Truppen -> Alle und wähle die "Alle" Gruppe aus.
 Stelle sicher, dass alle Dörfer zu sehen sind, und nicht z.B. durch die Maximale Anzahl an Dörfern / pro Seite 
 (siehe Screenshot) eingegrenzt werden. 
 
 image::features/account/troop-import.png[Truppen-Importieren-Ingame]
 
-TIP: Du kannst auch nur einzelne Gruppen auslesen, wenn du nur diese Gruppe verplanen willst. Allerdings hast du unter dem xref:features/action-planner.adoc[Aktionsplaner] die Möglichkeit, die Herkunftsdörfer durch Informationen wie Truppenanzahl sowie Lage einzuschränken, weswegen eine Einschränkung durch Gruppen i.d.R. nicht notwendig und meistens sogar eher hinderlich ist.
+TIP: Du kannst auch nur einzelne Gruppen auslesen, wenn du nur diese Gruppe verplanen willst. 
+Allerdings hast du unter dem xref:features/action-planner.adoc[Aktionsplaner] die Möglichkeit, die Herkunftsdörfer durch Informationen wie Truppenanzahl sowie Lage einzuschränken, weswegen eine Einschränkung durch Gruppen i.d.R. nicht notwendig und meistens sogar eher hinderlich ist.
 
-Nun drücke auf der Seite einfach Ctrl+a, Ctrl+c, um die gesamte Seite zu kopieren, gehe danach in TW-Forge und füge die Truppeninfos ein. Du kannst unten rechts auswählen, ob du "Eigene" (Truppen) oder "Insgesamt" einlesen willst. Diese werden dann als "Truppen" im Planungstool hinterlegt (relevant bei der Filterung unter Aktionsplaner -> Herkunftsdörfer).
+Nun drücke auf der Seite einfach Ctrl+a, Ctrl+c, um die gesamte Seite zu kopieren, gehe danach in TW-Forge und füge die Truppeninfos ein. 
+Du kannst unten rechts auswählen, ob du "Eigene" (Truppen) oder "Insgesamt" einlesen willst. 
+Diese werden dann als "Truppen" im Planungstool hinterlegt (relevant bei der Filterung unter Aktionsplaner -> Herkunftsdörfer).
 
 * *Eigene:* Alle Truppen, die zum Dorf gehören und aktuell im Dorf stehen (=Verteidigung abzüglich Fremdtruppen)
 * *Insgesamt:* Alle Truppen, die zum Dorf gehören (=Truppen)
@@ -68,9 +73,11 @@ Nachdem das einlesen erfolgreich war, siehst du eine Übersicht der erfolgreich 
 
 image::features/account/troop-overview.png[Truppenübersicht]
 
-TIP: Bei mehr als 1000 Dörfern in einem Account muss der Kopiervorgang mehrfach wiederholt werden, da die Stämme nur maximal 1000 Dörfer auf einer Seite anzeigt. Um die Truppen dennoch in TW Forge zu importieren, kopierst du die erste Seite, fügst sie ein (und drückst *nicht* auf Hochladen), gehst auf die zweite Seite, kopierst sie und fügst sie zusätzlich in das Feld hinein. Das wiederholst du so lange, bis alle Seiten erfasst sind, und drückst erst dann auf Hochladen.
+TIP: Bei mehr als 1000 Dörfern in einem Account muss der Kopiervorgang mehrfach wiederholt werden, da die Stämme nur maximal 1000 Dörfer auf einer Seite anzeigt. 
+Um die Truppen dennoch in TW Forge zu importieren, kopierst du die erste Seite, fügst sie ein (und drückst *nicht* auf Hochladen), gehst auf die zweite Seite, kopierst sie und fügst sie zusätzlich in das Feld hinein. Das wiederholst du so lange, bis alle Seiten erfasst sind, und drückst erst dann auf Hochladen.
 
-== 3. Urlaubsvertretungen
+
+== Urlaubsvertretungen
 
 Hier können Urlaubsvertretungen für andere Accounts hinzugefügt und verwaltet werden.
 
@@ -82,7 +89,7 @@ Nach erfolgreicher Einrichtung stehen folgende Möglichkeiten zur Verfügung:
 * Hinterlegen von Zeiten für Urlaubsvertretungs-Accounts unter xref:features/planner/abfrage_planner.adoc[Planer → Abfrage]
 * Zugriff auf Abschickpläne für diese Accounts unter xref:features/planner/angriffspläne_planner.adoc[Planer → Angriffspläne]
 
-== 4. Discord
+== Discord
 
 Im Bereich *Discord* wird angezeigt, mit welchem Discord-Server der eigene Account aktuell verknüpft ist.
 
