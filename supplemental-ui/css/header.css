@@ -1,0 +1,121 @@
+/* header.css — top header only */
+
+/* Brand logo */
+.twf-brand-logo {
+  height: 100%;
+  max-height: 2.5rem;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Language trigger (clean typography) */
+.navbar .navbar-link {
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  padding: 0.5rem 0.85rem;
+}
+
+/* Dropdown arrow more subtle */
+.navbar .navbar-link:not(.is-arrowless)::after {
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+/* CTA */
+.navbar .twf-cta {
+  appearance: none;
+  -webkit-appearance: none;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.45rem 0.85rem;
+  border-radius: 10px;
+
+  font-weight: 600;
+  letter-spacing: 0.01em;
+
+  color: rgba(255, 255, 255, 0.9) !important;
+  text-decoration: none !important;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255, 140, 64, 0.45),
+    rgba(255, 70, 70, 0.32)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.28);
+
+  transition: filter 140ms ease, box-shadow 140ms ease;
+}
+
+/* Hover without movement */
+.navbar .twf-cta:hover {
+  filter: brightness(1.07);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.32);
+}
+
+.navbar .twf-cta:active {
+  filter: brightness(0.95);
+}
+
+.navbar .twf-cta:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 3px rgba(255, 140, 64, 0.18),
+    0 4px 12px rgba(0, 0, 0, 0.32);
+}
+
+/* Hard kill any inherited transform-movement */
+.navbar .twf-cta,
+.navbar .twf-cta:hover,
+.navbar .twf-cta:active {
+  transform: none !important;
+}
+
+/* Language dropdown (use your existing twf-classes!) */
+.navbar .twf-lang-trigger {
+  font-weight: 500 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+  padding: 0.45rem 0.85rem !important;
+}
+
+.navbar .twf-lang-trigger:hover {
+  color: rgba(255, 255, 255, 0.95) !important;
+}
+
+.navbar .twf-lang-dropdown {
+  background: rgba(18, 18, 18, 0.96) !important;
+  border: 1px solid rgba(255, 255, 255, 0.10) !important;
+  border-radius: 10px !important;
+  padding: 0.25rem !important;
+  min-width: 160px;
+}
+
+.navbar .twf-lang-dropdown .navbar-item.lang-item {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.6rem !important;
+
+  color: rgba(255, 255, 255, 0.88) !important;
+  background: transparent !important;
+
+  font-weight: 500 !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 8px !important;
+}
+
+.navbar .twf-lang-dropdown .navbar-item.lang-item:hover {
+  background: rgba(255, 255, 255, 0.08) !important;
+  color: rgba(255, 255, 255, 0.96) !important;
+}
+
+.navbar .twf-lang-dropdown .lang-flag {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 4px !important;
+  object-fit: cover !important;
+  display: inline-block !important;
+  flex: 0 0 auto !important;
+}
