@@ -6,6 +6,7 @@
 :toclevels: 1
 :toc-title: Inhalt
 
+
 Auf dieser Seite werden alle verfügbaren weltenübergreifenden Einstellungen in TW Forge erklärt.
 Einstellungen beeinflussen die Anzeige von ausgewerteten Angriffen, die Darstellung im Interface, Discord-Verbindungen und Notifications.
 

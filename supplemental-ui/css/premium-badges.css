@@ -1,0 +1,38 @@
+/* Badge in Überschriften: gleiche Höhe, nicht hochgestellt */
+.doc h2 .image.badge,
+.doc h3 .image.badge,
+.doc h4 .image.badge,
+.doc h5 .image.badge {
+  display: inline-block;
+  margin-left: auto;
+  vertical-align: middle;   /* keine Hochstellung */
+  transform: none;
+}
+
+.doc h2,
+.doc h3,
+.doc h4,
+.doc h5 {
+  display: flex;
+  align-items: center;
+}
+
+.doc h2 .image.badge img,
+.doc h3 .image.badge img,
+.doc h4 .image.badge img,
+.doc h5 .image.badge img {
+  height: 6em;           /* feinjustieren: 0.9–1.05em */
+  width: auto;
+}
+
+/* Badge im normalen Text / Listen */
+.doc .image.badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.doc .image.badge img {
+  height: 5em;
+  width: auto;
+}

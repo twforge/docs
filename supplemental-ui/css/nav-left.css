@@ -31,13 +31,21 @@
   padding: 10px;
 }
 
-/* Title (TW Forge Doku Deutsch) */
+/* Title (TW Forge Doku Deutsch) – clean, hochwertig */
 .nav-panel-menu .nav-menu h3.title {
-  color: rgba(255, 140, 64, 1) !important;
+  color: rgba(255, 255, 255, 0.92) !important;
   font-weight: 700;
-  text-shadow:
-    0 0 4px rgba(255, 140, 64, 0.55),
-    0 0 10px rgba(255, 70, 70, 0.25);
+  letter-spacing: 0.01em;
+  font-size: 0.95rem;
+  margin: 2px 0 10px 0;
+  padding: 8px 10px 10px 10px;
+
+  /* weniger "cheap glow" */
+  text-shadow: none;
+
+  /* subtile Trennung */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
 }
 
 /* Lists */
@@ -90,25 +98,30 @@
   background: linear-gradient(180deg, rgba(255, 140, 64, 1), rgba(255, 70, 70, 1));
 }
 
-/* Section headers */
+/* Section headers (Überpunkte – Option B) */
 .nav-panel-menu .nav-menu .nav-text {
   display: block;
   padding: 10px 10px 6px 10px;
+
   font-size: 0.78rem;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.10em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 800;
 }
 
-/* Toggle caret centering */
-.nav-panel-menu .nav-item { position: relative; }
-
-/* Caret (Ausklappen) sauber an der Zeile ausrichten (nicht vertikal sticky/mittig) */
-/* Caret: nicht mit translateY arbeiten, damit rotate-state sauber bleibt */
-.nav-panel-menu .nav-item-toggle {
-  top: 0.55em;
-  transform: none;      /* KEIN !important */
-  margin-top: 0;
+.nav-panel-menu .nav-menu .nav-text::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 8px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 140, 64, 0.70),
+    rgba(255, 70, 70, 0.30),
+    rgba(255, 255, 255, 0.00)
+  );
 }
 
 /* Active: Pfeil nach unten (rotate) */
@@ -129,6 +142,35 @@
   opacity: 0.9;
   visibility: visible !important;
 }
+
+
+/* --- Toggle caret: an der Zeile verankern, nicht am gesamten LI --- */
+.nav-panel-menu .nav-item { position: relative; }
+
+/* Der Pfeil soll sich an der ersten Zeile orientieren (Link/Text) */
+.nav-panel-menu .nav-item > .nav-link,
+.nav-panel-menu .nav-item > .nav-text {
+  position: relative;      /* Anker für den Toggle */
+  padding-left: 28px;      /* Platz links für den Toggle */
+}
+
+/* Toggle relativ zum Link/Text positionieren */
+.nav-panel-menu .nav-item-toggle {
+  position: absolute;
+  left: 6px;
+
+  /* an der "Textzeile" ausrichten */
+  top: 0.95rem;            /* feinjustieren, falls nötig */
+  transform: none;
+
+  opacity: 0.9;
+}
+
+/* Active: Pfeil nach unten (rotate) */
+.nav-panel-menu .nav-item.is-active > .nav-item-toggle {
+  transform: rotate(90deg);
+}
+
 
 
 

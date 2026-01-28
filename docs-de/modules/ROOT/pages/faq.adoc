@@ -4,6 +4,7 @@
 :keywords: FAQ, Hilfe, Support, Probleme, Fragen
 
 
+
 [TIP]
 ====
 Nutze die Suche (Browser: `Strg` + `F`), um schnell Antworten auf deine Fragen zu finden.

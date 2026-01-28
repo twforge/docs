@@ -1,10 +1,11 @@
-= Stammeskonstrukt – Organisation und Management des Stammeskonstrukts
+= Stammeskonstrukt - Organisation und Management des Stammeskonstrukts
 :page-title: Stammeskonstrukt
 :description: Organisation des Stammeskonstruktes inkl. Membermanagement, Rollenmanagement, Stammestruppen einlesen, Angaben prüfen uvm.
 :keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Truppenimport, Planungsvorbereitung
 :toc: macro
 :toclevels: 1
 :toc-title: Inhalt
+
 
 Unter dem Menüpunkt *Stammeskonstrukt* kann ein Stammeskonstrukt erstellt und verwaltet werden.
 Das Stammeskonstrukt vereint die gemeinsame Verwendung von TW Forge durch mehrere Accounts.
@@ -17,13 +18,14 @@ Dabei werden unter anderem folgende Informationen und Funktionen im Konstrukt ge
 * Verwaltung von Diplomatie und Bündnissen zu anderen Stammeskonstrukten.
 * Zentrale Übersicht über Aktivität (Uploads) der Mitglieder.
 
-[IMPORTANT]
-====
-Um ein Stammeskonstrukt gründen zu können, benötigst du einen *Premium-Zugang*.
-Du bist nicht automatisch Teil eines Stamms, nur weil ihr euch ingame einen Stamm teilt, hierfür *muss* ein Stammeskonstrukt erstellt werden.
-====
-
 toc::[]
+
+== Stammeskonstrukt gründen pass:[<span class="tw-forge-gold">TW-Forge-Gold</span>]
+
+Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planung, Rechteverwaltung und das Teilen von Daten zwischen mehreren Accounts.
+
+IMPORTANT: Das Erstellen eines Stammeskonstrukts ist ausschließlich mit *TW-Forge-Gold* möglich.
+Ohne Premium-Zugang kannst du bestehenden Stammeskonstrukten beitreten, aber kein eigenes Konstrukt erstellen.
 
 == Einem Stammeskonstrukt beitreten
 
@@ -172,7 +174,7 @@ eingetragen und farblich markiert werden.
 Diese Markierungen werden unter anderem angezeigt:
 
 * auf der Karte: xref:features/map.adoc[Karte]
-* im Aktionsplaner: xref:features/action-planner.adoc[Aktionsplaner]
+* im Aktionsplaner: xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplaner]
 
 == Bündnisse
 

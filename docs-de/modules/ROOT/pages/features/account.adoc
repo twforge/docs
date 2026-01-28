@@ -3,6 +3,7 @@
 :description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
 :keywords: Account, UV, Urlaubsvertretung, Discord, Truppen einlesen, Planungsvorbereitung
 
+
 Hier findest du alle wichtigen Informationen sowie Einstellungsmöglichkeiten für Accountbezogene Settings.
 
 * Einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit dem Ingame Account verknüpft sind
@@ -43,12 +44,12 @@ In diesem Bereich können für den eigenen Account Truppen hinterlegt werden.
 
 Diese Truppenangaben können unter anderem für folgende Funktionen verwendet werden:
 
-* Nutzung in der Aktionsplanung für den eigenen Account  (siehe xref:features/action-planner.adoc[Aktionsplanung])
+* Nutzung in der Aktionsplanung für den eigenen Account  (siehe xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplanung])
 * Automatisches Auflösen der Truppenparametern in Abschickplänen (siehe xref:features/planner/angriffspläne_planner[Angriffspläne])
 
 // Weitere Funktionen, die auf diesen Daten aufbauen, sind bereits geplant, aber noch nicht implementiert.
 
-=== Truppen einlesen
+=== Truppen einlesen[[account-truppen-einlesen]]
 
 Das Einlesen der Truppen geschieht über ein Copy-Paste aus der accountinternen Truppenübersicht. 
 Hierzu gehe entweder ingame auf Übersicht -> Truppen -> Alle und wähle die "Alle" Gruppe aus.
@@ -58,7 +59,7 @@ Stelle sicher, dass alle Dörfer zu sehen sind, und nicht z.B. durch die Maximal
 image::features/account/troop-import.png[Truppen-Importieren-Ingame]
 
 TIP: Du kannst auch nur einzelne Gruppen auslesen, wenn du nur diese Gruppe verplanen willst. 
-Allerdings hast du unter dem xref:features/action-planner.adoc[Aktionsplaner] die Möglichkeit, die Herkunftsdörfer durch Informationen wie Truppenanzahl sowie Lage einzuschränken, weswegen eine Einschränkung durch Gruppen i.d.R. nicht notwendig und meistens sogar eher hinderlich ist.
+Allerdings hast du unter dem xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplaner] die Möglichkeit, die Herkunftsdörfer durch Informationen wie Truppenanzahl sowie Lage einzuschränken, weswegen eine Einschränkung durch Gruppen i.d.R. nicht notwendig und meistens sogar eher hinderlich ist.
 
 Nun drücke auf der Seite einfach Ctrl+a, Ctrl+c, um die gesamte Seite zu kopieren, gehe danach in TW-Forge und füge die Truppeninfos ein. 
 Du kannst unten rechts auswählen, ob du "Eigene" (Truppen) oder "Insgesamt" einlesen willst. 
@@ -77,7 +78,7 @@ TIP: Bei mehr als 1000 Dörfern in einem Account muss der Kopiervorgang mehrfach
 Um die Truppen dennoch in TW Forge zu importieren, kopierst du die erste Seite, fügst sie ein (und drückst *nicht* auf Hochladen), gehst auf die zweite Seite, kopierst sie und fügst sie zusätzlich in das Feld hinein. Das wiederholst du so lange, bis alle Seiten erfasst sind, und drückst erst dann auf Hochladen.
 
 
-== Urlaubsvertretungen
+== Urlaubsvertretungen[[uv]]
 
 Hier können Urlaubsvertretungen für andere Accounts hinzugefügt und verwaltet werden.
 

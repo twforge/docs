@@ -8,6 +8,11 @@ TW Forge ist ein strategisches Analyse-, Verwaltungs- und Planungstool für *Die
 
 Diese Dokumentation erklärt Aufbau, Funktionsweise und Nutzung der einzelnen Module von TW Forge.
 
+IMPORTANT: TW-Forge befindet sich zurzeit noch in der Closed-Beta Phase. 
+Das bedeutet, dass einige Funktionen noch nicht für jeden Nutzer verfügbar sind. 
+Außerdem kann es sein, dass einige Seiteninhalte noch nicht fehlerfrei funktionieren.
+Bei Fragen, Ideen oder Feedback komm gerne auf unseren https://discord.gg/PYr9Sb7UHm[TW-Forge Discord].
+
 == Überblick
 
 TW Forge bündelt mehrere Werkzeuge in einer zentralen Anwendung:

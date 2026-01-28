@@ -2,7 +2,7 @@
 
 Diese Anleitung führt dich durch die Einrichtung von TW Forge und das Hinzufügen deiner ersten Welt.
 
-== 1. Konto erstellen
+== Konto erstellen
 
 . Gehe zu https://twforge.net[twforge.net]
 . Klicke auf **Jetzt anmelden**, danach melde dich entweder mit einem bereits bestehenden Konto an oder Registriere ein neues.
@@ -27,19 +27,20 @@ Um TW-Forge nutzen zu können, musst du deinen TW-Forge Account mit deinem Ingam
 . Logge dich in "die Stämme" ein und öffne dein Profil. Füge den in TW-Forge angezeigten Code in dein Profil ein und klicke auf Speichern. Hierbei muss das Profil nicht leer sein, du kannst den Code einfach zu dem bestehenden Profil hinzufügen.
 . Drücke in TW-Forge auf "Überprüfen". Wenn du alle Schritte korrekt ausgeführt hast, ist dein Profil jetzt korrekt verbunden - **Herzlichen Glückwunsch**, du kannst TW-Forge jetzt nutzen. Den Code, welcher in das Profil kopiert werden musste, kann nun wieder entfernt werden.
 
-== Navigation in der App
+== Navigation auf der Website
 
 Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfügbaren Features:
 
 
 * *xref:features/analyser.adoc[Angriffe]* - Eingehenden Angriffe einlesen und auswerten
-* *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
 * *xref:features/reports.adoc[Berichte]* - Hochladen und Durchsuchen von Berichten
-* *Planner* – Übersicht über **xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]**, deine **xref:features/planner/abfrage_planner.adoc[Abfragen]**, die **xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB]** und Start des **xref:features/action-planner.adoc[Aktionsplaner]**
+* *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
+* *Planner* – Übersicht über 
+**xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]**, deine 
+**xref:features/planner/abfrage_planner.adoc[Abfragen]**, die **xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB]** und Start des 
+**xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplaner]**
 * *xref:features/tribe-construct.adoc[Stammeskonstrukt]* - Erstelle ein Stammeskonstrukt oder tritt einem bestehenden Konstrukt bei!
 * *xref:features/userscript.adoc[Userscript]* - Angriffs-Auswertung ingame anzeigen
-
-// Verlinkungen sollten so passen, Sortierung ist jetzt nach dem Menü (ggf. ändern wenn erwünscht)
 
 Klicke auf ein Feature im Menü um loszulegen.
 
@@ -69,4 +70,4 @@ Bereit loszulegen? Schau dir diese Anleitungen an:
 * xref:features/reports.adoc[Importiere die ersten Berichte]!
 * xref:features/map.adoc[Erkunde die Ingame Karte!]!
 * xref:features/tribe-construct[Tritt einem Stamm bei oder gründe dein eigenes Konstrukt]!
-* xref:features/action-planner.adoc[Plane deine erste Offaktion!]
+* xref:features/action-planner/action-planner-uebersicht.adoc[Plane deine erste Offaktion!]
