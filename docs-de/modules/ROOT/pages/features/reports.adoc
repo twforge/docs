@@ -46,7 +46,7 @@ Durch das AG- und das Späh-Symbol können Berichte danach gefiltert, ob der Ang
 
 === Filterung nach Eigenen Berichten bzw. Eigenem Account
 
-Durch diese Funktion werden Incs danach gefiltert, ob man sie selbst hochgeladen hat (Eigene) oder den eigenen Account betreffen (Eigener Account).
+Durch diese Funktion werden Berichte danach gefiltert, ob man sie selbst hochgeladen hat (Eigene) oder den eigenen Account betreffen (Eigener Account).
 
 == Import von Berichten in die Datenbank
 
