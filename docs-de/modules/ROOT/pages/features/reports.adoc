@@ -66,7 +66,7 @@ Nun gehe in die Stämme auf Berichte und markiere alle Berichte, die du veröffe
 
 image::features/reports/berichte-veröffentlichen.png[Berichte veröffentlichen]
 
-Danach klicke auf "Veröffentlichen". Danach klicke auf Weiterleiten und kopiere den gesamten String in das entsprechende TW-Forge Feld und bestätige die Eingabe.
+Danach klicke auf "Veröffentlichen". Danach klicke auf Weiterleiten und kopiere den gesamten Text in das entsprechende TW-Forge Feld und bestätige die Eingabe.
 
 // sollte man hier die Logik hinter zugeordneten Berichten erklären? Weil nicht wie Deep man gehen sollte
 
