@@ -1,0 +1,276 @@
+= Aktionsplaner
+:page-navtitle: Aktionsplaner
+:description: Tool zur Erstellung von Angriffsplänen von einzelnen Accounts bis hin zu Plänen für ganze Stämme
+:keywords: Planung, Offaktionen, Angriffspläne, etc.
+:toc: macro
+:toclevels: 4
+:toc-title: Inhalt
+:page-toclevels: 3
+
+Im Aktionsplaner können Offaktionen geplant werden. Von Aktionen für einzelne Accounts bis hin zu Aktionen für ganze Stämme ist alles möglich.
+
+Durch genaue Zeitangaben, unterschiedlichen Möglichkeiten zur Definition von Herkunfts- und Zieldörfern, mögliche Abhängigkeiten von verschiedenen Plänen, Template Auswahl für das leichte Abschicken, Verplanung von vorhandenen Truppen sowie viele weitere Features ist der Aktionsplaner in der Lage, durch einen von bis zu dreien Berechnungsalgorithmen eine Offplanung zu erstellen, wie sie von keinem anderen Tool geplant werden kann.
+
+== Überblick
+
+Hier findest du einen Überblick über die Funktionsweise des Aktionsplaners.
+Dieses Kapitel befasst sich mit den allgemeinen Funktionen des Tools den Möglichkeiten, die man beim Planen verwenden kann, sowie der grundlegenden funktionalen Struktur.
+Für eine Schritt-für-Schritt-Anleitung, wie man eine größere Aktion plant, klicke hier.
+// Hier noch die Anleitung verlinken. Weiß noch nicht genau ob ich das als Teil der Dokumentation machen will oder als ein seperates Ding, da es thematisch bzw. funktionell nicht so ganz in eine Doku passt.
+
+toc::[]
+
+== Aktionspläne und Planungsgruppen
+
+Grundlegend funktioniert eine Aktionsplanung aus der Berechnung mehrerer einzelnen Pläne, die sich dann später als Gruppen zusammenfügen lassen.
+So wird man als erstes, wenn man den Aktionsplaner öffnet, dazu aufgefordert, einen neuen Plan zu erstellen.
+Dieser bildet den ersten Grundstein der späteren Planung.
+Jeder Plan ist als einzelne Berechnung zu verstehen, die jeweils für einen gewissen Angriffstyp steht.
+So ist es notwendig, mindestens einen Plan für Offs, mindestens einen Plan für Fakes und mindestens einen Plan für die AGs zu erstellen.
+
+Wenn man mehrere verschiedene Off-, AG, Katter-, UT- oder Fakepläne erstellen möchte, können diese als Gruppen zusammengefasst werden, um die Übersichtlichkeit in der Planung selbst zu gewährleisten.
+
+TIP: Beispielsweise kann es notwendig sein, viele verschiedene Kattapultpläne erstellen, da jeder auf ein anderes Gebäude geplant werden soll.
+Hier ist es z.B. sinnvoll, diese Pläne in eine Gruppe zu packen. Dies ermöglicht bei darauffolgenden Plänen die gesamte Gruppe, als Abhängigkeit zu verwenden (mehr dazu unter Abhängigkeiten).
+Dies ist jedoch rein optional und kann den Workflow erheblich erleichtern.
+
+Diese Pläne oder Plangruppen werden nacheinander erstellt und können dann, sobald alle einzelnen Pläne einer Aktion berechnet worden sind, durch den Menüpunkt "Veröffentlichungen" in einer Aktions-Veröffentlichung so zusammengefasst werden, sodass die Aktion nur noch aus einem Plan (pro beteiligtem Account) besteht.
+
+IMPORTANT: Jeder Plan kann mehrere Berechnungen beinhalten, von denen jedoch nur die aktuellste Berechnung zum Veröffentlcihen verwendet werden kann.
+Solltest du also nach dem Berechnen einen Fehler in dem Plan finden, kannst du einfach wieder zu diesem Plan navigieren, die Konfiguration anpassen und erneut berechnen.
+
+Dies bedeutet, dass es bei der Planung drei verschiedene Übersichten gibt:
+
+=== Planübersicht
+
+image::features/action-planner/übersicht/übersicht-pläne-und-plangruppen.png[Pläne und Plangruppen]
+
+Hier verwaltest du all deine Pläne und Gruppen unter folgenden Kategorien:
+
+* *Entwürfe*: Hier kommst du zu deinen Planentwürfen.
+Dies umfasst alle Pläne, die entweder noch nicht fertig konfiguriert worden sind, oder die noch nicht berechnet worden sind. Dieser Plan umfasst also keinen finalen Angriffsplan, sondern lediglich eine (Teil-)Konfiguration eines zu berechnenden Plans.
+
+* *Berechnet*: Hier findest du alle final berechneten Pläne.
+Diese beinhalten sowohl die zugrundeliegende Konfiguration des Plans (Herkunftsdörfer, Zieldörfer etc.) als auch die fertig geplanten Angriffe.
+
+TIP: Bei mehreren Berechnungen wird immer die aktuellste verwendet.
+Sollte die aktuellste Berechnung nicht die richtige sein, kann diese jederzeit gelöscht werden.
+
+* *Gruppen*: Hier findest du alle von dir erstellen Gruppen.
+Eine Gruppe besteht immer aus mehreren Plänen, die du manuell zusammengefügt hast,
+
+* *Cleaner*: Hier findest du alle deine berechneten Cleaner.
+Cleaner sind hierbei eine Subkategorie von Plänen, die einem anderen Berechnungsalgorithmus unterliegen und eine spezielle Funktion erfüllen (mehr dazu unter "Cleanerberechnung").
+
+* *Papierkorb*: Hier findest du alle gelöschten Pläne.
+Falls du einen Fehler gemacht hast, und den falschen Plan gelöscht hast oder dich einfach umentschieden hast, kannst du hier diese Pläne wiederherstellen.
+
+=== Konfiguration eines einzelnen Plans
+
+image::features/action-planner/übersicht/planuebersicht.png[Übersicht Einzelplan]
+
+Wenn du einen neuen Plan erstellst, kommst du direkt in die Planübersicht des jeweiligen Plans.
+Hier kannst du zunächst die grundlegenden Inhalte des Plans definieren.
+Darüber hinaus ist diese Übersicht der Ausgangspunkt, um nach und nach den Angriffsplan zu konfigurieren.
+
+Einstellungsmöglichkeiten auf dieser Übersicht:
+
+* *Name des Plans* (Pflichtfeld)
+* *Langsamste Einheit* (Pflichtfeld)
+* *Typ (Pflichtfeld)*: Der Typ definiert, welches Symbol neben der langsamsten Einheit im Abschickplan angezeigt wird.
+Das kann z.B. für Kattapulte das geplante Ziel sein, oder der abgeknickte Speer für Fake-Unterstützungen.
+
+TIP: Der Typ dient dazu, der abschickenden Person klarzumachen, wofür der jeweilige Inc geplant ist.
+
+* *Moral*: Hier kannst du über einen Regler die minimale Moral aller Angriffe dieses Plans definiert werden.
+
+* *Template*: Hier kann das automatisch eingefügte Template eingetragen werden.
+Dieses kann entweder aus fixen Zahlen bestehen (z.B. 6000 Äxte, 3000 LKav, 300 Rammen) oder auch aus dynamischen Parametern.
+
+==== Dynamische Template-Parameter
+
+Der Planer kann statt fixen Truppen auch dynamische Parameter verwenden.
+
+. *alle* : fügt automatisch alle Truppen ein.
+. *fake* : fügt so viele Truppen ein, wie man mindestens benötigt, um über das Fakelimit zu kommen.
+(*Beispiel:* ) bei einem Dorf mit 10000 Punkten und einem Fakelimit von 1% heißt das, dass 100 Truppen eingefügt werden.
+
+Diese Parameter können allerdings auch noch mit mathematischen Befehlen / fixen Zahlen verbunden werden, wie z.B.:
+
+* *alle/2*: fügt automatisch die Hälfte von allen Truppen ein
+* *alle-100*: fügt automatisch alle abzüglich 100 vom jeweiligen Truppentyp ein
+* *fake/4*: fügt automatisch ein Viertel des Fakelimits ein
+* *usw.*
+
+[IMPORTANT]
+====
+Diese Truppenparameter können von DS-Ultimate nicht aufgelöst werden.
+Wenn du also die Exporte mit diesen Parametern *direkt* in DS-Ultimate importierst, werden die Felder mit dynamischen Parametern nicht übernommen.
+Um Fakes dennoch aufzulösen, wird der dynamische Parameter *Fake* seitens TW-Forge ausgerechnet und dann als absolute Zahl für DS-Ultimate bereitgestellt (für Fake/4 in LKAV werden für das Dorf 25 LKav eingetragen).
+Dies funktioniert allerdings nur in den von TW-Forge bereitgestellten DS-Ultimate Plänen.
+Der Parameter *alle* wird bei dem Transfer in DS-Ultimate nie aufgelöst.
+
+Wenn die Mitglieder jedoch über TW-Forge abschicken, wird der Parameter "alle" anhand der vom Account eingelesenen Truppen unter xref:features/account.adoc#account-truppen-einlesen[Account] bestimmt.
+Wenn sie also ihre Truppen vor kurzem eingelesen haben, können diese automatisch eingesetzt werden, was das Abschicken erleichtert.
+====
+
+[TIP]
+====
+*Planen von Fakes*: Wenn du also nach der oben erklärten Parameterlogik Fakes berechnen willst, musst du in das Feld der zum Faken verwendeten Truppe *fake/BH-Verbrauch* der jeweiligen Truppe eintragen.
+
+Katapult-fakes: fake/8 in das Kattapultfeld
+LKav-fakes: fake/4 in das LKavfeld (+1 Ramme / 1 Katapult für Laufzeit)
+====
+
+==== Standardberechnung vs. Cleaner Berechnung
+
+Es gibt grundsätzlich zwei unterschiedliche Arten von Berechnungen:
+
+*Standard-Berechnungen*[[standard-berechnung]]:
+Mit dieser Berechnung werden reguläre Abschickpläne berechnet.
+Durch das Vorgeben eines fixen Templates werden Möglichkeiten berechnet und auf Basis dieser Möglichkeiten den Herkunftsdörfern Zieldörfer zugeordnet.
+Geeignet für alle regulären Pläne wie Offs, Kattas, Fakes und AGs.
+
+*Cleaner-Berechnungen*[[cleaner-berechnung]]:
+Mit dieser Berechnung werden Abschickzeitoptimierte Pläne in Abhängigkeit zu einem anderen Plan berechnet.
+
+IMPORTANT: Damit diese Berechnungsmöglichkeit funktioniert, muss unter Abschickzeiten -> Abhängigkeiten eine Abhängigkeit zu einem anderen Plan eingetragen sein.
+
+Diese Funktion ist für die Berechnung von Zwischencleanern (knapp vor AGs) sowie Unterstützungen/Fake-Unterstützungen (knapp hinter den AGs) gedacht. Der Unterschied zur Standard-Berechnung besteht darin, dass man hier nicht nur ein (fixes) Template angeben kann, sondern mehrere Templates, die sich in Truppenmenge und der Auswahl an Truppen unterscheiden können.
+
+Um die richtigen Einstellungen für die Cleanerberechnung vorzunehmen, ist es erst einmal wichtig, zu verstehen, was genau das Ziel von der Cleanerberechnung ist.
+
+[NOTE]
+====
+*Spielkontext die Stämme:* Wenn man Zwischencleaner und / oder Fake-Unterstützungen oder echte Unterstützungen hinter AGs  planen will, ist es vor allem relevant, dass diese zeitlich sehr nah an dem Abschickzeitpunkt der AGs liegen, um dem Gegner möglichst wenig Zeit zu geben, um auf die Angriffe reagieren zu können.
+Um das zu erreichen, versucht man, möglichst viele verschiedene Laufzeiten zur Verfügung zu haben, um ein möglichst gutes Ergebnis zu erzielen.
+
+Um es am Beispiel eines Zwischencleaners deutlich zu machen: Ein Zwischencleaner kann z.B. aus 500 Lkav bestehen. Diese können jedoch entweder mit Lkav Laufzeit, mit Skav Laufzeit (500 Lkav + 1 Skav), mit Axt Laufzeit (500 Lkav + 1 Axt), mit Schwert Laufzeit (500 Lkav + 1 Schwert) oder mit Rammen-/ Katapult Laufzeit (500 Lkav + 1 Ramme) geschickt werden, je nachdem, welche Möglichkeit das beste Ergebnis bringt.
+
+Das Gleiche gilt natürlich auch bei Unterstützungen / Fake Unterstützungen hinter den AGs.
+====
+
+Um also für diesen Anwendungsfall die beste Möglichkeit finden zu können, muss man zunächst alle möglichen Cleaner-Templates eintragen.
+
+Nachdem man das getan hat, muss der Planer die Offset-Einstellung vornehmen.
+Hierzu muss er einen maximalen Offset einstellen (maximaler Abstand von AGs zu den zu berechnenden Cleanern) sowie ein Offset-Inkrement (in welchen Sprüngen er sich von Abstand 0 zum eingestellten Max-Offset iterativ heranarbeitet).
+
+Nachdem all diese Einstellungen erledigt sind, kann der Planer Cleaner berechnen.
+
+==== Berechnungsalgorithmen & Rechenkapazitäten image:badges/silver.png[TW-Forge-Silver,role=badge]
+
+Darüber hinaus kann sowohl bei der xref:standard-berechnung[Standard-Berechnung] als auch bei der xref:cleaner-berechnung[Cleaner-Berechnung] zwischen verschiedenen Berechnungsalgorithmen und Kapazitätsnutzungen wählen.
+
+Es stehen folgende Berechnungsalgorithmen zur Verfügung:
+
+. *Full Random*
+====
+Die Zuteilung der Angriffe erfolgt ausschließlich zufällig.
+====
+. *Halb Random*
+====
+Wenn initial mehrere Dörfer gleich gut erscheinend, wird zufällig ausgewählt.
+====
+. *Systematisch* image:badges/gold.png[TW-Forge-Gold,role=badge]
+====
+Es wird versucht, durch systematisches Vorgehen die beste Abdeckung zu erreichen.
+TIP: Die systematische Abdeckung ist ausschließlich in Verbindung mit "Dedicated"-Ressourcen möglich, da diese sehr viele Berechnungskapazitäten in Anspruch nimmt.
+====
+
+Welche der Berechnungsalgorithmen Sinn ergeben, hängt stark vom Ziel und vom Umfang des jeweiligen Plans ab.
+So empfiehlt es sich, bei Plänen, die sehr viele Incs beinhalten, die Full-Random Funktion zu nutzen, während bei kleineren Plänen die beiden anderen Algorithmen benutzt werden können.
+
+Außerdem kann entschieden werden, ob man den gemeinsamen Berechnungspool benutzen möchte, oder eigene "Dedicated" Ressourcen verwenden will.
+
+. *Shared Pool*: Du teilst mit allen TW-Forge Nutzern für alle kostenlos bereitgestellten Berechnungskapazitäten.
+Diese sind in ihrem Umfang jedoch limitiert, weswegen große Pläne (spätestens ab 1000 Incs pro Plan) nicht mehr zur Gänze berechnet werden können, da die Möglichkeiten eingeschränkt wird, um die vorhandenen Kapazitäten für alle nutzbar zu machen.
+
+. *Dedicated*: image:badges/gold.png[TW-Forge-Gold,role=badge]
+Du bekommst eigene Rechenkapazitäten zur Verfügung gestellt, mit denen du auch sehr große Pläne berechnen kannst.
+Außerdem bist du nicht abhängig davon, ob gerade andere Nutzer gleichzeitig Pläne berechnen wollen.
+
+== Veröffentlichungen von Plänen
+
+Wenn der Planer alle zur Aktion benötigten Pläne erstellt hat, so muss er diese veröffentlichen, damit sie für die Member verfügbar werden.
+Dafür öffnet er über das linksseitige aufklappbare Menü und klicke auf "Veröffentlichungen".
+Hier kann eine neue Veröffentlichung erstellt werden.
+
+Hierzu gibt der Planer einen Aktionsnamen, eine Beschreibung sowie ein Nachrichtentemplate ein und bestimmt, für welches Stammeskonstrukt die Aktion geplant wurde.
+
+=== Nachrichtentemplate
+
+Im Nachrichtentemplate verfasst der Planer eine Nachricht, die als Vorlage für das Verschicken der Aktions-PN als Ingame-Nachricht dient.
+Hierzu ist erstmal ein Grundverständnis erforderlich, wie das Veröffentlichen der Pläne funktioniert:
+
+Der Aktionsplaner fasst alle Pläne zusammen und erstellt dann für jeden Spieler einen einzelnen Abschickplan, der alle Angriffspläne zusammenfasst.
+Dieser kann dann z.B. über einen Button als IGM verschickt werden oder auf TW-Forge für alle freigegeben werden:
+
+[[igm-verschicken]]
+Ein Klick auf den Button kopiert die Nachricht aus dem "Nachrichten-Template" mit den aufgelösten Variablen in die Zwischenablage und öffnet eine Nachrichtenseite in "Die Stämme", bei der der Adressat schon eingetragen ist.
+Jetzt muss lediglich in das Textfeld der Nachricht geklickt werden und der Text aus der Zwischenablage eingefügt werden.
+Wenn dann noch der Betreff eingetragen wird, ist die Nachricht fertig und kann abgeschickt werden.
+
+Hierbei können folgende Variablen verwendet werden:
+
+* \{player}: Fügt den jeweiligen Spieler in der Ingame Nachricht ein
+* \{exported_link}: Fügt den jeweiligen DS-Ultimate Plan in die Nachricht ein
+* \{wb_export}: Fügt den jeweiligen Workbench-Export in die Nachricht ein
+
+[cols="1,1", frame=none, grid=none]
+|===
+a| image::features/action-planner/übersicht/nachrichten_template.png[Nachrichtentemplate, width=100%]
+a| image::features/action-planner/übersicht/igm_beispiel.png[Beispiel IGM, width=100%]
+|===
+
+
+TIP: Hier ist ein Beispieltemplate für eine Nachricht:
+
+[source]
+....
+Moin [player]{player}[/player]
+
+[b]Gemeinsame Off-Aktion auf ...[/b]
+
+[b]Hier ist dein Angriffsplan:[/b] [url={exported_link}]DS-Ultimate Plan[/url]
+
+[spoiler=WB Codes]
+{wb_export}
+[/spoiler]
+
+LG
+....
+
+=== Teilen von Angriffsplänen
+
+Nachdem der Planer die Aktion erstellt hat, hat er zunächst die Möglichkeit, die Abschickpläne jedes einzelnen Accounts in TW-Forge zu überprüfen.
+
+Um die Aktion für alle verfügbar zu machen, muss diese veröffentlicht werden (durch Klicken auf den Veröffentlichen-Button).
+Nachdem dies durchgeführt worden ist, können nun die Abschickpläne von den Accounts eingesehen werden, die unter
+xref:features/account.adoc[Account] mit einem Stammesaccount verknüpft sind oder die
+xref:features/account.adoc#uv[Urlaubsvertretung] für einen Account haben, für den ein Aktionsplan erstellt und freigegeben worden ist.
+
+Sofern du die Pläne noch als IGM verschicken musst, müssen diese noch exportiert werden (durch Klicken auf den Exportieren-Button).
+Sobald dies abgeschlossen ist, können die Pläne via IGM versendet werden (siehe
+xref:igm-verschicken[hier].)
+
+=== Nachträgliches Anpassen von veröffentlichten Plänen
+
+TW-Forge bietet die Möglichkeit, Aktionen auch im Nachhinein noch anzupassen.
+So hat der Planer folgende Möglichkeiten:
+
+* *Erstellen eines Gesamtexports der Aktion*
+* *Neu zuordnen der Angriffe*: Wenn im Nachhinein noch Dörfer geadelt worden sind, werden die Angriffe neu zugeordnet, die einen neuen Besitzer haben.
+
+// Fake UTs?
+
+
+
+
+
+
+
+
+
+
+
+

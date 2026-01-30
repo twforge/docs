@@ -1,7 +1,7 @@
 site:
   title: TW Forge
   url: https://docs.twforge.net
-  start_page: en::index.adoc
+  start_page: de::index.adoc
 
 content:
   sources:
@@ -19,3 +19,7 @@ ui:
 
 output:
   dir: ./build/site
+
+runtime:
+  log:
+    failure_level: error

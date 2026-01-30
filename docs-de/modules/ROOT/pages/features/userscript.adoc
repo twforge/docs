@@ -5,8 +5,9 @@
 
 Hier findest du alle Informationen zum Userscript, welches Informationen wie die Bewertung der Incs, Berichte zu den Dörfern sowie weitere Informationen ingame direkt anzeigt.
 
-[IMPORTANT] 
+[IMPORTANT]
 
-Das Script ist 100% legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden. Teilt euren API-Key mit niemand anderem.
+Das Script ist 100% legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden.
+Teilt euren API-Key mit niemand anderem.
 
 //tbd.

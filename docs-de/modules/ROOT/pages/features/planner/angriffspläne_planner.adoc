@@ -1,8 +1,9 @@
-= Angriffspläne 
+= Angriffspläne
 :page-navtitle: Angriffspläne
 :description: Verwalte und erstelle deine Angriffspläne in TW-Forge
 :keywords: Abschicken, Angriffspläne, anpassen, Unterstüzungen
 
-Hier findest du deine Angriffspläne, die entweder von deiner Stammesführung für dich erstellt worden sind oder die du selbst erstellt hast. Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abschicken, Pläne anpassen, Unterstützungen unter Beachtung der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-Datenbank] anpassen, Angriffe exportieren, einen DS-Ultimate Plan erstellen uvm.
+Hier findest du deine Angriffspläne, die entweder von deiner Stammesführung für dich erstellt worden sind oder die du selbst erstellt hast.
+Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abschicken, Pläne anpassen, Unterstützungen unter Beachtung der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-Datenbank] anpassen, Angriffe exportieren, einen DS-Ultimate Plan erstellen uvm.
 
-// tbd.
+// TODO

@@ -7,8 +7,7 @@
 ====
 Dieses Feature ist aktuell noch nicht verfügbar.
 
-Die hier beschriebene Funktionalität befindet sich in Planung und wird in einer
-zukünftigen Version von TW Forge ergänzt.
+Die hier beschriebene Funktionalität befindet sich in Planung und wird in einer zukünftigen Version von TW Forge ergänzt.
 ====
 
-// tbd.
+// TODO
