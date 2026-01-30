@@ -31,7 +31,7 @@ So ist es notwendig, mindestens einen Plan für Offs, mindestens einen Plan für
 Wenn man mehrere verschiedene Off-, AG, Katter-, UT- oder Fakepläne erstellen möchtem können diese als Gruppen zusammengefasst werden, um die Übersichtlichkeit in der Planung selbst zu gewährleisten. 
 
 TIP: Beispielsweise kann es notwendig sein, viele verschiedene Kattapultpläne erstellen, da jeder auf ein anderes Gebäude geplant werden soll. 
-Hier ist es z.B. sinnvoll, diese Pläne in eine Gruppe zu packen, um bei darauffolgenden Plänen, die Katapulte beinhalten, nicht die verplanten jedes einzelnen berechneten Plans abziehen zu müssen (mehr dazu unter Abhängigkeiten), sondern nur einmal die Plangruppe abziehen zu müssen. 
+Hier ist es z.B. sinnvoll, diese Pläne in eine Gruppe zu packen. Dies ermöglicht bei darauffolgenden Plänen die gesamte Gruppe als Abhängigkeit zu verwenden (mehr dazu unter Abhängigkeiten). 
 Dies ist jedoch rein optional und kann den Workflow erheblich erleichtern.
 
 Diese Pläne oder Plangruppen werden nacheinander erstellt und können dann, sobald alle einzelnen Pläne einer Aktion berechnet worden sind, durch den Menüpunkt "Veröffentlichungen" in einer Aktions-Veröffentlichung so zusammengefasst werden, sodass die Aktion nur noch aus einem Plan (pro beteiligtem Account) besteht.
