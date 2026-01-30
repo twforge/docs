@@ -110,7 +110,7 @@ Um Fakes dennoch aufzulösen, wird der dynamische Parameter *Fake* Seitens TW-Fo
 Dies funktioniert allerdings nur in den von TW-Forge bereitgestellten DS-Ultimate Plänen.
 Der Parameter *alle* wird bei dem Transfer in DS-Ultimate nie aufgelöst.
 
-Wenn die Mitglieder jedoch über TW-Forge abschicken, wird der Parameter "alle" anhand der vom Account eingelesenn Truppen unter xref:features/account.adoc#account-truppen-einlesen[Account] bestimmt.
+Wenn die Mitglieder jedoch über TW-Forge abschicken, wird der Parameter "alle" anhand der vom Account eingelesenen Truppen unter xref:features/account.adoc#account-truppen-einlesen[Account] bestimmt.
 Wenn sie also ihre Truppen vor kurzem eingelesen haben, können diese automatisch eingesetzt werden, was das Abschicken erleichtert.
 ====
 
