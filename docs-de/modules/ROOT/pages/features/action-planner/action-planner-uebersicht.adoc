@@ -136,7 +136,7 @@ Mit dieser Berechnung werden Abschickzeitoptimierte Pläne in Abhängigkeit zu e
 
 IMPORTANT: Damit diese Berechnungsmöglichkeit funktioniert, muss unter Abschickzeiten -> Abhängigkeiten eine Abhängigkeit zu einem anderen Plan eingetragen sein.
 
-Diese Funktion ist für die Berechnung von Zwischencleanern (knapp vor AGs) sowie Unterstützungen sowie Fake-Unterstützungen (knapp hinter den AGs) gedacht. Der Unterschied zur standard-Berechnung besteht darin, dass man hier nicht nur ein (fixes) Template angeben kann, sondern mehrere Templates, die sich in Truppenmenge und der Auswahl an Truppen unterscheiden können.
+Diese Funktion ist für die Berechnung von Zwischencleanern (knapp vor AGs) sowie Unterstützungen/Fake-Unterstützungen (knapp hinter den AGs) gedacht. Der Unterschied zur Standard-Berechnung besteht darin, dass man hier nicht nur ein (fixes) Template angeben kann, sondern mehrere Templates, die sich in Truppenmenge und der Auswahl an Truppen unterscheiden können.
 
 Um die richtigen Einstellungen für die Cleanerberechnung vorzunehmen, ist es erst einmal wichtig, zu verstehen, was genau das Ziel von der Cleaner-Berechnung ist.
 
