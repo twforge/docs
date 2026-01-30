@@ -52,7 +52,7 @@ Diese Truppenangaben können unter anderem für folgende Funktionen verwendet we
 === Truppen einlesen[[account-truppen-einlesen]]
 
 Das Einlesen der Truppen geschieht über ein Copy-Paste aus der accountinternen Truppenübersicht. 
-Hierzu gehe entweder ingame auf Übersicht -> Truppen -> Alle und wähle die "Alle" Gruppe aus.
+Hierzu gehe Ingame auf Übersicht -> Truppen -> Alle und wähle die Gruppe "Alle" aus.
 Stelle sicher, dass alle Dörfer zu sehen sind, und nicht z.B. durch die Maximale Anzahl an Dörfern / pro Seite 
 (siehe Screenshot) eingegrenzt werden. 
 
