@@ -57,7 +57,7 @@ Die interaktive Karte bietet eine räumliche Übersicht über Dörfer, Angriffe 
 
 Im Bereich *Berichte* können Kampfberichte hochgeladen, durchsucht und ausgewertet werden.
 
-* Zentrale Sammlung relevanter Reports
+* Zentrale Sammlung relevanter Berichte
 * Grundlage für fundierte Angriffs- und Verteidigungsentscheidungen
 
 → xref:features/reports.adoc[Zu den Berichten]
