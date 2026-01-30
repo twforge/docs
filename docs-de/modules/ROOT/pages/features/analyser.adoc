@@ -30,25 +30,26 @@ Auf Basis dieser Berechnung wird jedem Angriff eine *Gefahrenbewertung* zugewies
 
 Die Bewertung eines Angriffs basiert unter anderem auf folgenden Faktoren:
 
-* *Letzte Adelung des Herkunftsdorfes*  
-  Kürzlich geadelte Dörfer besitzen in der Regel weniger Off-Potenzial.
+* *Letzte Adelung des Herkunftsdorfes*
+Kürzlich geadelte Dörfer besitzen in der Regel weniger Off-Potenzial.
 
-* *Bekannter Tod von Off-Truppen*  
-  Verluste aus vorherigen Kämpfen werden berücksichtigt.
+* *Bekannter Tod von Off-Truppen*
+Verluste aus vorherigen Kämpfen werden berücksichtigt.
 
-* *Bereits eingeschlagene Angriffe*  
-  Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwendet werden.
+* *Bereits eingeschlagene Angriffe*
+Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwendet werden.
 
-Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern. Sofern ein Angriff durch einen dieser Faktoren eingeschränkt werden kann, wird die Erklärung, durch welche Information der Inc eingeschätzt wird, in einem Informationsfeld angezeigt.
+Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern.
+Sofern ein Angriff durch einen dieser Faktoren eingeschränkt werden kann, wird die Erklärung, durch welche Information der Inc eingeschätzt wird, in einem Informationsfeld angezeigt.
 
-// Hier noch einen Screenshot einügen, an dem man ein Beispiel für die Information in dem "I" erkennen kann 
+// Hier noch einen Screenshot einügen, an dem man ein Beispiel für die Information in dem "I" erkennen kann
 
 == Konfiguration der Bewertungsgrenzen
 
 Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
 Sie können unter xref:../settings.adoc#angriffe[Settings -> Angriffe] individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
 
-== Filter- und Sortiermöglichkeiten
+== Filter- und Sortiermöglichkeiten[[filterung]]
 
 Die Angriffsübersicht bietet umfangreiche Filterfunktionen, um große Mengen an Incs gezielt auszuwerten.
 
@@ -92,25 +93,27 @@ image::features/analyser/filter_by_own_account_or_upload_analyser.png[Filterung 
 
 Zusätzlich können Angriffe nach persönlichem Bezug gefiltert werden:
 
-* *Eigene*  
-  Zeigt nur die Angriffe an, die vom aktuellen Nutzer selbst hochgeladen wurden.
+* *Eigene*
+Zeigt nur die Angriffe an, die vom aktuellen Nutzer selbst hochgeladen wurden.
 
-* *Eigener Account*  
-  Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
+* *Eigener Account*
+Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
 
 Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
 
 == Upload
 
-Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden. Dies geschieht über das Submenü "Import".
+Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden.
+Dies geschieht über das Submenü "Import".
 
 image::features/analyser/upload_incs_analyser.png[Incs hochladen]
 
-Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden. Zum erstellen der SOS-Anfrage geh in "Die-Stämme"ingame auf "Eintreffend", markiere die gewünschten Incs und dann drücke auf "Unterstützung anfordern".
+Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden.
+Zum Erstellen der SOS-Anfrage geh in "Die-Stämme"ingame auf "Eintreffend", markiere die gewünschten Incs und dann drücke auf "Unterstützung anfordern".
 
 image::features/analyser/create_sos_request_1_analyser.png[Erstellen einer SOS-Anfrage]
 
-Danach muss der gesamte Text der SOS-Anfrage kopiert und auf TW-Forge eingefügt werden. 
+Danach muss der gesamte Text der SOS-Anfrage kopiert und auf TW-Forge eingefügt werden.
 
 image::features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-Anfrage]
 

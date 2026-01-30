@@ -1,15 +1,14 @@
 = TW Forge - Dokumentation
 :page-navtitle: Startseite
 
-
 Willkommen in der Dokumentation von *TW Forge*.
 
 TW Forge ist ein strategisches Analyse-, Verwaltungs- und Planungstool für *Die Stämme*, das Spieler und Stämme bei der Auswertung von Angriffen, der Planung von Aktionen und der Organisation komplexer Spielsituationen unterstützt.
 
 Diese Dokumentation erklärt Aufbau, Funktionsweise und Nutzung der einzelnen Module von TW Forge.
 
-IMPORTANT: TW-Forge befindet sich zurzeit noch in der Closed-Beta Phase. 
-Das bedeutet, dass einige Funktionen noch nicht für jeden Nutzer verfügbar sind. 
+IMPORTANT: TW-Forge befindet sich zurzeit noch in der Closed-Beta Phase.
+Das bedeutet, dass einige Funktionen noch nicht für jeden Nutzer verfügbar sind.
 Außerdem kann es sein, dass einige Seiteninhalte noch nicht fehlerfrei funktionieren.
 Bei Fragen, Ideen oder Feedback komm gerne auf unseren https://discord.gg/PYr9Sb7UHm[TW-Forge Discord].
 
@@ -85,10 +84,10 @@ TW Forge bietet verschiedene Verwaltungsbereiche:
 
 == Hinweis zum Entwicklungsstand
 
-TW Forge befindet sich in aktiver Weiterentwicklung.  
+TW Forge befindet sich in aktiver Weiterentwicklung.
 Einzelne Funktionen können sich noch im Ausbau befinden oder je nach Benutzerrolle variieren.
 
 Nicht implementierte oder geplante Features sind in der Dokumentation entsprechend gekennzeichnet.
 
----
+'''
 

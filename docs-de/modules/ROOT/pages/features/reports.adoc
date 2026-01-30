@@ -1,15 +1,14 @@
 = Berichte - Datenbank für alle Berichte
-:page-title: Berichte 
+:page-title: Berichte
 :description: Datenbank für alle hochgeladenen Bericht des Stammes, filterbar nach verschiedenen Kriterien
 :keywords: Berichte, Import, Durchsuchen, Datenbank, Filtern
 :toc: macro
 :toclevels: 1
 :toc-title: Inhalt
 
-
 Die Seite "Berichte" dient als Anlaufpunkt für die Suche nach Dorfinformationen und Berichten und bietet gleichzeitig die Möglichkeit für den Upload der Berichte an.
 
-toc:[]
+toc::[]
 
 == Filterungsmöglichkeiten
 
@@ -19,22 +18,21 @@ Du hast bei der Suche nach bestimmten Berichten / Dorfinformationen folgende Mö
 
 image::features/reports/filterung_stamm-player-koords.png[]
 
-Im ersten Feld kannst du entweder nach Spieler, Stamm oder nach der Zielkoordinate filtern. 
+Im ersten Feld kannst du entweder nach Spieler, Stamm oder nach der Zielkoordinate filtern.
 
 TIP: Wenn du nach einer Koordinate gesucht hast und dir dann den Bericht anzeigen lässt, wird automatisch die Berichtseite gehighlighted, nach der du gesucht hast.
 
-
 === Filterung nach Offgröße
-
 
 Im zweiten Feld kannst du nach der Größe des Angriffs filtern.
 
+=== Filterung nach Ergebnis
 
-=== Filterung nach Ergebnis 
-
-Im dritten Feld kannst du nach dem Ergebnis des Kampfes filtern. Dieses Ergebnis wird immer aus Sicht des zum Stamm gehörenden Accounts dargestellt. 
-Beispiel: Person A greif Person B an und späht das Dorf. Für Person A sieht der Bericht "blau" aus, für Person B rot. Wenn Person A zum Stamm gehört, wird der Bericht als "blau" eingelesen, wenn Person B dazu gehört als "rot".
-
+Im dritten Feld kannst du nach dem Ergebnis des Kampfes filtern.
+Dieses Ergebnis wird immer aus Sicht des zum Stamm gehörenden Accounts dargestellt.
+Beispiel: Person A greif Person B an und späht das Dorf.
+Für Person A sieht der Bericht "blau" aus, für Person B rot.
+Wenn Person A zum Stamm gehört, wird der Bericht als "blau" eingelesen, wenn Person B dazu gehört als "rot".
 
 === Filterung nach Zeitraum
 
@@ -54,19 +52,21 @@ Um Berichte in die Datenbank zu laden, gibt es grundsätzlich 2 Wege:
 
 === Hochladen von Berichten über Discord
 
-Wenn Links von Berichten in einen Discord geposted werden, der mit deinem Konstrukt verbunden ist, werden diese automatisch zur Datenbank hinzugefügt. Weitere Infos zum Discordbot findest du xref:features/discordbot.adoc[hier].
+Wenn Links von Berichten in einen Discord geposted werden, der mit deinem Konstrukt verbunden ist, werden diese automatisch zur Datenbank hinzugefügt.
+Weitere Informationen zum Discordbot findest du xref:features/discordbot.adoc[hier].
 
 === Hochladen von Berichten über TW-Forge
 
-Für eine größere Anzahl an Berichten kannst du immer den manuellen Import über die TW-Forge Website verwenden. Hierzu öffne zunächst das Importfenster.
+Für eine größere Anzahl an Berichten kannst du immer den manuellen Import über die TW-Forge Website verwenden.
+Hierzu öffne zunächst das Importfenster.
 
 image::features/reports/go-to-import.png[Go to Importfenster]
 
-Nun gehe in die Stämme auf Berichte und markiere alle Berichte, die du veröffentlichen willst. 
+Nun gehe in die Stämme auf Berichte und markiere alle Berichte, die du veröffentlichen willst.
 
 image::features/reports/berichte-veröffentlichen.png[Berichte veröffentlichen]
 
-Danach klicke auf "Veröffentlichen". Danach klicke auf Weiterleiten und kopiere den gesamten Text in das entsprechende TW-Forge Feld und bestätige die Eingabe.
+Danach klicke auf "Veröffentlichen" und anschließend auf Weiterleiten und kopiere den gesamten Text in das entsprechende TW-Forge Feld und bestätige die Eingabe.
 
 // sollte man hier die Logik hinter zugeordneten Berichten erklären? Weil nicht wie Deep man gehen sollte
 

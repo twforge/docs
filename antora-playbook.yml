@@ -19,3 +19,7 @@ ui:
 
 output:
   dir: ./build/site
+
+runtime:
+  log:
+    failure_level: error

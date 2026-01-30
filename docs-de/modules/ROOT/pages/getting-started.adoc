@@ -9,7 +9,6 @@ Diese Anleitung führt dich durch die Einrichtung von TW Forge und das Hinzufüg
 
 WARNING: Jeder Spieler muss seinen eigenen Account erstellen, Accountsharing ist untersagt und kann zum Ausschluss von TW-Forge führen.
 
-
 == Eine Welt hinzufügen
 
 Nach dem Login siehst du die Weltauswahl.
@@ -21,28 +20,32 @@ TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln.
 
 === Verknüpfung von TW-Forge mit dem Ingame Account[[verknuepfung]]
 
-Um TW-Forge nutzen zu können, musst du deinen TW-Forge Account mit deinem Ingame-"Die-Stämme"- Account verknüpfen. Das funktioniert folgendermaßen:
+Um TW-Forge nutzen zu können, musst du deinen TW-Forge Account mit deinem Ingame-"Die-Stämme"-Account verknüpfen.
+Das funktioniert folgendermaßen:
 
-. Gib deinen Spielername ein und drücke auf "Nächster Schritt"
-. Logge dich in "die Stämme" ein und öffne dein Profil. Füge den in TW-Forge angezeigten Code in dein Profil ein und klicke auf Speichern. Hierbei muss das Profil nicht leer sein, du kannst den Code einfach zu dem bestehenden Profil hinzufügen.
-. Drücke in TW-Forge auf "Überprüfen". Wenn du alle Schritte korrekt ausgeführt hast, ist dein Profil jetzt korrekt verbunden - **Herzlichen Glückwunsch**, du kannst TW-Forge jetzt nutzen. Den Code, welcher in das Profil kopiert werden musste, kann nun wieder entfernt werden.
+. Gib deinen Spielernamen ein und drücke auf "Nächster Schritt"
+. Logge dich in "die Stämme" ein und öffne dein Profil.
+Füge den in TW-Forge angezeigten Code in dein Profil ein und klicke auf Speichern.
+Hierbei muss das Profil nicht leer sein, du kannst den Code einfach zu dem bestehenden Profil hinzufügen.
+. Drücke in TW-Forge auf "Überprüfen".
+Wenn du alle Schritte korrekt ausgeführt hast, ist dein Profil jetzt korrekt verbunden - **Herzlichen Glückwunsch**, du kannst TW-Forge jetzt nutzen.
+Den Code, welcher in das Profil kopiert werden musste, kann nun wieder entfernt werden.
 
 == Navigation auf der Website
 
 Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfügbaren Features:
 
-
-* *xref:features/analyser.adoc[Angriffe]* - Eingehenden Angriffe einlesen und auswerten
+* *xref:features/analyser.adoc[Angriffe]* - Eingehende Angriffe einlesen und auswerten
 * *xref:features/reports.adoc[Berichte]* - Hochladen und Durchsuchen von Berichten
 * *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
-* *Planner* – Übersicht über 
-**xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]**, deine 
-**xref:features/planner/abfrage_planner.adoc[Abfragen]**, die **xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB]** und Start des 
-**xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplaner]**
+* *Planner* – Übersicht über
+**xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]**, deine
+**xref:features/planner/abfrage_planner.adoc[Abfragen]**, die **xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB]** und Start des
+**xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplaners]**
 * *xref:features/tribe-construct.adoc[Stammeskonstrukt]* - Erstelle ein Stammeskonstrukt oder tritt einem bestehenden Konstrukt bei!
 * *xref:features/userscript.adoc[Userscript]* - Angriffs-Auswertung ingame anzeigen
 
-Klicke auf ein Feature im Menü um loszulegen.
+Klicke auf ein Feature im Menü, um loszulegen.
 
 == Daten synchronisieren
 
@@ -60,14 +63,16 @@ Um dir ausgewertete Angriffe sowie Dorfinformationen ingame anzeigen zu lassen, 
 . Installiere einen Userscript-Manager (Tampermonkey, Violentmonkey)
 . Erstelle ein neues, leeres Userscript.
 . Kopiere das Userscript aus dem Menüpunkt "Userscript" und füge es in dein neues (leeres) Userscript ein.
-. Logge dich in "Die Stämme" ein und gehe auf Einstellungen. Klicke auf "Datenbank Settings" und füge dort den API-Key ein.
+. Logge dich in "Die Stämme" ein und gehe auf Einstellungen.
+Klicke auf "Datenbank Settings" und füge dort den API-Key ein.
 . Weitere Informationen zur Installation und zum Script findest du xref:features/userscript.adoc[hier]!
 
 == Nächste Schritte
 
-Bereit loszulegen? Schau dir diese Anleitungen an:
+Bereit loszulegen?
+Schau dir diese Anleitungen an:
 
 * xref:features/reports.adoc[Importiere die ersten Berichte]!
 * xref:features/map.adoc[Erkunde die Ingame Karte!]!
-* xref:features/tribe-construct[Tritt einem Stamm bei oder gründe dein eigenes Konstrukt]!
+* xref:features/tribe-construct.adoc[Tritt einem Stamm bei oder gründe dein eigenes Konstrukt]!
 * xref:features/action-planner/action-planner-uebersicht.adoc[Plane deine erste Offaktion!]

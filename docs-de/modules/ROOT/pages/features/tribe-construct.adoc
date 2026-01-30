@@ -6,7 +6,6 @@
 :toclevels: 1
 :toc-title: Inhalt
 
-
 Unter dem Menüpunkt *Stammeskonstrukt* kann ein Stammeskonstrukt erstellt und verwaltet werden.
 Das Stammeskonstrukt vereint die gemeinsame Verwendung von TW Forge durch mehrere Accounts.
 
@@ -29,12 +28,13 @@ Ohne Premium-Zugang kannst du bestehenden Stammeskonstrukten beitreten, aber kei
 
 == Einem Stammeskonstrukt beitreten
 
-Um einem Stammeskonstrukt beizutreten, benötigst du einen Invite Link, der von deiner Stammesführung oder einem bereits beigetretenen Stammesmitglied erstellt werden kann. 
-Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem man auf "beim Stammeskonstrukt bewerben" klicken muss. 
-Wenn dies erfolgreich ist, ist alles erforderliche getan - du musst jetzt nur noch von der Stammesführung freigeschaltet werden. Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhälst Zugriffsrechte, die von dem dir von der SF zugewiesenen Rechtelevel entsprechen.
+Um einem Stammeskonstrukt beizutreten, benötigst du einen Invite Link, der von deiner Stammesführung oder einem bereits beigetretenen Stammesmitglied erstellt werden kann.
+Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem man auf "beim Stammeskonstrukt bewerben" klicken muss.
+Wenn dies erfolgreich ist, ist alles Erforderliche getan - du musst jetzt nur noch von der Stammesführung freigeschaltet werden.
+Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die von dem dir von der SF zugewiesenen Rechtelevel entsprechen.
 
-TIP: Man kann auch mehreren Stammeskonstrukten gleichzeitig angehören. Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit beiden Stammeskonstrukten geteilt.
-
+TIP: Man kann auch mehreren Stammeskonstrukten gleichzeitig angehören.
+Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit beiden Stammeskonstrukten geteilt.
 
 == Übersicht
 
@@ -54,6 +54,7 @@ Das Rechtesystem ist *aufeinander aufbauend*: Alles, was ein Mitglied kann, kann
 === Rechtelevel
 
 ==== Gastrechte
+
 Gästerechte sind Teil des Konstrukts, haben jedoch *keine Einsicht* in Berichte oder eingehende Angriffe des Stammes.
 
 * Teilt die *eigenen* Berichte und eingehenden Angriffe mit dem Stamm
@@ -62,13 +63,15 @@ Gästerechte sind Teil des Konstrukts, haben jedoch *keine Einsicht* in Berichte
 * Teilen von Abfrageinformationen mit dem Stamm (AGs, Zeiten etc.)
 
 ==== Mitglied
+
 Mitglieder haben Zugriff auf die gemeinsamen Informationen des Konstrukts:
 
 * Einsicht auf alle eingehenden Angriffe (Incs) auf den Stamm
 * Einsicht in die vollständige Berichte-Datenbank
-* Erstellen von einmalig Nutzbaren Invite-Links für das Stammeskonstrukt
+* Erstellen von einmalig nutzbaren Invite-Links für das Stammeskonstrukt
 
 ==== Planer
+
 Planer-Rechte erweitern den Zugriff um planungsrelevante Funktionen:
 
 * Einlesen von Stammestruppen
@@ -78,6 +81,7 @@ Planer-Rechte erweitern den Zugriff um planungsrelevante Funktionen:
 * Möglichkeit zum Eintragen von Zeiten für andere Accounts des Konstrukts
 
 ==== Führung
+
 Führung übernimmt organisatorische und diplomatische Verwaltungsaufgaben:
 
 * Verwalten von Mitgliedern
@@ -88,6 +92,7 @@ Führung übernimmt organisatorische und diplomatische Verwaltungsaufgaben:
 * Verwaltung der verknüpften Discord-Server
 
 ==== Gründer
+
 Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 * Möglichkeit zum Auflösen des Stammeskonstrukts
@@ -97,42 +102,48 @@ Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
 Das Einlesen erfolgt über ein erlaubtes Net-SL-Script.
 
-TIP: Du benötigst das erlaubte Net-Schnelleisten Script, welches du unter folgendem Link finden kannst:
+TIP: Du benötigst das erlaubte Net-Schnellleisten Script, welches du unter folgendem Link finden kannst:
 https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/[tribe-troop-counter]
 
 === Benutzung des Userscripts
 
-Um die Truppen mit dem Schnellleistenscript auszulesen, füge zunächst das oben verlinkte Schnellleistenscript in deine Browser-Schnelleiste oder in die Schnellleiste in "Die Stämme" ein, indem du den Code aus dem Punkt "Quickbar Entry" in die Schnelleiste einfügst. 
+Um die Truppen mit dem Schnellleistenscript auszulesen, füge zunächst das oben verlinkte Schnellleistenscript in deine Browser-Schnellleiste oder in die Schnellleiste in "Die Stämme" ein, indem du den Code aus dem Punkt "Quickbar Entry" in die Schnellleiste einfügst.
 
 image::features/tribe-construct/script-installieren.png[Script Importieren]
 
-TIP: Um das Script benutzen zu können und Truppeninformationen zu erhalten, benötigst du mindestens Stammesführungsrechte in deinem Stamm. Außerdem kannst du die Truppen nur auslesen, wenn die Stammesmitglieder unter Einstellungen -> Stammeseinstellungen ihre Truppen / Verteidigung für die SF freigegeben haben.
+TIP: Um das Script benutzen zu können und Truppeninformationen zu erhalten, benötigst du mindestens Stammesführungsrechte in deinem Stamm.
+Außerdem kannst du die Truppen nur auslesen, wenn die Stammesmitglieder unter Einstellungen -> Stammeseinstellungen ihre Truppen / Verteidigung für die SF freigegeben haben.
 
-Danach gehe auf **Stamm -> Mitglieder**. Dort klickst du dann auf das Schnelleistenscript entweder in deiner Browserbar oder in der Schnellleiste in "Die Stämme", je nachdem wo du es eingefügt hast. Danach sollte sich folgendes Fenster öffnen:
+Danach gehe auf **Stamm -> Mitglieder**.
+Dort klickst du dann auf das Schnellleistenscript entweder in deiner Browserbar oder in der Schnellleiste in "Die Stämme", je nachdem wo du es eingefügt hast.
+Danach sollte sich folgendes Fenster öffnen:
 
 image::features/tribe-construct/tribe-info-script.png[Tribe-Info-Script]
 
 Hier kannst du auswählen, ob du entweder die zum Dorf gehörenden Truppen "Troops" auslesen möchtest, oder die im Dorf stehenden Truppen "Defenses".
-Sollten Filter eingestellt sein, so lösche alle Filter, bis keiner mehr angezeigt wird. 
+Sollten Filter eingestellt sein, so lösche alle Filter, bis keiner mehr angezeigt wird.
 Jetzt klicke auf "Read Data" und warte, bis das Script alle Truppen ausgelesen hat (je nach Dorfmenge dauert dies zwischen 5 und 30 Sekunden).
 Du solltest jetzt einen Output erzeugt haben, der in etwa folgendermaßen aussieht:
 
 image::features/tribe-construct/tribe-info-script-example-troops.png[Beispielauslesung des Scripts]
 
-TIP: Hierbei können ein bekanntes Problem auftreten. Bei der ersten benutzung des Scripts kann es sein, dass das Outputfeld lediglich den Header (Coords, Player, ...) enthält. 
+TIP: Hierbei können ein bekanntes Problem auftreten.
+Bei der ersten benutzung des Scripts kann es sein, dass das Outputfeld lediglich den Header (Coords, Player, ...) enthält.
 Der Fix hierfür ist, in der Scriptübersicht (Screenshot 1) einmal das Feld "Read defenses in the village" auszuwählen, und dann wieder auf das Feld "Read troops of the village" zu klicken - dies sollte in den meisten Fällen das Problem fixen.
 
 WARNING: Das Script funktioniert nur bis 1000 Dörfer pro Spieler, alles über dieser Anzahl wird nicht ausgelesen.
 
-Wenn du den korrekten Output erzeugt hast, kann danach entweder die Datei als .csv Datei agespeichert werden und danach in TW-Forge importiert werden (Datei öffnen -> Strg A -> Strg C, TW Forge/Stammeskonstrukte/Truppen öffnen, Ctrl V) oder direkt aus der Vorschau kopiert und auf dem gleichen Weg in TW Forge eingefügt werden.
+Wenn du den korrekten Output erzeugt hast, kann danach entweder die Datei als .csv Datei abgespeichert werden und danach in TW-Forge importiert werden (Datei öffnen -> Strg A -> Strg C, TW Forge/Stammeskonstrukte/Truppen öffnen, Ctrl V) oder direkt aus der Vorschau kopiert und auf dem gleichen Weg in TW Forge eingefügt werden.
 
-TIP: Wenn du die Datei als .csv abgespeichert hast und du siehst, dass bei Einigen Spielern anstatt von Truppenzahlen "?" stehen, liegt das daran, dass der Spieler entweder seine Truppen oder seine Verteidigung nicht mit dem Stamm teilt.
+TIP: Wenn du die Datei als .csv abgespeichert hast und du siehst, dass bei einigen Spielern anstatt von Truppenzahlen Fragezeichen("?") stehen, liegt das daran, dass der Spieler entweder seine Truppen oder seine Verteidigung nicht mit dem Stamm teilt.
 
 Auf TW-Forge kann ausgewählt werden, ob die eingefügten Truppen als "Truppen" oder als "Verteidigung" abgespeichert werden.
 
 image::features/tribe-construct/import-troops.png[Truppenimport in TW-Forge]
 
-TIP: Du bist nicht verpflichtet, Truppen als Truppen und Verteidigung als Verteidigung hochzuladen. Es kann teilweise von Vorteil sein, bei Aktionsplanungen auch Dorfverteidigung als Dorftruppen hochzuladen. Die Template Funktion unter Aktionsplaner -> Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteididung als Truppen hochzuladen, sollte man dieses Feature nutzen wollen.
+TIP: Du bist nicht verpflichtet, Truppen als Truppen und Verteidigung als Verteidigung hochzuladen.
+Es kann teilweise von Vorteil sein, bei Aktionsplanungen auch Dorfverteidigung als Dorftruppen hochzuladen.
+Die Templatefunktion unter Aktionsplaner -> Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteidigung als Truppen hochzuladen, sollte man dieses Feature nutzen wollen.
 
 // hier noch später den Aktionsplaner/Herkunftsseite verlinken
 // Ist das verständlich formuliert? find es iwie nicht so ganz schön
@@ -213,7 +224,7 @@ So kann überprüft werden, wer über längere Zeit keine Daten mehr eingelesen 
 
 == Invite Links
 
-Im Bereich *Invite Links* können Einladungslinks für das Stammeskonstrukt erstellt werden. 
+Im Bereich *Invite Links* können Einladungslinks für das Stammeskonstrukt erstellt werden.
 
 Invite Links können eingeschränkt werden durch:
 
