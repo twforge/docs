@@ -1,13 +1,16 @@
 {
   "name": "twforge-docs",
   "version": "1.0.0",
-  "description": "TW Forge Documentation",
+  "private": true,
   "scripts": {
-    "build": "antora antora-playbook.yml",
-    "build:local": "antora antora-playbook.yml --fetch"
+    "lint:api": "redocly lint script-api/openapi.yaml",
+    "build": "antora antora-playbook.yml"
   },
   "devDependencies": {
     "@antora/cli": "^3.1.0",
-    "@antora/site-generator": "^3.1.0"
+    "@antora/site-generator": "^3.1.0",
+    "@redocly/cli": "^1.25.0",
+    "mkdirp": "^3.0.1",
+    "swagger-ui-dist": "^5.18.0"
   }
 }

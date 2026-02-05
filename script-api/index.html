@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Script API Documentation</title>
+    <link rel="stylesheet" href="/script-api/css/swagger-ui.css" />
+    <link rel="icon" type="image/png" href="https://twforge.net/favicon-96x96.png" sizes="96x96"/>
+    <link rel="icon" type="image/svg+xml" href="https://twforge.net/favicon.svg"/>
+    <link rel="shortcut icon" href="https://twforge.net/favicon.ico"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="https://twforge.net/apple-touch-icon.png"/>
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="/script-api/js/swagger-ui-bundle.js"></script>
+<script>
+    SwaggerUIBundle({
+        url: "/script-api/openapi.yaml",
+        dom_id: '#swagger-ui',
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
+        layout: "BaseLayout"
+    });
+</script>
+</body>
+</html>

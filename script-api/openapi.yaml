@@ -1,0 +1,395 @@
+openapi: 3.1.0
+info:
+  title: TW Forge Script API
+  description: TW Forge API for Tribalwars scripts.
+  version: 1.0.0
+  contact:
+    name: TWForge
+    url: https://github.com/twforge
+
+servers:
+  - url: https://twforge.net/api/v1
+    description: Production
+
+security:
+  - defaultApiKey: [ ]
+
+paths:
+  /db-info/userscript:
+    post:
+      security: [ ]
+      deprecated: true
+      summary: Village information.
+      description: |
+        Retrieves village information (tribalwars action).
+        
+        This endpoint is deprecated and only provided for compatibility with existing scripts. If you plan to create a
+        new script please prefer to use the other endpoints.
+      operationId: dbInfoApi
+      tags:
+        - db-info
+      parameters:
+        - name: action
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - tribalwars
+          description: API action type
+        - name: Origin
+          description: Used to determine the world this request belongs to.
+          in: header
+          required: true
+          schema:
+            type: string
+            example: de250.die-staemme.de
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/DbInfoTribalWarsRequest'
+      responses:
+        '200':
+          description: Successful response - returns village information for tribalwars action.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/DbInfoTribalwarsResponse'
+        '400':
+          description: Bad Request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+  /reports/tw/worlds/{world}/report-import-tasks:
+    post:
+      tags:
+        - reports
+      summary: Used to upload a batch of reports supplying a text containing slugs or public links.
+      description: |
+        Creates a batch of report-import-tasks. These tasks will be added to a queue and asynchronously imported.
+        
+        The response only reveals how many tasks were created from the supplied text.
+      operationId: importReports
+      parameters:
+        - $ref: '#/components/parameters/world'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ReportImportRequest'
+      responses:
+        200:
+          description: The number of tasks that were created.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ReportImportResponse'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+components:
+  securitySchemes:
+    defaultApiKey:
+      description: API Key provided to accounts on twforge.net
+      type: apiKey
+      name: Authorization
+      in: header
+  parameters:
+    world:
+      name: world
+      in: path
+      required: true
+      description: |
+        The world that this operation is in the context of.
+        
+        Can usually be read from `game_data.world`.
+      schema:
+        type: string
+        example: de250
+  responses:
+    badRequest:
+      description: There was a mistake in the data supplied in the request.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    unauthorized:
+      description: The API key supplied in the Authorization header is not valid.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+  schemas:
+    ReportImportRequest:
+      type: object
+      required:
+        - text
+      properties:
+        text:
+          type: string
+          description: The text containing the slugs or public links to the reports.
+          example: |
+            - [report]51d634ed239b48e5cabf521cd67e24a4[/report]
+            - [report]030b126e7b764e3691c26626b703c454[/report]
+            
+            https://de250.die-staemme.de/public_report/030b126e7b764e3691c26626b703c454
+    ReportImportResponse:
+      type: object
+      required:
+        - added
+      properties:
+        added:
+          type: integer
+          format: int32
+          description: The number of reports that were successfully added to the queue.
+    # DB Info Models
+    DbInfoTribalWarsRequest:
+      type: object
+      required:
+        - Key
+        - X
+        - Y
+      properties:
+        Key:
+          type: string
+          description: API authentication key
+        X:
+          type: integer
+          description: X coordinate of the village
+        Y:
+          type: integer
+          description: Y coordinate of the village
+    DbInfoTribalwarsResponse:
+      type: object
+      required:
+        - village_id
+        - type
+        - attacks
+        - sos
+      properties:
+        village_id:
+          type: string
+          description: Unique village identifier
+        type:
+          type: integer
+          description: Village type (0 = Deff, 1 = Off)
+        unit_time:
+          type: integer
+          format: int64
+          description: UNIX timestamp of unit data
+        attacks:
+          type: integer
+          description: Number of incoming attacks
+        report_id:
+          type: string
+          description: ID of the most recent report
+        report_fighttime:
+          type: integer
+          format: int64
+          description: UNIX timestamp of the most recent report
+        attack_report:
+          $ref: '#/components/schemas/DbInfoBattleReport'
+        defend_report:
+          $ref: '#/components/schemas/DbInfoBattleReport'
+        sos:
+          type: array
+          description: Array of incoming attacks (required, can be empty)
+          items:
+            $ref: '#/components/schemas/DbInfoIncomingAttack'
+        spear:
+          type: integer
+          description: Number of spear units in village
+        sword:
+          type: integer
+          description: Number of sword units in village
+        axe:
+          type: integer
+          description: Number of axe units in village
+        archer:
+          type: integer
+          description: Number of archer units in village
+        spy:
+          type: integer
+          description: Number of spy units in village
+        light:
+          type: integer
+          description: Number of light cavalry units in village
+        marcher:
+          type: integer
+          description: Number of mounted archer units in village
+        heavy:
+          type: integer
+          description: Number of heavy cavalry units in village
+        ram:
+          type: integer
+          description: Number of ram units in village
+        catapult:
+          type: integer
+          description: Number of catapult units in village
+        snob:
+          type: integer
+          description: Number of nobleman units in village
+    DbInfoBattleReport:
+      type: object
+      description: Battle report object
+      properties:
+        report_id:
+          type: string
+          description: Unique report identifier
+        fighttime:
+          type: integer
+          format: int64
+          description: UNIX timestamp of the battle
+        spear:
+          type: integer
+          description: Number of spear units
+        sword:
+          type: integer
+          description: Number of sword units
+        axe:
+          type: integer
+          description: Number of axe units
+        archer:
+          type: integer
+          description: Number of archer units
+        spy:
+          type: integer
+          description: Number of spy units
+        light:
+          type: integer
+          description: Number of light cavalry units
+        marcher:
+          type: integer
+          description: Number of mounted archer units
+        heavy:
+          type: integer
+          description: Number of heavy cavalry units
+        ram:
+          type: integer
+          description: Number of ram units
+        catapult:
+          type: integer
+          description: Number of catapult units
+        snob:
+          type: integer
+          description: Number of nobleman units
+        loss_spear:
+          type: integer
+          description: Number of spear units lost
+        loss_sword:
+          type: integer
+          description: Number of sword units lost
+        loss_axe:
+          type: integer
+          description: Number of axe units lost
+        loss_archer:
+          type: integer
+          description: Number of archer units lost
+        loss_spy:
+          type: integer
+          description: Number of spy units lost
+        loss_light:
+          type: integer
+          description: Number of light cavalry units lost
+        loss_marcher:
+          type: integer
+          description: Number of mounted archer units lost
+        loss_heavy:
+          type: integer
+          description: Number of heavy cavalry units lost
+        loss_ram:
+          type: integer
+          description: Number of ram units lost
+        loss_catapult:
+          type: integer
+          description: Number of catapult units lost
+        loss_snob:
+          type: integer
+          description: Number of nobleman units lost
+    DbInfoIncomingAttack:
+      type: object
+      required:
+        - attacker_village_id
+        - attacker_coords
+        - unit_type
+        - fighttime
+        - arrival_time
+        - prediction_reason
+        - duplicate_count
+      properties:
+        attacker_village_id:
+          type: string
+          description: ID of the attacking village
+        attacker_coords:
+          type: string
+          description: Coordinates of the attacking village (format XXX|YYY)
+        unit_type:
+          type: string
+          description: Type of unit leading the attack
+        fighttime:
+          type: integer
+          format: int64
+          description: UNIX timestamp when the battle will occur
+        arrival_time:
+          type: integer
+          format: int64
+          description: UNIX timestamp when the attack was first detected arriving
+        prediction:
+          type: integer
+          description: Attack size prediction (1=small, 2=possible off, 3=medium, 4=large)
+          enum: [ 1, 2, 3, 4 ]
+        prediction_reason:
+          type: string
+          description: Reason for the prediction classification
+        duplicate_count:
+          type: integer
+          description: Number of duplicate incoming attacks from the same source
+
+    ErrorResponse:
+      type: object
+      required:
+        - timestamp
+        - code
+        - message
+        - rejectedArguments
+        - args
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        code:
+          type: string
+        message:
+          type: string
+        rejectedArguments:
+          type: array
+          items:
+            $ref: '#/components/schemas/RejectedArgument'
+        args:
+          type: object
+          additionalProperties:
+            type: string
+        requestId:
+          type: string
+    RejectedArgument:
+      type: object
+      required:
+        - path
+        - code
+        - args
+      properties:
+        path:
+          type: string
+        code:
+          type: string
+        args:
+          type: object
+          additionalProperties:
+            type: string

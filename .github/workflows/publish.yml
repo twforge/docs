@@ -34,8 +34,19 @@ jobs:
       - name: Build Antora site
         run: npm run build
 
+      - name: Lint OpenAPI spec
+        run: npm run lint:api
+
       - name: Add CNAME file
         run: cp supplemental-ui/root/CNAME build/site/CNAME
+
+      - name: Copy Swagger UI
+        run: |
+          mkdir -p build/site/script-api/js
+          mkdir -p build/site/script-api/css
+          cp node_modules/swagger-ui-dist/swagger-ui-bundle.js node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js build/site/script-api/js/
+          cp node_modules/swagger-ui-dist/swagger-ui.css build/site/script-api/css/
+          cp script-api/index.html script-api/openapi.yaml build/site/script-api/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
