@@ -1,0 +1,350 @@
+openapi: 3.1.0
+info:
+  title: TW Forge Script API
+  description: TW Forge API for Tribalwars scripts.
+  version: 1.0.0
+  contact:
+    name: TWForge
+    url: https://github.com/twforge
+
+servers:
+  - url: https://twforge.net
+    description: Production
+
+security:
+  - defaultApiKey: []
+
+paths:
+  /api/db-info/userscript:
+    post:
+      security: []
+      deprecated: true
+      summary: Village information and data submission
+      description: Retrieves village information (tribalwars action) or submits game data like reports, SOS requests, troops, buildings, or outgoing attacks (submit_input action)
+      operationId: dbInfoApi
+      tags:
+        - db-info
+      parameters:
+        - name: action
+          in: query
+          required: true
+          schema:
+            type: string
+            enum:
+              - tribalwars
+              - submit_input
+          description: API action type
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              oneOf:
+                - $ref: '#/components/schemas/DbInfoTribalWarsRequest'
+                - $ref: '#/components/schemas/DbInfoSubmitInputRequest'
+      responses:
+        '200':
+          description: Successful response - returns village information for tribalwars action or submission status for submit_input action
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - $ref: '#/components/schemas/DbInfoTribalwarsResponse'
+                  - $ref: '#/components/schemas/DbInfoSubmitInputResponse'
+        '400':
+          description: Authentication failed - invalid key or mode
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ErrorResponse'
+
+components:
+  securitySchemes:
+    defaultApiKey:
+      description: API Key provided to accounts on twforge.net
+      type: apiKey
+      name: Authorization
+      in: header
+  schemas:
+    DbInfoSubmitInputRequest:
+      type: object
+      required:
+        - Key
+        - type
+        - data
+      properties:
+        Key:
+          type: string
+          description: API authentication key
+        type:
+          type: string
+          enum:
+            - report
+            - sos
+            - troops
+            - buildings
+            - outgoing
+        data:
+          type: string
+          description: JSON-encoded game data corresponding to the specified type
+    DbInfoTribalWarsRequest:
+      type: object
+      required:
+        - Key
+        - X
+        - Y
+      properties:
+        Key:
+          type: string
+          description: API authentication key
+        X:
+          type: integer
+          description: X coordinate of the village
+        Y:
+          type: integer
+          description: Y coordinate of the village
+    DbInfoTribalwarsResponse:
+      type: object
+      required:
+        - village_id
+        - type
+        - attacks
+        - sos
+      properties:
+        village_id:
+          type: string
+          description: Unique village identifier
+        type:
+          type: integer
+          description: Village type (0 = Deff, 1 = Off)
+        unit_time:
+          type: integer
+          format: int64
+          description: UNIX timestamp of unit data (SF mode only, optional)
+        attacks:
+          type: integer
+          description: Number of incoming attacks
+        report_id:
+          type: string
+          description: ID of the most recent report (optional)
+        report_fighttime:
+          type: integer
+          format: int64
+          description: UNIX timestamp of the most recent report (optional)
+        attack_report:
+          $ref: '#/components/schemas/DbInfoBattleReport'
+        defend_report:
+          $ref: '#/components/schemas/DbInfoBattleReport'
+        sos:
+          type: array
+          description: Array of incoming attacks (required, can be empty)
+          items:
+            $ref: '#/components/schemas/DbInfoIncomingAttack'
+        spear:
+          type: integer
+          description: Number of spear units in village (SF mode only, optional)
+        sword:
+          type: integer
+          description: Number of sword units in village (SF mode only, optional)
+        axe:
+          type: integer
+          description: Number of axe units in village (SF mode only, optional)
+        archer:
+          type: integer
+          description: Number of archer units in village (SF mode only, optional)
+        spy:
+          type: integer
+          description: Number of spy units in village (SF mode only, optional)
+        light:
+          type: integer
+          description: Number of light cavalry units in village (SF mode only, optional)
+        marcher:
+          type: integer
+          description: Number of mounted archer units in village (SF mode only, optional)
+        heavy:
+          type: integer
+          description: Number of heavy cavalry units in village (SF mode only, optional)
+        ram:
+          type: integer
+          description: Number of ram units in village (SF mode only, optional)
+        catapult:
+          type: integer
+          description: Number of catapult units in village (SF mode only, optional)
+        snob:
+          type: integer
+          description: Number of nobleman units in village (SF mode only, optional)
+    DbInfoSubmitInputResponse:
+      type: object
+      required:
+        - success
+      properties:
+        success:
+          type: boolean
+        message:
+          type: string
+        error:
+          type: string
+        details:
+          type: object
+          properties:
+            success:
+              type: boolean
+            queued_for_processing:
+              type: boolean
+    DbInfoBattleReport:
+      type: object
+      description: Battle report object
+      properties:
+        report_id:
+          type: string
+          description: Unique report identifier
+        fighttime:
+          type: integer
+          format: int64
+          description: UNIX timestamp of the battle
+        spear:
+          type: integer
+          description: Number of spear units
+        sword:
+          type: integer
+          description: Number of sword units
+        axe:
+          type: integer
+          description: Number of axe units
+        archer:
+          type: integer
+          description: Number of archer units
+        spy:
+          type: integer
+          description: Number of spy units
+        light:
+          type: integer
+          description: Number of light cavalry units
+        marcher:
+          type: integer
+          description: Number of mounted archer units
+        heavy:
+          type: integer
+          description: Number of heavy cavalry units
+        ram:
+          type: integer
+          description: Number of ram units
+        catapult:
+          type: integer
+          description: Number of catapult units
+        snob:
+          type: integer
+          description: Number of nobleman units
+        loss_spear:
+          type: integer
+          description: Number of spear units lost
+        loss_sword:
+          type: integer
+          description: Number of sword units lost
+        loss_axe:
+          type: integer
+          description: Number of axe units lost
+        loss_archer:
+          type: integer
+          description: Number of archer units lost
+        loss_spy:
+          type: integer
+          description: Number of spy units lost
+        loss_light:
+          type: integer
+          description: Number of light cavalry units lost
+        loss_marcher:
+          type: integer
+          description: Number of mounted archer units lost
+        loss_heavy:
+          type: integer
+          description: Number of heavy cavalry units lost
+        loss_ram:
+          type: integer
+          description: Number of ram units lost
+        loss_catapult:
+          type: integer
+          description: Number of catapult units lost
+        loss_snob:
+          type: integer
+          description: Number of nobleman units lost
+    DbInfoIncomingAttack:
+      type: object
+      required:
+        - attacker_village_id
+        - attacker_coords
+        - unit_type
+        - fighttime
+        - arrival_time
+        - prediction_reason
+        - duplicate_count
+      properties:
+        attacker_village_id:
+          type: string
+          description: ID of the attacking village
+        attacker_coords:
+          type: string
+          description: Coordinates of the attacking village (format XXX|YYY)
+        unit_type:
+          type: string
+          description: Type of unit leading the attack
+        fighttime:
+          type: integer
+          format: int64
+          description: UNIX timestamp when the battle will occur
+        arrival_time:
+          type: integer
+          format: int64
+          description: UNIX timestamp when the attack was first detected arriving
+        prediction:
+          type: integer
+          description: Attack size prediction (1=small, 2=possible off, 3=medium, 4=large)
+          enum: [ 1, 2, 3, 4 ]
+        prediction_reason:
+          type: string
+          description: Reason for the prediction classification
+        duplicate_count:
+          type: integer
+          description: Number of duplicate incoming attacks from the same source
+
+    ErrorResponse:
+      type: object
+      required:
+        - timestamp
+        - code
+        - message
+        - rejectedArguments
+        - args
+      properties:
+        timestamp:
+          type: string
+          format: date-time
+        code:
+          type: string
+        message:
+          type: string
+        rejectedArguments:
+          type: array
+          items:
+            $ref: '#/components/schemas/RejectedArgument'
+        args:
+          type: object
+          additionalProperties:
+            type: string
+        requestId:
+          type: string
+    RejectedArgument:
+      type: object
+      required:
+        - path
+        - code
+        - args
+      properties:
+        path:
+          type: string
+        code:
+          type: string
+        args:
+          type: object
+          additionalProperties:
+            type: string

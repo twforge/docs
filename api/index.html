@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>API Documentation</title>
+    <link rel="stylesheet" href="/api/css/swagger-ui.css" />
+</head>
+<body>
+<div id="swagger-ui"></div>
+<script src="/api/js/swagger-ui-bundle.js"></script>
+<script>
+    SwaggerUIBundle({
+        url: "./api/openapi.yaml",
+        dom_id: '#swagger-ui',
+        presets: [SwaggerUIBundle.presets.apis, SwaggerUIBundle.SwaggerUIStandalonePreset],
+        layout: "BaseLayout"
+    });
+</script>
+</body>
+</html>
