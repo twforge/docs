@@ -22,4 +22,12 @@ Für weitere Informationen klicke hier.
 Das liegt vermutlich daran, dass ihr euch entweder nicht im gleichen Konstrukt befindet, oder dass die betreffenden Member noch nicht das erforderliche Mindest-Rechtelevel (Mitglied) besitzen.
 Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#mitglieder[hier].
 
+=== Warum laggt es bei mir, wenn ich im Aktionsplaner eine Aktion planen will?
+
+Gehe sicher, dass bei dir in den Browsereinstellungen die Hardwarebeschleunigung eingeschaltet ist.
+
+=== Warum kann meine Stammesführung meine eingetragenen Abschickzeiten / AGs nicht sehen?
+
+Das liegt in den meisten Fällen daran, dass du dem Stammeskonstrukt in TW-Forge noch nicht beigetreten bist.
+
 // TODO
