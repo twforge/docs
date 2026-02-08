@@ -13,9 +13,7 @@ Nutze die Suche (Browser: `Strg` + `F`), um schnell Antworten auf deine Fragen z
 === Warum kann ich kein Stammeskonstrukt erstellen?
 
 Man benötigt dafür einen Premium-Zugang.
-Für weitere Informationen klicke hier.
-
-// das hier noch Verlinken zur Premium Erklärung
+Für weitere Informationen klicke xref:premium.adoc[hier].
 
 === Warum können meine Member die Berichte nicht sehen?
 

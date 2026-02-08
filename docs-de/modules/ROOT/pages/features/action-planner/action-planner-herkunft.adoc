@@ -14,7 +14,6 @@ Ausgeschaltete Hardwarebeschleunigung kann zu Lags und Fehlern in der Grafikdars
 
 toc::[]
 
-
 == Stämme und Spieler[[staemme_und_spieler]]
 
 // Bild noch einfügen
@@ -23,7 +22,6 @@ Hier hat die planende Person die Möglichkeit, ganze Spieler und Stämme einzuf�
 Sie kann definieren, wie viele Angriffe entweder pro Account geschickt werden sollen ("Max Angriffe pro Spieler"), und wie viele Angriffe pro Herkunftsdorf maximal verplant werden sollen.
 Möchte sie einzelne Spieler eines Stammes nicht verplanen, so kann man diese nach dem Einfügen manuell entfernen.
 Falls die maximalen Angriffe pro Dorf oder Account nachträglich angepasst werden sollen, markiere die entsprechenden Accounts, gib oben die neuen Werte ein und bestätige die Änderung über den Button Ändern.
-
 
 == Manuelle Herkunftsdörfer[[manuelle_herkunftsdoerfer]]
 
@@ -88,7 +86,7 @@ Dafür kann die Personen unter "Zonen" ein Zeichentool aktivieren, womit er dire
 
 Hier kann eingestellt werden, welche Dörfer, abhängig von ihren Truppen oder der Verteidigung im Dorf, für die Aktion verplant werden sollen.
 
-TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#_truppen[Stammestruppen einlesen] oder unter xref:features/account.adoc#_truppen[Accounttruppen einlesen].
+TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#truppen[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
 
 === Mindest Bauernhofplätze
 
@@ -120,7 +118,7 @@ Das Template erweitert die "Mindest Truppen"-Filterung. Und zwar kann es vorkomm
 Der Unterschied zu "Mindest Truppen" besteht darin, dass bei diesem die Dörfer genau so oft verplant werden, wie unter xref:staemme_und_spieler[Stämme und Spieler] oder xref:manuelle_herkunftsdoerfer[manuelle Herkunftsdörfer] maximal möglich, sofern sie die Anforderung erfüllen.
 Die Funktion des Templates erweitert hier also die Mindestanforderung so, dass die maximale Inc-Anzahl dadurch eingeschränkt wird, wie viele Angriffe das Dorf mit dem eingetragenen Template maximal schicken kann.
 
-== Abhängigkeiten[[abhängigkeiten]]
+== Abhängigkeiten[[abhaengigkeiten]]
 
 Abhängigkeiten stellen ein Kernpunkt der Offplanung dar.
 Durch Abhängigkeiten kann sichergestellt werden, dass die Truppen, die in einem anderen Plan bereits verplant worden sind, nicht erneut verplant werden.

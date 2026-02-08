@@ -35,8 +35,8 @@ Durch ein Ändern des Stämme-Passworts können alle bisherigen Zugriffe effekti
 Zusätzlich wird angezeigt, ob der eigene Account bei anderen Accounts als *Urlaubsvertretung* eingetragen ist.
 Diese Einträge können bei Bedarf selbstständig entfernt werden.
 
-[#_truppen]
-== Truppen
+
+== Truppen[[truppen]]
 
 In diesem Bereich können für den eigenen Account Truppen hinterlegt werden.
 

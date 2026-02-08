@@ -97,8 +97,8 @@ Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 * Möglichkeit zum Auflösen des Stammeskonstrukts
 
-[#_truppen]
-== Truppen
+
+== Truppen[[truppen]]
 
 Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
 Das Einlesen erfolgt über ein erlaubtes Net-SL-Script.
