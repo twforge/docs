@@ -14,6 +14,10 @@
 ** xref:features/userscript.adoc[Userscript]
 ** Aktionsplaner
 *** xref:features/action-planner/action-planner-uebersicht.adoc[Übersicht]
+*** xref:features/action-planner/action-planner-herkunft.adoc[Herkunft]
+*** xref:features/action-planner/action-planner-ziele.adoc[Ziele]
+*** xref:features/action-planner/action-planner-zeiten.adoc[Zeiten]
 * xref:faq.adoc[FAQ]
+* xref:premium.adoc[Premium-Features]
 // hier kommt noch mehr
 

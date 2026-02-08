@@ -1,0 +1,68 @@
+= Aktionsplaner - Abschick- und Ankunftszeiten
+:page-navtitle: Aktionsplaner - Abschick- und Ankunftszeiten
+:description: Tool zur Erstellung von Angriffsplänen von einzelnen Accounts bis hin zu Plänen für ganze Stämme
+:keywords: Planung, Offaktionen, Angriffspläne, Zeiten, Rückläufer, UT-Boost-DB, UT-Boost, etc.
+:toc: macro
+:toclevels: 2
+:toc-title: Inhalt
+
+In diesem Kapitel wird die Einstellbarkeit von Abschick- und Ankunftszeiten thematisiert.
+
+toc::[]
+
+== Abschickzeiten
+
+// hier Screenshot einfügen
+
+Hier können die Abschickzeiten für den Angriffsplan eingestellt werden.
+Zunächst hat die planende Person die Möglichkeit, die Grenzbereiche der Planung (von ... bis ...) festzulegen.
+Es ist möglich, mehrere einzelne Fenster einzugeben.
+Dies gelten als eine "harte" Einstellungsgrenze, die die angegeben Zeiten von den sich im Konstrukt befindlichen Accounts einschränkt.
+
+Zusätzlich kann durch die Checkbox "Eingetragene Zeiten ignorieren" die Entscheidung getroffen werden, von deinem Konstrukt eingetragene Zeiten zu ignorieren.
+In diesem Fall werden die als Grenzwert eingetragenen Zeitrahmen zu 100% verplant.
+
+Sobald du ein Zeitfenster ausgewählt hast, kannst du anhand der Leiste hinter dem Namen der Accounts sehen, welche Accounts wie viel Prozente des angegebenen Zeitrahmens abdecken.
+So kann überprüft werden, ob Accounts, die man verplanen will, ggf. zu wenig oder gar keine Zeiten angegeben haben.
+
+Darüber hinaus kann die planende Person die UT Boost Datenbank direkt beim Planen berücksichtigen.
+Sollte ein Feind den UT Boost bereits aktiviert haben oder es wird davon ausgegangen, dass der UT Boost noch aktiviert wird, kann man entscheiden, diese bei der Planungsberechnung direkt einzurechnen.
+Hierzu kann man entweder auswählen, nur die von einem selbst eingetragenen UT Boosts zu berücksichtigen, oder alle im Konstrukt eingetragenen UTs.
+
+Darüber hinaus besteht auch hier die Möglichkeit, Abhängigkeiten zu bereits erstellten Plänen zu verwenden.
+
+=== Abhängigkeiten bei Abschickzeiten[[abhaengigkeiten_abschickzeiten]]
+
+Die Abhängigkeit kann sich sowohl auf die Abschickzeit von Angriffen als auch die Rückkehrzeit beziehen.
+
+IMPORTANT: Man kann nur Abhängigkeiten von Plänen verwenden, die in TW Forge erstellt worden sind.
+
+* *Abhängigkeit nach Abschickzeit*: Nur relevant auf Non-MS Welten (xref:features/action-planner/action-planner-uebersicht.adoc#exkurs_non_ms[Exkurs Non-MS]).
+
+Hierdurch können Angriffe entweder ausschließlich vor oder nach dem Referenzplan abgeschickt werden.
+Das "-" bedeutet hierbei, dass alle Angriffe *vor* dem Angriff aus dem referenzierten Plan losgeschickt werden müssen, das "+" bedeutet, dass alle Angriffe ausschließlich nach dem referenzierten Plan losgeschickt werden müssen.
+Die eingetragene Minutenanzahl beschreibt, wie viel Minuten der Angriff *maximal* von dem referenzierten Plan abweichen darf (relevant für schnelle Zwischencleaner / (Fake)-Unterstützungen)
+
+[IMPORTANT]
+====
+Damit dies funktioniert, muss der referenzierte Plan zwei Anforderungen erfüllen:
+
+. Es darf maximal ein Angriff pro Zieldorf existieren
+. Alle Angriffe müssen auf die gleiche Zeit geplant sein
+====
+
+* *Abhängigkeit nach Rückkehrzeit*:
+Hier können Angriffe so verplant werden, dass sie erst losgeschickt werden müssen, nachdem sie gemäß dem referenzierten Plan wieder zu Hause sein müssen.
+Der Zeitintervall beschreibt hier, wie viel Puffer zwischen dem nach Hause Kommen der Einheiten *mindestens* sein muss, bis sie wieder losgeschickt werden müssen.
+
+
+== Ankunftszeit
+
+Ebenso wie bei der Abschickzeit kann hier durch die von ... bis ... Funktion ein oder mehrere Fenster eingetragen werden, in denen die Angriffe ankommen sollen.
+
+
+
+
+
+
+

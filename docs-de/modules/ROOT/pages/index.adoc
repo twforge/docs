@@ -63,7 +63,7 @@ Im Bereich *Berichte* können Kampfberichte hochgeladen, durchsucht und ausgewer
 
 === Planer
 
-Der Planer unterstützt bei der Vorbereitung und Koordination von Aktionen:
+Der Aktionsplaner unterstützt bei der Vorbereitung und Koordination von Aktionen:
 
 * Angriffspläne
 * Abfragen

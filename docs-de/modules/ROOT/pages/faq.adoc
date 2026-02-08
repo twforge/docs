@@ -30,4 +30,8 @@ Gehe sicher, dass bei dir in den Browsereinstellungen die Hardwarebeschleunigung
 
 Das liegt in den meisten Fällen daran, dass du dem Stammeskonstrukt in TW-Forge noch nicht beigetreten bist.
 
+=== Mein Plan errechnet keine Angriffe, was habe ich falsch gemacht?
+
+Hierfür kann es viele Gründe geben. Einer der häufigsten Gründe ist, dass keine Abschickzeiten angeben sind. Dies kann durch ein Auswählen der Checkbox "Eingetragene Abschickzeiten ignorieren" umgangen werden.
+
 // TODO

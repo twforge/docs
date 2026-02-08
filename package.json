@@ -12,5 +12,8 @@
     "@redocly/cli": "^1.25.0",
     "mkdirp": "^3.0.1",
     "swagger-ui-dist": "^5.18.0"
+  },
+  "dependencies": {
+    "@antora/lunr-extension": "^1.0.0-alpha.13"
   }
 }

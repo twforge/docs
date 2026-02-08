@@ -10,4 +10,4 @@ Hier findest du alle Informationen zum Userscript, welches Informationen wie die
 Das Script ist 100% legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden.
 Teilt euren API-Key mit niemand anderem.
 
-//tbd.
+//TODO

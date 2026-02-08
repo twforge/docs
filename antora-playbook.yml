@@ -3,6 +3,10 @@ site:
   url: https://docs.twforge.net
   start_page: de::index.adoc
 
+antora:
+  extensions:
+    - require: '@antora/lunr-extension'
+
 content:
   sources:
     - url: .

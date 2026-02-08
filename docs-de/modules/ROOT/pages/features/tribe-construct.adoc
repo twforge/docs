@@ -31,7 +31,7 @@ Ohne Premium-Zugang kannst du bestehenden Stammeskonstrukten beitreten, aber kei
 Um einem Stammeskonstrukt beizutreten, benötigst du einen Invite Link, der von deiner Stammesführung oder einem bereits beigetretenen Stammesmitglied erstellt werden kann.
 Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem man auf "beim Stammeskonstrukt bewerben" klicken muss.
 Wenn dies erfolgreich ist, ist alles Erforderliche getan - du musst jetzt nur noch von der Stammesführung freigeschaltet werden.
-Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die von dem dir von der SF zugewiesenen Rechtelevel entsprechen.
+Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die dem dir von der SF zugewiesenen Rechtelevel entsprechen.
 
 TIP: Man kann auch mehreren Stammeskonstrukten gleichzeitig angehören.
 Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit beiden Stammeskonstrukten geteilt.
@@ -97,6 +97,7 @@ Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 * Möglichkeit zum Auflösen des Stammeskonstrukts
 
+[#_truppen]
 == Truppen
 
 Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
