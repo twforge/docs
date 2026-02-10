@@ -19,5 +19,6 @@
 *** xref:features/action-planner/action-planner-zeiten.adoc[Zeiten]
 * xref:faq.adoc[FAQ]
 * xref:premium.adoc[Premium-Features]
+* xref:api.adoc[API]
 // hier kommt noch mehr
 

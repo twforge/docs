@@ -1,13 +1,28 @@
 = Userscript
-:page-navtitle: Aktionsplaner
+:page-navtitle: Userscript
 :description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
 :keywords: Userscript, Script, Installation, Tampermonkey, Angriffe anzeigen, API-Key, API
 
-Hier findest du alle Informationen zum Userscript, welches Informationen wie die Bewertung der Incs, Berichte zu den Dörfern sowie weitere Informationen ingame direkt anzeigt.
+Hier werden alle Informationen zum Userscript thematisiert, welches Informationen wie die Bewertung der Angriffe, Berichte zu den Dörfern sowie weitere Informationen ingame direkt anzeigt.
 
-[IMPORTANT]
-
-Das Script ist 100% legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden.
+IMPORTANT: Das Script ist 100 % legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden.
 Teilt euren API-Key mit niemand anderem.
 
-//TODO
+== Einrichten des Userscripts
+
+Um das Userscript zu benutzen, muss das Script kopiert werden und  in einen Userscript-Manager der Wahl (Tampermonkey o.Ä.) eingefügt werden.
+
+TIP: Sollte des Script nicht geladen werden kann dies daran liegen, dass in den Browsereinstellungen der Entwicklermodus nicht eingeschaltet ist.
+Klicke hierzu auf "Erweiterungen verwalten" und schalte den Entwicklermodus ein.
+Das genauere Vorgehen hängt hier vom verwendeten Browser ab.
+
+Nachdem das Skript eingefügt worden ist, muss in den Stämme Einstellungen unter "Spieloptionen->Datenbanksettings" noch der API-Key, welchen du direkt über dem Userscript auf TW-Forge findest, eingefügt werden.
+
+TIP: Benutze die Kopieren-Funktion rechts neben dem API-Key Feld und kopiere nicht das Feld, da  sonst nur die Sterne kopiert werden.
+
+Bevor das Eingabefeld bestätigt werden kann, muss noch zwischen "User" und "SF" entschieden werden.
+Hier kann jeder Nutzer sowohl User als auch SF problemlos auswählen, SF zeigt mehr Informationen an, der Nutzer muss aber nicht teil der SF sein.
+
+== Nutzung des Userscripts
+
+// das muss hier noch ergänzt werden, wenn ich mal Angriffe hatte und mir das genau anschauen können

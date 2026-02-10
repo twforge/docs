@@ -1,9 +1,37 @@
 = UT-Boost-Datenbank
 :page-navtitle: UT-Boost-Datenbank
-:description: Trage festgestellte UT-Boosts in eine Konstruktbezogene Datenbank ein.
+:description: Trage festgestellte UT-Boosts in eine konstruktbezogene Datenbank ein.
 :keywords: Datenbank, Unterstützungen, Anpassen, UT-Boost, Stammesskill, Banner der Bedrängnis, Bammer
 
 Hier findest du alle Informationen zu der UT-Boost-Datenbank.
 Diese ermöglicht, festgestellte UT-Boosts durch Stammesskill oder das Banner der Bedrängnis direkt in die Datenbank zu übernehmen, sodass jedem Mitglied des Konstruktes die Möglichkeit gegeben wird, diese sowohl bei der Planung als auch beim Abschicken von bereits erstellten Plänen zurück berücksichtigen.
 
-// TODO
+image:features/planner/planner_UT-Boost-DB.png[UT-Boost-DB]
+
+== Übersicht über bestehende Boosts
+
+Zunächst kann sich der Spieler hier einen Überblick über bestehende Unterstützungsboosts verschaffen.
+Diese können entweder durch den Stammesskill bedingt sein oder aber durch das Item "Banner der Bedrängnis".
+In der Übersicht sieht der Spieler sowohl die von dir hinzugefügten Unterstützungsboosts als auch diejenigen, die von Mitgliedern des Konstruktes hinzugefügt worden sind.
+Hierbei werden sowohl die Stärke des Boosts in % als auch die verbleibende Restdauer der Unterstützungen angezeigt.
+
+=== Hinzufügen von Unterstützungsboosts
+
+Sollte der Spieler einen Unterstützungsboost feststellen, der noch nicht im System hinterlegt ist, so muss er den entsprechenden Spieler zunächst in der Suche eingeben.
+Wenn jetzt kein Unterstützungsboost für den Spieler eingetragen ist, besteht die Möglichkeit, diesen hinzuzufügen.
+Hierbei müssen folgende Daten eingegeben werden:
+
+* *Stärke des Unterstützungsboosts:* Wie viel % schneller läuft die Unterstützung?
+* Nur bei dem Banner der Bedrängnis): *Koordinate des Dorfes, in dem das Banner festgestellt worden ist*
+* *Anfang bzw. Ende des Boosts:* Standardmäßig eingestellt auf 48h nach Eingabe, kann aber manuell angepasst werden.
+
+== Interaktionsmöglichkeiten mit der UT-Boost-DB
+
+Die UT-Boost-DB kann in unterschiedlichen Bereichen von TW-Forge verwendet werden.
+
+* xref:features/action-planner/action-planner-zeiten.adoc[Planung unter Berücksichtigung von UT-Boosts]
+* xref:features/planner/angriffspläne_planner.adoc[Berücksichtigung von UT-Boosts für bestehende Angriffs- und UT-Pläne]
+// Tabulator
+// Snipe
+
+
