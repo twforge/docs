@@ -54,7 +54,7 @@ Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen unte
 xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]
 angezeigt werden bzw. welche ausgeblendet werden sollen.
 
-== Discord
+== Discord[[discord]]
 
 [cols="1,1",frame=none,grid=none]
 |===
