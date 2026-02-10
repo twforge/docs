@@ -15,7 +15,7 @@ toc::[]
 // hier Screenshot einfügen
 
 Hier können die Abschickzeiten für den Angriffsplan eingestellt werden.
-Zunächst hat die planende Person die Möglichkeit, die Grenzbereiche der Planung (von ... bis ...) festzulegen.
+Zunächst können die Grenzbereiche der Planung (von ... bis ...) festgelegt werden.
 Es ist möglich, mehrere einzelne Fenster einzugeben.
 Dies gelten als eine "harte" Einstellungsgrenze, die die angegeben Zeiten von den sich im Konstrukt befindlichen Accounts einschränkt.
 
@@ -23,11 +23,11 @@ Zusätzlich kann durch die Checkbox "Eingetragene Zeiten ignorieren" die Entsche
 In diesem Fall werden die als Grenzwert eingetragenen Zeitrahmen zu 100% verplant.
 
 Sobald du ein Zeitfenster ausgewählt hast, kannst du anhand der Leiste hinter dem Namen der Accounts sehen, welche Accounts wie viel Prozente des angegebenen Zeitrahmens abdecken.
-So kann überprüft werden, ob Accounts, die man verplanen will, ggf. zu wenig oder gar keine Zeiten angegeben haben.
+So kann überprüft werden, ob Accounts, die verplant werden sollen, ggf. zu wenig oder gar keine Zeiten angegeben haben.
 
-Darüber hinaus kann die planende Person die UT Boost Datenbank direkt beim Planen berücksichtigen.
-Sollte ein Feind den UT Boost bereits aktiviert haben oder es wird davon ausgegangen, dass der UT Boost noch aktiviert wird, kann man entscheiden, diese bei der Planungsberechnung direkt einzurechnen.
-Hierzu kann man entweder auswählen, nur die von einem selbst eingetragenen UT Boosts zu berücksichtigen, oder alle im Konstrukt eingetragenen UTs.
+Darüber hinaus kann die UT Boost Datenbank direkt beim Planen berücksichtigt werden.
+Sollte ein Feind den UT Boost bereits aktiviert haben oder es wird davon ausgegangen, dass der UT Boost noch aktiviert wird, kann entschieden werden, diese bei der Planungsberechnung direkt einzurechnen.
+Hierzu kann entweder ausgewählt werden, nur die von einem selbst eingetragenen UT Boosts zu berücksichtigen, oder alle im Konstrukt eingetragenen UTs.
 
 Darüber hinaus besteht auch hier die Möglichkeit, Abhängigkeiten zu bereits erstellten Plänen zu verwenden.
 
@@ -35,7 +35,7 @@ Darüber hinaus besteht auch hier die Möglichkeit, Abhängigkeiten zu bereits e
 
 Die Abhängigkeit kann sich sowohl auf die Abschickzeit von Angriffen als auch die Rückkehrzeit beziehen.
 
-IMPORTANT: Man kann nur Abhängigkeiten von Plänen verwenden, die in TW Forge erstellt worden sind.
+IMPORTANT: Es können nur Abhängigkeiten von Plänen verwendet werden, die in TW Forge erstellt worden sind.
 
 * *Abhängigkeit nach Abschickzeit*: Nur relevant auf Non-MS Welten (xref:features/action-planner/action-planner-uebersicht.adoc#exkurs_non_ms[Exkurs Non-MS]).
 

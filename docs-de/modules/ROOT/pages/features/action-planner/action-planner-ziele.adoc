@@ -32,9 +32,9 @@ Beispiel: Bei der Standardeinstellung "mindestens 5 Dörfer in einem 5-Feld-Radi
 Sollte ein Dorf weniger Dörfer in dem festgelegten Radius haben, so wird es als Zecke behandelt und somit nicht für die Frontbewertung mit einbezogen.
 ====
 
-TIP: Man kann auch mehrere von den oben beschriebenen Auwahlmöglichkeiten kombinieren.
+TIP: Es können auch mehrere von den oben beschriebenen Auswahlmöglichkeiten kombiniert werden.
 Dazu klicke einfach erneut auf "Fronten hinzufügen".
-Dies dient dazu, z.B. mehrere Zielstämme mit unterschiedlicher Angriffs-Anzahl pro Dorf als Ziel auszuwählen, oder aber auch unterschiedliche Gebiete des gleichen Gegners mit unterschiedlichen Angriffszahlen zu versehen. Ein klassischer Anwendungsfall hierfür wäre z.B., dass man auf frontnahe Dörfer mehr Fake-Angriffe plant als auf Dörfer, die weiter hinten liegen.
+Dies dient dazu, z.B. mehrere Zielstämme mit unterschiedlicher Angriffs-Anzahl pro Dorf als Ziel auszuwählen, oder aber auch unterschiedliche Gebiete des gleichen Gegners mit unterschiedlichen Angriffszahlen zu versehen. Ein klassischer Anwendungsfall hierfür wäre z.B., dass auf frontnahe Dörfer mehr Fake-Angriffe geplant werden als auf Dörfer, die weiter hinten liegen.
 
 == Zonen
 
@@ -45,18 +45,18 @@ Ebenso wie bei den xref:features/action-planner/action-planner-herkunft.adoc#zon
 == Abhängigkeiten
 
 Ebenfalls analog zu den xref:features/action-planner/action-planner-herkunft.adoc#abhängigkeiten[Abhängigkeiten der Herkunft] können hier Abhängigkeiten für die Zieldörfer eingestellt werden.
-Diese Abhängigkeiten dienen dazu, entweder Ziele gänzlich zu ignorieren, auf die man bereits Angriffe geplant hat, oder lediglich die Anzahl der Angriffe eines bestehenden Plans von der im neuen Plan gewollten Gesamtanzahl Angriffe abzuziehen.
+Diese Abhängigkeiten dienen dazu, entweder Ziele gänzlich zu ignorieren, auf die bereits Angriffe geplant worden sind, oder lediglich die Anzahl der Angriffe eines bestehenden Plans von der im neuen Plan gewollten Gesamtanzahl Angriffe abzuziehen.
 
 ====
-*Beispiel:* Man möchte Fakes auf einen großen Stamm planen. Hierzu möchte man sowohl Rammen-Fakes (1 Ramme / Fake/4 LKav) als auch Kata-Fakes (Fake/8 Katas) verwenden.
-Man verplant also zunächst alle Rammen Fakes, diese reichen aber nicht, um alle Ziele abzudecken.
-Also erstellt man einen neuen Plan mit Katapulten in der Vorlage.
+*Beispiel:* Es sollen Fakes auf einen großen Stamm geplant werden. Hierzu sollen sowohl Rammen-Fakes (1 Ramme / Fake/4 LKav) als auch Kata-Fakes (Fake/8 Katas) verwendet werden.
+Es werden also zunächst alle Rammen Fakes verplant, diese reichen aber nicht, um alle Ziele abzudecken.
+Also wird ein neuer Plan mit Katapulten in der Vorlage erstellt.
 Damit nun aber nicht auf die Ziele, auf die bereits eine gewisse Anzahl an Fakes geplant ist, nochmal Fakes verplant werden, kann die bereits geplante Fake/Dorf-Anzahl von der jeweiligen Gesamt-Fake-Anzahl abgezogen werden.
-Dadurch geht man sicher, dass man z.B. nicht 2x 15 Angriffe pro Dorf plant, sondern alle Dörfer auf 15 Fakes auffüllen kann.
+Dadurch wird sichergestellt, dass z.B. nicht 2x 15 Angriffe pro Dorf geplant werden, sondern alle Dörfer auf 15 Fakes auffüllen kann.
 ====
 
 Darüber hinaus können bereits verplante Ziele auch ganz ausgeschlossen werden.
-Dies dient z.B. dazu, wenn man AGs in mehreren Plänen plant, die bereits verplanten Ziele auszuschließen, um doppelte AG-Planung zu umgehen.
+Dies dient z.B. dazu, wenn AGs in mehreren Plänen geplant werden, die bereits verplanten Ziele auszuschließen, um doppelte AG-Planung zu umgehen.
 
 
 
