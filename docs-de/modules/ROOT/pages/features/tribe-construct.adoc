@@ -51,7 +51,7 @@ Um auf eine ausstehende Beitrittsanfrage aufmerksam zu machen, wird mit einer No
 
 Das Rechtesystem ist *aufeinander aufbauend*: Alles, was ein Mitglied kann, kann ein Planer automatisch ebenfalls (und so weiter).
 
-=== Rechtelevel
+=== Rechtelevel[[rechtelevel]]
 
 ==== Gastrechte
 

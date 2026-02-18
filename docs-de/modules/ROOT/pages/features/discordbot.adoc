@@ -20,7 +20,8 @@ Danach bietet sich ihm die Möglichkeit, den Discord-Bot zu bestehenden Servern 
 Nachdem der Discord Bot zum Server hinzugefügt worden ist, muss er noch mit der Datenbank verknüpft werden.
 Dies geschieht über den Command /tribe set [welt] [Konstrukt] [opt. Channel].
 
-TIP: Es werden nur Konstrukte angezeigt, bei denen du Mitglied bist.
+TIP: Es werden nur Konstrukte angezeigt, bei denen du mindestens xref:features/tribe-construct.adoc#rechtelevel[Führung] bist.
+Für Accountdiscords muss lediglich /play set [welt] [opt. Channel] eingetragen werden.
 
 Die beschränkung des Channels bezieht sich nur darauf, ob Berichte gewisser Channel direkt in die DB übernommen werden sollen.
 
