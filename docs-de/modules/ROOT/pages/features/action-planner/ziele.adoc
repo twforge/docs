@@ -6,7 +6,7 @@
 :toclevels: 2
 :toc-title: Inhalt
 
-Nach der Auswahl der Herkunftsdörfer unter xref:features/action-planner/action-planner-herkunft.adoc[Angriffsplaner - Herkunft] können unter diesem Punkt die Ziele für die Angriffe definiert werden.
+Nach der Auswahl der Herkunftsdörfer unter xref:features/action-planner/herkunft.adoc[Angriffsplaner - Herkunft] können unter diesem Punkt die Ziele für die Angriffe definiert werden.
 
 toc::[]
 
@@ -23,7 +23,7 @@ Außerdem kann eingeschränkt werden, ab welcher Dorfpunktzahl die Ziele angelau
 
 === Definition von Zecken
 
-Analog zu der xref:features/action-planner/action-planner-herkunft.adoc#definition_frontlinie[Definition von Zecken bei Herkunftsdörfern] kann hier definiert werden, welche Dörfer zur Definition der Frontlinie ignoriert werden.
+Analog zu der xref:features/action-planner/herkunft.adoc#definition_frontlinie[Definition von Zecken bei Herkunftsdörfern] kann hier definiert werden, welche Dörfer zur Definition der Frontlinie ignoriert werden.
 
 Als Frontdörfer werden Dörfer ignoriert, die weniger befreundete Dörfer in dem unter Radius definierbarem Radius haben als in dem Mindestwert definiert worden ist.
 
@@ -40,11 +40,11 @@ Dies dient dazu, z.B. mehrere Zielstämme mit unterschiedlicher Angriffs-Anzahl 
 
 // hier screenshot einfügen
 
-Ebenso wie bei den xref:features/action-planner/action-planner-herkunft.adoc#zonen[Herkunftsdörfer - Zonen] kann hier durch ein Zeichentool auf der Karte durch ein oder mehrere gezeichnete Bereiche der Zielbereich weiter eingeschränkt werden.
+Ebenso wie bei den xref:features/action-planner/herkunft.adoc#zonen[Herkunftsdörfer - Zonen] kann hier durch ein Zeichentool auf der Karte durch ein oder mehrere gezeichnete Bereiche der Zielbereich weiter eingeschränkt werden.
 
 == Abhängigkeiten
 
-Ebenfalls analog zu den xref:features/action-planner/action-planner-herkunft.adoc#abhängigkeiten[Abhängigkeiten der Herkunft] können hier Abhängigkeiten für die Zieldörfer eingestellt werden.
+Ebenfalls analog zu den xref:features/action-planner/herkunft.adoc#abhängigkeiten[Abhängigkeiten der Herkunft] können hier Abhängigkeiten für die Zieldörfer eingestellt werden.
 Diese Abhängigkeiten dienen dazu, entweder Ziele gänzlich zu ignorieren, auf die bereits Angriffe geplant worden sind, oder lediglich die Anzahl der Angriffe eines bestehenden Plans von der im neuen Plan gewollten Gesamtanzahl Angriffe abzuziehen.
 
 ====

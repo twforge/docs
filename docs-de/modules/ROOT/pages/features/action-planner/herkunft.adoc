@@ -7,7 +7,7 @@
 :toc-title: Inhalt
 
 Das folgende Kapitel thematisiert den ersten großen Bereich der Planung, die Bestimmung der Herkunftsdörfer.
-Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/action-planner-uebersicht.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
+Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/uebersicht.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
 
 TIP: Um eine angenehme Planungserfahrung zu gewährleisten wird empfohlen, die Hardwarebeschleunigung im Browser zu aktivieren.
 Ausgeschaltete Hardwarebeschleunigung kann zu Lags und Fehlern in der Grafikdarstellung führen.
