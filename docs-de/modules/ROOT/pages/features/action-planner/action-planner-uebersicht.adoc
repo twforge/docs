@@ -39,7 +39,11 @@ Diese Pläne oder Plangruppen werden nacheinander erstellt und können dann, sob
 IMPORTANT: Jeder Plan kann mehrere Berechnungen beinhalten, von denen jedoch nur die aktuellste Berechnung zum Veröffentlichen verwendet werden kann.
 Solltest du also nach dem Berechnen einen Fehler in dem Plan finden, kannst du einfach wieder zu diesem Plan navigieren, die Konfiguration anpassen und erneut berechnen.
 
-Dies bedeutet, dass es bei der Planung drei verschiedene Übersichten gibt:
+[TIP,role=premium_silver]
+====
+Anstatt einen leeren neuen Plan zu erstellen, kann über die "Plan kopieren" - Funktion ein Plan erstellt werden, bei dem alle Informationen (Template, Herkunftsdörfer, Zieldörfer, Abschickzeiten, Ankunftszeiten etc.) des ursprünglichen Plans übernommen werden.
+Dies kann entweder über die gesamtübersicht aller berechneter Pläne über das durch rechtsseitige Dropdown ausgewählt werden oder in der Übersicht des einzelnen Plans durch den "Kopieren" Button.
+====
 
 === Planübersicht
 
@@ -157,9 +161,9 @@ Hierzu muss ein maximaler Offset eingestellt werden (maximaler Abstand von AGs z
 
 Nachdem all diese Einstellungen erledigt sind, können Cleaner berechnet werden.
 
-// hier noch den Vorgang des Berechnens einbauen und nochmal das vorgehen überarbeiten, wenn alles gefixed ist
+// hier noch den Vorgang des Berechnens einbauen und nochmal das vorgehen überarbeiten, wenn alles gefixt ist
 
-==== Berechnungsalgorithmen & Rechenkapazitäten image:badges/gold.png[TW-Forge-Gold,role=badge]
+==== Berechnungsalgorithmen & Rechenkapazitäten
 
 Darüber hinaus kann sowohl bei der xref:standard-berechnung[Standard-Berechnung] als auch bei der xref:cleaner-berechnung[Cleaner-Berechnung] zwischen verschiedenen Berechnungsalgorithmen und Kapazitätsnutzungen gewählt werden.
 
@@ -169,7 +173,12 @@ Es stehen folgende Berechnungsalgorithmen zur Verfügung:
 Die Zuteilung der Angriffe erfolgt ausschließlich zufällig.
 . *Halb Random*
 Wenn initial mehrere Dörfer gleich gut erscheinend, wird zufällig ausgewählt.
-. *Systematisch* image:badges/gold.png[TW-Forge-Gold,role=badge]
+. *Systematisch*
++
+[TIP,role=premium_gold]
+====
+Dieses Feature steht nur TW-Forge Gold Accounts zur Verfügung.
+====
 Es wird versucht, durch systematisches Vorgehen die beste Abdeckung zu erreichen.
 
 TIP: Die systematische Abdeckung ist ausschließlich in Verbindung mit "Dedicated"-Ressourcen möglich, da diese sehr viele Berechnungskapazitäten in Anspruch nimmt.
@@ -182,7 +191,12 @@ Außerdem kann entschieden werden, ob der gemeinsame Berechnungspool benutzt wer
 . *Shared Pool*: Du teilst mit allen TW-Forge Nutzern für alle kostenlos bereitgestellten Berechnungskapazitäten.
 Diese sind in ihrem Umfang jedoch limitiert, weswegen große Pläne (spätestens ab 1000 Incs pro Plan) nicht mehr zur Gänze berechnet werden können, da die Möglichkeiten eingeschränkt wird, um die vorhandenen Kapazitäten für alle nutzbar zu machen.
 
-. *Dedicated*: image:badges/gold.png[TW-Forge-Gold,role=badge]
+. *Dedicated*:
++
+[TIP,role=premium_gold]
+====
+Dieses Feature steht nur TW-Forge Gold Accounts zur Verfügung.
+====
 Du bekommst eigene Rechenkapazitäten zur Verfügung gestellt, mit denen du auch sehr große Pläne berechnen kannst.
 Außerdem bist du nicht abhängig davon, ob gerade andere Nutzer gleichzeitig Pläne berechnen wollen.
 
@@ -237,7 +251,7 @@ Moin [player]{player}[/player]
 LG
 ....
 
-=== Teilen von Angriffsplänen
+=== Teilen von Angriffsplänen[[endscreen_planung]]
 
 Nachdem die Aktion erstellt worden ist, können zunächst die Abschickpläne jedes einzelnen Accounts in TW-Forge überprüft werden.
 
