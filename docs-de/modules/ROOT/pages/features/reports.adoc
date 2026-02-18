@@ -98,9 +98,8 @@ Diese Zuordnung ist immer gegeben.
 Zusätzlich wird der Bericht dem Ingame Account des hochladenden TW Forge Users zugeordnet.
 Da jeder TW Forge User mit einem Ingame Account verknüpft sein muss, sind bei diesem Upload-Weg stets beide Zuordnungen vorhanden.
 
-* *Stammeskonstrukt (optional)*
-Befindet sich der hochladende User in einem Stammeskonstrukt, wird der Bericht zusätzlich diesem Konstrukt zugeordnet.
-Diese Zuordnung erfolgt nur bei bestehender Mitgliedschaft.
+* *Stammeskonstrukt (hier nicht möglich)*
+Über den Upload über die Website / die API kann keine Zugehörigkeit zu einem Stammeskonstrukt erstellt werden (dies ist aber nicht erforderlich, damit der Stamm die Berichte sehen kann, vgl. unten)
 
 ==== Upload über Discord (Discord-Bot)
 
