@@ -4,6 +4,31 @@
 :keywords: Abschicken, Angriffspläne, anpassen, Unterstüzungen
 
 Hier findest du deine Angriffspläne, die entweder von deiner Stammesführung für dich erstellt worden sind oder die du selbst erstellt hast.
-Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abschicken, Pläne anpassen, Unterstützungen unter Beachtung der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-Datenbank] anpassen, Angriffe exportieren, einen DS-Ultimate Plan erstellen uvm.
+Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abschicken, Pläne anpassen, Unterstützungen unter Beachtung der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-Datenbank] anpassen, WB-Strings exportieren, einen DS-Ultimate Plan erstellen uvm.
 
-// TODO
+== Übersicht der Angriffspläne
+
+Zunächst erhält der Nutzer einen Überblick über alle ihm zugewiesenen Angriffspläne.
+Diese können entweder durch den Nutzer selbst erstellt worden sein oder von einem Stammesmitglied mit der Planungsrolle für den Nutzer erstellt und dann freigegeben worden sein.
+Hier bieten sich durch einen Klick auf die drei Punkte neben den APs dem Nutzer direkt mehrere Möglichkeiten:
+
+* *Öffnen des Angriffplans*
+* *Archivieren des Angriffplans*-> Angriff wird in das Archiv verschoben
+* *Erstellen der WB-Exporte*-> vom Plan werden die zugehörigen WB-Exporte erstellt
+
+TIP: Solltest du diese Exporte in DS-Ultimate einfügen, werden dort die unaufgelösten Variablen (fake, alle) nicht aufgelöst, sondern komplett übernommen.
+Solltest du die aufgelösten Truppen erhalten wollen, so drücke auf "Exportierter Plan"
+
+* *Exportierter Plan*: Gelange zu dem exportierten Ds-Ultimate Plan, in dem alle Variablen (soweit möglich) aufgelöst sind.
+
+TIP: Die "Alle"-Variable hängt von den aktuellen Truppen des Dorfes an.
+Diese werden bei dem exportierten Plan nicht aufgelöst, da diese Anzahl sich stetig verändert.
+TW-Forge bietet aber an, vor dem Abschicken unter xref:features/account.adoc#truppen[Account→Truppen] die Truppen hochzuladen.
+Beim Abschicken über TW-Forge selbst werden dann alle Variablen (inkl. "Alle") aufgelöst.
+
+Nachdem der Plan geöffnet worden ist, besteht zusätzlich die Möglichkeit, den Angriffsplan gemäß der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB] anzupassen.
+Hierbei werden alle Unterstützungen, für die ein Unterstützungsboost eingetragen worden ist, automatisch angepasst.
+Dabei kann der User wählen, ob dabei alle (eigene + vom Stamm eingetragene) UT-Boosts berücksichtigt werden sollen oder ausschließlich die eigenen.
+
+Sollte der Nutzer bei einzelnen Angriffen etwas verändern wollen (Template, Zeit, Herkunftsdorf etc.), so kann er dies über die drei Punkte neben dem einzelnen Inc jederzeit tun.
+

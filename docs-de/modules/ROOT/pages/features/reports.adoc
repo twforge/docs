@@ -68,7 +68,69 @@ image::features/reports/berichte-veröffentlichen.png[Berichte veröffentlichen]
 
 Danach klicke auf "Veröffentlichen" und anschließend auf Weiterleiten und kopiere den gesamten Text in das entsprechende TW-Forge Feld und bestätige die Eingabe.
 
-// sollte man hier die Logik hinter zugeordneten Berichten erklären? Weil nicht wie Deep man gehen sollte
+=== Zugehörigkeit von Berichten
+
+Die Sichtbarkeit von Berichten in TW Forge wird über ihre Zuordnung zu definierten Entitäten gesteuert.
+Ein Bericht muss mindestens einer Entität zugeordnet sein. Je nach Upload-Weg können mehrere parallele Zuordnungen bestehen.
+
+Die konkrete Zuordnung entscheidet darüber, welche anderen Nutzer einen Bericht einsehen können.
+
+==== Grundprinzip der Zuordnung
+
+Berichte können folgenden Entitäten zugeordnet werden:
+
+* TW Forge Account
+* Ingame Account
+* Stammeskonstrukt
+
+Mindestens eine dieser Zuordnungen muss bestehen.
+Welche Zuordnungen gesetzt werden, hängt vom jeweiligen Upload-Weg ab.
+
+==== Upload über Website oder API
+
+Erfolgt der Upload über die Website oder die API, wird die Zuordnung automatisiert vorgenommen.
+
+* *TW Forge Account*
+Der Bericht wird dem hochladenden TW Forge Account zugeordnet.
+Diese Zuordnung ist immer gegeben.
+
+* *Ingame Account*
+Zusätzlich wird der Bericht dem Ingame Account des hochladenden TW Forge Users zugeordnet.
+Da jeder TW Forge User mit einem Ingame Account verknüpft sein muss, sind bei diesem Upload-Weg stets beide Zuordnungen vorhanden.
+
+* *Stammeskonstrukt (hier nicht möglich)*
+Über den Upload über die Website / die API kann keine Zugehörigkeit zu einem Stammeskonstrukt erstellt werden (dies ist aber nicht erforderlich, damit der Stamm die Berichte sehen kann, vgl. unten)
+
+==== Upload über Discord (Discord-Bot)
+
+Beim Posten eines Berichts über den Discord-Bot erfolgt die Zuordnung serverseitig anhand der Bot-Konfiguration.
+
+* *Account (Serverkonfiguration)*
+Der Bericht wird dem Account zugeordnet, mit dem der Discord-Bot auf dem Server verbunden ist.
+
+* *Stamm (Serverkonfiguration)*
+Der Bericht wird dem Stamm zugeordnet, mit dem der Discord-Bot auf dem Server verbunden ist.
+
+* *Optionale persönliche Zuordnung*
+Wurde der Discord-Account des hochladenden Users auf der TW Forge Website mit seinem TW Forge Account verknüpft, wird der Bericht zusätzlich diesem Account zugeordnet.
+Ohne bestehende Verknüpfung erfolgt keine persönliche Zuordnung.
+
+==== Voraussetzungen für die Sichtbarkeit
+
+Ein Bericht kann von einem Nutzer eingesehen werden, wenn mindestens eine der folgenden Bedingungen erfüllt ist:
+
+* Der Bericht ist einem Account zugeordnet, mit dem der Nutzer verbunden ist.
+* Der Bericht ist einem Stammeskonstrukt zugeordnet, dem der Nutzer angehört.
+* Der Nutzer befindet sich im gleichen Account wie derjenige, der den Bericht hochgeladen hat.
+* Der Nutzer befindet sich im gleichen Stammeskonstrukt wie derjenige, der den Bericht hochgeladen hat.
+
+==== Zusammenfassung
+
+Die Sichtbarkeit von Berichten basiert ausschließlich auf der gemeinsamen Zugehörigkeit zu mindestens einer Entität (Account oder Stammeskonstrukt).
+
+Durch Mehrfach-Zuordnungen kann die Reichweite eines Berichts erweitert werden.
+Ein Bericht wird ausschließlich denjenigen Nutzern angezeigt, mit denen eine gemeinsame Entität besteht.
+
 
 
 

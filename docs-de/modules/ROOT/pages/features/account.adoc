@@ -2,14 +2,13 @@
 :page-navtitle: Account
 :description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
 :keywords: Account, UV, Urlaubsvertretung, Discord, Truppen einlesen, Planungsvorbereitung
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
 
 Hier findest du alle wichtigen Informationen sowie Einstellungsmöglichkeiten für Accountbezogene Settings.
 
-* Einsehen, welche TW-Forge Accounts auf der ausgewählten Welt mit dem Ingame Account verknüpft sind
-* Einsicht, ob dein verknüpfter Ingame Account als Urlaubsvertretung bei einem anderen Account verknüpft ist
-* Hinzufügen von Urlaubsvertretungen
-* Einlesen von Accounttruppen
-* Discordeinstellungen für Accountdiscords
+toc::[]
 
 == Accountbezogene Informationen und Verwaltung
 
@@ -35,7 +34,8 @@ Durch ein Ändern des Stämme-Passworts können alle bisherigen Zugriffe effekti
 Zusätzlich wird angezeigt, ob der eigene Account bei anderen Accounts als *Urlaubsvertretung* eingetragen ist.
 Diese Einträge können bei Bedarf selbstständig entfernt werden.
 
-== Truppen
+
+== Truppen[[truppen]]
 
 In diesem Bereich können für den eigenen Account Truppen hinterlegt werden.
 
@@ -49,7 +49,7 @@ Diese Truppenangaben können unter anderem für folgende Funktionen verwendet we
 === Truppen einlesen[[account-truppen-einlesen]]
 
 Das Einlesen der Truppen geschieht über ein Copy-Paste aus der account-internen Truppenübersicht.
-Hierzu gehe Ingame auf Übersicht -> Truppen -> Alle und wähle die Gruppe "Alle" aus.
+Hierzu gehe Ingame auf Übersicht->Truppen->Alle und wähle die Gruppe "Alle" aus.
 Stelle sicher, dass alle Dörfer zu sehen sind, und nicht z.B. durch die maximale Anzahl an Dörfern / pro Seite (siehe Screenshot) eingegrenzt werden.
 
 image::features/account/troop-import.png[Truppen-Importieren-Ingame]
@@ -59,7 +59,7 @@ Allerdings hast du unter dem xref:features/action-planner/action-planner-uebersi
 
 Nun drücke auf der Seite einfach Ctrl+a, Ctrl+c, um die gesamte Seite zu kopieren, gehe danach in TW-Forge und füge die Truppeninfos ein.
 Du kannst unten rechts auswählen, ob du "Eigene" (Truppen) oder "Insgesamt" einlesen willst.
-Diese werden dann als "Truppen" im Planungstool hinterlegt (relevant bei der Filterung unter Aktionsplaner -> Herkunftsdörfer).
+Diese werden dann als "Truppen" im Planungstool hinterlegt (relevant bei der Filterung unter Aktionsplaner->Herkunftsdörfer).
 
 * *Eigene:* Alle Truppen, die zum Dorf gehören und aktuell im Dorf stehen (=Verteidigung abzüglich Fremdtruppen)
 * *Insgesamt:* Alle Truppen, die zum Dorf gehören (=Truppen)

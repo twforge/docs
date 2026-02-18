@@ -19,7 +19,7 @@ Dabei werden unter anderem folgende Informationen und Funktionen im Konstrukt ge
 
 toc::[]
 
-== Stammeskonstrukt gründen pass:[<span class="tw-forge-gold">TW-Forge-Gold</span>]
+== Stammeskonstrukt gründen image:badges/gold.png[TW-Forge-Gold,role=badge]
 
 Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planung, Rechteverwaltung und das Teilen von Daten zwischen mehreren Accounts.
 
@@ -31,7 +31,7 @@ Ohne Premium-Zugang kannst du bestehenden Stammeskonstrukten beitreten, aber kei
 Um einem Stammeskonstrukt beizutreten, benötigst du einen Invite Link, der von deiner Stammesführung oder einem bereits beigetretenen Stammesmitglied erstellt werden kann.
 Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem man auf "beim Stammeskonstrukt bewerben" klicken muss.
 Wenn dies erfolgreich ist, ist alles Erforderliche getan - du musst jetzt nur noch von der Stammesführung freigeschaltet werden.
-Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die von dem dir von der SF zugewiesenen Rechtelevel entsprechen.
+Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die dem dir von der SF zugewiesenen Rechtelevel entsprechen.
 
 TIP: Man kann auch mehreren Stammeskonstrukten gleichzeitig angehören.
 Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit beiden Stammeskonstrukten geteilt.
@@ -51,7 +51,7 @@ Um auf eine ausstehende Beitrittsanfrage aufmerksam zu machen, wird mit einer No
 
 Das Rechtesystem ist *aufeinander aufbauend*: Alles, was ein Mitglied kann, kann ein Planer automatisch ebenfalls (und so weiter).
 
-=== Rechtelevel
+=== Rechtelevel[[rechtelevel]]
 
 ==== Gastrechte
 
@@ -97,7 +97,7 @@ Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 * Möglichkeit zum Auflösen des Stammeskonstrukts
 
-== Truppen
+== Truppen[[truppen]]
 
 Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
 Das Einlesen erfolgt über ein erlaubtes Net-SL-Script.

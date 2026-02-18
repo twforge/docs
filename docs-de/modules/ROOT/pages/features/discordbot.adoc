@@ -1,3 +1,45 @@
-= Discordbot
+= Discord-Bot
+:page-navtitle: Discordbot
+:description: Verknüpfung von Funktionen der Datenbank mit Stammes- und Accountdiscords
+:keywords: Discord, Verknüpfung, Berichte, Notifications,
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
 
-// TODO
+NOTE: Der Discord-Bot umfasst momentan nur sehr eingeschränkte Funktionen. Diese werden im weiteren Verlauf der Entwicklung von TW-Forge noch erweitert.
+
+toc::[]
+
+== Setup des Discord-Bots
+
+Zunächst muss der Discord-Bot auf den Stammesdiscord / den Accountdiscord eingeladen und mit TW-Forge verknüpft werden.
+Hierzu gelangt der Nutzer durch einen Klick auf das Discord-Symbol unten links auf die xref:settings.adoc#discord[Discord-Einstellungen].
+Hier muss sich der Nutzer zunächst mit seinem Discord verbinden.
+Danach bietet sich ihm die Möglichkeit, den Discord-Bot zu bestehenden Servern einzuladen und hinzuzufügen.
+
+Nachdem der Discord Bot zum Server hinzugefügt worden ist, muss er noch mit der Datenbank verknüpft werden.
+Dies geschieht über den Command `/tribe set <welt> <Konstrukt> [opt. channel]`.
+
+TIP: Es werden nur Konstrukte angezeigt, bei denen du mindestens xref:features/tribe-construct.adoc#rechtelevel[Führung] bist.
+Für Accountdiscords muss lediglich `/player set <welt> [opt. channel]` eingetragen werden.
+
+Die beschränkung des Channels bezieht sich nur darauf, ob Berichte gewisser Channel direkt in die DB übernommen werden sollen.
+
+== Berichte umformatieren
+
+Durch das Hochladen von den Veröffentlichungslinks auf dem Stammesdiscord werden diese Berichte umformatiert und graphisch dargestellt.
+Darüber hinaus werden hier hochgeladene Berichte automatisch in die Datenbank übernommen.
+
+[NOTE]
+====
+Im Gegensatz zum regulären Hochladen von Berichten über die Datenbank selbst oder die dafür vorgesehene xref:api.adoc[API] werden diese Berichte dem Stammeskonstrukt selbst zugeordnet und nicht einem einzelnen User.
+Dies bedeutet, dass im Falle eines Wechsel des Konstruktes (Stammeswechsel o.Ä.) der Bericht im alten Konstrukt bestehen bleibt.
+====
+
+=== Bericht des Tages / der Woche / des Monats
+
+Zusätzlich bietet der umformatierte Bericht in Bildform die Möglichkeit, mit Daumen hoch oder Daumen runter zu reagieren.
+Der Bericht, der am Ende des Tages die meisten Daumen hoch erhalten hat, wird als Bericht des Tages gewertet und nochmal gepostet.
+Selbiges gilt für Berichte der Woche, des Monats und des Jahres.
+Des Weiteren werden die Berichte mit den meisten Reaktionen auch auf der TWForge-Startseite angezeigt.
+

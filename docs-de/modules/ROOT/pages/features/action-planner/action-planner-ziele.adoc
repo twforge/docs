@@ -1,0 +1,63 @@
+= Aktionsplaner - Ziele
+:page-navtitle: Aktionsplaner - Ziele
+:description: Tool zur Erstellung von Angriffsplänen von einzelnen Accounts bis hin zu Plänen für ganze Stämme
+:keywords: Planung, Offaktionen, Angriffspläne, Ziele, Filter, Template etc.
+:toc: macro
+:toclevels: 2
+:toc-title: Inhalt
+
+Nach der Auswahl der Herkunftsdörfer unter xref:features/action-planner/action-planner-herkunft.adoc[Angriffsplaner - Herkunft] können unter diesem Punkt die Ziele für die Angriffe definiert werden.
+
+toc::[]
+
+== Stämme/Spieler
+
+//hier Screenshot einfügen
+
+Zunächst besteht die Möglichkeit einer automatischen Zielauswahl eines Spielers oder eines Stammes.
+Dies geschieht über den großen Button "Front hinzufügen".
+Hier müssen auf der linken Seite alle befreundeten Stämme (die Front zu den Zielstämmen haben) ausgewählt werden, auf der rechten Seite analog dazu alle Zielstämme.
+Nachdem dies geschehen ist, kann durch den Regler "Frontentfernung" definiert werden, wie viele Reihen der Front zu den eingetragenen Stämmen als Ziele ausgewählt werden sollen.
+Hier kann sowohl eine Mindestdistanz (ab einer gewissen Entfernung zum eigenen Stamm) definiert werden als auch eine Maximaldistanz (wie weit in den Stamm sollen die Angriffe hinein gehen).
+Außerdem kann eingeschränkt werden, ab welcher Dorfpunktzahl die Ziele angelaufen werden.
+
+=== Definition von Zecken
+
+Analog zu der xref:features/action-planner/action-planner-herkunft.adoc#definition_frontlinie[Definition von Zecken bei Herkunftsdörfern] kann hier definiert werden, welche Dörfer zur Definition der Frontlinie ignoriert werden.
+
+Als Frontdörfer werden Dörfer ignoriert, die weniger befreundete Dörfer in dem unter Radius definierbarem Radius haben als in dem Mindestwert definiert worden ist.
+
+====
+Beispiel: Bei der Standardeinstellung "mindestens 5 Dörfer in einem 5-Feld-Radius" werden nur Dörfer in die Frontbewertung einbezogen, die in einem Radius von 5 Feldern mindestens 5 weitere Stammesdörfer haben.
+Sollte ein Dorf weniger Dörfer in dem festgelegten Radius haben, so wird es als Zecke behandelt und somit nicht für die Frontbewertung mit einbezogen.
+====
+
+TIP: Es können auch mehrere von den oben beschriebenen Auswahlmöglichkeiten kombiniert werden.
+Dazu klicke einfach erneut auf "Fronten hinzufügen".
+Dies dient dazu, z.B. mehrere Zielstämme mit unterschiedlicher Angriffs-Anzahl pro Dorf als Ziel auszuwählen, oder aber auch unterschiedliche Gebiete des gleichen Gegners mit unterschiedlichen Angriffszahlen zu versehen. Ein klassischer Anwendungsfall hierfür wäre z.B., dass auf frontnahe Dörfer mehr Fake-Angriffe geplant werden als auf Dörfer, die weiter hinten liegen.
+
+== Zonen
+
+// hier screenshot einfügen
+
+Ebenso wie bei den xref:features/action-planner/action-planner-herkunft.adoc#zonen[Herkunftsdörfer - Zonen] kann hier durch ein Zeichentool auf der Karte durch ein oder mehrere gezeichnete Bereiche der Zielbereich weiter eingeschränkt werden.
+
+== Abhängigkeiten
+
+Ebenfalls analog zu den xref:features/action-planner/action-planner-herkunft.adoc#abhängigkeiten[Abhängigkeiten der Herkunft] können hier Abhängigkeiten für die Zieldörfer eingestellt werden.
+Diese Abhängigkeiten dienen dazu, entweder Ziele gänzlich zu ignorieren, auf die bereits Angriffe geplant worden sind, oder lediglich die Anzahl der Angriffe eines bestehenden Plans von der im neuen Plan gewollten Gesamtanzahl Angriffe abzuziehen.
+
+====
+*Beispiel:* Es sollen Fakes auf einen großen Stamm geplant werden. Hierzu sollen sowohl Rammen-Fakes (1 Ramme / Fake/4 LKav) als auch Kata-Fakes (Fake/8 Katas) verwendet werden.
+Es werden also zunächst alle Rammen Fakes verplant, diese reichen aber nicht, um alle Ziele abzudecken.
+Also wird ein neuer Plan mit Katapulten in der Vorlage erstellt.
+Damit nun aber nicht auf die Ziele, auf die bereits eine gewisse Anzahl an Fakes geplant ist, nochmal Fakes verplant werden, kann die bereits geplante Fake/Dorf-Anzahl von der jeweiligen Gesamt-Fake-Anzahl abgezogen werden.
+Dadurch wird sichergestellt, dass z.B. nicht 2x 15 Angriffe pro Dorf geplant werden, sondern alle Dörfer auf 15 Fakes auffüllen kann.
+====
+
+Darüber hinaus können bereits verplante Ziele auch ganz ausgeschlossen werden.
+Dies dient z.B. dazu, wenn AGs in mehreren Plänen geplant werden, die bereits verplanten Ziele auszuschließen, um doppelte AG-Planung zu umgehen.
+
+
+
+

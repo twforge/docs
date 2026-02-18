@@ -5,6 +5,7 @@
 ** xref:features/reports.adoc[Berichte]
 ** xref:features/map.adoc[Karte]
 ** xref:features/analyser.adoc[Angriffe]
+** xref:features/discordbot.adoc[DC-Bot]
 ** Planer
 *** xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]
 *** xref:features/planner/abfrage_planner.adoc[Abfrage]
@@ -14,6 +15,11 @@
 ** xref:features/userscript.adoc[Userscript]
 ** Aktionsplaner
 *** xref:features/action-planner/action-planner-uebersicht.adoc[Übersicht]
+*** xref:features/action-planner/action-planner-herkunft.adoc[Herkunft]
+*** xref:features/action-planner/action-planner-ziele.adoc[Ziele]
+*** xref:features/action-planner/action-planner-zeiten.adoc[Zeiten]
 * xref:faq.adoc[FAQ]
+* xref:premium.adoc[Premium-Features]
+* xref:api.adoc[API]
 // hier kommt noch mehr
 

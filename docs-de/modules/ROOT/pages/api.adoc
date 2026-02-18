@@ -1,0 +1,30 @@
+= API
+:page-navtitle: API
+:description: Einführung in die TW Forge APIs und Verweis auf die offizielle API-Dokumentation
+:keywords: API, Schnittstelle, Integration, Entwickler, TW Forge
+
+TW Forge stellt leistungsfähige Programmierschnittstellen (APIs) zur Verfügung, um Funktionen und Daten der Plattform automatisiert und extern nutzbar zu machen.
+Die APIs richten sich in erster Linie an Entwicklerinnen und Entwickler, die eigene Tools, Skripte oder Integrationen rund um TW Forge umsetzen möchten.
+
+== Überblick
+
+Über die TW Forge APIs können unter anderem folgende Anwendungsfälle realisiert werden:
+
+* *Import von Berichten*
+* *more to come...*
+
+Die APIs sind klar versioniert, konsistent aufgebaut und für eine programmgesteuerte Nutzung ausgelegt.
+
+== Offizielle API-Dokumentation
+
+Eine vollständige und stets aktuelle Beschreibung aller verfügbaren Endpunkte, Parameter, Authentifizierungsmechanismen sowie Beispielanfragen findest du in der offiziellen API-Dokumentation:
+
+link:https://docs.twforge.net/developer-api[Zur offiziellen TW Forge API-Dokumentation]
+
+Dort werden alle technischen Details zentral gepflegt und dokumentiert.
+
+== Hinweise zur Nutzung
+
+Die Nutzung der APIs kann abhängig vom Funktionsumfang und Zugriffstyp an bestimmte Voraussetzungen oder Berechtigungen gebunden sein.
+Einige APIs sind für jeden zugänglich, andere sind Premium-Nutzern vorbehalten.
+Details hierzu sind ebenfalls in der API-Dokumentation beschrieben.

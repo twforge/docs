@@ -2,8 +2,46 @@
 :page-navtitle: Abfrage
 :description: Tool zum Angeben von Informationen für eine Offaktionsplanung (AGs, Abschickzeiten, nicht zu verplanende Offs)
 :keywords: Planung, Abfrage, Zeiten, Abschickzeiten, AGs, Ausplanen, Angeben
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
 
 Hier werden die Informationen angegeben, die für eine Offaktion notwendig sind.
 Diese Informationen können für alle verknüpften Accounts (Main Account sowie xref:features/account.adoc#uv[Urlaubsvertretungen]) angegeben werden und danach bei der Offaktionsplanung berücksichtigt werden.
 
-// TODO
+toc::[]
+
+// hier Screenshot einfügen
+
+== AGs angeben
+
+Hier können AGs angegeben werden, damit entweder die angebende Person selbst oder die planende Person aus dem Stammeskonstrukt diese AGs für Aktionen verplanen kann.
+Dies geschieht über das Eingabefeld, in dem du Koordinaten einfügen kannst.
+Über das darunter liegende Eingabefeld wird definiert, wie viele AGs die entsprechenden Dörfer beinhalten.
+Für jede unterschiedliche AG Anzahl muss also nacheinander eine AG eingabe getätigt werden.
+
+IMPORTANT: Solltest du ein bereits eingegebenes Dorf aktualisieren wollen, so muss zunächst das Dorf aus der Liste gelöscht werden und dann mit der aktualisierten Zahl angegeben werden.
+
+Um darauf hinzuweisen, wenn die AG-Angaben älter als zwei Tage sind (und somit ggf. outdated sind), erscheint ein Popup, das auf das Alter der Daten hinweist.
+Sofern die Daten noch aktuell sind, kann dies durch ein "Angaben bestätigen" Button bestätigt werden.
+
+TIP: Du kannst über dein Eingabefeld auch angaben für andere Accounts vornehmen, sollte das Dorf z.B. noch nicht zu deinem Account gehören.
+
+== Auszuplanende Offs angeben
+
+Darüber hinaus hat der Spieler die Möglichkeit, Offs anzugeben, die die planende Person nicht verplanen soll.
+Hierzu kopiere einfach die Koordinatenliste der entsprechenden Dörfer in das Eingabefeld hinein und drücke auf bestätigen.
+
+TIP: Die Truppen werden nicht automatisch ausgeplant, sondern muss dies von der planenden Person noch bei der Planung hinzugefügt werden.
+Sollte er dies also nicht tun, werden die Offs dennoch verplant.
+
+== Abschickzeiten angeben
+
+Hier können Abschickzeiten für den eigenen Account sowie bestehende Urlaubsvertretungen eingegeben werden.
+Über das oben rechts stehende Dropdown können Accounts markiert werden, für die die entsprechenden Zeiten angegeben werden sollen.
+Danach kann über die Kalender-Anzeige definiert werden, für welche Tage man Zeiten angeben will.
+Über die von ... bis ... Zeitangabe können dann die einzelnen Zeitfenster an den eingestellten Daten gekennzeichnet werden.
+
+TIP: Um das Abschicken zu erleichtern, ist es sinnvoll, nicht ein langes Zeitfenster von morgens bis abends anzugeben, da in diesem Fall die Angriffe einzeln über den ganzen Tag verteilt werden und lediglich immer mal wieder einzelne Angriffe zu schicken sind.
+Sinnvoller ist es, mehrere Zeitfenster anzugeben (z.B. alle 2h jeweils 15min), da die Angriffe so gebündelt werden und man nicht permanent Angriffe abschicken muss.
+

@@ -1,0 +1,122 @@
+/* Dropdown Container */
+.navbar .search .search-result-dropdown-menu {
+    position: absolute;
+    top: calc(100% + .45rem);
+    right: 0;
+    width: 38rem;
+    max-width: 85vw;
+    max-height: 70vh;
+    overflow: auto;
+
+    background: #111; /* an dunkles Header-Theme angepasst */
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: .6rem;
+    box-shadow: 0 18px 40px rgba(0,0,0,.45);
+    z-index: 5000;
+}
+
+/* Dataset Padding */
+.navbar .search .search-result-dataset {
+    padding: .35rem;
+}
+
+/* Component Header (z.B. "TW Forge Doku Deutsch") */
+.navbar .search .search-result-component-header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: .55rem .65rem;
+    margin: 0;
+
+    font-weight: 700;
+    font-size: .95rem;
+    color: rgba(255,255,255,.85);
+    background: rgba(17,17,17,.95);
+    border-bottom: 1px solid rgba(255,255,255,.10);
+}
+
+/* Result Item */
+.navbar .search .search-result-item {
+    padding: .55rem .65rem;
+    border-radius: .5rem;
+}
+
+/* Trennlinie zwischen Items */
+.navbar .search .search-result-item + .search-result-item {
+    border-top: 1px solid rgba(255,255,255,.08);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/* Hover / Focus */
+.navbar .search .search-result-item:hover {
+    background: rgba(255,255,255,.06);
+}
+
+/* Titel oben (fett, nicht blau) */
+.navbar .search .search-result-document-title {
+    font-weight: 700;
+    font-size: 1rem;
+    color: rgba(255,255,255,.92);
+    margin-bottom: .2rem;
+}
+
+/* Link-Reset: keine Standard-Blau/Underline */
+.navbar .search .search-result-document-hit a {
+    color: rgba(255,255,255,.80);
+    text-decoration: none;
+    display: block;
+    line-height: 1.35;
+}
+
+/* Snippet/Content etwas gedimmt */
+.navbar .search .search-result-document-hit {
+    color: rgba(255,255,255,.70);
+    font-size: .92rem;
+}
+
+/* Section Title (Zwischenüberschrift) */
+.navbar .search .search-result-section-title {
+    font-weight: 600;
+    color: rgba(255,255,255,.88);
+    margin-bottom: .15rem;
+}
+
+/* Keywords-Zeile */
+.navbar .search .search-result-keywords {
+    margin-top: .35rem;
+    font-size: .85rem;
+    color: rgba(255,255,255,.55);
+}
+
+.navbar .search .search-result-keywords-field-label {
+    color: rgba(255,255,255,.45);
+}
+
+/* Highlight (Suchtreffer) */
+.navbar .search .search-result-highlight {
+    background: rgba(255, 153, 0, .18); /* warmes orange */
+    border-radius: .25rem;
+    padding: 0 .15rem;
+    color: rgba(255,255,255,.95);
+}
+
+/* Optional: Scrollbar etwas cleaner (Chrome/Edge) */
+.navbar .search .search-result-dropdown-menu::-webkit-scrollbar {
+    width: 10px;
+}
+.navbar .search .search-result-dropdown-menu::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,.12);
+    border-radius: 10px;
+    border: 2px solid rgba(17,17,17,.95);
+}
+.navbar .search .search-result-dropdown-menu::-webkit-scrollbar-track {
+    background: rgba(0,0,0,.15);
+}
+
+.navbar .search #search-input {
+    width: 18rem;
+    max-width: 40vw;
+    padding: .45rem .6rem;
+    border-radius: .4rem;
+}
