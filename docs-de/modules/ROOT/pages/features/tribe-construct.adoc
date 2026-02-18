@@ -19,7 +19,7 @@ Dabei werden unter anderem folgende Informationen und Funktionen im Konstrukt ge
 
 toc::[]
 
-== Stammeskonstrukt gründen pass:[<span class="tw-forge-gold">TW-Forge-Gold</span>]
+== Stammeskonstrukt gründen image:badges/gold.png[TW-Forge-Gold,role=badge]
 
 Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planung, Rechteverwaltung und das Teilen von Daten zwischen mehreren Accounts.
 
@@ -96,7 +96,6 @@ Führung übernimmt organisatorische und diplomatische Verwaltungsaufgaben:
 Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 * Möglichkeit zum Auflösen des Stammeskonstrukts
-
 
 == Truppen[[truppen]]
 

@@ -18,11 +18,12 @@ Das genauere Vorgehen hängt hier vom verwendeten Browser ab.
 
 Nachdem das Skript eingefügt worden ist, muss in den Stämme Einstellungen unter "Spieloptionen->Datenbanksettings" noch der API-Key, welchen du direkt über dem Userscript auf TW-Forge findest, eingefügt werden.
 
-TIP: Benutze die Kopieren-Funktion rechts neben dem API-Key Feld und kopiere nicht das Feld, da  sonst nur die Sterne kopiert werden.
 
 Bevor das Eingabefeld bestätigt werden kann, muss noch zwischen "User" und "SF" entschieden werden.
 Hier kann jeder Nutzer sowohl User als auch SF problemlos auswählen, SF zeigt mehr Informationen an, der Nutzer muss aber nicht teil der SF sein.
 
 == Nutzung des Userscripts
+
+NOTE: Detaillierte Beschreibung der Funktionen  unter https://forum.die-staemme.de/index.php?threads/db-info.194547/[der offiziellen Beschreibung im Forum.]
 
 // das muss hier noch ergänzt werden, wenn ich mal Angriffe hatte und mir das genau anschauen können
