@@ -41,7 +41,7 @@ Solltest du also nach dem Berechnen einen Fehler in dem Plan finden, kannst du e
 
 [TIP,role=premium_silver]
 ====
-Anstatt einen leeren neuen Plan zu erstellen, kann über die "Plan kopieren" - Funktion ein Plan erstellt werden, bei dem alle Informationen (Template, Herkunftsdörfer, Zieldörfer, Abschickzeiten, Ankunftszeiten etc.) des ursprünglichen Plans übernommen werden.
+*Plan kopieren:* Anstatt einen leeren neuen Plan zu erstellen, kann über die "Plan kopieren" - Funktion ein Plan erstellt werden, bei dem alle Informationen (Template, Herkunftsdörfer, Zieldörfer, Abschickzeiten, Ankunftszeiten etc.) des ursprünglichen Plans übernommen werden.
 Dies kann entweder über die gesamtübersicht aller berechneter Pläne über das durch rechtsseitige Dropdown ausgewählt werden oder in der Übersicht des einzelnen Plans durch den "Kopieren" Button.
 ====
 
@@ -82,7 +82,7 @@ Einstellungsmöglichkeiten auf dieser Übersicht:
 * *Name des Plans* (Pflichtfeld)
 * *Langsamste Einheit* (Pflichtfeld)
 * *Typ (Pflichtfeld)*: Der Typ definiert, welches Symbol neben der langsamsten Einheit im Abschickplan angezeigt wird.
-Das kann z.B. für Kattapulte das geplante Ziel sein, oder der abgeknickte Speer für Fake-Unterstützungen.
+Das kann z.B. für Katapulte das geplante Ziel sein, oder der abgeknickte Speer für Fake-Unterstützungen.
 
 TIP: Der Typ dient dazu, der abschickenden Person klarzumachen, wofür der jeweilige Inc geplant ist.
 

@@ -18,6 +18,7 @@
 *** xref:features/action-planner/herkunft.adoc[Herkunft]
 *** xref:features/action-planner/ziele.adoc[Ziele]
 *** xref:features/action-planner/zeiten.adoc[Zeiten]
+*** xref:features/action-planner/berechnen.adoc[Berechnen]
 * xref:faq.adoc[FAQ]
 * xref:premium.adoc[Premium-Features]
 * xref:api.adoc[API]
