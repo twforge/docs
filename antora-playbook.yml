@@ -26,4 +26,4 @@ output:
 
 runtime:
   log:
-    failure_level: error
+    failure_level: warn

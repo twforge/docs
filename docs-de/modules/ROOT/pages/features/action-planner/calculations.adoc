@@ -10,7 +10,7 @@ Im finalen Screen können sowohl der Berechnungsalgorithmus als auch der Berechn
 
 [TIP,role=premium_gold]
 ====
-Der systematische Berechnungsalgorithmus und der (dafür benötigte) dedicated Berechnungspool sind nur für TWForge-Gold Nutzer möglich.
+Der systematische Berechnungsalgorithmus und der (dafür benötigte) dedicated Berechnungspool sind nur für TWForge-Gold Nutzer verfügbar.
 ====
 
 Für weitere Informationen zu den Berechnungsalgorithmen und dem Berechnungspool schaue xref:features/action-planner/overview.adoc#berechnungsalgorithmus_rechenkapazitäten[hier.]
@@ -35,7 +35,7 @@ Außerdem kann durch ein Klicken auf das Zeichentool rechts auf der Karte angeze
 === Ziele
 
 Unter Ziele kann überprüft werden, wie viele Angriffe auf welches Ziel geplant worden sind.
-Hierbei kann überprüft werden, ob alle Ziele mit den unter xref:features/action-planner/targets.adoc[Ziele] definierten Angriffsanzahlen abgedeckt werden konnten und welche Dörfer ggf. nicht vollständig bzw. gar nicht abgedeckt werden konnten.
+Hierbei kann überprüft werden, ob alle Ziele mit den unter xref:features/action-planner/targets.adoc[Ziele] definierten Angriffszahlen abgedeckt werden konnten und welche Dörfer ggf. nicht vollständig bzw. gar nicht abgedeckt werden konnten.
 
 === Angriffe
 
