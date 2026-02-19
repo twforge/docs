@@ -42,11 +42,11 @@ jobs:
 
       - name: Copy Swagger UI
         run: |
-          mkdir -p build/site/script-api/js
-          mkdir -p build/site/script-api/css
-          cp node_modules/swagger-ui-dist/swagger-ui-bundle.js node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js build/site/script-api/js/
-          cp node_modules/swagger-ui-dist/swagger-ui.css build/site/script-api/css/
-          cp script-api/index.html script-api/openapi.yaml build/site/script-api/
+          mkdir -p build/site/developer-api/js
+          mkdir -p build/site/developer-api/css
+          cp node_modules/swagger-ui-dist/swagger-ui-bundle.js node_modules/swagger-ui-dist/swagger-ui-standalone-preset.js build/site/developer-api/js/
+          cp node_modules/swagger-ui-dist/swagger-ui.css build/site/developer-api/css/
+          cp developer-api/index.html developer-api/openapi.yaml build/site/developer-api/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
-  title: TW Forge Script API
-  description: TW Forge API for Tribalwars scripts.
+  title: TW Forge Developer API
+  description: TW Forge API for Tribalwars developers.
   version: 1.0.0
   contact:
     name: TWForge

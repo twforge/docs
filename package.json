@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "lint:api": "redocly lint script-api/openapi.yaml",
+    "lint:api": "redocly lint developer-api/openapi.yaml",
     "build": "antora antora-playbook.yml"
   },
   "devDependencies": {
