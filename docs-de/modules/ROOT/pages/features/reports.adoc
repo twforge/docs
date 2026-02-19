@@ -46,7 +46,7 @@ Durch das AG- und das Späh-Symbol können Berichte danach gefiltert, ob der Ang
 
 Durch diese Funktion werden Berichte danach gefiltert, ob man sie selbst hochgeladen hat (Eigene) oder den eigenen Account betreffen (Eigener Account).
 
-== Import von Berichten in die Datenbank
+== Import von Berichten in die Datenbank[[import_reports]]
 
 Um Berichte in die Datenbank zu laden, gibt es grundsätzlich 2 Wege:
 

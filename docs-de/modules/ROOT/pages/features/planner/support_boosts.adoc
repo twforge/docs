@@ -29,8 +29,8 @@ Hierbei müssen folgende Daten eingegeben werden:
 
 Die UT-Boost-DB kann in unterschiedlichen Bereichen von TW-Forge verwendet werden.
 
-* xref:features/action-planner/zeiten.adoc[Planung unter Berücksichtigung von UT-Boosts]
-* xref:features/planner/angriffspläne_planner.adoc[Berücksichtigung von UT-Boosts für bestehende Angriffs- und UT-Pläne]
+* xref:features/action-planner/send-and-arrival-time.adoc[Planung unter Berücksichtigung von UT-Boosts]
+* xref:features/planner/plans.adoc[Berücksichtigung von UT-Boosts für bestehende Angriffs- und UT-Pläne]
 // Tabulator
 // Snipe
 

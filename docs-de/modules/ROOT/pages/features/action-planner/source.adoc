@@ -7,7 +7,7 @@
 :toc-title: Inhalt
 
 Das folgende Kapitel thematisiert den ersten großen Bereich der Planung, die Bestimmung der Herkunftsdörfer.
-Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/uebersicht.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
+Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/overview.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
 
 TIP: Um eine angenehme Planungserfahrung zu gewährleisten wird empfohlen, die Hardwarebeschleunigung im Browser zu aktivieren.
 Ausgeschaltete Hardwarebeschleunigung kann zu Lags und Fehlern in der Grafikdarstellung führen.
@@ -50,7 +50,7 @@ Sollen explizit Dörfer nicht verplant werden (z.B. weil gewisse Offs noch nicht
 Hierzu bieten sich zwei Möglichkeiten:
 
 . *Ausplanen von Dörfern über eine Koordinatenliste*
-. *Ausplanen von Dörfern über "auszuplanende Offs"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/abfrage_planner.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
+. *Ausplanen von Dörfern über "auszuplanende Offs"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/inquiry.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
 Diese können auf die gleiche Weise eingefügt werden wie die xref:ags_importieren[AGs].
 
 == Frontausplanung
@@ -86,7 +86,7 @@ Dafür kann unter "Zonen" ein Zeichentool aktiviert werden, womit direkt auf der
 
 Hier kann eingestellt werden, welche Dörfer, abhängig von ihren Truppen oder der Verteidigung im Dorf, für die Aktion verplant werden sollen.
 
-TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#truppen[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
+TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#troops[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
 
 === Mindest Bauernhofplätze
 

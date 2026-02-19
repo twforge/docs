@@ -39,9 +39,9 @@ Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfü
 * *xref:features/reports.adoc[Berichte]* - Hochladen und Durchsuchen von Berichten
 * *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
 * *Planner* – Übersicht über
-**xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]**, deine
-**xref:features/planner/abfrage_planner.adoc[Abfragen]**, die **xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB]** und Start des
-**xref:features/action-planner/uebersicht.adoc[Aktionsplaners]**
+**xref:features/planner/plans.adoc[Angriffspläne]**, deine
+**xref:features/planner/inquiry.adoc[Abfragen]**, die **xref:features/planner/support_boosts.adoc[UT-Boost-DB]** und Start des
+**xref:features/action-planner/overview.adoc[Aktionsplaners]**
 * *xref:features/tribe-construct.adoc[Stammeskonstrukt]* - Erstelle ein Stammeskonstrukt oder tritt einem bestehenden Konstrukt bei!
 * *xref:features/userscript.adoc[Userscript]* - Angriffs-Auswertung ingame anzeigen
 
@@ -75,4 +75,4 @@ Schau dir diese Anleitungen an:
 * xref:features/reports.adoc[Importiere die ersten Berichte]!
 * xref:features/map.adoc[Erkunde die Ingame Karte!]!
 * xref:features/tribe-construct.adoc[Tritt einem Stamm bei oder gründe dein eigenes Konstrukt]!
-* xref:features/action-planner/uebersicht.adoc[Plane deine erste Offaktion!]
+* xref:features/action-planner/overview.adoc[Plane deine erste Offaktion!]

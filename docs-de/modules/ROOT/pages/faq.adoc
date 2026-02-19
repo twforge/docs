@@ -18,7 +18,7 @@ Für weitere Informationen klicke xref:premium.adoc[hier].
 === Warum können meine Member die Berichte nicht sehen?
 
 Das liegt vermutlich daran, dass ihr euch entweder nicht im gleichen Konstrukt befindet, oder dass die betreffenden Member noch nicht das erforderliche Mindest-Rechtelevel (Mitglied) besitzen.
-Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#mitglieder[hier].
+Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#members[hier].
 
 === Warum laggt es bei mir, wenn ich im Aktionsplaner eine Aktion planen will?
 

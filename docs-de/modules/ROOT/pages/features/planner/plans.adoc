@@ -4,7 +4,7 @@
 :keywords: Abschicken, Angriffspläne, anpassen, Unterstüzungen
 
 Hier findest du deine Angriffspläne, die entweder von deiner Stammesführung für dich erstellt worden sind oder die du selbst erstellt hast.
-Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abschicken, Pläne anpassen, Unterstützungen unter Beachtung der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-Datenbank] anpassen, WB-Strings exportieren, einen DS-Ultimate Plan erstellen uvm.
+Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abschicken, Pläne anpassen, Unterstützungen unter Beachtung der xref:features/planner/support_boosts.adoc[UT-Boost-Datenbank] anpassen, WB-Strings exportieren, einen DS-Ultimate Plan erstellen uvm.
 
 == Übersicht der Angriffspläne
 
@@ -26,7 +26,7 @@ Diese werden bei dem exportierten Plan nicht aufgelöst, da diese Anzahl sich st
 TW-Forge bietet aber an, vor dem Abschicken unter xref:features/account.adoc#truppen[Account→Truppen] die Truppen hochzuladen.
 Beim Abschicken über TW-Forge selbst werden dann alle Variablen (inkl. "Alle") aufgelöst.
 
-Nachdem der Plan geöffnet worden ist, besteht zusätzlich die Möglichkeit, den Angriffsplan gemäß der xref:features/planner/ut_boost_db_planner.adoc[UT-Boost-DB] anzupassen.
+Nachdem der Plan geöffnet worden ist, besteht zusätzlich die Möglichkeit, den Angriffsplan gemäß der xref:features/planner/support_boosts.adoc[UT-Boost-DB] anzupassen.
 Hierbei werden alle Unterstützungen, für die ein Unterstützungsboost eingetragen worden ist, automatisch angepasst.
 Dabei kann der User wählen, ob dabei alle (eigene + vom Stamm eingetragene) UT-Boosts berücksichtigt werden sollen oder ausschließlich die eigenen.
 
