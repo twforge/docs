@@ -69,7 +69,7 @@ Cleaner sind hierbei eine Subkategorie von Plänen, die einem anderen Berechnung
 * *Papierkorb*: Hier findest du alle gelöschten Pläne.
 Falls du einen Fehler gemacht hast, und den falschen Plan gelöscht hast oder dich einfach umentschieden hast, kannst du hier diese Pläne wiederherstellen.
 
-=== Konfiguration eines einzelnen Plans [[konfiguration_plan]]
+=== Konfiguration eines einzelnen Plans [[configuration_plan]]
 
 image::features/action-planner/übersicht/planuebersicht.png[Übersicht Einzelplan]
 
