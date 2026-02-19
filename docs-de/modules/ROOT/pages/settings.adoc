@@ -51,7 +51,7 @@ Die Einstellungen, welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf
 // Bild ist hier noch überflüssig, da es noch nicht viele Features gibt
 
 Unter diesem Punkt kann definiert werden, welche Spalten in Abschickplänen unter
-xref:features/planner/angriffspläne_planner.adoc[Angriffspläne]
+xref:features/planner/plans.adoc[Angriffspläne]
 angezeigt werden bzw. welche ausgeblendet werden sollen.
 
 == Discord[[discord]]

@@ -1,0 +1,50 @@
+= Aktionsplaner - Berechnen
+:page-navtitle: Aktionsplaner - Berechnen
+:description: Tool zur Erstellung von Angriffsplänen von einzelnen Accounts bis hin zu Plänen für ganze Stämme
+:keywords: Planung, Offaktionen, Angriffspläne, Berechnung, Random, Systematisch, Ziele
+:toc: macro
+:toclevels: 2
+:toc-title: Inhalt
+
+Im finalen Screen können sowohl der Berechnungsalgorithmus als auch der Berechnungspool ausgewählt werden.
+
+[TIP,role=premium_gold]
+====
+Der systematische Berechnungsalgorithmus und der (dafür benötigte) dedicated Berechnungspool sind nur für TWForge-Gold Nutzer verfügbar.
+====
+
+Für weitere Informationen zu den Berechnungsalgorithmen und dem Berechnungspool schaue xref:features/action-planner/overview.adoc#berechnungsalgorithmus_rechenkapazitäten[hier.]
+
+== Verwaltung deiner Berechnungen
+
+image:features/action-planner/berechnen/uebersicht_berechnungen.png[Übersicht Berechnungen]
+
+Nachdem ein Plan erfolgreich berechnet worden ist, ist hier eine Übersicht aller berechneter Pläne sichtbar.
+Durch ein Klicken auf die drei Punkte können die einzelnen Berechnungen genauer betrachtet werden bzw. mit dem Plan interagiert werden.
+
+=== Löschen
+
+Der Plan kann gelöscht werden.
+Sollte der Plan aus Versehen gelöscht worden sein, so kann er über das Archiv wiederhergestellt werden.
+
+=== Herkunft
+
+Durch Herkunft kann geschaut werden, für welchen Account wie viele Angriffe verplant worden sind.
+Außerdem kann durch ein Klicken auf das Zeichentool rechts auf der Karte angezeigt werden, von wo der Account wohin läuft.
+
+=== Ziele
+
+Unter Ziele kann überprüft werden, wie viele Angriffe auf welches Ziel geplant worden sind.
+Hierbei kann überprüft werden, ob alle Ziele mit den unter xref:features/action-planner/targets.adoc[Ziele] definierten Angriffszahlen abgedeckt werden konnten und welche Dörfer ggf. nicht vollständig bzw. gar nicht abgedeckt werden konnten.
+
+=== Angriffe
+
+Unter Angriffe wird ein Fenster geöffnet, in welchem man eine Übersicht der berechneten Angriffe sehen kann.
+Durch das Suchfeld oben kann nach spezifischen Dörfern, Spielern oder Stämmen gesucht werden.
+
+=== WB-Exports
+
+Unter WB-Exports werden dir alle berechneten WB-Exports bereitgestellt
+
+TIP: Diese sind nur für kurzfristiges überprüfen gedacht, für das Bereitstellen von Angriffsplänen müssen diese veröffentlicht werden.
+Mehr Informationen dazu findest du xref:features/action-planner/overview.adoc#_veröffentlichungen_von_plänen[hier.]

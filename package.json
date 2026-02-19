@@ -4,14 +4,16 @@
   "private": true,
   "scripts": {
     "lint:api": "redocly lint developer-api/openapi.yaml",
-    "build": "antora antora-playbook.yml"
+    "build": "antora antora-playbook.yml --log-level=debug",
+    "check-minor-updates": "npx npm-check-updates --upgrade --target \"minor\"",
+    "check-major-updates": "npx npm-check-updates --upgrade --target \"latest\""
   },
   "devDependencies": {
-    "@antora/cli": "^3.1.0",
-    "@antora/site-generator": "^3.1.0",
-    "@redocly/cli": "^1.25.0",
+    "@antora/cli": "^3.1.14",
+    "@antora/site-generator": "^3.1.14",
+    "@redocly/cli": "^2.19.1",
     "mkdirp": "^3.0.1",
-    "swagger-ui-dist": "^5.18.0"
+    "swagger-ui-dist": "^5.31.1"
   },
   "dependencies": {
     "@antora/lunr-extension": "^1.0.0-alpha.13"

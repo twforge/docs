@@ -1,4 +1,4 @@
-= Stammeskonstrukt - Organisation und Management des Stammeskonstrukts
+﻿= Stammeskonstrukt - Organisation und Management des Stammeskonstrukts
 :page-title: Stammeskonstrukt
 :description: Organisation des Stammeskonstruktes inkl. Membermanagement, Rollenmanagement, Stammestruppen einlesen, Angaben prüfen uvm.
 :keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Truppenimport, Planungsvorbereitung
@@ -19,12 +19,14 @@ Dabei werden unter anderem folgende Informationen und Funktionen im Konstrukt ge
 
 toc::[]
 
-== Stammeskonstrukt gründen image:badges/gold.png[TW-Forge-Gold,role=badge]
+== Stammeskonstrukt gründen
+
+[TIP,role=premium_silver]
+====
+Dieses Feature steht nur TW-Forge Silver und TW-Forge Gold Accounts zur Verfügung.
+====
 
 Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planung, Rechteverwaltung und das Teilen von Daten zwischen mehreren Accounts.
-
-IMPORTANT: Das Erstellen eines Stammeskonstrukts ist ausschließlich mit *TW-Forge-Gold* möglich.
-Ohne Premium-Zugang kannst du bestehenden Stammeskonstrukten beitreten, aber kein eigenes Konstrukt erstellen.
 
 == Einem Stammeskonstrukt beitreten
 
@@ -40,9 +42,9 @@ Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit beiden St
 
 Hier kannst du dein Stammeskonstrukt verlassen oder, sofern du Gründer-Rechte hast, diese auflösen.
 
-// Platzhalter, weiß atm nicht, wofür die Seite überhaupt da ist, außer dass man da Stamm auflösen kann
+// Platzhalter, wofür ist Übersicht noch gut?
 
-== Mitglieder[[mitglieder]]
+== Mitglieder[[members]]
 
 Im Bereich *Mitglieder* verwaltest du alle Accounts, die zum Stammeskonstrukt gehören.
 Hier können Mitglieder angenommen werden und das Rechtelevel einzelner Mitglieder angepasst werden.
@@ -97,7 +99,7 @@ Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 * Möglichkeit zum Auflösen des Stammeskonstrukts
 
-== Truppen[[truppen]]
+== Truppen[[troops]]
 
 Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
 Das Einlesen erfolgt über ein erlaubtes Net-SL-Script.
@@ -112,9 +114,9 @@ Um die Truppen mit dem Schnellleistenscript auszulesen, füge zunächst das oben
 image::features/tribe-construct/script-installieren.png[Script Importieren]
 
 TIP: Um das Script benutzen zu können und Truppeninformationen zu erhalten, benötigst du mindestens Stammesführungsrechte in deinem Stamm.
-Außerdem kannst du die Truppen nur auslesen, wenn die Stammesmitglieder unter Einstellungen -> Stammeseinstellungen ihre Truppen / Verteidigung für die SF freigegeben haben.
+Außerdem kannst du die Truppen nur auslesen, wenn die Stammesmitglieder unter Einstellungen->Stammeseinstellungen ihre Truppen / Verteidigung für die SF freigegeben haben.
 
-Danach gehe auf **Stamm -> Mitglieder**.
+Danach gehe auf **Stamm->Mitglieder**.
 Dort klickst du dann auf das Schnellleistenscript entweder in deiner Browserbar oder in der Schnellleiste in "Die Stämme", je nachdem wo du es eingefügt hast.
 Danach sollte sich folgendes Fenster öffnen:
 
@@ -133,7 +135,7 @@ Der Fix hierfür ist, in der Scriptübersicht (Screenshot 1) einmal das Feld "Re
 
 WARNING: Das Script funktioniert nur bis 1000 Dörfer pro Spieler, alles über dieser Anzahl wird nicht ausgelesen.
 
-Wenn du den korrekten Output erzeugt hast, kann danach entweder die Datei als .csv Datei abgespeichert werden und danach in TW-Forge importiert werden (Datei öffnen -> Strg A -> Strg C, TW Forge/Stammeskonstrukte/Truppen öffnen, Ctrl V) oder direkt aus der Vorschau kopiert und auf dem gleichen Weg in TW Forge eingefügt werden.
+Wenn du den korrekten Output erzeugt hast, kann danach entweder die Datei als .csv Datei abgespeichert werden und danach in TW-Forge importiert werden (Datei öffnen->Strg A ->Strg C, TW Forge/Stammeskonstrukte/Truppen öffnen, Ctrl V) oder direkt aus der Vorschau kopiert und auf dem gleichen Weg in TW Forge eingefügt werden.
 
 TIP: Wenn du die Datei als .csv abgespeichert hast und du siehst, dass bei einigen Spielern anstatt von Truppenzahlen Fragezeichen("?") stehen, liegt das daran, dass der Spieler entweder seine Truppen oder seine Verteidigung nicht mit dem Stamm teilt.
 
@@ -143,12 +145,12 @@ image::features/tribe-construct/import-troops.png[Truppenimport in TW-Forge]
 
 TIP: Du bist nicht verpflichtet, Truppen als Truppen und Verteidigung als Verteidigung hochzuladen.
 Es kann teilweise von Vorteil sein, bei Aktionsplanungen auch Dorfverteidigung als Dorftruppen hochzuladen.
-Die Templatefunktion unter Aktionsplaner -> Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteidigung als Truppen hochzuladen, sollte man dieses Feature nutzen wollen.
+Die Templatefunktion unter Aktionsplaner->Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteidigung als Truppen hochzuladen, sollte man dieses Feature nutzen wollen.
 
 // hier noch später den Aktionsplaner/Herkunftsseite verlinken
 // Ist das verständlich formuliert? find es iwie nicht so ganz schön
 
-== Abfrage
+== Abfrage[[inquiry]]
 
 Im Bereich *Abfrage* siehst du, welche Accounts Angaben hinterlegt haben, z. B.:
 
@@ -171,7 +173,7 @@ Das ist besonders nützlich, wenn:
 * Standardzeiten gesetzt werden sollen
 * einzelne Accounts vergessen haben, Zeiten anzugeben
 
-== Diplomatie
+== Diplomatie[[diplomacy]]
 
 Im Bereich *Diplomatie* wird Stammesdiplomatie gepflegt.
 Hier können Stämme als
@@ -185,9 +187,9 @@ eingetragen und farblich markiert werden.
 Diese Markierungen werden unter anderem angezeigt:
 
 * auf der Karte: xref:features/map.adoc[Karte]
-* im Aktionsplaner: xref:features/action-planner/action-planner-uebersicht.adoc[Aktionsplaner]
+* im Aktionsplaner: xref:features/action-planner/overview.adoc[Aktionsplaner]
 
-== Bündnisse
+== Bündnisse[[alliances]]
 
 Im Bereich *Bündnisse* können Bündnisse mit anderen TW-Forge-Stammeskonstrukten eingegangen werden.
 
@@ -212,7 +214,7 @@ Damit sollen asymmetrische Einstellungen (z. B. nur eine Seite teilt) sofort erk
 
 // Es wäre denke gut, wenn das einseitige Ändern der Einstellungen entweder dazu führt, dass die andere Seite auch automatisch angepasst wird, oder dass man eine Notification bekommt, dass man es mitbekommt.
 
-== Datenbank
+== Datenbank[[statistics]]
 
 Im Bereich *Datenbank* wird die Aktivität der Mitglieder sichtbar gemacht:
 
@@ -222,7 +224,7 @@ Im Bereich *Datenbank* wird die Aktivität der Mitglieder sichtbar gemacht:
 
 So kann überprüft werden, wer über längere Zeit keine Daten mehr eingelesen hat.
 
-== Invite Links
+== Invite Links[[invite-links]]
 
 Im Bereich *Invite Links* können Einladungslinks für das Stammeskonstrukt erstellt werden.
 
@@ -231,7 +233,9 @@ Invite Links können eingeschränkt werden durch:
 * Gültigkeitsdauer
 * maximale Anzahl an Benutzungen
 
-== Discord
+== Discord[[discord]]
 
 Im Bereich *Discord* können verknüpfte Discord-Server eingesehen und verwaltet werden.
 Hier wird die Verbindung zwischen TW Forge und Discord organisiert.
+
+

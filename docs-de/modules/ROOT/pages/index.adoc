@@ -70,7 +70,7 @@ Der Aktionsplaner unterstützt bei der Vorbereitung und Koordination von Aktione
 * UT-Boost-Datenbank
 * Aktionsplanungen
 
-→ xref:features/planner/angriffspläne_planner.adoc[Zum Planer]
+→ xref:features/planner/plans.adoc[Zum Planer]
 
 == Account- und Stammesverwaltung
 

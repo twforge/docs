@@ -37,7 +37,7 @@ Die Abhängigkeit kann sich sowohl auf die Abschickzeit von Angriffen als auch d
 
 IMPORTANT: Es können nur Abhängigkeiten von Plänen verwendet werden, die in TW Forge erstellt worden sind.
 
-* *Abhängigkeit nach Abschickzeit*: Nur relevant auf Non-MS Welten (xref:features/action-planner/action-planner-uebersicht.adoc#exkurs_non_ms[Exkurs Non-MS]).
+* *Abhängigkeit nach Abschickzeit*: Nur relevant auf Non-MS Welten (xref:features/action-planner/overview.adoc#exkurs_non_ms[Exkurs Non-MS]).
 
 Hierdurch können Angriffe entweder ausschließlich vor oder nach dem Referenzplan abgeschickt werden.
 Das "-" bedeutet hierbei, dass alle Angriffe *vor* dem Angriff aus dem referenzierten Plan losgeschickt werden müssen, das "+" bedeutet, dass alle Angriffe ausschließlich nach dem referenzierten Plan losgeschickt werden müssen.

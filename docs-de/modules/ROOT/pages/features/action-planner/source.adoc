@@ -7,7 +7,7 @@
 :toc-title: Inhalt
 
 Das folgende Kapitel thematisiert den ersten großen Bereich der Planung, die Bestimmung der Herkunftsdörfer.
-Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/action-planner-uebersicht.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
+Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/overview.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
 
 TIP: Um eine angenehme Planungserfahrung zu gewährleisten wird empfohlen, die Hardwarebeschleunigung im Browser zu aktivieren.
 Ausgeschaltete Hardwarebeschleunigung kann zu Lags und Fehlern in der Grafikdarstellung führen.
@@ -30,7 +30,7 @@ Falls die maximalen Angriffe pro Dorf oder Account nachträglich angepasst werde
 Hier können entweder manuelle Dörfer als Herkunftsdörfer eingefügt oder manuell Dörfer ausgeplant werden, sollten diese nicht verplant werden sollen.
 Für das Hinzufügen manueller Dörfer muss lediglich eine Liste von Koordinaten eingefügt werden und eine Anzahl definiert werden, wie oft die jeweiligen Dörfer verplant werden sollen.
 
-TIP: Sollten später noch Truppenfilter hinzugefügt werden, können manuelle Herkunftsdörfer nur dann eingeplant werden, wenn Truppeninformationen für diese Dörfer eingelesen sind (vgl. xref:dorftruppen[Truppenfilterung]).
+TIP: Sollten später noch Truppenfilter hinzugefügt werden, können manuelle Herkunftsdörfer nur dann eingeplant werden, wenn Truppeninformationen für diese Dörfer eingelesen sind (vgl. xref:#dorftruppen[Truppenfilterung]).
 
 === AGs importieren[[ags_importieren]]
 
@@ -50,8 +50,8 @@ Sollen explizit Dörfer nicht verplant werden (z.B. weil gewisse Offs noch nicht
 Hierzu bieten sich zwei Möglichkeiten:
 
 . *Ausplanen von Dörfern über eine Koordinatenliste*
-. *Ausplanen von Dörfern über "auszuplanende Offs"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/abfrage_planner.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
-Diese können auf die gleiche Weise eingefügt werden wie die xref:ags_importieren[AGs].
+. *Ausplanen von Dörfern über "auszuplanende Offs"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/inquiry.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
+Diese können auf die gleiche Weise eingefügt werden wie die xref:#ags_importieren[AGs].
 
 == Frontausplanung
 
@@ -86,7 +86,7 @@ Dafür kann unter "Zonen" ein Zeichentool aktiviert werden, womit direkt auf der
 
 Hier kann eingestellt werden, welche Dörfer, abhängig von ihren Truppen oder der Verteidigung im Dorf, für die Aktion verplant werden sollen.
 
-TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#truppen[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
+TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#troops[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
 
 === Mindest Bauernhofplätze
 
@@ -115,7 +115,7 @@ Das Template erweitert die "Mindest Truppen"-Filterung. Und zwar kann es vorkomm
 *Beispiel:* Im Template Filter stehen 12 Katapulte. Wenn das Dorf 24 Katapulte hat, so könnte das Dorf maximal 2 Angriffe mit dem geforderten Template schicken.
 ====
 
-Der Unterschied zu "Mindest Truppen" besteht darin, dass bei diesem die Dörfer genau so oft verplant werden, wie unter xref:staemme_und_spieler[Stämme und Spieler] oder xref:manuelle_herkunftsdoerfer[manuelle Herkunftsdörfer] maximal möglich, sofern sie die Anforderung erfüllen.
+Der Unterschied zu "Mindest Truppen" besteht darin, dass bei diesem die Dörfer genau so oft verplant werden, wie unter xref:#staemme_und_spieler[Stämme und Spieler] oder xref:#manuelle_herkunftsdoerfer[manuelle Herkunftsdörfer] maximal möglich, sofern sie die Anforderung erfüllen.
 Die Funktion des Templates erweitert hier also die Mindestanforderung so, dass die maximale Inc-Anzahl dadurch eingeschränkt wird, wie viele Angriffe das Dorf mit dem eingetragenen Template maximal schicken kann.
 
 == Abhängigkeiten[[abhaengigkeiten]]
@@ -129,7 +129,7 @@ Dies funktioniert so, dass entweder die Truppen, Angriffsanzahl oder Herkunftsd�
 *Beispiel:* Im ersten Plan wurden ca. 50 % der Offs eines Stammes bereits verplant.
 Jetzt soll allerdings ein zweiter Plan erstellt werden, der sich vom ersten Plan unterscheidet (z.B. andere Ankunftszeit, andere Ziele, anderes Angriffstemplate).
 Im zweiten Plan soll nun sichergestellt werden, dass die Offs, die bereits verplant sind, nicht erneut verplant werden.
-Somit können unter "Abhängigkeiten" entweder die Truppen abgezogen werden (wenn im Angriffstemplate des ersten Plans z.B. "alle" Äxte) ausgewählt worden ist und unter xref:dorftruppen[Dorftruppen] 5000 äxte ausgewählt hat, so werden die bereits verplanten Offs nicht mehr angezeigt.
+Somit können unter "Abhängigkeiten" entweder die Truppen abgezogen werden (wenn im Angriffstemplate des ersten Plans z.B. "alle" Äxte) ausgewählt worden ist und unter xref:#dorftruppen[Dorftruppen] 5000 äxte ausgewählt hat, so werden die bereits verplanten Offs nicht mehr angezeigt.
 ====
 
 * *Truppen abziehen*: Es werden die Truppen abgezogen, die bei dem abzuziehenden Plan im Template stehen.
