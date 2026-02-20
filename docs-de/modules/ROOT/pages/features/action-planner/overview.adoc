@@ -77,6 +77,17 @@ Wenn du einen neuen Plan erstellst, kommst du direkt in die Planübersicht des j
 Hier kannst du zunächst die grundlegenden Inhalte des Plans definieren.
 Darüber hinaus ist diese Übersicht der Ausgangspunkt, um nach und nach den Angriffsplan zu konfigurieren.
 
+=== Bereitschaftscheckliste
+
+Die Planübersicht zeigt eine *Bereitschaftscheckliste*, die auf einen Blick anzeigt, welche Konfigurationsschritte bereits abgeschlossen sind:
+
+* Herkunftsdörfer definiert
+* Zieldörfer definiert
+* Abschickzeiten eingetragen
+* Ankunftszeiten eingetragen
+
+Sobald alle Punkte erfüllt sind, kann die Berechnung des Plans gestartet werden.
+
 Einstellungsmöglichkeiten auf dieser Übersicht:
 
 * *Name des Plans* (Pflichtfeld)
@@ -204,6 +215,15 @@ Außerdem bist du nicht abhängig davon, ob gerade andere Nutzer gleichzeitig Pl
 
 Wenn alle zur Aktion benötigten Pläne erstellt worden sind, müssen diese veröffentlicht werden, damit sie für die Member verfügbar werden.
 Dafür wird über das linksseitige aufklappbare Menü der Punkt "Veröffentlichungen" geöffnet.
+
+=== Übersicht der Veröffentlichungen
+
+Unter "Veröffentlichungen" werden alle bisherigen Kampagnen aufgelistet.
+Für jede Kampagne wird angezeigt, wie weit der Versandfortschritt ist — also wie viele Accounts bereits mit einem Abschickplan versorgt wurden.
+Der Fortschritt wird in Echtzeit aktualisiert.
+
+=== Neue Veröffentlichung erstellen
+
 Hier kann eine neue Veröffentlichung erstellt werden.
 
 Hierzu werden ein Aktionsname, eine Beschreibung sowie ein Nachrichtentemplate eingegeben und bestimmt, für welches Stammeskonstrukt die Aktion geplant wurde.
@@ -273,6 +293,19 @@ So bestehen folgende Möglichkeiten:
 * *Neu zuordnen der Angriffe*: Wenn im Nachhinein noch Dörfer geadelt worden sind, werden die Angriffe neu zugeordnet, die einen neuen Besitzer haben.
 
 // Fake UTs?
+
+=== Anpassungsaufgaben (Adjustment Tasks)[[adjustment_tasks]]
+
+[TIP,role=premium_silver]
+====
+Dieses Feature steht nur TW-Forge Silver und TW-Forge Gold Accounts zur Verfügung.
+====
+
+Über *Anpassungsaufgaben* können Ankunftszeiten für einzelne Accounts nach der Veröffentlichung gezielt nachjustiert werden.
+Für jeden Account kann eine separate Aufgabe erstellt werden, in der eine neue Zielankunftszeit definiert wird.
+Die Anpassungsaufgabe wird nach Erstellung angezeigt und kann bearbeitet oder gelöscht werden.
+
+Typischer Anwendungsfall: Ein Account hat geadelt oder war offline — über eine Anpassungsaufgabe kann sein Abschickfenster nachträglich verschoben werden, ohne die gesamte Kampagne neu berechnen zu müssen.
 
 
 

@@ -12,6 +12,15 @@ Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/actio
 TIP: Um eine angenehme Planungserfahrung zu gewährleisten wird empfohlen, die Hardwarebeschleunigung im Browser zu aktivieren.
 Ausgeschaltete Hardwarebeschleunigung kann zu Lags und Fehlern in der Grafikdarstellung führen.
 
+Die Herkunftskonfiguration ist in mehrere Tabs unterteilt:
+
+* *Stämme/Spieler* — automatische Auswahl ganzer Stämme oder Spieler
+* *Dörfer* — Übersicht und Filterung aller ausgewählten Herkunftsdörfer
+* *Frontentfernung* — Ausplanung frontnaher Dörfer
+* *Zonen* — manuelle Einschränkung per Zeichenwerkzeug auf der Karte
+* *Dorftruppen* — Filterung nach Truppenbestand im Dorf
+* *Abhängigkeiten* — Abzug bereits verplanter Truppen/Dörfer aus anderen Plänen
+
 toc::[]
 
 == Stämme und Spieler[[staemme_und_spieler]]
@@ -22,6 +31,14 @@ Hier können ganze Spieler und Stämme eingefügt werden.
 Es kann definiert werden, wie viele Angriffe entweder pro Account geschickt werden sollen ("Max Angriffe pro Spieler"), und wie viele Angriffe pro Herkunftsdorf maximal verplant werden sollen.
 Sollen einzelne Spieler eines Stammes nicht verplant werden, so können diese nach dem Einfügen manuell entfernt werden.
 Falls die maximalen Angriffe pro Dorf oder Account nachträglich angepasst werden sollen, markiere die entsprechenden Accounts, gib oben die neuen Werte ein und bestätige die Änderung über den Button Ändern.
+
+== Dörfer[[doerfer_herkunft]]
+
+Im Tab *Dörfer* wird eine vollständige Liste aller aktuell ausgewählten Herkunftsdörfer angezeigt.
+Hier kann kontrolliert werden, welche Dörfer konkret für die Berechnung vorgesehen sind.
+Die Liste ist nach Koordinate, Spieler oder Stamm filterbar.
+
+NOTE: Im Tab "Dörfer" können keine neuen Dörfer hinzugefügt werden; dies geschieht ausschließlich über den Tab "Stämme/Spieler" oder "Manuelle Herkunftsdörfer".
 
 == Manuelle Herkunftsdörfer[[manuelle_herkunftsdoerfer]]
 

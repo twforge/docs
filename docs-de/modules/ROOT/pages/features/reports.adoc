@@ -8,6 +8,18 @@
 
 Die Seite "Berichte" dient als Anlaufpunkt für die Suche nach Dorfinformationen und Berichten und bietet gleichzeitig die Möglichkeit für den Upload der Berichte an.
 
+== Berichtsanzeige
+
+Berichte werden in einer paginierten Liste dargestellt.
+Über die Schaltfläche zum Nachladen können weitere Berichte nachgeladen werden.
+
+Durch einen Klick auf einen Bericht wird eine Detailansicht geöffnet:
+
+* Auf dem Desktop wird der Bericht in einem *Dialog-Fenster* angezeigt.
+* Auf mobilen Geräten erfolgt eine vollständige *Navigation* zur Berichtsdetailseite.
+
+In der Detailansicht sind alle Kampfinformationen einsehbar: beteiligte Truppen, erlittene Verluste, Gebäudeschäden sowie weitere Kampfeffekte.
+
 toc::[]
 
 == Filterungsmöglichkeiten
@@ -72,6 +84,12 @@ Danach klicke auf "Veröffentlichen" und anschließend auf Weiterleiten und kopi
 
 Für den Import von Berichten wird eine TW-Forge Developer-API bereitgestellt.
 Mehr Infos unter xref:api.adoc[Developer-API].
+
+=== Importstatus
+
+Nachdem ein manueller Import gestartet wurde, wird auf der Import-Seite eine *Statustabelle* angezeigt.
+Darin kann der Fortschritt der einzelnen Import-Aufgaben verfolgt werden.
+Die Verarbeitung erfolgt asynchron; sobald eine Aufgabe abgeschlossen ist oder ein Fehler aufgetreten ist, wird dies in der Tabelle angezeigt.
 
 == Zugehörigkeit von Berichten
 

@@ -1,0 +1,20 @@
+= Dashboard
+:page-navtitle: Dashboard
+:description: Übersichtsseite nach dem Einloggen in eine Spielwelt auf TW Forge
+:keywords: Dashboard, Startseite, Berichte, Übersicht, Willkommen
+
+Die *Dashboard-Seite* wird angezeigt, nachdem eine Spielwelt ausgewählt wurde.
+Sie dient als zentraler Einstiegspunkt in die weltspezifischen Funktionen von TW Forge.
+
+== Spieler-Widget
+
+Im oberen Bereich der Seite wird ein persönliches *Spieler-Widget* angezeigt.
+Es zeigt grundlegende Informationen zum aktuell eingeloggten Spieler der gewählten Welt an.
+
+== Top-Berichte
+
+Im unteren Bereich werden die *Top-Berichte* des Stammeskonstrukts angezeigt.
+Dabei handelt es sich um die meistreagierten Berichte aus dem mit dem Konstrukt verbundenen Discord-Berichte-Kanal.
+
+TIP: Damit die Top-Berichte angezeigt werden, muss ein Discord-Server mit dem Stammeskonstrukt verbunden und ein Berichte-Kanal konfiguriert worden sein.
+Weitere Informationen hierzu finden sich unter xref:features/discordbot.adoc[Discord-Bot].

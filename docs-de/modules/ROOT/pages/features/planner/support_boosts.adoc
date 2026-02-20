@@ -12,8 +12,14 @@ image:features/planner/planner_UT-Boost-DB.png[UT-Boost-DB]
 
 Zunächst kann sich der Spieler hier einen Überblick über bestehende Unterstützungsboosts verschaffen.
 Diese können entweder durch den Stammesskill bedingt sein oder aber durch das Item "Banner der Bedrängnis".
-In der Übersicht sieht der Spieler sowohl die von dir hinzugefügten Unterstützungsboosts als auch diejenigen, die von Mitgliedern des Konstruktes hinzugefügt worden sind.
-Hierbei werden sowohl die Stärke des Boosts in % als auch die verbleibende Restdauer der Unterstützungen angezeigt.
+In der Übersicht sieht der Spieler sowohl die von ihm selbst hinzugefügten Unterstützungsboosts als auch diejenigen, die von Mitgliedern des Konstruktes hinzugefügt worden sind.
+Hierbei werden sowohl die Stärke des Boosts in % als auch die verbleibende *Restdauer* in Form eines Live-Countdowns angezeigt.
+Die Liste kann sortiert und seitenweise durchgeblättert werden.
+
+=== Löschen von Unterstützungsboosts
+
+Ein eingetragener Boost kann bei Bedarf entfernt werden.
+Hierzu wird auf die entsprechende Aktion in der Liste geklickt; eine Bestätigung ist erforderlich, um versehentliches Löschen zu vermeiden.
 
 === Hinzufügen von Unterstützungsboosts
 
