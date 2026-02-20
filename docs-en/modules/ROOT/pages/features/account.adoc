@@ -1,0 +1,83 @@
+= Account
+:page-navtitle: Account
+:description: Account management in TW Forge, including troop import, holiday cover (account sitting), and Discord.
+:keywords: Account, Holiday Cover, Account Sitting, Discord, Troops, Import
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
+
+All important information and settings related to account management are found here.
+
+toc::[]
+
+== Account Information and Management
+
+In the *Account* section, all TW Forge accounts connected to the same in-game account as the own account on the currently selected world are displayed.
+
+The following functions are available:
+
+* Overview of all connected members on this world
+* Ability to remove oneself from the account
+* Ability to **delete all members from the account**
+
+[TIP]
+====
+Removing all members is particularly important if unwanted persons are connected to the account, or if the overview of connected accounts has been lost.
+====
+
+After all members have been removed, re-authentication is only possible via code-based authentication (see xref:getting-started.adoc[Getting Started]).
+
+IMPORTANT: The in-game password is required for this authentication.
+This ensures that the owner of the in-game account retains full control over connected TW Forge members at all times.
+All existing access can be effectively revoked by changing the Tribal Wars password.
+
+It is also shown whether the own account is registered as a *holiday cover* (account sitter) for other accounts.
+These entries can be removed independently if needed.
+
+== Troops[[troops]]
+
+In this section, troops can be stored for the own account.
+
+These troop entries can be used for the following functions, among others:
+
+* Use in action planning for the own account (see xref:features/action-planner.adoc[Action Planner])
+* Automatic resolution of troop variables in dispatch plans (see xref:features/planner.adoc[Planner → Attack Plans])
+
+=== Importing Troops[[account-troops-import]]
+
+Troops are imported via copy-paste from the in-game troop overview.
+In the game, *Overview → Troops → All* is navigated to and the group "All" is selected.
+It should be ensured that all villages are visible and not limited by the maximum number of villages per page.
+
+TIP: Only specific groups can be imported if only those villages are to be planned.
+However, the xref:features/action-planner.adoc[Action Planner] allows source villages to be restricted by troop count and location, so restriction by group is generally not necessary and is often more of a hindrance.
+
+The entire page is then copied with Ctrl+A, Ctrl+C.
+In TW Forge, the troop information is pasted in.
+In the bottom right, it can be selected whether "Own" (troops) or "Total" should be imported.
+
+* *Own:* All troops belonging to the village that are currently stationed there (= defence minus foreign troops)
+* *Total:* All troops belonging to the village (= troops)
+
+After a successful import, an overview of the successfully imported troops is displayed for verification.
+
+TIP: For accounts with more than 1,000 villages, the copy process must be repeated multiple times, since Tribal Wars only displays up to 1,000 villages per page.
+To import all troops into TW Forge, the first page is copied and pasted (without clicking Upload), then the second page is copied and added to the same field.
+This is repeated until all pages are captured, and only then is Upload clicked.
+
+== Holiday Cover[[holiday-cover]]
+
+Holiday cover (account sitting) for other accounts can be added and managed here.
+
+The verification of a holiday cover account follows the same process as described in xref:getting-started.adoc[Getting Started], but is carried out within the respective holiday cover account rather than the main account.
+
+After successful setup, the following options are available:
+
+* Entering send times for holiday cover accounts under xref:features/planner.adoc#inquiry[Planner → Inquiry]
+* Access to dispatch plans for these accounts under xref:features/planner.adoc#attack-plans[Planner → Attack Plans]
+
+== Discord
+
+In the *Discord* section, the Discord server currently linked to the own account is displayed.
+
+This information provides transparency and makes it easier to assign accounts to connected Discord servers.

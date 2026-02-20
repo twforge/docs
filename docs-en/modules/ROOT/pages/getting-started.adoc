@@ -47,7 +47,7 @@ To keep data current, the app periodically refreshes in the background.
 For automatic report import, install the TW Forge userscript:
 
 . Install a userscript manager (Tampermonkey, Violentmonkey)
-. Go to **Account** → **Userscript**
+. The **Userscript** page is opened from the main menu
 . Click **Install Userscript**
 . Play the game normally – reports are captured automatically
 

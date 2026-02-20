@@ -1,0 +1,30 @@
+= API
+:page-navtitle: API
+:description: Introduction to the TW Forge APIs and reference to the official API documentation.
+:keywords: API, Interface, Integration, Developer, TW Forge
+
+Powerful programming interfaces (APIs) are provided by TW Forge to enable automated and external access to platform functions and data.
+The APIs are aimed primarily at developers who wish to build their own tools, scripts, or integrations around TW Forge.
+
+== Overview
+
+The following use cases, among others, can be realised via the TW Forge APIs:
+
+* *Report import*
+* *more to come...*
+
+The APIs are clearly versioned, consistently structured, and designed for programmatic use.
+
+== Official API Documentation
+
+A complete and always up-to-date description of all available endpoints, parameters, authentication mechanisms, and example requests can be found in the official API documentation:
+
+link:https://docs.twforge.net/developer-api[Official TW Forge API Documentation]
+
+All technical details are centrally maintained and documented there.
+
+== Usage Notes
+
+The use of certain APIs may be subject to specific prerequisites or permissions depending on the scope of functionality and access type.
+Some APIs are accessible to all users, while others are reserved for premium users.
+Details are also described in the API documentation.

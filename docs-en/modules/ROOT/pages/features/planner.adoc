@@ -1,42 +1,114 @@
 = Planner
+:page-navtitle: Planner
+:description: Overview of the Planner feature in TW Forge, covering Attack Plans, Snipe, Inquiry, and UT Boosts.
+:keywords: Planner, Attack Plans, Snipe, Inquiry, UT Boosts
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
 
-Calculate timing for coordinated attacks.
+The *Planner* brings together several coordination and timing tools for offensive and defensive operations.
+It is divided into four tabs: **Attack Plans**, **Snipe**, **Inquiry**, and **UT Boosts**.
 
-== Time Calculator
+toc::[]
 
-Figure out when to send attacks:
+== Attack Plans
 
-. Go to **Planner**
-. Enter your **source village**
-. Enter the **target village**
-. Select the **slowest unit** in your attack
-. Enter the desired **arrival time**
-. Click **Calculate**
+Attack plans are managed and dispatched here.
+Plans are assigned either by the tribe leadership or created by the user themselves.
 
-The Planner shows exactly when to send your attack.
+Plans can be dispatched directly via TW Forge using the imported troop data.
+Additional options are available via the three-dot menu next to each plan:
 
-== Multiple Waves
+* *Open Attack Plan*
+* *Archive Attack Plan* — the plan is moved to the archive
+* *Create WB Exports* — corresponding WB exports are generated from the plan
+* *Exported Plan* — the DS-Ultimate plan with all variables resolved (as far as possible) is accessed
 
-To coordinate several attacks landing together:
+Plans can also be adjusted according to the xref:features/planner.adoc#ut-boosts[UT Boost Database]:
+all supports for which a support boost has been entered are automatically adjusted.
+The user can choose whether all boosts (own + tribe-entered) or only their own boosts are taken into account.
 
-. Add multiple source villages
-. Set the same arrival time for all
-. The Planner calculates each send time
-. Send each attack at its calculated time
+Individual attacks within a plan (template, time, source village, etc.) can be modified at any time via the three-dot menu next to the respective attack.
 
-== Travel Time Reference
+NOTE: If DS-Ultimate exports are used with unresolved variables (e.g., "fake", "all"), these are not resolved by DS-Ultimate and are copied as-is.
+To receive resolved troops, the *Exported Plan* option should be used.
+For the "All" variable, troops should be uploaded under xref:features/account.adoc#troops[Account → Troops] before dispatching.
+When dispatching via TW Forge directly, all variables (including "All") are resolved automatically.
 
-Quickly check travel times:
+== Snipe[[snipe]]
 
-. Enter source and target
-. Select a unit type
-. See the travel duration instantly
+The *Snipe* tool is used for timing the interception of a noble attack.
+A target village and a desired arrival time are selected — the arrival time must be in the future.
+TW Forge then calculates all source villages that can reach the target at exactly that time.
 
-Use this to estimate how far in advance to plan.
+For each source village, the following information is displayed:
 
-== Tips
+* Distance to the target
+* Already-planned attacks from that village
+* Available and total troops per unit type
+* Calculated send time per unit type
+* Front-distance safety score
+* Live countdown until the send time
 
-* Account for your reaction time when planning
-* Double-check server time vs. your local time
-* For large operations, give yourself buffer time
-* Coordinate with tribe members on exact timing
+UT Boost settings can be applied to the calculation.
+A toggle allows switching between *available* and *total* troops.
+An attack plan can be created directly from any result row by clicking the troop count, which opens a plan creation popup.
+
+== Inquiry
+
+In the *Inquiry* tab, information required for an offensive operation is provided.
+This information can be entered for all linked accounts (main account as well as holiday cover accounts) and is taken into account during action planning.
+
+=== Providing Attack Group (AG) Information
+
+Attack groups (AGs) are entered so that the user or the planner can assign them to operations.
+Coordinates are entered in the input field, and the number of AGs for those villages is specified below.
+A separate entry must be made for each different AG count.
+
+IMPORTANT: To update a village already entered, it must first be deleted from the list and then re-entered with the updated number.
+
+If AG entries are older than two days, a popup appears to indicate that the data may be outdated.
+If the data is still current, this can be confirmed via the "Confirm entries" button.
+
+=== Providing Unavailable Offensives
+
+Offensives that should not be planned by the planner can be indicated here.
+The coordinate list of the relevant villages is copied into the input field and confirmed.
+
+NOTE: Troops are not automatically excluded — the planner must still account for them manually during planning.
+
+=== Providing Send Times
+
+Send times can be entered for the own account and for existing holiday cover accounts.
+The accounts to provide times for are selected via the dropdown in the top right.
+The calendar view is then used to select the days, and time windows are defined using the "From … to …" input.
+
+TIP: Rather than specifying one long time window (e.g. morning to evening), multiple short windows (e.g. 15 minutes every 2 hours) are recommended.
+This way attacks are bundled together instead of being spread over the entire day.
+
+== UT Boosts[[ut-boosts]]
+
+The *UT Boosts* tab contains the tribe construct's support-boost database.
+Detected support boosts — from tribe skills or the "Banner of Distress" item — can be recorded here so that all construct members can take them into account when planning or dispatching existing plans.
+
+=== Viewing Existing Boosts
+
+An overview of all active support boosts is shown, including boosts entered by the user and by other construct members.
+The strength of the boost (in %) and the remaining duration are displayed for each entry.
+
+=== Adding a Support Boost
+
+If a support boost is detected that has not yet been recorded, the affected player is searched for first.
+If no boost is registered for that player, a new entry can be added with the following data:
+
+* *Boost strength* — how many % faster does the support travel?
+* *Village coordinate* (Banner of Distress only) — the village where the banner was detected
+* *Start and end time* — defaults to 48 hours from entry, but can be adjusted manually
+
+=== Interactions with the UT Boost Database
+
+The UT Boost database can be used in the following areas:
+
+* xref:features/planner.adoc#attack-plans[Attack Plans — adjusting existing plans with UT Boosts]
+* Action Planner — planning with UT Boosts taken into account
+* xref:features/planner.adoc#snipe[Snipe — applying UT Boosts to interception calculations]

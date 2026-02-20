@@ -1,0 +1,54 @@
+= Settings — Personalisation of TW Forge
+:page-navtitle: Settings
+:description: Global settings that apply across all worlds for the TW Forge account.
+:keywords: Settings, Light Mode, Dark Mode, Discord, Colours, Tables
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
+
+All available world-independent settings in TW Forge are explained on this page.
+Settings affect how evaluated attacks are displayed, how the interface is rendered, Discord connections, and notifications.
+
+toc::[]
+
+== General
+
+Under this section, basic display settings for the application can be configured.
+
+The appearance of TW Forge is set here.
+The following options are available:
+
+- *Light Mode*
+- *Dark Mode*
+- *Browser Default*
+
+The chosen setting affects only the display of the user interface and has no influence on functions, calculations, or stored data.
+
+== Account
+
+Under this section, account-related settings are configured.
+
+- Viewing / changing the display name
+- Viewing / managing linked worlds
+
+== Attacks[[attacks]]
+
+Under this section, the thresholds at which TW Forge applies colour markings for incoming attacks can be defined.
+This configurability ensures that individual preferences can be implemented.
+
+"Small attacks" can be adjusted via a slider, which in turn shifts the lower boundary for small-medium attacks; the small-medium slider shifts its own upper boundary and the lower boundary for medium attacks, and so on.
+
+The settings for which colour is displayed when affect both the display in TW Forge under xref:features/analyser.adoc#filtering[Analyser] and the in-game display via the approved Userscript.
+
+== Planner
+
+Under this section, it can be defined which columns are shown or hidden in dispatch plans under xref:features/planner.adoc#attack-plans[Planner → Attack Plans].
+
+== Discord[[discord]]
+
+Under this section, a Discord account can be linked.
+This is done by clicking the button, signing into Discord in the browser, and approving the connection.
+Once connected, the accounts are successfully linked.
+
+Afterwards, either the connection can be removed, or the Discord Bot can be added to a Discord server (tribe Discord or account Discord).
+The option to join the TW Forge community Discord to ask questions and provide feedback is also available here.

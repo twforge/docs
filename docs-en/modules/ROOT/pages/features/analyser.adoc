@@ -1,57 +1,123 @@
-= Analyser
+= Analyser — Incoming Attack Overview and Threat Rating
+:page-navtitle: Analyser
+:description: Central overview for displaying, rating, and filtering incoming attacks (Incs) in TW Forge.
+:keywords: Analyser, Incs, Threat Rating, Filter, Attack Size
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
 
-Analyze targets to plan better attacks.
+The *Analyser* page serves as the central incoming-attack overview in TW Forge.
+All imported and uploaded incoming attacks (Incs) are collected here and automatically evaluated.
 
-== What It Does
+toc::[]
 
-The Analyser helps you:
+== Display and Interpretation of Attacks
 
-* Estimate enemy defenses
-* See attack history on targets
-* Decide how many troops to send
+Each attack is interpreted by TW Forge based on a *maximum possible offensive size*.
+This maximum offensive size is expressed using the metric "maximum axes" / "maximum light cavalry".
 
-== Analyzing a Target
+Based on this calculation, each attack is assigned a *threat rating*, which is visualised by colour:
 
-. Go to **Analyser**
-. Enter or select a target village
-. Click **Analyze**
+* *Green* — very high suspicion of fake / confirmed fake
+* *Yellow* — small to medium possible offensive
+* *Orange* — medium-sized possible offensive
+* *Red* — large possible offensive
 
-The Analyser shows:
+== Factors in the Threat Rating
 
-* Recent attacks on this village
-* Estimated defense strength
-* Attack recommendations
+The rating of an attack is based on the following factors, among others:
 
-== Understanding Results
+* *Last nobling of the source village*
+Recently nobled villages generally have less offensive potential.
 
-=== Defense Estimate
+* *Known loss of offensive troops*
+Losses from previous battles are taken into account.
 
-Based on available reports, the Analyser estimates:
+* *Attacks already dispatched or landed*
+If an offensive has already been sent or landed, it cannot be counted twice.
 
-* Likely troop count
-* Wall level
-* Overall defense strength
+These pieces of information are combined to provide the most realistic estimate of the maximum possible attack strength.
+If an attack can be restricted by one of these factors, an explanation is shown in an info field indicating which information was used to assess the incoming.
 
-NOTE: Estimates are based on reports. More reports = better estimates.
+== Configuring the Threat Rating Thresholds
 
-=== Attack History
+The thresholds for the individual threat levels (*Green*, *Yellow*, *Orange*, *Red*) are freely configurable.
+They can be adjusted under xref:../settings.adoc#attacks[Settings → Attacks] to match individual playing styles or preferences.
 
-See all recorded attacks on the target:
+== Filtering and Sorting[[filtering]]
 
-* When attacks happened
-* What was sent
-* The outcome
+The attack overview offers extensive filter options for targeted evaluation of large numbers of Incs.
 
-== Planning Your Attack
+=== Filter by Label
 
-Use the analysis to decide:
+* e.g. "Ram tab"
+* Free text search within the Inc label
 
-* **Troop count** – Send enough to overcome estimated defense
-* **Attack type** – Full attack vs. scout first
-* **Timing** – Coordinate with tribe if defense is strong
+=== Filter by Origin or Target
 
-== Tips
+* by *Player*
+* by *Tribe*
+* by *Coordinate*
 
-* Import reports before analyzing for best results
-* Re-analyze after new attacks for updated estimates
-* Combine with Action Planner to create attack plans
+=== Filter by Confirmed Inc Size
+
+* Known, visible Inc sizes (when commands are visible)
+* Filtering by small (green), medium (orange) and large (red)
+
+=== Filter by TW Forge Calculated Maximum Size
+
+* Filtering by small (green), medium (yellow), medium-large (orange) and large (red)
+
+=== Filter by Travel Time / Unit Type
+
+* e.g. Scouts / Rams
+
+== Personal Attacks and Account Reference
+
+Attacks can additionally be filtered by personal relevance:
+
+* *Own*
+Only attacks uploaded by the current user are shown.
+
+* *Own Account*
+All attacks affecting the currently selected account are shown.
+
+These filters are particularly useful for personal tracking and coordination within larger tribes.
+
+== Importing Incoming Attacks
+
+In order for incoming attacks to appear in the table, they must be uploaded either by the user themselves or by another member of the tribe construct.
+This is done via the *Import* sub-menu.
+
+For this, an SOS request must be created and then imported into TW Forge.
+To create the SOS request, the "Incoming" view is opened in the game, the desired Incs are selected, and "Request Support" is clicked.
+
+The complete text of the SOS request is then copied and pasted into TW Forge.
+
+== Tabulator — Collaborative Defence Coordination
+
+The *Tabulator* tab ("Attack Tabbing") is a collaborative tool for coordinating defensive support across tribe members.
+
+=== Overview
+
+A SOS request (in the same format as for the Analyser import) is pasted in to create a Tabulator request.
+The incoming attacks to be covered are reviewed, participants (tribe members) are invited, and each participant selects the villages from which they will contribute defensive troops.
+After a confirmation step, results are displayed showing the computed defence distribution per attack target and per participant.
+
+=== Workflow
+
+The Tabulator follows a guided multi-step process:
+
+. *Attacks* — The SOS request is pasted in; incoming attacks are displayed with target, unit type, arrival time, and a live countdown.
+. *Participants* — Tribe members are invited to participate in the tabbing session.
+. *Settings* — Global settings for the coordination are configured.
+. *Troops* — Each participant selects which of their villages they will contribute defence troops from.
+. *Personal Settings* — Each participant adjusts their individual preferences.
+. *Overview* — A confirmation summary is shown before finalising.
+. *Result* — The computed defence distribution is displayed for each attack target and participant.
+
+=== Usage Notes
+
+* A valid SOS request must be available before a Tabulator session can be started.
+* Each invited participant must complete the troop-selection step independently.
+* Results are computed automatically once all participants have confirmed.

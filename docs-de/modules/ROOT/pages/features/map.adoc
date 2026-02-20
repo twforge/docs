@@ -1,13 +1,59 @@
 = Karte
 :page-title: Karte
-:description: Geplantes Feature zur grafischen Darstellung der Weltkarte sowie zusätzlicher Funktionen
-:keywords: Karte, Übersicht, Markierungen
+:description: Interaktive Weltkarte mit Dorfübersicht, Farbmarkierungen und Overlays
+:keywords: Karte, Übersicht, Markierungen, Overlays
 
-[NOTE]
-====
-Dieses Feature ist aktuell noch nicht verfügbar.
+Die interaktive Karte zeigt alle Dörfer der Welt an.
 
-Die hier beschriebene Funktionalität befindet sich in Planung und wird in einer zukünftigen Version von TW Forge ergänzt.
-====
+== Kartenansicht
 
-// TODO
+. Der Menüpunkt *Karte* wird aufgerufen.
+. Der eigene Bereich wird auf der Karte geladen.
+. Die Navigation erfolgt über die Maus:
+** *Scrollen* – hinein- oder herauszoomen
+** *Ziehen* – den Kartenausschnitt verschieben
+** *Klick* auf ein Dorf – Dorfdetails werden angezeigt
+
+== Dörfer suchen
+
+Um ein bestimmtes Dorf zu finden:
+
+. Die Suchleiste oben wird aufgerufen.
+. Dorfname, Koordinaten oder Spielername werden eingegeben.
+. Über das Suchergebnis wird zur entsprechenden Position gesprungen.
+
+TIP: Koordinaten wie `500|500` können direkt eingegeben werden, um direkt zu dieser Position zu gelangen.
+
+== Farbliche Markierungen
+
+Dörfer werden nach Zugehörigkeit eingefärbt:
+
+* *Eigene Dörfer* – besonders hervorgehoben
+* *Stammesmitglieder* – in der Stammesfarbe
+* *Feindliche Stämme* – je Stamm in unterschiedlichen Farben
+* *Barbarendörfer* – neutrale Farbe
+
+== Overlays
+
+Overlays ermöglichen die Anzeige zusätzlicher Informationen auf der Karte:
+
+. Die Schaltfläche *Ebenen* wird geöffnet.
+. Folgende Overlays können ein- oder ausgeblendet werden:
+** Stammesgebiete
+** Kontinentgrenzen
+** Eigene Markierungen
+
+== Dörfer markieren
+
+Um Dörfer für Aktionen zu markieren:
+
+. Auf das gewünschte Dorf wird geklickt.
+. *Als Ziel markieren* wird ausgewählt.
+. Das Dorf erhält eine Markierung auf der Karte.
+. Diese Markierungen können anschließend im Aktionsplaner genutzt werden.
+
+== Tipps
+
+* Durch Herauszoomen wird die gesamte Weltsituation sichtbar.
+* Feindliche Cluster werden durch die farbliche Darstellung schnell erkannt.
+* In Kombination mit dem Aktionsplaner lassen sich Angriffe visualisieren.

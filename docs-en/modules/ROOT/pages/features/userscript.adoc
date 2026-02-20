@@ -1,0 +1,28 @@
+= Userscript
+:page-navtitle: Userscript
+:description: Userscript for connecting the TW Forge database with Tribal Wars — installation and usage.
+:keywords: Userscript, Script, Installation, Tampermonkey, Attacks, API Key, API
+
+All information about the Userscript is covered here.
+The Userscript displays information such as threat ratings for incoming attacks, reports for villages, and further data directly in-game.
+
+IMPORTANT: The script is 100% legal (in the German-language version) and can be used there without concern.
+The API key must not be shared with anyone else.
+
+== Setting Up the Userscript
+
+To use the Userscript, the script must be copied and pasted into a userscript manager of choice (Tampermonkey or similar).
+
+TIP: If the script does not load, this may be because the Developer Mode is not enabled in the browser settings.
+"Manage Extensions" is clicked and Developer Mode is switched on.
+The exact procedure depends on the browser being used.
+
+After the script has been inserted, the API key must be entered in the Tribal Wars settings under *Game Options → Database Settings*.
+The API key can be found directly above the Userscript section in TW Forge.
+
+Before the input field can be confirmed, a choice must be made between "User" and "SF" (leadership).
+Either option can be selected freely — "SF" displays more information, but the user does not need to be part of the tribe leadership.
+
+== Using the Userscript
+
+NOTE: A detailed description of all functions is available under https://forum.die-staemme.de/index.php?threads/db-info.194547/[the official forum description].

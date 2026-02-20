@@ -8,6 +8,7 @@
 ** xref:features/discordbot.adoc[DC-Bot]
 ** Planer
 *** xref:features/planner/plans.adoc[Angriffspläne]
+*** xref:features/planner/snipe.adoc[Snipe]
 *** xref:features/planner/inquiry.adoc[Abfrage]
 *** xref:features/planner/support_boosts.adoc[UT-Boost-Datenbank]
 ** xref:features/account.adoc[Account]

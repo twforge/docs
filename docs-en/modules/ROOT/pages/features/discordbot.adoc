@@ -1,0 +1,44 @@
+= Discord Bot
+:page-navtitle: Discord Bot
+:description: Linking TW Forge functions with tribe and account Discord servers.
+:keywords: Discord, Bot, Reports, Notifications, Integration
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
+
+NOTE: The Discord Bot currently offers only limited functionality. These features will be expanded further during the ongoing development of TW Forge.
+
+toc::[]
+
+== Setting Up the Discord Bot
+
+First, the Discord Bot must be invited to the tribe Discord or account Discord and linked to TW Forge.
+This is done by clicking the Discord icon at the bottom left, which leads to the xref:settings.adoc#discord[Discord Settings].
+A Discord account must first be connected there.
+Afterwards, the option to invite the Discord Bot to existing servers and add it is provided.
+
+After the Discord Bot has been added to the server, it must still be linked to the database.
+This is done via the command `/tribe set <world> <construct> [opt. channel]`.
+
+TIP: Only constructs for which at least xref:features/tribe-construct.adoc#permission-levels[Leadership] rights are held are displayed.
+For account Discords, only `/player set <world> [opt. channel]` needs to be entered.
+
+The channel restriction only determines whether reports from a specific channel are to be automatically imported into the database.
+
+== Reformatting Reports
+
+By uploading publication links to the tribe Discord, these reports are reformatted and displayed graphically.
+In addition, reports uploaded in this way are automatically imported into the database.
+
+[NOTE]
+====
+Unlike regular report uploads via the database itself or the dedicated xref:api.adoc[API], these reports are attributed to the tribe construct itself rather than to an individual user.
+This means that if the construct changes (tribe switch, etc.), the report remains in the old construct.
+====
+
+=== Report of the Day / Week / Month
+
+The reformatted report image also supports reactions — thumbs up or thumbs down.
+The report that has received the most thumbs-up reactions by the end of the day is counted as the Report of the Day and posted again.
+The same applies to the Report of the Week, Month, and Year.
+Furthermore, the reports with the most reactions are also displayed on the TW Forge home page.

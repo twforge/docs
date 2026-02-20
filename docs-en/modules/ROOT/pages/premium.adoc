@@ -1,0 +1,11 @@
+= Premium Features — TW Forge Silver and TW Forge Gold
+:page-navtitle: Premium Features
+:description: Listing and explanation of premium-exclusive features.
+:keywords: Premium, Found Tribe, Silver, Gold, Adjust Times, Cleaner Calculation
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
+
+All premium benefits available through TW Forge Silver and TW Forge Gold subscriptions are listed here.
+
+NOTE: TW Forge is currently in the closed beta phase. As a result, the described premium features cannot yet be purchased and are only available to selected users. For further questions, the xref:https://discord.gg/PYr9Sb7UHm[TW Forge Discord] can be joined.
