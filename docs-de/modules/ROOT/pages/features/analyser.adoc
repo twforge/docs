@@ -101,6 +101,34 @@ Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
 
 Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
 
+== Sortierung
+
+Die Angriffstabelle kann nach verschiedenen Spalten sortiert werden, indem auf den jeweiligen Spaltenheader geklickt wird.
+Die aktuell gewählte Sortierung wird in der URL gespeichert, sodass sie beim Teilen des Links oder beim Neuladen der Seite erhalten bleibt.
+
+== Interaktion mit einzelnen Angriffen
+
+Durch einen Klick auf eine Tabellenzeile wird der jeweilige Angriff aufgeklappt.
+In der aufgeklappten Ansicht wird ein *Zeitfortschrittsbalken* angezeigt, der die verstrichene Zeit zwischen Abschickzeit und Ankunftszeit visualisiert.
+
+== Massenbearbeitung und Löschen[[massenbearbeitung]]
+
+Über die Auswahl-Checkboxen in der linken Spalte können mehrere Angriffe gleichzeitig markiert werden.
+Markierte Angriffe können anschließend:
+
+* *Gesammelt bearbeitet* werden (z. B. Anpassung von Eigenschaften),
+* *Gesammelt gelöscht* werden.
+
+Diese Funktionen erleichtern insbesondere die Verwaltung großer Mengen eingehender Angriffe.
+
+== Wachturmunterstützung[[watchtower]]
+
+Sofern die aktuelle Welt mit aktivem *Wachturm* gespielt wird, wird in der Angriffstabelle eine zusätzliche Spalte eingeblendet.
+In dieser Spalte wird für Herkunftsdörfer, von denen mehrere Incs eingehen, die *Anzahl doppelter Angriffe* (Duplikat-Zähler) angezeigt.
+Dies unterstützt die Einschätzung, wie viele tatsächlich unterschiedliche Angreifer hinter den eingehenden Incs stecken.
+
+NOTE: Diese Spalte wird nur angezeigt, wenn die ausgewählte Spielwelt den Wachturm als aktives Feature enthält.
+
 == Upload
 
 Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden.
@@ -119,4 +147,37 @@ image::features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-An
 
 image::features/analyser/sos_twforge_paste_analyser.png[Einfügen auf TW-Forge]
 
+=== Importstatus
+
+Nachdem ein Import gestartet wurde, wird auf der Import-Seite eine *Statustabelle* angezeigt.
+Darin kann der Fortschritt der einzelnen Import-Aufgaben verfolgt werden.
+Importaufgaben werden asynchron verarbeitet; die Seite zeigt automatisch an, sobald ein Import abgeschlossen ist oder ein Fehler aufgetreten ist.
+
+== Tabulator — Kollaborative Verteidigungskoordination
+
+Der Tab *Tabulator* ("Angriffe Tabben") ist ein kollaboratives Werkzeug zur koordinierten Verteilung von Defensivtruppen innerhalb des Stammeskonstrukts.
+
+=== Übersicht
+
+Eine SOS-Anfrage (im gleichen Format wie beim Analyser-Import) wird eingefügt, um eine Tabulator-Anfrage zu erstellen.
+Die zu deckenden eingehenden Angriffe werden angezeigt, Teilnehmer (Stammesmitglieder) werden eingeladen, und jeder Teilnehmer wählt die Dörfer aus, von denen er Defensivtruppen beisteuert.
+Nach einem Bestätigungsschritt wird das Ergebnis angezeigt, das die berechnete Verteidigungsverteilung pro Angriffsziel und pro Teilnehmer darstellt.
+
+=== Ablauf
+
+Der Tabulator folgt einem geführten mehrstufigen Prozess:
+
+. *Angriffe* — Die SOS-Anfrage wird eingefügt; eingehende Angriffe werden mit Ziel, Einheitentyp, Ankunftszeit und einem Live-Countdown angezeigt.
+. *Teilnehmer* — Stammesmitglieder werden zur Teilnahme an der Tabb-Sitzung eingeladen.
+. *Einstellungen* — Globale Einstellungen für die Koordination werden konfiguriert.
+. *Truppen* — Jeder Teilnehmer wählt die Dörfer aus, von denen er Defensivtruppen bereitstellt.
+. *Meine Einstellungen* — Jeder Teilnehmer passt seine individuellen Präferenzen an.
+. *Übersicht* — Eine Bestätigungszusammenfassung wird vor dem Abschluss angezeigt.
+. *Ergebnis* — Die berechnete Verteidigungsverteilung wird für jedes Angriffsziel und jeden Teilnehmer dargestellt.
+
+=== Hinweise zur Nutzung
+
+* Eine gültige SOS-Anfrage muss vorhanden sein, bevor eine Tabulator-Sitzung gestartet werden kann.
+* Jeder eingeladene Teilnehmer muss den Truppenauswahlschritt eigenständig abschließen.
+* Die Ergebnisse werden automatisch berechnet, sobald alle Teilnehmer bestätigt haben.
 

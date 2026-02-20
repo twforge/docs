@@ -9,6 +9,9 @@
 Hier werden die Informationen angegeben, die für eine Offaktion notwendig sind.
 Diese Informationen können für alle verknüpften Accounts (Main Account sowie xref:features/account.adoc#uv[Urlaubsvertretungen]) angegeben werden und danach bei der Offaktionsplanung berücksichtigt werden.
 
+NOTE: Auf Welten, bei denen der Paladin mit mehreren aktiven Skills gespielt wird, erscheint in der Abfrage ein zusätzlicher Bereich für *Paladindörfer (Offs)*.
+Hier können Dörfer angegeben werden, von denen Paladine als Teil einer Offaktion eingesetzt werden sollen.
+
 toc::[]
 
 // hier Screenshot einfügen

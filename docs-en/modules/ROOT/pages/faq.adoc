@@ -1,0 +1,34 @@
+= FAQ
+:page-title: FAQ
+:description: Frequently asked questions and answers about TW Forge.
+:keywords: FAQ, Help, Support, Problems, Questions
+
+[TIP]
+====
+The browser search function (`Ctrl` + `F`) can be used to quickly find answers to specific questions.
+====
+
+== Questions and Answers
+
+=== Why can't a tribe construct be created?
+
+A premium subscription is required for this.
+For more information, click xref:premium.adoc[here].
+
+=== Why can't the tribe members see the reports?
+
+This is likely because the accounts are either not in the same construct, or the members in question do not yet have the required minimum permission level (Member).
+More information about permissions within the construct can be found xref:features/tribe-construct.adoc#members[here].
+
+=== Why does the Action Planner lag when planning an operation?
+
+It should be ensured that hardware acceleration is enabled in the browser settings.
+
+=== Why can't the tribe leadership see the entered send times or attack groups?
+
+In most cases this is because the TW Forge tribe construct has not yet been joined.
+
+=== My plan calculates no attacks — what went wrong?
+
+There can be many reasons for this. One of the most common is that no send times have been entered.
+This can be bypassed by enabling the checkbox "Ignore entered send times".

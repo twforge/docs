@@ -51,6 +51,14 @@ Hier können Mitglieder angenommen werden und das Rechtelevel einzelner Mitglied
 Um sicherzustellen, dass nur Accounts angenommen werden, die tatsächlich zu deinem Stamm gehören, werden bei der Beitrittsanfrage sowohl der TW-Forge Account als auch der verknüpfte ingame Account angezeigt.
 Um auf eine ausstehende Beitrittsanfrage aufmerksam zu machen, wird mit einer Notification über dem Menüpunkt "Mitglieder" darauf hingewiesen.
 
+=== Beitrittsanfragen[[join-requests]]
+
+Über den Bereich *Beitrittsanfragen* werden alle offenen Anfragen von Spielern angezeigt, die über einen Invite Link dem Stammeskonstrukt beitreten möchten.
+Für jede Anfrage werden der TW-Forge Account und der verknüpfte Ingame Account des Antragstellers angezeigt.
+Anfragen können einzeln angenommen oder abgelehnt werden.
+
+NOTE: Sobald mindestens eine offene Beitrittsanfrage vorliegt, wird über dem Menüpunkt eine Benachrichtigung eingeblendet.
+
 Das Rechtesystem ist *aufeinander aufbauend*: Alles, was ein Mitglied kann, kann ein Planer automatisch ebenfalls (und so weiter).
 
 === Rechtelevel[[rechtelevel]]
@@ -101,7 +109,15 @@ Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
 == Truppen[[troops]]
 
-Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
+Im Bereich *Truppen* können Stammestruppen eingelesen, aktualisiert und eingesehen werden.
+
+=== Truppenübersicht
+
+Nach dem Import werden die eingelesenen Truppen in einer tabellarischen Übersicht pro Stammesmitglied und Dorf angezeigt.
+Die Übersicht ermöglicht es, den Truppenstand des gesamten Stammes auf einen Blick zu erfassen und gezielt nach einzelnen Spielern oder Dörfern zu filtern.
+
+=== Einlesen von Stammestruppen
+
 Das Einlesen erfolgt über ein erlaubtes Net-SL-Script.
 
 TIP: Du benötigst das erlaubte Net-Schnellleisten Script, welches du unter folgendem Link finden kannst:

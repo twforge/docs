@@ -1,51 +1,221 @@
-= Tribe Construct
+= Tribe Construct — Organisation and Management
+:page-title: Tribe Construct
+:description: Organisation of the tribe construct including member management, role management, troop import, inquiry admin, and more.
+:keywords: Tribe, Found, Construct, Permissions, Roles, Troop Import, Planning
+:toc: macro
+:toclevels: 1
+:toc-title: Contents
 
-View your tribe's members and statistics.
+Under the *Tribe Construct* menu item, a tribe construct can be created and managed.
+The tribe construct enables the collaborative use of TW Forge across multiple accounts.
 
-== Member List
+The following information and functions are consolidated within the construct:
 
-See all tribe members at a glance:
+* Uploaded reports and incoming attacks are shared within the construct.
+* Inquiries for operations take send times and other account-specific data into account.
+* Computed operations (attack plans) can be shared and collaboratively worked on within the construct.
+* Diplomacy and alliances with other tribe constructs are managed here.
+* A central overview of member activity (uploads) is provided.
 
-. Go to **Tribe Construct**
-. Browse the member list
+toc::[]
 
-For each member you can see:
+== Founding a Tribe Construct
 
-* Player name
-* Number of villages
-* Total points
-* Rank in tribe
+[TIP,role=premium_silver]
+====
+This feature is only available to TW Forge Silver and TW Forge Gold accounts.
+====
 
-== Sorting and Filtering
+A tribe construct forms the organisational foundation for shared planning, permission management, and data sharing between multiple accounts.
 
-Organize the list by:
+== Joining a Tribe Construct
 
-* Points (highest/lowest)
-* Village count
-* Name (alphabetical)
-* Activity
+To join a tribe construct, an invite link is required.
+This link can be created by the tribe leadership or an existing construct member.
+The link is clicked, a browser window opens, and "Apply to the tribe construct" is selected.
+Once done, approval from the tribe leadership is awaited.
+After approval is granted, reports and attacks are automatically shared with the tribe, and access rights corresponding to the assigned permission level are received.
 
-Use filters to find specific members quickly.
+TIP: It is possible to be a member of multiple tribe constructs at the same time.
+Uploaded reports and incoming attacks are automatically shared with all constructs.
 
-== Tribe Statistics
+== Overview
 
-View overall tribe stats:
+The tribe construct can be left from this section.
+Founders can also dissolve the construct here.
 
-* Total members
-* Combined points
-* Total villages
-* Tribe ranking
+== Members[[members]]
 
-== Member Details
+In the *Members* section, all accounts belonging to the tribe construct are managed.
+Members can be accepted here and the permission level of individual members can be adjusted.
 
-Click a member to see:
+To ensure that only accounts belonging to the tribe are accepted, both the TW Forge account and the linked in-game account are displayed with each join request.
+A notification above the "Members" menu item appears to draw attention to pending join requests.
 
-* Their villages on the map
-* Recent activity
-* Contribution to tribe
+The permission system is *cumulative*: everything a Member can do, a Planner can do automatically as well (and so on up the hierarchy).
 
-== Tips
+=== Permission Levels[[permission-levels]]
 
-* Check member activity before assigning operation roles
-* Use the map view to see who covers which area
-* Monitor tribe growth over time
+==== Guest
+
+Guests are part of the construct but have *no visibility* into the tribe's reports or incoming attacks.
+
+* Own reports and incoming attacks are shared with the tribe
+* No access to the reports database
+* No access to the tribe's incoming attacks (Incs)
+* Inquiry information (AGs, times, etc.) is shared with the tribe
+
+==== Member
+
+Members have access to the shared information of the construct:
+
+* Access to all incoming attacks (Incs) directed at the tribe
+* Access to the full reports database
+* Creation of single-use invite links for the tribe construct
+
+==== Planner
+
+Planner rights extend access to planning-relevant functions:
+
+* Reading tribe troops
+* Access to created plans
+* Ability to interact with plans (e.g. dependencies, adjustments)
+* Ability to publish plans for the entire construct
+* Ability to enter send times for other accounts within the construct
+
+==== Leadership
+
+Leadership handles organisational and diplomatic management tasks:
+
+* Managing members
+* Entering and changing diplomacy
+* Configuring sharing of tribe information with another tribe (alliances)
+* Visibility of when members last uploaded reports/attacks
+* Creation of invite links for the tribe construct
+* Management of linked Discord servers
+
+==== Founder
+
+Founder rights encompass the highest level of control over the construct:
+
+* Ability to dissolve the tribe construct
+
+== Troops[[troops]]
+
+In the *Troops* section, tribe troops can be imported and updated.
+The import is carried out via an approved Net-SL-Script.
+
+TIP: The approved Net Quickbar Script is required, which can be found at the following link:
+https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/[tribe-troop-counter]
+
+=== Using the Userscript
+
+To read out troops with the quickbar script, the script linked above is first inserted into the browser quickbar or into the quickbar in Tribal Wars, by pasting the code from the "Quickbar Entry" section.
+
+TIP: Tribe leadership rights (in-game) are required to use the script and retrieve troop information.
+Additionally, tribe members must have enabled troop/defence sharing for leadership under Settings → Tribe Settings.
+
+After that, *Tribe → Members* is navigated to in-game.
+The quickbar script is then clicked either in the browser bar or the in-game quickbar.
+A dialog window opens with the following options:
+
+* *Troops* — reads out troops belonging to the village
+* *Defenses* — reads out troops currently stationed in the village
+
+All filters should be cleared before clicking "Read Data".
+After waiting for the script to finish (5–30 seconds depending on village count), an output is produced.
+This output can either be saved as a .csv file and then imported into TW Forge, or copied directly from the preview and pasted into TW Forge (Tribe Construct → Troops → Ctrl+V).
+
+WARNING: The script only works for up to 1,000 villages per player; everything above that limit is not read out.
+
+In TW Forge, it can be selected whether the pasted data should be saved as "Troops" or as "Defence".
+
+TIP: It is not required to upload troops as troops and defence as defence.
+In some cases it may be advantageous to upload village defence as village troops as well.
+The template function under Action Planner → Source Villages always uses only village troops, so defence should also be uploaded as troops if that feature is to be used.
+
+== Inquiry[[inquiry]]
+
+In the *Inquiry* section, it is visible which accounts have provided information, such as:
+
+* Send times
+* Attack groups (AGs)
+* Unavailable offensives
+
+=== Filters
+
+Entries can be filtered to hide outdated data:
+
+* Filter by age of entry
+* Alternatively: From/to filter for a specific time range
+
+=== Adding Times
+
+Times can additionally be added for one or more accounts or tribes.
+This is particularly useful when:
+
+* Default times need to be set
+* Individual accounts have forgotten to enter times
+
+== Diplomacy[[diplomacy]]
+
+In the *Diplomacy* section, tribe diplomacy is maintained.
+Tribes can be entered as:
+
+* Allied
+* Neutral
+* Enemy
+
+and colour-coded accordingly.
+
+These markings are displayed, among other places:
+
+* On the map: xref:features/map.adoc[Map]
+* In the Action Planner: xref:features/action-planner.adoc[Action Planner]
+
+== Alliances[[alliances]]
+
+In the *Alliances* section, alliances with other TW Forge tribe constructs can be established.
+
+For each alliance, the following can be defined:
+
+* Whether reports and incoming attacks are to be shared
+* Whether own information should be hidden when sharing reports
+
+=== Alliance Request Process
+
+The alliance is established via a link process:
+
+. Construct A creates a link and sends it to Construct B.
+. Construct B creates a request via the link.
+. Construct A accepts the request.
+. Sharing settings (reports/attacks) and optionally information hiding can then be configured.
+
+=== Transparency of Settings
+
+Each side can view the current settings of the other side.
+This ensures that asymmetric settings (e.g. only one side shares) are immediately visible.
+
+== Database[[database]]
+
+In the *Database* section, member activity is made visible:
+
+* Which accounts have uploaded how many reports
+* Which accounts have imported how many attacks
+* When this last took place
+
+This allows it to be checked which members have not uploaded any data for an extended period.
+
+== Invite Links[[invite-links]]
+
+In the *Invite Links* section, invitation links for the tribe construct can be created.
+
+Invite links can be restricted by:
+
+* Validity period
+* Maximum number of uses
+
+== Discord[[discord]]
+
+In the *Discord* section, linked Discord servers can be viewed and managed.
+The connection between TW Forge and Discord is organised here.

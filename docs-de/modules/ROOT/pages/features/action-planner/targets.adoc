@@ -8,9 +8,16 @@
 
 Nach der Auswahl der Herkunftsdörfer unter xref:features/action-planner/source.adoc[Angriffsplaner - Herkunft] können unter diesem Punkt die Ziele für die Angriffe definiert werden.
 
+Die Zielkonfiguration ist in mehrere Tabs unterteilt:
+
+* *Stämme/Spieler* — automatische Zielauswahl über Frontentfernung
+* *Dörfer* — Übersicht und Filterung aller ausgewählten Zieldörfer
+* *Zonen* — manuelle Einschränkung über Zeichenwerkzeug auf der Karte
+* *Abhängigkeiten* — Ausschluss oder Abzug bereits verplanter Ziele
+
 toc::[]
 
-== Stämme/Spieler
+== Stämme/Spieler[[staemme_und_spieler_ziele]]
 
 //hier Screenshot einfügen
 
@@ -35,6 +42,12 @@ Sollte ein Dorf weniger Dörfer in dem festgelegten Radius haben, so wird es als
 TIP: Es können auch mehrere von den oben beschriebenen Auswahlmöglichkeiten kombiniert werden.
 Dazu klicke einfach erneut auf "Fronten hinzufügen".
 Dies dient dazu, z.B. mehrere Zielstämme mit unterschiedlicher Angriffs-Anzahl pro Dorf als Ziel auszuwählen, oder aber auch unterschiedliche Gebiete des gleichen Gegners mit unterschiedlichen Angriffszahlen zu versehen. Ein klassischer Anwendungsfall hierfür wäre z.B., dass auf frontnahe Dörfer mehr Fake-Angriffe geplant werden als auf Dörfer, die weiter hinten liegen.
+
+== Dörfer[[doerfer_ziele]]
+
+Im Tab *Dörfer* wird eine vollständige Liste aller aktuell ausgewählten Zieldörfer angezeigt.
+Die Liste kann nach Koordinate, Spieler oder Stamm gefiltert werden.
+Auf diese Weise kann überprüft werden, welche Dörfer konkret als Ziele für die Berechnung vorgesehen sind.
 
 == Zonen
 

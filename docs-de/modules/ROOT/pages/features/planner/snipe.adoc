@@ -1,0 +1,28 @@
+= Snipe
+:page-navtitle: Snipe
+:description: Timing-Tool zum präzisen Abfangen eines Adelangriffs (Command Finder).
+:keywords: Snipe, Command Finder, Timing, Adelangriff, Abfangen, Abschickzeit
+
+Das *Snipe*-Tool ("Command Finder") dient dazu, den Zeitpunkt zum Abfangen eines Adelangriffs präzise zu berechnen.
+Ein Zieldorf und eine gewünschte Ankunftszeit werden ausgewählt — die Ankunftszeit muss in der Zukunft liegen.
+TW Forge berechnet daraufhin alle Herkunftsdörfer, die das Ziel genau zu diesem Zeitpunkt erreichen können.
+
+== Ergebnisdarstellung
+
+Für jedes Herkunftsdorf werden folgende Informationen angezeigt:
+
+* Entfernung zum Ziel
+* Bereits geplante Angriffe aus diesem Dorf
+* Verfügbare und gesamte Truppen pro Einheitentyp
+* Berechnete Abschickzeit pro Einheitentyp
+* Front-Distanz-Sicherheitswert
+* Live-Countdown bis zur Abschickzeit
+
+== UT-Boosts
+
+UT-Boost-Einstellungen können auf die Berechnung angewendet werden.
+Ein Umschalter ermöglicht den Wechsel zwischen *verfügbaren* und *gesamten* Truppen.
+
+== Plan erstellen
+
+Durch Klick auf die Truppenanzahl in einem Ergebnis öffnet sich ein Popup, über das direkt ein Angriffsplan aus dem jeweiligen Dorf erstellt werden kann.

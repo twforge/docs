@@ -3,27 +3,46 @@
 :description: Userscript zum Verbinden der Datenbank mit "Die Stämme", Informationen über die Nutzung und Installation
 :keywords: Userscript, Script, Installation, Tampermonkey, Angriffe anzeigen, API-Key, API
 
-Hier werden alle Informationen zum Userscript thematisiert, welches Informationen wie die Bewertung der Angriffe, Berichte zu den Dörfern sowie weitere Informationen ingame direkt anzeigt.
+Hier werden alle Informationen zu den verfügbaren Userscripts thematisiert, die Informationen wie die Bewertung eingehender Angriffe, Berichte zu den Dörfern sowie weitere Informationen direkt ingame anzeigen.
 
-IMPORTANT: Das Script ist 100 % legal (in der deutschen Sprachversion) und kann dort bedenkenfrei genutzt werden.
-Teilt euren API-Key mit niemand anderem.
+IMPORTANT: Die Userscripts sind 100 % legal (in der deutschen Sprachversion) und können dort bedenkenfrei genutzt werden.
+Der persönliche API-Key sollte nicht mit anderen Personen geteilt werden.
 
-== Einrichten des Userscripts
+== DB-Info Userscript
 
-Um das Userscript zu benutzen, muss das Script kopiert werden und  in einen Userscript-Manager der Wahl (Tampermonkey o.Ä.) eingefügt werden.
+Das *DB-Info Userscript* ist für alle TW-Forge Nutzer kostenlos verfügbar.
+Es zeigt ingame Informationen direkt aus der TW-Forge Datenbank an — unter anderem Angriffsbewertungen und Berichtsdaten zu Dörfern.
 
-TIP: Sollte des Script nicht geladen werden kann dies daran liegen, dass in den Browsereinstellungen der Entwicklermodus nicht eingeschaltet ist.
-Klicke hierzu auf "Erweiterungen verwalten" und schalte den Entwicklermodus ein.
-Das genauere Vorgehen hängt hier vom verwendeten Browser ab.
+=== API-Key
 
-Nachdem das Skript eingefügt worden ist, muss in den Stämme Einstellungen unter "Spieloptionen->Datenbanksettings" noch der API-Key, welchen du direkt über dem Userscript auf TW-Forge findest, eingefügt werden.
+Auf der Userscript-Seite in TW-Forge wird der persönliche API-Key angezeigt.
+Er ist standardmäßig verborgen und kann über das Augen-Symbol sichtbar gemacht sowie über einen Button in die Zwischenablage kopiert werden.
 
+=== Einrichten des DB-Info Userscripts
+
+Um das Userscript zu benutzen, muss das Script kopiert werden und in einen Userscript-Manager der Wahl (Tampermonkey o.Ä.) eingefügt werden.
+
+TIP: Sollte das Script nicht geladen werden, kann dies daran liegen, dass in den Browsereinstellungen der Entwicklermodus nicht eingeschaltet ist.
+Hierzu auf "Erweiterungen verwalten" klicken und den Entwicklermodus einschalten.
+Das genauere Vorgehen hängt vom verwendeten Browser ab.
+
+Nachdem das Skript eingefügt worden ist, muss in den Stämme Einstellungen unter "Spieloptionen->Datenbanksettings" noch der API-Key eingefügt werden, der direkt über dem Userscript-Bereich auf TW-Forge zu finden ist.
 
 Bevor das Eingabefeld bestätigt werden kann, muss noch zwischen "User" und "SF" entschieden werden.
-Hier kann jeder Nutzer sowohl User als auch SF problemlos auswählen, SF zeigt mehr Informationen an, der Nutzer muss aber nicht teil der SF sein.
+Beide Optionen können problemlos gewählt werden — die SF-Ansicht zeigt mehr Informationen an; die SF-Mitgliedschaft ingame ist hierfür nicht erforderlich.
 
-== Nutzung des Userscripts
+=== Nutzung des DB-Info Userscripts
 
-NOTE: Detaillierte Beschreibung der Funktionen  unter https://forum.die-staemme.de/index.php?threads/db-info.194547/[der offiziellen Beschreibung im Forum.]
+NOTE: Eine detaillierte Beschreibung der Funktionen findet sich unter https://forum.die-staemme.de/index.php?threads/db-info.194547/[der offiziellen Beschreibung im Forum.]
 
 // das muss hier noch ergänzt werden, wenn ich mal Angriffe hatte und mir das genau anschauen können
+
+== DSUtils Userscript (PREMIUM)
+
+[TIP,role=premium_silver]
+====
+Das DSUtils Userscript steht nur TW-Forge Silver und TW-Forge Gold Accounts zur Verfügung.
+====
+
+Das *DSUtils Userscript* ist eine erweiterte Variante des Userscripts mit zusätzlichen Funktionen, die über den Funktionsumfang des DB-Info Scripts hinausgehen.
+Es wird ebenfalls über den Userscript-Bereich in TW-Forge bereitgestellt und auf dieselbe Weise über einen Userscript-Manager installiert.

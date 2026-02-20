@@ -1,0 +1,35 @@
+= Dorfdetails
+:page-navtitle: Dorfdetails
+:description: Detailansicht für ein einzelnes Dorf mit Berichten, Gebäudeschäden und weiteren Informationen
+:keywords: Dorf, Dorfdetails, Berichte, Gebäudeschäden, Informationen
+
+Die *Dorfdetailseite* wird durch einen Klick auf eine Dorfkoordinate in verschiedenen Bereichen von TW Forge geöffnet.
+Sie fasst alle in der Datenbank vorhandenen Informationen zu einem einzelnen Dorf übersichtlich zusammen.
+
+== Dorfinformationen
+
+Im oberen Bereich werden allgemeine Informationen zum Dorf angezeigt:
+
+* Name und Koordinate des Dorfes
+* Aktueller Besitzer (verlinkter Spieler-Eintrag)
+* Direktlink zum Dorf im Spiel
+
+== Letzte Kampfeffekte
+
+Auf Basis des zuletzt vorhandenen Berichts für dieses Dorf werden die *Kampfeffekte* angezeigt:
+
+* Eventuelle Gebäudeschäden (z. B. Mauerverringerung)
+* Weitere erfasste Effekte aus dem Kampfbericht
+
+Diese Informationen ermöglichen eine schnelle Einschätzung des aktuellen Dorfzustands ohne den vollständigen Bericht öffnen zu müssen.
+
+== Dorf-Informationseinträge
+
+Unterhalb der Kampfeffekte werden alle vorhandenen *Dorf-Informationseinträge* in tabellarischer Form dargestellt.
+Jeder Eintrag enthält:
+
+* Typ des Eintrags (z. B. Späh, Angriff)
+* Datum des Eintrags
+* Truppenaufschlüsselung zum Zeitpunkt des Eintrags
+
+Durch diese Übersicht kann der Verlauf der Dorfaktivität nachvollzogen werden.

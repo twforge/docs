@@ -8,13 +8,32 @@ Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abs
 
 == Übersicht der Angriffspläne
 
+=== Suche und Filter
+
+Über ein Suchfeld kann die Planliste nach dem Namen des Angriffplans gefiltert werden.
+Die Suche reagiert mit einer kurzen Verzögerung, sodass nicht jede einzelne Eingabe eine neue Suchanfrage auslöst.
+
+=== Aktive und archivierte Pläne
+
+Standardmäßig werden nur aktive Angriffspläne angezeigt.
+Durch einen Umschalter kann auf die Ansicht der *archivierten Pläne* gewechselt werden.
+Archivierte Pläne können bei Bedarf wiederhergestellt und zurück in die aktive Liste verschoben werden.
+
+=== Neuen Plan erstellen
+
+Ein neuer Angriffsplan kann direkt in der Listenansicht erstellt werden.
+Hierzu wird ein Name eingegeben und die Erstellung bestätigt.
+Der neu erstellte Plan erscheint anschließend in der Liste und kann geöffnet und befüllt werden.
+
+=== Optionen je Plan
+
 Zunächst erhält der Nutzer einen Überblick über alle ihm zugewiesenen Angriffspläne.
 Diese können entweder durch den Nutzer selbst erstellt worden sein oder von einem Stammesmitglied mit der Planungsrolle für den Nutzer erstellt und dann freigegeben worden sein.
 Hier bieten sich durch einen Klick auf die drei Punkte neben den APs dem Nutzer direkt mehrere Möglichkeiten:
 
 * *Öffnen des Angriffplans*
-* *Archivieren des Angriffplans*-> Angriff wird in das Archiv verschoben
-* *Erstellen der WB-Exporte*-> vom Plan werden die zugehörigen WB-Exporte erstellt
+* *Archivieren des Angriffplans* → Angriff wird in das Archiv verschoben; kann dort wiederhergestellt werden
+* *Erstellen der WB-Exporte* → vom Plan werden die zugehörigen WB-Exporte erstellt
 
 TIP: Solltest du diese Exporte in DS-Ultimate einfügen, werden dort die unaufgelösten Variablen (fake, alle) nicht aufgelöst, sondern komplett übernommen.
 Solltest du die aufgelösten Truppen erhalten wollen, so drücke auf "Exportierter Plan"
