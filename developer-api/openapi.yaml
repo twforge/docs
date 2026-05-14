@@ -94,6 +94,200 @@ paths:
           $ref: '#/components/responses/badRequest'
         401:
           $ref: '#/components/responses/unauthorized'
+  /planner/tw/worlds/{world}/support-boosts/players/{playerId}/tribe-skill-activations:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: playerId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+    get:
+      tags:
+        - support-boost
+      summary: Get the active support boost tribe skills for the given player.
+      operationId: getTribeSkillActivations
+      responses:
+        200:
+          description: The active support boost tribe skills.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TribeSkillActivation'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+    post:
+      tags:
+        - support-boost
+      summary: Report a tribe skill activation for the given player.
+      operationId: createTribeSkillActivation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateTribeSkillActivationRequest'
+      responses:
+        200:
+          description: The created resource.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TribeSkillActivation'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+  /planner/tw/worlds/{world}/support-boosts/players/{playerId}/tribe-skill-activations/{id}:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: playerId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+    delete:
+      tags:
+        - support-boost
+      summary: Delete a previously reported tribe skill activation.
+      operationId: deleteTribeSkillActivation
+      responses:
+        204:
+          description: The resource was deleted.
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+  /planner/tw/worlds/{world}/support-boosts/villages/{villageId}/sigil-distress-activations:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: villageId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+    get:
+      tags:
+        - support-boost
+      summary: Get the active sigil of distress activations for the given village.
+      operationId: getSigilDistressActivations
+      responses:
+        200:
+          description: The page of activations.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SigilDistressActivation'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+    post:
+      tags:
+        - support-boost
+      summary: Create sigil of distress activation.
+      operationId: createSigilDistressActivation
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CreateSigilDistressActivationRequest'
+      responses:
+        200:
+          description: The created activation.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SigilDistressActivation'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+  /planner/tw/worlds/{world}/support-boosts/villages/{villageId}/sigil-distress-activations/{id}:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: villageId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+    delete:
+      tags:
+        - support-boost
+      summary: Delete sigil of distress activation.
+      operationId: deleteSigilDistressActivation
+      responses:
+        204:
+          description: The activation was deleted.
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+  /planner/tw/worlds/{world}/support-boosts/villages/{villageId}/active-boost:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: villageId
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int32
+      - name: include-shared
+        in: query
+        required: false
+        description: |
+          Whether support boost activations that were shared with the current user should also be included. Set to
+          false to only consider the activations reported by the current user.
+        schema:
+          type: boolean
+          default: true
+      - name: at-time
+        in: query
+        required: false
+        description: |
+          The point in time for when the support-boosts should be checked. Defaults to now.
+        schema:
+          type: string
+          format: date-time
+    get:
+      tags:
+        - support-boost
+      summary: Get the aggregated active support boost for the given village at the given time.
+      operationId: getActiveSupportBoost
+      responses:
+        200:
+          description: The active boost.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ActiveSupportBoost'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
 components:
   securitySchemes:
     defaultApiKey:
@@ -393,3 +587,108 @@ components:
           type: object
           additionalProperties:
             type: string
+    TribeSkillActivation:
+      type: object
+      required:
+        - id
+        - playerId
+        - strength
+        - validFrom
+        - validUntil
+        - actions
+      properties:
+        id:
+          type: integer
+          format: int64
+        playerId:
+          type: integer
+          format: int64
+        strength:
+          type: integer
+        validFrom:
+          type: string
+          format: date-time
+        validUntil:
+          type: string
+          format: date-time
+        actions:
+          type: array
+          uniqueItems: true
+          items:
+            type: string
+            enum:
+              - delete
+    CreateTribeSkillActivationRequest:
+      type: object
+      required:
+        - strength
+        - validUntil
+      properties:
+        strength:
+          type: integer
+          minimum: 1
+          maximum: 20
+        validUntil:
+          type: string
+          format: date-time
+    SigilDistressActivation:
+      type: object
+      required:
+        - id
+        - villageId
+        - strength
+        - validFrom
+        - validUntil
+        - actions
+      properties:
+        id:
+          type: integer
+          format: int64
+        villageId:
+          type: integer
+        strength:
+          type: integer
+        validFrom:
+          type: string
+          format: date-time
+        validUntil:
+          type: string
+          format: date-time
+        actions:
+          type: array
+          uniqueItems: true
+          items:
+            type: string
+            enum:
+              - delete
+    SigilOfDistressStrength:
+      type: string
+      enum:
+        - TEN
+        - TWENTY
+        - THIRTY
+    CreateSigilDistressActivationRequest:
+      type: object
+      required:
+        - strength
+        - validUntil
+      properties:
+        strength:
+          $ref: '#/components/schemas/SigilOfDistressStrength'
+        validUntil:
+          type: string
+          format: date-time
+    ActiveSupportBoost:
+      type: object
+      required:
+        - strength
+        - tribeSkill
+        - sigil
+      properties:
+        strength:
+          type: integer
+          description: Combined support boost strength.
+        tribeSkill:
+          type: integer
+        sigil:
+          type: integer
