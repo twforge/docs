@@ -1,4 +1,4 @@
-openapi: 3.1.0
+openapi: 3.0.3
 info:
   title: TW Forge Developer API
   description: TW Forge API for Tribalwars developers.
@@ -288,6 +288,86 @@ paths:
           $ref: '#/components/responses/badRequest'
         401:
           $ref: '#/components/responses/unauthorized'
+  /analyser/tw/worlds/{world}/incoming-attacks:
+    parameters:
+      - $ref: '#/components/parameters/world'
+    get:
+      tags:
+        - incoming-attacks
+      summary: Get a page of incoming attacks.
+      operationId: getIncomingAttacks
+      description: Page of incoming attacks the current user is allowed to see. Includes attacks imported by other users.
+      parameters:
+        - $ref: '#/components/parameters/page'
+        - $ref: '#/components/parameters/pageSize'
+        - name: village-id
+          in: query
+          required: false
+          explode: false
+          schema:
+            type: array
+            uniqueItems: true
+            maxItems: 100
+            items:
+              type: integer
+              format: int32
+      responses:
+        200:
+          description: The page of incoming attacks.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/IncomingAttackPage'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+  /analyser/tw/worlds/{world}/incoming-attacks/ratings:
+    parameters:
+      - $ref: '#/components/parameters/world'
+    get:
+      tags:
+        - incoming-attacks
+      summary: Get the ratings for attacks uploaded by the current user.
+      operationId: getIncomingAttackRatings
+      responses:
+        200:
+          description: The list of attack ratings.
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/StandaloneAttackRating'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+  /analyser/tw/worlds/{world}/incoming-attacks/sos-requests:
+    parameters:
+      - $ref: '#/components/parameters/world'
+    post:
+      tags:
+        - incoming-attacks
+      summary: Import incoming attacks via SOS Request.
+      operationId: importSosRequest
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImportIncomingAttacksSosRequest'
+      responses:
+        200:
+          description: The parsed sos request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParsedSosRequest'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
 components:
   securitySchemes:
     defaultApiKey:
@@ -296,6 +376,23 @@ components:
       name: Authorization
       in: header
   parameters:
+    page:
+      name: page
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 0
+    pageSize:
+      name: size
+      in: query
+      required: false
+      schema:
+        type: integer
+        format: int32
+        default: 10
+        maximum: 200
     world:
       name: world
       in: path
@@ -321,6 +418,18 @@ components:
           schema:
             $ref: '#/components/schemas/ErrorResponse'
   schemas:
+    Page:
+      type: object
+      required:
+        - totalElements
+        - totalPages
+      properties:
+        totalElements:
+          type: integer
+          format: int64
+        totalPages:
+          type: integer
+          format: int32
     ReportImportRequest:
       type: object
       required:
@@ -692,3 +801,127 @@ components:
           type: integer
         sigil:
           type: integer
+    IncomingAttackPage:
+      allOf:
+        - $ref: '#/components/schemas/Page'
+        - type: object
+          required:
+            - content
+          properties:
+            content:
+              type: array
+              items:
+                $ref: '#/components/schemas/IncomingAttack'
+    IncomingAttack:
+      type: object
+      required:
+        - id
+        - name
+        - unit
+        - targetId
+        - sourceId
+        - attackerId
+        - arrival
+        - sendTime
+        - actions
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        unit:
+          type: string
+        targetId:
+          type: integer
+          format: int32
+        sourceId:
+          type: integer
+          format: int32
+        attackerId:
+          type: integer
+          format: int64
+        defenderId:
+          type: integer
+          format: int64
+        arrival:
+          type: string
+          format: date-time
+        sendTime:
+          type: string
+          format: date-time
+        actions:
+          type: array
+          uniqueItems: true
+          items:
+            type: string
+            enum:
+              - EDIT
+              - DELETE
+        attackSize:
+          $ref: '#/components/schemas/AttackSize'
+        rating:
+          $ref: '#/components/schemas/AttackRating'
+    AttackRating:
+      type: object
+      required:
+        - attackSize
+        - isOffensive
+      properties:
+        attackSize:
+          $ref: '#/components/schemas/AttackSize'
+        isOffensive:
+          type: boolean
+        watchtowerDetected:
+          type: boolean
+        defensiveSourceVillage:
+          type: boolean
+        units:
+          $ref: '#/components/schemas/Troops'
+        transit:
+          $ref: '#/components/schemas/Troops'
+    StandaloneAttackRating:
+      type: object
+      required:
+        - sourceId
+        - targetId
+        - arrival
+        - rating
+      properties:
+        sourceId:
+          type: integer
+        targetId:
+          type: integer
+        arrival:
+          type: string
+          description: Arrival as formatted by the game.
+        rating:
+          $ref: '#/components/schemas/AttackRating'
+    AttackSize:
+      type: string
+      enum:
+        - SMALL
+        - MEDIUM_SMALL
+        - MEDIUM
+        - LARGE
+    Troops:
+      type: object
+      additionalProperties:
+        type: integer
+        format: int32
+    ImportIncomingAttacksSosRequest:
+      type: object
+      required:
+        - sosRequest
+      properties:
+        sosRequest:
+          type: string
+    ParsedSosRequest:
+      type: object
+      required:
+        - attacks
+      properties:
+        attacks:
+          type: array
+          items:
+            $ref: '#/components/schemas/IncomingAttack'
