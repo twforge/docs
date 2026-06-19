@@ -271,17 +271,22 @@ So bestehen folgende Möglichkeiten:
 
 * *Erstellen eines Gesamtexports der Aktion*
 * *Neu zuordnen der Angriffe*: Wenn im Nachhinein noch Dörfer geadelt worden sind, werden die Angriffe neu zugeordnet, die einen neuen Besitzer haben.
+* *Anpassen der Ankunftszeit von geplanten Angriffen (AGs, Zwischencleaner) auf bereits laufende Befehle.
 
-// Fake UTs?
+==== Anpassen mit Devilicious-Script
 
+Um geplante Angriffe auf bereits laufende Angriffe anzugleichen, muss zunächst dass Develicious-SL-Script geladen werden. Dieses findest du link:https://forum.tribalwars.net/index.php?threads/devils-noble-spam-planner-enhancer.291222/[hier.]
 
+So passt du deine Angriffe an:
 
-
-
-
-
-
-
-
-
-
+. Kopiere die Zieldörfer aus der Checkbox in TW-Forge.
+. Starte das SL-Script
+. Füge die Koordinaten in das untere "Coordinates" Feld ein.
+. Klicke auf "Fetch Commands"
+. Trage in der oberen Leiste ein: Add (Nummer egal) to the last (3) and exclude (0) attacks of the type [red] (rest egal).
+. Klicke auf "add nobles"
+. Wenn alles richtig gemacht wird, siehst du bei jedem dorf, dass bei den letzten 3 roten Angriffen die ausgewählte AG-Anzahl eingefügt worden ist.
+. Klicke auf "Extract Planning". Hierdurch wird unten im Textfeld ein Output generiert.
+. Kopiere den gesamten Output (Strg A -> Strg C) und füge ihn in TW-Forge in das "Ankunftszeiten" Feld ein.
+. Klicke auf "Zeiten anpassen". Die ausgewählten Pläne werden jetzt automatisch angepasst.
+Du erhältst Rückmeldung über Dörfer, in denen das Anpassen nicht geklappt hat.
