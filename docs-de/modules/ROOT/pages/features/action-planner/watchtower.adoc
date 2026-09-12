@@ -16,7 +16,7 @@ toc::[]
 Ein Wachturm erkennt eingehende Angriffe abhängig von seiner Stufe eine bestimmte Zeit vor dem Einschlag.
 Bei aktivierter Wachturmplanung berechnet der Aktionsplaner für jede Kombination aus Herkunfts- und Zieldorf, wie lange vor dem Einschlag der Angriff von den gegnerischen Wachtürmen erkannt würde, und berücksichtigt das bei der Auswahl der Angriffe.
 
-IMPORTANT: Grundlage ist die Wachturm-Datenbank unter xref:features/reports.adoc[Berichte → Wachturm]. Nur dort eingetragene Wachtürme (manuell gemeldet oder aus Berichten übernommen) können berücksichtigt werden.
+IMPORTANT: Grundlage ist die Wachturm-Datenbank unter xref:features/reports.adoc#wachturm[Berichte → Wachturm]. Nur dort eingetragene Wachtürme (manuell gemeldet oder aus Berichten übernommen) können berücksichtigt werden.
 
 == Einstellungen
 

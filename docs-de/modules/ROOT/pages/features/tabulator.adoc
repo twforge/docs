@@ -213,20 +213,3 @@ Ziele ohne passende Truppen stehen mit 0% und *Keine* in der Liste.
 Über *Speichern* übernimmst du deine Befehle in einen Angriffsplan.
 Im Popup kannst du entweder einen *neuen Plan* anlegen oder die Befehle an einen *bestehenden Plan* anhängen.
 Anschließend gelangst du über *Zum Plan* jederzeit zum zugehörigen xref:features/planner/plans.adoc[Angriffsplan], aus dem heraus die Tabs wie gewohnt abgeschickt werden können.
-
-== Wie verteilt der Tabulator?
-
-Für alle, die wissen wollen, was bei der Berechnung passiert - die wichtigsten Regeln:
-
-* Es werden nur Dörfer von Teilnehmern mit Status *Bereit* verwendet.
-* Ein Tab wird nie aus dem Zieldorf selbst geschickt, und pro Dorf, Ziel und Ankunftszeit wird höchstens ein Tab erzeugt.
-* Pro Teilnehmer werden maximal zwei Befehle mit exakt derselben Abschicksekunde erzeugt, damit die Tabs auch praktisch abschickbar sind.
-* Die Abschickzeit ergibt sich aus Ankunftszeit des Angriffs minus Laufzeit.
-Sie muss innerhalb des globalen Zeitfensters und - bei mehreren Teilnehmern - innerhalb des persönlichen Zeitfensters liegen.
-Aktive UT-Boosts (Stammesfähigkeiten und Sigille) verkürzen die Laufzeit entsprechend.
-* Die Größe eines Tabs ist das Minimum aus den verfügbaren Truppen des Dorfes, der maximalen Tab-Größe und dem, was am Ziel noch fehlt.
-Unterschreitet ein Dorf die minimale Tab-Größe, wird es für dieses Ziel nicht verwendet.
-* Bei aktivem *Def-Äquivalent* wird statt der exakten Einheiten die Verteidigungsstärke verglichen.
-Der Tabulator versucht zuerst eine exakte Übereinstimmung und greift nur dann auf äquivalente Einheiten zurück, wenn kein passendes Dorf gefunden wurde.
-* Truppen, die für einen Tab verwendet werden, stehen für weitere Tabs nicht mehr zur Verfügung.
-Die Verteilung endet, sobald alle Ziele die Ziel-Tab-Größe erreicht haben oder keine passenden Truppen mehr übrig sind.
