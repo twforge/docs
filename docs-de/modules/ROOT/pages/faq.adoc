@@ -30,6 +30,7 @@ Das liegt in den meisten Fällen daran, dass du dem Stammeskonstrukt in TW-Forge
 
 === Mein Plan errechnet keine Angriffe, was habe ich falsch gemacht?
 
-Hierfür kann es viele Gründe geben. Einer der häufigsten Gründe ist, dass keine Abschickzeiten angeben sind. Dies kann durch ein Auswählen der Checkbox "Eingetragene Abschickzeiten ignorieren" umgangen werden.
+Hierfür kann es viele Gründe geben. Einer der häufigsten Gründe ist, dass keine Abschickzeiten angegeben sind. Dies kann durch ein Auswählen der Checkbox "Von Spielern angegebene Abschickzeiten ignorieren" unter Abschickzeiten umgangen werden.
+Wurden weniger Angriffe gefunden als gewünscht, zeigt die xref:features/action-planner/calculations.adoc#ablehnungsuebersicht[Ablehnungsübersicht "Warum so wenige Angriffe?"] auf der Berechnungsseite, welche Gründe (z.B. Moral, Zeitfenster, Abhängigkeiten) dafür verantwortlich sind.
 
 // TODO

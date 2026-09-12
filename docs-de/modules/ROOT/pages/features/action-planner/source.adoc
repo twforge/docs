@@ -7,141 +7,196 @@
 :toc-title: Inhalt
 
 Das folgende Kapitel thematisiert den ersten großen Bereich der Planung, die Bestimmung der Herkunftsdörfer.
-Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/overview.adoc#konfiguration_einzeplan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden. Hierzu bieten sich verschiedene Möglichkeiten.
+Sobald ein Plan erstellt und die ersten Einstellungen in der xref:features/action-planner/overview.adoc#configuration_plan[Konfiguration des Einzelplans] vorgenommen worden sind, können unter "Herkunftsdörfer" die Herkunftsdörfer für die Offaktion definiert werden.
+Hierzu bieten sich verschiedene Möglichkeiten, die auf folgende Tabs verteilt sind:
 
-TIP: Um eine angenehme Planungserfahrung zu gewährleisten wird empfohlen, die Hardwarebeschleunigung im Browser zu aktivieren.
-Ausgeschaltete Hardwarebeschleunigung kann zu Lags und Fehlern in der Grafikdarstellung führen.
+*Stämme / Spieler · Dörfer · Frontentfernung · Zonen · Dorftruppen · Abhängigkeiten*
+
+Hinter jedem Tab wird die Anzahl der jeweiligen Einträge angezeigt.
+Alle Einstellungen werden kombiniert: Ein Dorf wird nur dann als Herkunftsdorf verwendet, wenn es alle Bedingungen erfüllt.
+
+TIP: Über das Dörfer-Popup auf der Karte kannst du jederzeit nachsehen, welche Herkunftsdörfer sich aus den aktuellen Einstellungen ergeben (Anzahl Angriffe und Dörfer).
+Spieler, die noch unter *Anfängerschutz* stehen, werden dort gesondert aufgeführt und nicht in die Auswahl übernommen.
+
+
+NOTE: Für eine flüssige Kartendarstellung wird empfohlen, die Hardwarebeschleunigung im Browser zu aktivieren.
 
 toc::[]
 
 == Stämme und Spieler[[staemme_und_spieler]]
 
-// Bild noch einfügen
+image::features/action-planner/herkunft/herkunft_staemme_spieler.png[Tab "Stämme / Spieler" der Herkunftsdörfer]
 
 Hier können ganze Spieler und Stämme eingefügt werden.
-Es kann definiert werden, wie viele Angriffe entweder pro Account geschickt werden sollen ("Max Angriffe pro Spieler"), und wie viele Angriffe pro Herkunftsdorf maximal verplant werden sollen.
+Es kann definiert werden, wie viele Angriffe pro Account maximal geschickt werden sollen ("Max Angriffe pro Spieler") und wie viele Angriffe pro Herkunftsdorf maximal verplant werden sollen ("Max Angriffe pro Dorf").
 Sollen einzelne Spieler eines Stammes nicht verplant werden, so können diese nach dem Einfügen manuell entfernt werden.
-Falls die maximalen Angriffe pro Dorf oder Account nachträglich angepasst werden sollen, markiere die entsprechenden Accounts, gib oben die neuen Werte ein und bestätige die Änderung über den Button Ändern.
+Falls die maximalen Angriffe pro Dorf oder Account nachträglich angepasst werden sollen, markiere die entsprechenden Accounts über die Checkboxen, gib oben die neuen Werte ein und bestätige die Änderung über den Bearbeiten-Button.
 
-== Manuelle Herkunftsdörfer[[manuelle_herkunftsdoerfer]]
+== Dörfer[[manuelle_herkunftsdoerfer]]
 
-// Bild noch einfügen
+image::features/action-planner/herkunft/herkunft_doerfer.png[Tab "Dörfer" mit manuellen Herkunftsdörfern und Ausschlüssen]
 
-Hier können entweder manuelle Dörfer als Herkunftsdörfer eingefügt oder manuell Dörfer ausgeplant werden, sollten diese nicht verplant werden sollen.
-Für das Hinzufügen manueller Dörfer muss lediglich eine Liste von Koordinaten eingefügt werden und eine Anzahl definiert werden, wie oft die jeweiligen Dörfer verplant werden sollen.
+Der Tab "Dörfer" besteht aus zwei Bereichen: *Manuelle Herkunftsdörfer* und *Dörfer ausschließen*.
 
-TIP: Sollten später noch Truppenfilter hinzugefügt werden, können manuelle Herkunftsdörfer nur dann eingeplant werden, wenn Truppeninformationen für diese Dörfer eingelesen sind (vgl. xref:#dorftruppen[Truppenfilterung]).
+=== Manuelle Herkunftsdörfer
 
-=== AGs importieren[[ags_importieren]]
+Hier können Dörfer explizit als Herkunftsdörfer eingefügt werden, unabhängig von der Auswahl unter Stämme / Spieler.
+Dafür muss lediglich eine Liste von Koordinaten eingefügt und eine Anzahl definiert werden, wie oft die jeweiligen Dörfer verplant werden sollen ("Max Angriffe pro Dorf").
+Über die Checkboxen können mehrere Dörfer markiert und gemeinsam bearbeitet oder entfernt werden.
+
+TIP: Sollten später noch Truppenfilter hinzugefügt werden, können manuelle Herkunftsdörfer nur dann eingeplant werden, wenn Truppeninformationen für diese Dörfer eingelesen sind (vgl. xref:#dorftruppen[Dorftruppen]).
+
+==== AGs importieren[[ags_importieren]]
 
 Des Weiteren können hier die vom Stamm gemeldeten AGs eingefügt werden.
-Dies geschieht über den Button "AGs".
-Durch einen Klick auf diesen Button öffnet sich ein Interface, in dem die gemeldeten AGs einfügt werden können.
-Die einzufügenden AGs können nach Alter gefiltert werden.
+Dies geschieht über den Button *"Gemeldete AGs einfügen"*.
+Durch einen Klick auf diesen Button öffnet sich ein Fenster, in dem die über die xref:features/planner/inquiry.adoc[Abfrage] gemeldeten AGs pro Spieler aufgelistet sind.
+Über "Max Alter" können veraltete Meldungen ausgeblendet werden; zu jedem Spieler wird angezeigt, wann er seine Angaben zuletzt bearbeitet hat.
+Die gewünschten Spieler werden per Checkbox ausgewählt und übernommen.
 
-TIP: Der Name, der hinter den jeweiligen AGs steht, bezieht sich auf den Account, der die AGs angegeben hat, nicht auf die Ingame Accounts, zu denen die angegebenen AGs gehören.
+TIP: Der Name, der hinter den jeweiligen AGs steht, bezieht sich auf den Account, der die AGs angegeben hat, nicht auf die Ingame-Accounts, zu denen die angegebenen AGs gehören.
 
-Nachdem die Einzel-AGs eingefügt worden sind, können diese in Trains aufgeteilt werden (/4, /3 (mit Zustimmungspaladine)).
-Sollte die Zahl nicht genau für die jeweilige Train-Anzahl aufgehen (z.B. 23 AGs), so wird abgerundet (23 AGs->5 4er Trains).
+Nachdem die Einzel-AGs eingefügt worden sind, können diese über die Buttons *÷3* und *÷4* in Trains aufgeteilt werden (÷3 z.B. mit Zustimmungspaladin).
+Dazu die betroffenen Dörfer markieren und den passenden Button klicken.
+Sollte die Zahl nicht genau für die jeweilige Train-Anzahl aufgehen (z.B. 23 AGs), so wird abgerundet (23 AGs → 5 4er-Trains).
 
-=== Dörfer ausplanen
+TIP: Auf Welten mit mehreren Paladinen und Paladin-Skills gibt es zusätzlich den Button *"Pala-OFFs einfügen"*, mit dem die in der Abfrage gemeldeten Paladin-Offs als Herkunftsdörfer übernommen werden können.
+
+=== Dörfer ausschließen
 
 Sollen explizit Dörfer nicht verplant werden (z.B. weil gewisse Offs noch nicht zu Hause sind), können diese manuell ausgeplant werden.
 Hierzu bieten sich zwei Möglichkeiten:
 
-. *Ausplanen von Dörfern über eine Koordinatenliste*
-. *Ausplanen von Dörfern über "auszuplanende Offs"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/inquiry.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
+. *Ausschließen von Dörfern über eine Koordinatenliste*
+. *Ausschließen über "Nicht verfügbare Offs ignorieren"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/inquiry.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
 Diese können auf die gleiche Weise eingefügt werden wie die xref:#ags_importieren[AGs].
 
-== Frontausplanung
+== Frontentfernung
 
-// Bild einfügen
+image::features/action-planner/herkunft/herkunft_frontentfernung.png[Tab "Frontentfernung"]
 
 Der Aktionsplaner bietet die Möglichkeit, die Herkunftsdörfer einzuschränken.
 Für viele Aktionen kann es sinnvoll sein, frontnahe Dörfer auszuplanen, wenn z.B. keine Front-Offs verwendet werden sollen.
-So können hier verfeindete Stämme / Accounts eingetragen und eingestellt werden, ab welcher Distanz potenzielle Herkunftsdörfer zu den eingetragenen Stämmen erst wieder als mögliche Herkunftsdörfer verwendet werden können.
+So können hier verfeindete Stämme / Accounts eingetragen und eingestellt werden, ab welcher Distanz zu den eingetragenen Stämmen potenzielle Herkunftsdörfer erst wieder als mögliche Herkunftsdörfer verwendet werden können.
+
+TIP: Über das Augen-Symbol in der jeweiligen Zeile kannst du dir die eingestellte Entfernung direkt auf der Karte einzeichnen lassen.
 
 === Definition der Frontlinie: Zecken[[definition_frontlinie]]
 
-Der Aktionsplaner bietet die Möglichkeit, einzustellen, inwiefern Zecken bei der Frontlinie mit eingerechnet werden / was als Zecken gilt.
+Einzelne, weit abseits liegende Dörfer ("Zecken") können die Frontlinie verzerren.
+Über die Zecken-Einstellung kannst du solche Ausreißer bei der Berechnung der Frontentfernung ignorieren.
 Hierzu gibt es zwei Einstellungsmöglichkeiten:
 
-. *Minimale Nachbarn:* Hier kannst du definieren, was als Zecke bewertet wird (und somit kein Teil der Frontlinie ist).
-Bei 0 minimalen Nachbarn: Jedes Dorf, welches mind 0 Verbündete in der Nähe hat, zählt als Frontdorf (also nicht als Zecke).
-Bei 3 minimalen Nachbarn: Ein Dorf zählt nur dann als Frontdorf (=nicht als Zecke), wenn es mindestens 3 verbündete Nachbardörfer im eingestellten Radius hat.
-Wenn Dörfer als Zecke (also nicht als Frontdorf) bewertet werden, werden sie bei der Frontausplanung *nicht* berücksichtigt.
+. *Min Nachbarn:* Mindestanzahl an Nachbardörfern, die ein Dorf im Umkreis haben muss, um nicht als Zecke gewertet zu werden.
+Bei 0 minimalen Nachbarn zählt jedes Dorf als Frontdorf (also nicht als Zecke).
+Bei 3 minimalen Nachbarn zählt ein Dorf nur dann als Frontdorf, wenn es mindestens 3 verbündete Nachbardörfer im eingestellten Radius hat.
+Wenn Dörfer als Zecke bewertet werden, werden sie bei der Frontausplanung *nicht* berücksichtigt – für diese Dörfer wird die Frontentfernung also nicht eingehalten.
 
-. *Radius:* Definiert der Radius, in dem ein Dorf nach "minimalen Nachbarn" sucht.
+. *Radius:* Größe des Umkreises (in Feldern), in dem nach diesen Nachbarn gesucht wird.
 
-TIP: Um die Zeckeneinstellung genau so einzurichten, wie du sie haben willst, kannst du dir das Gebiet, welches ausgeplant wird, durch die Checkbox neben Entfernung anzeigen lassen und testen, wie sich Veränderungen in der Zeckendefinition auf die Frontlinie auswirken.
+====
+*Beispiel:* Bei *Min Nachbarn = 5* und *Radius = 5* wird jedes Dorf, das im Umkreis von 5 Feldern weniger als 5 Nachbarn hat, ignoriert.
+====
+
+TIP: Um die Zeckeneinstellung genau so einzurichten, wie du sie haben willst, kannst du dir das Gebiet, welches ausgeplant wird, über das Augen-Symbol anzeigen lassen und testen, wie sich Veränderungen in der Zeckendefinition auf die Frontlinie auswirken.
 
 == Zonen[[zonen]]
 
-// Beispielbild einfügen
+image::features/action-planner/herkunft/herkunft_zonen.png[Tab "Zonen" mit gezeichneter Zone]
 
-Zusätzlich zum Ausplanen eines Frontbereichs können darüber hinaus noch Dörfer nach beliebiger Lage ein- und ausgeplant werden.
-Dafür kann unter "Zonen" ein Zeichentool aktiviert werden, womit direkt auf der angezeigten Weltkarte Zonen eingezeichnet werden können. Für die Planung werden nur Dörfer berücksichtigt, die in den gezeichneten Zonen liegen.
+Zusätzlich zum Ausplanen eines Frontbereichs können Dörfer nach beliebiger Lage ein- und ausgeplant werden.
+Dafür kann unter "Zonen" über den Button *Zeichnen* ein Zeichentool aktiviert werden, womit direkt auf der angezeigten Karte Zonen eingezeichnet werden können.
+
+*Bedienung:* Wenn "Zeichnen" aktiv ist, kannst du mit *Linksklick* auf der Karte Zonen zeichnen und mit *Rechtsklick* die Karte verschieben. Mit *Zeichnen beenden* wird das Tool wieder deaktiviert.
+
+Jede gezeichnete Zone erscheint in der Liste und kann per Toggle auf *Ausschließend* gestellt werden:
+
+* *Normale Zone*: Es werden nur Dörfer berücksichtigt, die in (mindestens) einer der normalen Zonen liegen.
+* *Ausschließende Zone*: Dörfer innerhalb dieser Zone werden explizit nicht verplant, auch wenn sie in einer normalen Zone liegen.
+
+Mit der Checkbox *Immer anzeigen* werden die Zonen dauerhaft auf der Karte eingeblendet, auch wenn ein anderer Tab geöffnet ist.
 
 == Dorftruppen[[dorftruppen]]
 
+image::features/action-planner/herkunft/herkunft_dorftruppen.png[Tab "Dorftruppen" mit Truppenfiltern]
+
 Hier kann eingestellt werden, welche Dörfer, abhängig von ihren Truppen oder der Verteidigung im Dorf, für die Aktion verplant werden sollen.
+Es kann sowohl nach absoluten Zahlen gefiltert werden als auch mit den Variablen *alle* / *fake* (siehe xref:features/action-planner/overview.adoc#_dynamische_template_parameter[Dynamische Template-Parameter]).
 
-TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingefügt sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#troops[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
+TIP: Damit dieses Feature benutzt werden kann, müssen für die zu verplanenden Dörfer auch Truppeninformationen eingelesen sein. Dies geschieht entweder unter xref:features/tribe-construct.adoc#troops[Stammestruppen einlesen] oder unter xref:features/account.adoc#truppen[Accounttruppen einlesen].
 
-=== Mindest Bauernhofplätze
+=== Mindest Bevölkerung
 
-Es werden nur Dörfer verplant, die mehr Truppen beinhalten, als die hier eingestellten Mindest-BH-Plätze vorgeben.
-Ein volles Dorf hat ca. 20500 BH-Truppenplätze (abhängig vom Ausbau des Dorfes).
+Es werden nur Dörfer verplant, deren Truppen-Bevölkerung über dem eingegebenen Wert liegt.
+20k Bevölkerung oder mehr entspricht einem so gut wie vollen Bauernhof (abhängig von den gebauten Gebäuden).
 
-=== Mindest Verteidigung
+=== Mindest Dorfverteidigung
 
-Es werden nur Dörfer verplant, die mehr Verteidigung beinhalten (Gesamttruppen im Dorf stehend) als durch den Filter gefordert werden.
+Es werden nur Dörfer verplant, die mindestens die geforderte Verteidigung beinhalten (im Dorf stehende Truppen).
 
-=== Mindest Truppen
+=== Mindest Dorftruppen
 
-Es werden nur Dörfer verplant, die mehr Truppen beinhalten (Gesamttruppen zum Dorf gehörend, auch außerhalb) als durch den Filter gefordert werden.
+Es werden nur Dörfer verplant, die mindestens die geforderten Truppen besitzen (zum Dorf gehörende Truppen, auch außerhalb).
+Die Angriffsanzahl pro Dorf entspricht dabei immer der eingestellten Maximalanzahl, unabhängig davon, ob die Truppen für mehr oder weniger Angriffe reichen würden.
 
 === Max Dorftruppen
 
-Es werden nur Dörfer verplant, die weniger Truppen beinhalten (Gesamttruppen, zum Dorf gehörend, auch außerhalb) als durch den Filter gefordert werden.
+Es werden nur Dörfer verplant, die maximal die eingegebenen Truppen besitzen (zum Dorf gehörende Truppen, auch außerhalb).
+Sinnvoll, wenn man z.B. aus Dörfern mit vollen Offs explizit keine Angriffe planen will.
 
 === Template
 
-// hier Screenshot einfügen
-
-Das Template erweitert die "Mindest Truppen"-Filterung. Und zwar kann es vorkommen, dass die geforderten Mindesttruppen mehrfach vorhanden sind.
+Das Template erweitert die "Mindest Dorftruppen"-Filterung. Und zwar kann es vorkommen, dass die geforderten Mindesttruppen mehrfach vorhanden sind.
 
 ====
-*Beispiel:* Im Template Filter stehen 12 Katapulte. Wenn das Dorf 24 Katapulte hat, so könnte das Dorf maximal 2 Angriffe mit dem geforderten Template schicken.
+*Beispiel:* Im Template-Filter stehen 12 Katapulte. Wenn das Dorf 24 Katapulte hat, so könnte das Dorf maximal 2 Angriffe mit dem geforderten Template schicken.
 ====
 
-Der Unterschied zu "Mindest Truppen" besteht darin, dass bei diesem die Dörfer genau so oft verplant werden, wie unter xref:#staemme_und_spieler[Stämme und Spieler] oder xref:#manuelle_herkunftsdoerfer[manuelle Herkunftsdörfer] maximal möglich, sofern sie die Anforderung erfüllen.
+Der Unterschied zu "Mindest Dorftruppen" besteht darin, dass bei diesem die Dörfer genau so oft verplant werden, wie unter xref:#staemme_und_spieler[Stämme und Spieler] oder xref:#manuelle_herkunftsdoerfer[Dörfer] maximal möglich, sofern sie die Anforderung erfüllen.
 Die Funktion des Templates erweitert hier also die Mindestanforderung so, dass die maximale Inc-Anzahl dadurch eingeschränkt wird, wie viele Angriffe das Dorf mit dem eingetragenen Template maximal schicken kann.
+
+====
+*Beispiel:* Ein Dorf kann laut Einstellung maximal 5 Incs schicken, als Template sind 12 Katapulte eingetragen und das Dorf hat 24 Katapulte. Es werden 2 Angriffe statt 5 geplant, da die Dorftruppen die Anzahl begrenzen.
+====
 
 == Abhängigkeiten[[abhaengigkeiten]]
 
-Abhängigkeiten stellen ein Kernpunkt der Offplanung dar.
+image::features/action-planner/herkunft/herkunft_abhaengigkeiten.png[Tab "Abhängigkeiten" der Herkunftsdörfer]
+
+Abhängigkeiten stellen einen Kernpunkt der Offplanung dar.
 Durch Abhängigkeiten kann sichergestellt werden, dass die Truppen, die in einem anderen Plan bereits verplant worden sind, nicht erneut verplant werden.
-Dies funktioniert so, dass entweder die Truppen, Angriffsanzahl oder Herkunftsdörfer aus anderen Plänen von den potenziellen Möglichkeiten abgezogen werden.
+Dies funktioniert so, dass entweder die Truppen, die Angriffsanzahl oder die Herkunftsdörfer aus anderen Plänen von den potenziellen Möglichkeiten abgezogen werden.
+
+Häufige Anwendungsfälle:
+
+* Sicherstellen, dass Offs über verschiedene Pläne nicht mehrmals verplant werden
+* Sicherstellen, dass über alle Pläne hinweg nur eine bestimmte Anzahl Angriffe pro Dorf gesendet wird
+* Verplante Kata-Splits von den verfügbaren Truppen abziehen
+
+So gehst du vor:
+
+. Wähle den Plan oder die Gruppe aus, von dem dieser Plan abhängt. Auch xref:features/action-planner/overview.adoc#planuebersicht[geteilte Pläne] anderer Planer können ausgewählt werden.
+. Bestimme den Typ der Abhängigkeit.
+. Klicke auf Hinzufügen.
+
+Bestehende Abhängigkeiten werden darunter aufgelistet und können einzeln oder über *Alle löschen* entfernt werden.
 
 ====
-
 *Beispiel:* Im ersten Plan wurden ca. 50 % der Offs eines Stammes bereits verplant.
 Jetzt soll allerdings ein zweiter Plan erstellt werden, der sich vom ersten Plan unterscheidet (z.B. andere Ankunftszeit, andere Ziele, anderes Angriffstemplate).
 Im zweiten Plan soll nun sichergestellt werden, dass die Offs, die bereits verplant sind, nicht erneut verplant werden.
-Somit können unter "Abhängigkeiten" entweder die Truppen abgezogen werden (wenn im Angriffstemplate des ersten Plans z.B. "alle" Äxte) ausgewählt worden ist und unter xref:#dorftruppen[Dorftruppen] 5000 äxte ausgewählt hat, so werden die bereits verplanten Offs nicht mehr angezeigt.
+Somit können unter "Abhängigkeiten" die Truppen abgezogen werden: Wenn im Angriffstemplate des ersten Plans z.B. "alle" Äxte ausgewählt worden ist und unter xref:#dorftruppen[Dorftruppen] 5000 Äxte gefordert werden, so werden die bereits verplanten Offs nicht mehr angezeigt.
 ====
 
 * *Truppen abziehen*: Es werden die Truppen abgezogen, die bei dem abzuziehenden Plan im Template stehen.
+(Beispiel: Plan A hat bereits eine bestimmte Anzahl Kata-Splits verplant → Plan B hat diese Truppen nicht mehr zur Verfügung.)
 
 IMPORTANT: Hier ist das Template relevant, welches in der Planübersicht ausgewählt worden ist und was beim Abschicken zugrunde gelegt wird, nicht das Template, nach dem in der Filterung im Offplan selbst die Herkunftsdörfer gefiltert worden sind.
 
-* *Anzahl abziehen*: Hier wird die reine Anzahl der Herkunftsdörfer abgezogen. Wenn z.B. aus jedem Herkunftsdorf maximal 5 Incs geschickt werden sollen (aktueller Plan) und in dem bereits erstellten Plan 3 Incs geplant worden sind, so werden nur noch 2 Möglichkeiten angezeigt.
+* *Anzahl abziehen*: Hier wird für jedes Herkunftsdorf die Anzahl der bereits geplanten Angriffe von der Anzahl erlaubter Angriffe abgezogen.
+(Beispiel: Plan A hat 2 Angriffe von Dorf X verplant → Plan B erlaubt max. 3 Angriffe pro Dorf. Mit der Abhängigkeit zu Plan A kann von Dorf X nur noch 1 Angriff verplant werden.)
 
-* *Dorf ausschließen*: Es werden alle Dörfer abgezogen, die im bereits geplanten Plan verwendet worden sind.
+* *Ausschließen*: Es werden alle Dörfer ausgeschlossen, die im abhängigen Plan verwendet worden sind.
+(Beispiel: Plan A hat bereits Offs verplant → Plan B verwendet diese Dörfer nicht mehr.)
 
-
-
-
-
-
+NOTE: Unabhängig vom Typ verwenden Pläne mit Abhängigkeit zueinander nie dieselbe Kombination aus Herkunfts- und Zieldorf.

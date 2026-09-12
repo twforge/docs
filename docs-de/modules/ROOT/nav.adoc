@@ -18,6 +18,7 @@
 *** xref:features/action-planner/source.adoc[Herkunft]
 *** xref:features/action-planner/targets.adoc[Ziele]
 *** xref:features/action-planner/send-and-arrival-time.adoc[Zeiten]
+*** xref:features/action-planner/watchtower.adoc[Wachturm]
 *** xref:features/action-planner/calculations.adoc[Berechnen]
 * xref:faq.adoc[FAQ]
 * xref:premium.adoc[Premium-Features]
