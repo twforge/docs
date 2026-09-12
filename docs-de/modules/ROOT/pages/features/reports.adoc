@@ -42,7 +42,7 @@ TIP: Über die xref:settings.adoc#benachrichtigungen[Benachrichtigung] "Truppen 
 
 image::features/reports/reports-full.png[Tab Berichte mit Filterleiste und der Liste der Berichte]
 
-Im Tab *Berichte* findest du alle Berichte, die für dich sichtbar sind (siehe <<zugehoerigkeit>>).
+Im Tab *Berichte* findest du alle Berichte, die für dich sichtbar sind (siehe <<zugehoerigkeit,Zugehörigkeit von Berichten>>).
 Pro Bericht siehst du das Ergebnis (farbiger Punkt), die Größe des Angriffs, den Betreff, die enthaltenen Einheiten- bzw. Gebäudetypen und den Zeitpunkt.
 Über das Symbol am Ende der Zeile öffnest du die Detailansicht mit Angreifer, Verteidiger, Kampfergebnis, Beute, Gebäuden, Einheiten außerhalb und Zustimmung.
 
@@ -99,7 +99,7 @@ Eigene Notizen kannst du über das Stift-Symbol bearbeiten oder per Mehrfachausw
 // TODO Screenshot: features/reports/reports-wachturm.png – Tab Wachturm mit der Tabelle der gemeldeten Wachtürme
 
 Auf Wachturm-Welten führt TW Forge eine *Wachturm-Datenbank*.
-Sie ist die Grundlage für die xref:features/action-planner/watchtower.adoc[Wachturmplanung im Aktionsplaner] und für die Wachturm-Erkennung bei xref:features/analyser.adoc#bewertung[eingehenden Angriffen].
+Sie ist die Grundlage für die xref:features/action-planner/watchtower.adoc[Wachturmplanung im Aktionsplaner].
 
 Einträge entstehen auf zwei Wegen:
 

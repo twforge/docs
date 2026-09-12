@@ -39,7 +39,7 @@ Nach dem Login siehst du die Weltauswahl.
 Dort werden alle Welten angezeigt, mit denen dein Account bereits verknüpft ist, inklusive Rang, Punkten und Dörfern.
 
 . Wähle unter *Weiteren Welten beitreten* die gewünschte Welt aus (z.B. de250, de251).
-. Folge den Anweisungen, um deinen Ingame-Account zu verknüpfen (siehe <<verknuepfung>>).
+. Folge den Anweisungen, um deinen Ingame-Account zu verknüpfen (siehe <<verknuepfung,Verknüpfung mit dem Ingame Account>>).
 
 TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln - entweder über die Weltauswahl auf der Startseite oder über das Kontosymbol in der Kopfzeile unter *Welten*.
 

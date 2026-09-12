@@ -28,7 +28,7 @@ Sie beantwortet auf einen Blick, *wer* wie stark angegriffen wird, *wann* die An
 
 Auf Wachturm-Welten kannst du oben rechts zwischen zwei Sichten umschalten:
 
-* *Bewertung* - Die Angriffe werden nach der von TW Forge errechneten Gefahrenbewertung eingeordnet (siehe <<bewertung>>).
+* *Bewertung* - Die Angriffe werden nach der von TW Forge errechneten Gefahrenbewertung eingeordnet (siehe <<bewertung,Anzeige und Interpretation der Bewertung>>).
 * *WT erkannt* - Es werden nur Angriffe eingeordnet, die bereits von einem Wachturm erkannt wurden.
 Diese entsprechen mit Sicherheit der angezeigten Größe.
 
@@ -187,7 +187,6 @@ Hierzu muss eine SOS-Anfrage im Spiel erstellt und dann in TW Forge importiert w
 
 Unter *Import Ergebnis* siehst du anschließend, wie viele Angriffe eingelesen wurden.
 
-TIP: Alternativ können eingehende Angriffe auch über die xref:api.adoc[Developer-API] importiert werden, z.B. automatisiert per Userscript.
 
 == Tabulator
 

@@ -85,9 +85,9 @@ Es stehen drei Kanäle zur Verfügung:
 * *Web* - Die Benachrichtigung erscheint in TW Forge selbst.
 Über das Glocken-Symbol in der Kopfzeile öffnest du die Liste deiner Benachrichtigungen, kannst sie als gelesen markieren, löschen oder per Klick direkt zur betreffenden Seite springen.
 * *Push* - Die Benachrichtigung wird als Browser-Push-Nachricht an alle registrierten Browser gesendet, auch wenn TW Forge gerade nicht geöffnet ist.
-Voraussetzung ist mindestens ein registrierter Browser (siehe <<push-empfaenger>>).
+Voraussetzung ist mindestens ein registrierter Browser (siehe <<push-empfaenger,Push-Empfänger>>).
 * *Discord* - Die Benachrichtigung wird dir per Direktnachricht vom TW Forge Bot auf Discord zugestellt.
-Voraussetzung ist ein verknüpfter Discord-Account (siehe <<discord>>).
+Voraussetzung ist ein verknüpfter Discord-Account (siehe <<discord,Discord>>).
 
 Solange Push bzw. Discord noch nicht eingerichtet sind, bleiben die entsprechenden Spalten ausgegraut.
 Ein Klick auf die Spaltenüberschrift bringt dich direkt zur jeweiligen Einrichtung.
