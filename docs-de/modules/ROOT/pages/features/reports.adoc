@@ -66,7 +66,7 @@ Paladin, Wachturm und Kirche werden nur angezeigt, wenn die Welt das jeweilige F
 
 == Dorfinfos[[dorfinfos]]
 
-// TODO Screenshot: features/reports/reports-dorfinfos.png – Tab Dorfinfos mit den beiden Koordinaten-Boxen Offensiv und Defensiv
+image::features/reports/reports-dorfinfos.png[Tab Dorfinfos mit den Koordinatenlisten Offensiv und Defensiv]
 
 TW Forge leitet aus den Berichten ab, welche Dörfer als *Off-* bzw. *Deff-Dörfer* bekannt sind.
 Ein Dorf gilt als offensiv, wenn in einem Bericht mehr als 2.500 Bauernhofplätze Off-Truppen gesehen wurden, als defensiv ab 1.500 Bauernhofplätzen Deff-Truppen - jeweils anhand des aktuellsten Berichts zu dem Dorf.
@@ -77,7 +77,7 @@ NOTE: Die gleichen Informationen fließen automatisch in die xref:features/analy
 
 == Dorfnotizen[[dorfnotizen]]
 
-// TODO Screenshot: features/reports/reports-dorfnotizen.png – Tab Dorfnotizen mit dem Eingabeformular und der Notizen-Tabelle
+image::features/reports/reports-dorfnotizen.png[Tab Dorfnotizen mit dem Formular für Koordinaten, Typ und Notiz sowie der Notizen-Liste]
 
 Über *Dorfnotizen* pflegst du manuelle Informationen zu Dörfern, z.B. Erkenntnisse aus Fakes oder Berichten, die TW Forge nicht automatisch ableiten kann.
 
@@ -96,7 +96,7 @@ Eigene Notizen kannst du über das Stift-Symbol bearbeiten oder per Mehrfachausw
 
 == Wachturm[[wachturm]]
 
-// TODO Screenshot: features/reports/reports-wachturm.png – Tab Wachturm mit der Tabelle der gemeldeten Wachtürme
+image::features/reports/reports-wachturm.png[Tab Wachturm mit Filter und der Tabelle der gemeldeten Wachtürme]
 
 Auf Wachturm-Welten führt TW Forge eine *Wachturm-Datenbank*.
 Sie ist die Grundlage für die xref:features/action-planner/watchtower.adoc[Wachturmplanung im Aktionsplaner].
@@ -105,7 +105,7 @@ Einträge entstehen auf zwei Wegen:
 
 * *Automatisch aus Berichten* - Enthält ein importierter Bericht die Gebäudestufen des Zieldorfes, wird der Wachturm mit der erkannten Stufe übernommen.
 Neuere Berichte aktualisieren den Eintrag.
-* *Manuell melden* - Über *Wachturm melden* trägst du Koordinaten und Wachturmstufe selbst ein, z.B. aus Späh-Informationen, die nicht in TW Forge liegen.
+* *Manuell melden* - Über das Plus-Symbol in der Tabellenkopfzeile öffnest du *Wachturm melden* und trägst Koordinaten und Wachturmstufe selbst ein, z.B. aus Späh-Informationen, die nicht in TW Forge liegen.
 Existiert bereits ein Eintrag, kannst du ihn überschreiben.
 
 Die Tabelle zeigt pro Dorf die gemeldete Stufe, wer den Wachturm gemeldet hat und wann.

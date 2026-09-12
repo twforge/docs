@@ -175,15 +175,13 @@ TIP: Angriffe, die sowohl als Fake als auch als Off angezeigt werden, solltest d
 Damit die eingehenden Angriffe ausgewertet werden können, müssen sie von dir selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden.
 Dies geschieht über den Tab *Import*.
 
-// TODO Screenshot: features/analyser/inc-import.png – Import-Tab mit dem Feld "Eingehende Angriffe" und dem Import-Ergebnis
+image::features/analyser/inc-import.png[Import-Tab mit dem Eingabefeld für die SOS-Anfrage]
 
 Hierzu muss eine SOS-Anfrage im Spiel erstellt und dann in TW Forge importiert werden:
 
 . Gehe in "Die Stämme" auf *Eintreffend*, markiere die gewünschten Incs und drücke auf *Unterstützung anfordern*.
 . Kopiere den gesamten Text der SOS-Anfrage.
 . Füge den Text in TW Forge im Tab *Import* in das Feld *Eingehende Angriffe* ein und bestätige.
-
-// TODO Screenshot: features/analyser/sos-anfrage-ingame.png – Ingame: markierte Incs und Button "Unterstützung anfordern"
 
 Unter *Import Ergebnis* siehst du anschließend, wie viele Angriffe eingelesen wurden.
 
