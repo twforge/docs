@@ -39,9 +39,9 @@ Sollte er dies also nicht tun, werden die Offs dennoch verplant.
 
 Hier können Abschickzeiten für den eigenen Account sowie bestehende Urlaubsvertretungen eingegeben werden.
 Über das oben rechts stehende Dropdown können Accounts markiert werden, für die die entsprechenden Zeiten angegeben werden sollen.
-Danach kann über die Kalender-Anzeige definiert werden, für welche Tage man Zeiten angeben will.
+Danach kannst du über die Kalender-Anzeige definieren, für welche Tage du Zeiten angeben willst.
 Über die von ... bis ... Zeitangabe können dann die einzelnen Zeitfenster an den eingestellten Daten gekennzeichnet werden.
 
 TIP: Um das Abschicken zu erleichtern, ist es sinnvoll, nicht ein langes Zeitfenster von morgens bis abends anzugeben, da in diesem Fall die Angriffe einzeln über den ganzen Tag verteilt werden und lediglich immer mal wieder einzelne Angriffe zu schicken sind.
-Sinnvoller ist es, mehrere Zeitfenster anzugeben (z.B. alle 2h jeweils 15min), da die Angriffe so gebündelt werden und man nicht permanent Angriffe abschicken muss.
+Sinnvoller ist es, mehrere Zeitfenster anzugeben (z.B. alle 2h jeweils 15min), da die Angriffe so gebündelt werden und du nicht permanent Angriffe abschicken musst.
 

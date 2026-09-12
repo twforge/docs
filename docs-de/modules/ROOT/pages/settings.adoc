@@ -62,12 +62,12 @@ a| image::settings/discord_no_connection_settings.png[Keine Discordverknüpfung,
 a| image::settings/discord_connected_account.png[Discord verknüpft,width=100%]
 |===
 
-Unter diesem Punkt kann zunächst ein Discord Account verknüpft werden.
-Hierzu einfach auf den Button drücken und im Browser seinen Discord Account anmelden und der Verknüpfung zustimmen.
+Unter diesem Punkt kannst du zunächst deinen Discord Account verknüpfen.
+Hierzu einfach auf den Button drücken, im Browser mit deinem Discord Account anmelden und der Verknüpfung zustimmen.
 So sind die Accounts erfolgreich verknüpft.
 
-Jetzt hat man die Möglichkeit, entweder die Verknüpfung wieder zu löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzuzufügen.
-Außerdem besteht hier die Möglichkeit, dem Community-Discord "TW-Forge" zu joinen, um Fragen zu stellen sowie Feedback einzubringen.
+Jetzt kannst du entweder die Verknüpfung wieder löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzufügen.
+Außerdem kannst du hier dem Community-Discord "TW-Forge" joinen, um Fragen zu stellen sowie Feedback einzubringen.
 
 == Benachrichtigungen[[benachrichtigungen]]
 

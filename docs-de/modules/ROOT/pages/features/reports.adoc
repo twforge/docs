@@ -44,7 +44,7 @@ Durch das AG- und das Späh-Symbol können Berichte danach gefiltert, ob der Ang
 
 === Filterung nach Eigenen Berichten bzw. Eigenem Account
 
-Durch diese Funktion werden Berichte danach gefiltert, ob man sie selbst hochgeladen hat (Eigene) oder den eigenen Account betreffen (Eigener Account).
+Durch diese Funktion werden Berichte danach gefiltert, ob du sie selbst hochgeladen hast (Eigene) oder sie deinen eigenen Account betreffen (Eigener Account).
 
 == Import von Berichten in die Datenbank[[import_reports]]
 
@@ -122,11 +122,11 @@ Ohne bestehende Verknüpfung erfolgt keine persönliche Zuordnung.
 
 === Voraussetzungen für die Sichtbarkeit
 
-Ein Bericht kann von einem Nutzer eingesehen werden, wenn mindestens eine der folgenden Bedingungen erfüllt ist:
+Du kannst einen Bericht einsehen, wenn mindestens eine der folgenden Bedingungen erfüllt ist:
 
-* Der Bericht ist einem Account zugeordnet, mit dem der Nutzer verbunden ist.
-* Der Bericht ist einem Stammeskonstrukt zugeordnet, dem der Nutzer angehört.
-* Der Nutzer befindet sich im gleichen Account wie derjenige, der den Bericht hochgeladen hat.
+* Der Bericht ist einem Account zugeordnet, mit dem du verbunden bist.
+* Der Bericht ist einem Stammeskonstrukt zugeordnet, dem du angehörst.
+* Du befindest dich im gleichen Account wie derjenige, der den Bericht hochgeladen hat.
 * Der Nutzer befindet sich im gleichen Stammeskonstrukt wie derjenige, der den Bericht hochgeladen hat.
 
 === Zusammenfassung

@@ -8,7 +8,9 @@
 
 Der *Tabulator* ist ein Untermenü der xref:features/analyser.adoc[Angriffe] und hilft dabei, eingehende Angriffe gemeinsam mit anderen Spielern zu *tabben*.
 Beim Tabben wird eine kleine Unterstützung so getimt, dass sie in derselben Sekunde wie der Angriff eintrifft.
-Da Unterstützungen vor Angriffen abgearbeitet werden, steht die Deff beim Einschlag bereits im Dorf und der Angriff läuft in die Truppen.
+Da immer der Angriff, der zuerst abgeschickt wurde ankommt, helfen Tabs somit, potenziell auf die Off getimte AGs zu besiegen, ohne die Off deffen zu müssen.
+
+NOTE: Das gilt nur für Non-MS Welten.
 
 Der Tabulator nimmt dir dabei die aufwendige Verteilung ab:
 Du importierst die Angriffe, lädst Mitspieler ein, jeder gibt an, welche Truppen er aus welchen Dörfern bereitstellen kann, und TW Forge berechnet, wer wann von wo welchen Tab schicken muss.
@@ -135,7 +137,7 @@ Standardmäßig sind die defensiven Einheiten mit `alle` vorbelegt.
 Du kannst das Template anpassen, um z.B. nur die halben Dorftruppen (`alle/2`) oder nur bestimmte Einheiten freizugeben.
 Mit *Mögliche Truppen laden* wird die Dorfliste anhand des Templates neu berechnet.
 
-NOTE: Das Template wirkt nur auf Dörfer, die noch nicht ausgewählt sind.
+IMPORTANT: Das Template wirkt nur auf Dörfer, die noch nicht ausgewählt sind.
 Bereits angehakte Dörfer behalten ihre individuell eingetragenen Truppenwerte.
 
 ==== Erweiterte Filter

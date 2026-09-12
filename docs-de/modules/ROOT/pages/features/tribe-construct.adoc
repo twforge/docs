@@ -31,7 +31,7 @@ Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planu
 == Einem Stammeskonstrukt beitreten
 
 Um einem Stammeskonstrukt beizutreten, benötigst du einen Invite Link, der von deiner Stammesführung oder einem bereits beigetretenen Stammesmitglied erstellt werden kann.
-Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem man auf "beim Stammeskonstrukt bewerben" klicken muss.
+Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem du auf "beim Stammeskonstrukt bewerben" klicken musst.
 Wenn dies erfolgreich ist, ist alles Erforderliche getan - du musst jetzt nur noch von der Stammesführung freigeschaltet werden.
 Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die dem dir von der SF zugewiesenen Rechtelevel entsprechen.
 

@@ -8,9 +8,9 @@ Du kannst diese Pläne direkt über TW-Forge mit deinen eingefügten Truppen abs
 
 == Übersicht der Angriffspläne
 
-Zunächst erhält der Nutzer einen Überblick über alle ihm zugewiesenen Angriffspläne.
-Diese können entweder durch den Nutzer selbst erstellt worden sein oder von einem Stammesmitglied mit der Planungsrolle für den Nutzer erstellt und dann freigegeben worden sein.
-Hier bieten sich durch einen Klick auf die drei Punkte neben den APs dem Nutzer direkt mehrere Möglichkeiten:
+Zunächst erhältst du einen Überblick über alle dir zugewiesenen Angriffspläne.
+Diese kannst du entweder selbst erstellt haben oder ein Stammesmitglied mit der Planungsrolle hat sie für dich erstellt und dann freigegeben.
+Durch einen Klick auf die drei Punkte neben den APs hast du direkt mehrere Möglichkeiten:
 
 * *Öffnen des Angriffplans*
 * *Archivieren des Angriffplans*-> Angriff wird in das Archiv verschoben
@@ -28,7 +28,7 @@ Beim Abschicken über TW-Forge selbst werden dann alle Variablen (inkl. "Alle") 
 
 Nachdem der Plan geöffnet worden ist, besteht zusätzlich die Möglichkeit, den Angriffsplan gemäß der xref:features/planner/support_boosts.adoc[UT-Boost-DB] anzupassen.
 Hierbei werden alle Unterstützungen, für die ein Unterstützungsboost eingetragen worden ist, automatisch angepasst.
-Dabei kann der User wählen, ob dabei alle (eigene + vom Stamm eingetragene) UT-Boosts berücksichtigt werden sollen oder ausschließlich die eigenen.
+Dabei kannst du wählen, ob alle (eigene + vom Stamm eingetragene) UT-Boosts berücksichtigt werden sollen oder ausschließlich die eigenen.
 
-Sollte der Nutzer bei einzelnen Angriffen etwas verändern wollen (Template, Zeit, Herkunftsdorf etc.), so kann er dies über die drei Punkte neben dem einzelnen Inc jederzeit tun.
+Solltest du bei einzelnen Angriffen etwas verändern wollen (Template, Zeit, Herkunftsdorf etc.), kannst du dies über die drei Punkte neben dem einzelnen Inc jederzeit tun.
 

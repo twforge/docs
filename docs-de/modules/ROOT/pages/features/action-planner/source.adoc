@@ -142,7 +142,7 @@ Die Angriffsanzahl pro Dorf entspricht dabei immer der eingestellten Maximalanza
 === Max Dorftruppen
 
 Es werden nur Dörfer verplant, die maximal die eingegebenen Truppen besitzen (zum Dorf gehörende Truppen, auch außerhalb).
-Sinnvoll, wenn man z.B. aus Dörfern mit vollen Offs explizit keine Angriffe planen will.
+Sinnvoll, wenn du z.B. aus Dörfern mit vollen Offs explizit keine Angriffe planen willst.
 
 === Template
 
