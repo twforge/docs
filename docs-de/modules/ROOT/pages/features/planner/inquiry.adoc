@@ -11,7 +11,9 @@ Diese Informationen können für alle verknüpften Accounts (Main Account sowie 
 
 toc::[]
 
-// hier Screenshot einfügen
+image::features/planner/planner-abfrage.png[Tab Abfrage mit den Bereichen AGs, Pala-Offs, Nicht verfügbare Offs und dem Kalender für Abschickzeiten]
+
+Die Seite ist in vier Bereiche aufgeteilt: *AGs*, *Pala-Offs* und *Nicht verfügbare Offs* auf der linken Seite sowie die *Abschickzeiten* mit Kalender auf der rechten Seite.
 
 == AGs angeben
 
@@ -26,6 +28,11 @@ Um darauf hinzuweisen, wenn die AG-Angaben älter als zwei Tage sind (und somit 
 Sofern die Daten noch aktuell sind, kann dies durch ein "Angaben bestätigen" Button bestätigt werden.
 
 TIP: Du kannst über dein Eingabefeld auch angaben für andere Accounts vornehmen, sollte das Dorf z.B. noch nicht zu deinem Account gehören.
+
+== Pala-Offs angeben
+
+Unter *Pala-Offs* trägst du die Koordinaten der Dörfer ein, in denen sich eine Off mit Paladin befindet.
+Die planende Person kann diese Offs im Aktionsplaner gezielt berücksichtigen, z.B. um sie auf besonders wichtige Ziele zu setzen.
 
 == Auszuplanende Offs angeben
 
