@@ -1,13 +1,216 @@
-= Karte
+= Karte - Interaktive Weltkarte mit Heatmap, Übersicht und Zeichentool
 :page-title: Karte
-:description: Geplantes Feature zur grafischen Darstellung der Weltkarte sowie zusätzlicher Funktionen
-:keywords: Karte, Übersicht, Markierungen
+:description: Interaktive Weltkarte von TW Forge mit Layern für eingehende Angriffe, Stammesübersicht (Truppen, Wachtürme, Zonen) und einem Zeichentool mit Ingame-Export
+:keywords: Karte, Map, Heatmap, Zonen, Zeichnen, Korridorkarte, Wachtürme, Truppen, Markierungen, Minimap, MapSdk
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
 
-[NOTE]
+Die *Karte* zeigt die gesamte Welt mit allen Dörfern, Spielern und Stämmen.
+Über eine Leiste am rechten Rand lassen sich verschiedene Layer zuschalten: eine *Heatmap* der eingehenden Angriffe, eine *Übersicht* über die Lage des eigenen Stammes (Truppen, Wachtürme, Zonen) sowie ein *Zeichentool*, mit dem die Karte beschriftet und ins Spiel exportiert werden kann.
+Beim Hineinzoomen wechselt die Karte in eine Nahansicht mit den Ingame-Grafiken und zeigt zu jedem Dorf zusätzliche Informationen wie den besten Verteidigungsbericht.
+
+image::features/map/karte_gesamtansicht.png[Gesamtansicht der Karte mit Layer-Leiste]
+
+NOTE: Dieselbe Karte wird auch im xref:features/action-planner/overview.adoc[Aktionsplaner] verwendet, z.B. für das Einzeichnen von xref:features/action-planner/source.adoc#zonen[Zonen] oder die Anzeige der Frontlinie.
+
+toc::[]
+
+== Bedienung
+
+* *Verschieben*: Karte mit gedrückter linker Maustaste ziehen.
+* *Zoomen*: Mausrad (bzw. Zwei-Finger-Geste auf Touchgeräten).
+* *Pfeiltasten*: In der xref:#nahansicht[Nahansicht] verschieben die Pfeiltasten die Karte jeweils um einen ganzen Bildschirm.
+* *Karte vergrößern*: Über den Button oben rechts wird die Karte auf das gesamte Fenster vergrößert, das Menü wird dabei ausgeblendet.
+Ein weiterer Klick verkleinert sie wieder.
+
+
+== Layer-Leiste[[layer-leiste]]
+
+image::features/map/karte_layer_leiste.png[Layer-Leiste am rechten Kartenrand]
+
+Am rechten Rand der Karte befindet sich die Layer-Leiste.
+Über den Pfeil ganz oben kann sie ein- und ausgeklappt werden.
+Von oben nach unten enthält sie:
+
+. *Heatmap* – Darstellung der eingehenden Angriffe (siehe xref:#heatmap[Heatmap]).
+. *Übersicht* – Truppen, Wachtürme, Zonen und Koordinatenlisten des eigenen Stammes (siehe xref:#uebersicht[Übersicht]).
+. *Zeichnen* – Zeichentool mit Ingame-Export und Korridorkarten (siehe xref:#zeichnen[Zeichnen]).
+. *Dorf-Infos an/aus* – Schaltet die Infokarte ein oder aus, die beim Überfahren eines Dorfes erscheint.
+. *Verteidigungs-Report an/aus* – Zeigt beim Überfahren eines Dorfes dessen besten Verteidigungsbericht an.
+. *Eigenen Account hervorheben* – Hebt alle Dörfer des eigenen Accounts farblich hervor.
+. *Korridorkarten* – Blendet die Korridorkarten der eigenen Stammeskonstrukte ein oder aus (einzeln oder alle).
+. *Minimap an/aus* – Nur in der Nahansicht sichtbar.
+. *Karten-Einstellungen* – Farbliche Markierungen von Spielern und Stämmen (siehe xref:#einstellungen[Karten-Einstellungen]).
+
+Ein Klick auf Heatmap, Übersicht oder Zeichnen öffnet oben auf der Karte die zugehörige Steuerleiste.
+Aktive Layer werden in der Leiste farblich markiert.
+
+TIP: Jede Steuerleiste hat rechts einen Schalter zum *Anheften*.
+Ist er aktiviert, bleibt der Layer auch dann auf der Karte sichtbar, wenn ein anderer Reiter geöffnet wird.
+So lassen sich z.B. Heatmap und Zonen gleichzeitig anzeigen.
+
+== Dorf-Infos und Nahansicht[[nahansicht]]
+
+=== Dorf-Infokarte
+
+image::features/map/karte_dorf_info.png[Fixierte Dorf-Infokarte]
+
+Beim Überfahren eines Dorfes mit der Maus erscheint eine Infokarte mit Name, Koordinaten, Spieler, Stamm und Punkten des Dorfes.
+Gleichzeitig werden alle Dörfer desselben Besitzers auf der Karte hervorgehoben.
+
+Ein Klick auf das Dorf *fixiert* die Infokarte.
+Erst dann sind die Links darin anklickbar, z.B. der Spieler, der Stamm oder *Ingame öffnen*, welches die Dorfinfo direkt in "Die Stämme" aufruft.
+Die fixierte Karte lässt sich über das X, mit `Esc` oder durch einen Klick auf eine freie Stelle der Karte wieder schließen.
+
+=== Verteidigungs-Report
+
+image::features/map/karte_best_report.png[Bester Verteidigungsbericht zum überfahrenen Dorf]
+
+Ist der Verteidigungs-Report in der Layer-Leiste aktiviert, wird beim Überfahren eines Dorfes unten links der *beste Verteidigungsbericht* zu diesem Dorf aus der xref:features/reports.adoc[Berichte-Datenbank] eingeblendet.
+Standardmäßig wird eine gekürzte Ansicht gezeigt; durch Halten der `Leertaste` wird der vollständige Bericht angezeigt.
+Liegt zu einem Dorf kein passender Bericht vor, wird dies entsprechend angezeigt.
+
+=== Nahansicht und Minimap
+
+Ab einer bestimmten Zoomstufe wechselt die Karte von der farbigen Punktdarstellung in die *Nahansicht* mit den Grafiken aus dem Spiel (Dörfer, Wald, Berge, Seen).
+Unten rechts erscheint dann eine *Minimap*, die die Position des aktuellen Ausschnitts in der Welt zeigt.
+Über die Pfeile an der Minimap oder die Pfeiltasten kann der Ausschnitt jeweils um einen Bildschirm verschoben werden.
+Die Minimap lässt sich über die Layer-Leiste ausblenden.
+
+== Heatmap[[heatmap]]
+
+image::features/map/karte_heatmap.png[Heatmap der eingehenden Angriffe]
+
+Der Layer *Heatmap* stellt die unter xref:features/analyser.adoc[Angriffe] eingelesenen eingehenden Angriffe auf der Karte dar.
+Grundlage sind alle Angriffe, die vom eigenen Account oder Mitgliedern des Stammeskonstrukts xref:features/analyser.adoc#_upload[hochgeladen] wurden.
+
+In der Steuerleiste stehen dieselben Filter wie in der Angriffsübersicht zur Verfügung:
+
+* *Angriffsbenennung* – freie Textsuche in der Inc-Bezeichnung
+* *Herkunft oder Ziel* – nach Spieler, Stamm oder Koordinate
+* *Größe* – bekannte Inc-Größe
+* *Bewertung* – von TW Forge errechnete maximale Offgröße
+* *Einheit* – langsamste Einheit / Laufzeit
+* *Eigener Account* – nur Angriffe auf den eigenen Account
+
+Über den *Modus* wird die Darstellung gewählt:
+
+* *Angriffe*: Jeder Angriff wird als Linie vom Herkunfts- zum Zieldorf eingezeichnet.
+* *Heatmap Herkunft*: Einfärbung der Bereiche, aus denen die Angriffe kommen.
+* *Heatmap Ziele*: Einfärbung der Bereiche, die angegriffen werden.
+
+TIP: Mit "Heatmap Herkunft" lässt sich schnell erkennen, aus welchem Gebiet ein Gegner seine Offs schickt – hilfreich z.B. für die Frontausplanung im xref:features/action-planner/source.adoc#_frontausplanung[Aktionsplaner].
+
+== Übersicht[[uebersicht]]
+
+image::features/map/karte_uebersicht_leiste.png[Steuerleiste des Übersicht-Layers]
+
+Der Layer *Übersicht* bündelt Informationen über die Lage des eigenen Stammes.
+Die Steuerleiste enthält folgende Funktionen:
+
+=== Wachtürme
+
+Auf Welten mit Wachturm werden hier die bekannten Wachtürme inklusive ihrer Reichweite eingezeichnet.
+Die Daten stammen aus der Wachturm-Datenbank unter xref:features/reports.adoc[Berichte → Wachturm], die aus Berichten befüllt oder manuell gepflegt wird.
+Über das Zahnrad kann ausgewählt werden, für welche Spieler die Wachtürme angezeigt werden sollen.
+
+=== Truppen
+
+Über den Truppen-Filter werden nur Dörfer angezeigt, die den eingestellten Truppenanforderungen entsprechen:
+
+* *Mindest-Truppen pro Dorf*
+* *Max-Truppen pro Dorf*
+* *Mindest-Verteidigung pro Dorf* (nur bei Stammestruppen)
+
+Mit Planer-Rechten im Stammeskonstrukt kann zwischen *Stammestruppen* (siehe xref:features/tribe-construct.adoc#troops[Stammeskonstrukt → Truppen]) und *eigenen Truppen* (siehe xref:features/account.adoc#truppen[Account → Truppen]) gewechselt werden.
+Ohne Planer-Rechte stehen nur die eigenen Truppen zur Verfügung.
+
+TIP: Der Truppen-Filter wirkt sich auch auf die xref:#koordinaten[Koordinatenliste] und die xref:#truppeninfo[Truppeninfo] aus.
+
+=== Zonen[[zonen]]
+
+Mit *Zonen* können beliebige Bereiche direkt auf der Karte eingezeichnet werden.
+Ist das Zeichnen aktiviert, wird mit der *linken Maustaste* gezeichnet, mit der *rechten Maustaste* wird die Karte verschoben.
+
+Alle gezeichneten Zonen erscheinen in einer Liste unterhalb der Layer-Leiste.
+Für jede Zone kann eingestellt werden:
+
+* *Einschließend / Ausschließend*: Einschließende Zonen fügen ihre Dörfer der Auswahl hinzu, ausschließende Zonen ziehen ihre Dörfer wieder ab (z.B. um ein Loch aus einem größeren Bereich auszuschneiden).
+* *In Auswertung berücksichtigen*: Zone für Truppeninfo und Koordinatenliste aktivieren oder deaktivieren, ohne sie zu löschen.
+* *Ein-/Ausblenden* und *Löschen*
+* Ein Klick auf den Zoneneintrag hebt die Zone auf der Karte hervor.
+
+=== Truppeninfo[[truppeninfo]]
+
+Die *Truppeninfo* summiert die Truppen aller Dörfer in den gezeichneten Zonen auf.
+Angezeigt werden die Anzahl der Dörfer, Barbarendörfer, ausgewählten Dörfer sowie Dörfer mit Truppeninformationen.
+Sofern Verteidigungsdaten vorliegen, kann zwischen *Truppen* und *Verteidigung* umgeschaltet werden.
+
+Über den Filter können einzelne Spieler oder Stämme aus der Auswertung ausgenommen werden.
+Mit *Mehr Infos* öffnet sich eine Tabelle mit den Truppen pro Spieler – diese ist nur mit Planer-Rechten verfügbar.
+
+TIP: In Kombination mit dem Truppen-Filter lässt sich so z.B. schnell ermitteln, wie viel Deff in einem Frontabschnitt steht oder wie viele volle Offs ein Gebiet hergibt.
+
+=== Koordinaten[[koordinaten]]
+
+Die *Koordinatenliste* exportiert alle Dörfer, die aktuell durch Zonen, Truppen-Filter und den Spieler-/Stamm-Filter ausgewählt sind, als Koordinatenliste zum Kopieren.
+Barbarendörfer können dabei optional ignoriert werden.
+Im Reiter *Spieler / Stämme* lässt sich die Auswahl weiter einschränken.
+
+TIP: Die exportierten Koordinaten können direkt als xref:features/action-planner/source.adoc#manuelle_herkunftsdoerfer[manuelle Herkunftsdörfer] oder Zieldörfer im Aktionsplaner verwendet werden.
+
+== Zeichnen[[zeichnen]]
+
+image::features/map/karte_zeichnen.png[Zeichentool mit Beispielzeichnung]
+
+Mit dem Layer *Zeichnen* kann die Karte mit Geraden und Texten beschriftet werden, etwa um Frontabschnitte, Korridore oder Zielgebiete zu markieren.
+
+=== Zeichnungen verwalten
+
+In der Steuerleiste wird die aktive *Zeichnung* ausgewählt.
+Es können beliebig viele Zeichnungen angelegt (*Neu*), umbenannt und gelöscht werden.
+Zeichnungen sind persönlich und nur für den eigenen Account sichtbar – zum Teilen mit dem Stamm siehe xref:#korridorkarte[Korridorkarte].
+
+=== Werkzeuge
+
+* *Gerade* (`Q`): Klick auf das Startfeld, danach Klick auf das Endfeld der Linie.
+* *Text* (`W`): Klick auf das Feld, an dem die Beschriftung platziert werden soll.
+* *Wählen* (`E`): Klick auf eine Linie oder einen Text, um ihn auszuwählen.
+Ausgewählte Elemente können durch Ziehen verschoben und mit `Entf` bzw. `R` gelöscht werden.
+* *Farbe*, *Strichbreite* und *Textgröße* gelten für neue Elemente bzw. das aktuell ausgewählte Element.
+* *Letztes rückgängig* und *Zeichnung leeren*
+
+=== Export ins Spiel (MapSdk)
+
+Über *Export* wird aus der aktiven Zeichnung ein Userscript erzeugt, das die Linien und Beschriftungen auf der Ingame-Karte und Minimap anzeigt.
+Das Script wird einfach in einen Userscript-Manager (Tampermonkey o.Ä.) eingefügt.
+
+TIP: Standardmäßig wird die Zeichnung sowohl auf der Karte als auch auf der Minimap angezeigt.
+Soll nur eines davon gezeichnet werden, im Script `drawOnMap` bzw. `drawOnMini` auf `false` setzen.
+
+=== Korridorkarte[[korridorkarte]]
+
+Mitglieder mit xref:features/tribe-construct.adoc#rechtelevel[Führungsrechten] können eine Zeichnung als *Korridorkarte* des Stammeskonstrukts definieren.
+Die Korridorkarte ist für alle Mitglieder des Konstrukts sichtbar und kann über das Korridorkarten-Menü in der xref:#layer-leiste[Layer-Leiste] ein- und ausgeblendet werden.
+
+[IMPORTANT]
 ====
-Dieses Feature ist aktuell noch nicht verfügbar.
-
-Die hier beschriebene Funktionalität befindet sich in Planung und wird in einer zukünftigen Version von TW Forge ergänzt.
+Die Korridorkarte ist eine *Momentaufnahme* der Zeichnung.
+Spätere Änderungen an der Zeichnung wirken sich nicht automatisch aus – um die Korridorkarte zu aktualisieren, muss sie erneut definiert werden.
+Pro Stammeskonstrukt gibt es genau eine Korridorkarte.
 ====
 
-// TODO
+== Karten-Einstellungen[[einstellungen]]
+
+In den *Karten-Einstellungen* wird festgelegt, welche Spieler und Stämme auf der Karte farblich markiert werden.
+Es gibt zwei Arten von Markierungen:
+
+* *Stammesmarkierungen*: Werden automatisch aus der xref:features/tribe-construct.adoc#diplomacy[Diplomatie] des Stammeskonstrukts übernommen (Verbündete, Neutrale, Feinde).
+Die Farben können für die eigene Ansicht überschrieben und einzelne Markierungen ausgeblendet werden; über *Zurücksetzen* gilt wieder die Stammesfarbe.
+* *Eigene Markierungen*: Zusätzliche Spieler oder Stämme, die nur für den eigenen Account markiert werden.
+Diese werden über die Suche unten im Dialog mit einer Farbe hinzugefügt.
+
+Nicht markierte Spielerdörfer werden in der Standardfarbe (braun), Barbarendörfer grau dargestellt.
+
+TIP: Über *Eigenen Account hervorheben* in der Layer-Leiste werden die eigenen Dörfer unabhängig von den Markierungen zusätzlich hervorgehoben.
