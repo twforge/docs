@@ -123,7 +123,7 @@ Grundlage sind die Berichte in der xref:features/reports.adoc[Berichte-Datenbank
 === Konfiguration der Bewertungsgrenzen
 
 Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
-Sie können unter xref:../settings.adoc#angriffe[Einstellungen → Angriffe] individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
+Sie können unter xref:settings.adoc#angriffe[Einstellungen → Angriffe] individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
 
 === Filter- und Sortiermöglichkeiten[[filterung]]
 

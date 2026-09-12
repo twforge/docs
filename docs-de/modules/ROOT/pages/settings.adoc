@@ -31,7 +31,7 @@ Zur Auswahl stehen:
 
 Die gewählte Einstellung wirkt sich ausschließlich auf die Darstellung der Benutzeroberfläche aus und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
 
-== Angriffe
+== Angriffe[[angriffe]]
 
 image::settings/angriffe_settings.png[Einstellung der farblichen Markierungen für eingehende Angriffe]
 

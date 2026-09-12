@@ -83,7 +83,7 @@ Die Minimap lässt sich über die Layer-Leiste ausblenden.
 image::features/map/karte_heatmap.png[Heatmap der eingehenden Angriffe]
 
 Der Layer *Heatmap* stellt die unter xref:features/analyser.adoc[Angriffe] eingelesenen eingehenden Angriffe auf der Karte dar.
-Grundlage sind alle Angriffe, die vom eigenen Account oder Mitgliedern des Stammeskonstrukts xref:features/analyser.adoc#_upload[hochgeladen] wurden.
+Grundlage sind alle Angriffe, die vom eigenen Account oder Mitgliedern des Stammeskonstrukts xref:features/analyser.adoc#upload[hochgeladen] wurden.
 
 In der Steuerleiste stehen dieselben Filter wie in der Angriffsübersicht zur Verfügung:
 
@@ -100,7 +100,7 @@ In der Steuerleiste stehen dieselben Filter wie in der Angriffsübersicht zur Ve
 * *Heatmap Herkunft*: Einfärbung der Bereiche, aus denen die Angriffe kommen.
 * *Heatmap Ziele*: Einfärbung der Bereiche, die angegriffen werden.
 
-TIP: Mit "Heatmap Herkunft" lässt sich schnell erkennen, aus welchem Gebiet ein Gegner seine Offs schickt – hilfreich z.B. für die Frontausplanung im xref:features/action-planner/source.adoc#_frontausplanung[Aktionsplaner].
+TIP: Mit "Heatmap Herkunft" lässt sich schnell erkennen, aus welchem Gebiet ein Gegner seine Offs schickt – hilfreich z.B. für die Frontausplanung im xref:features/action-planner/source.adoc#_frontentfernung[Aktionsplaner].
 
 == Übersicht[[uebersicht]]
 
