@@ -369,16 +369,11 @@ So bestehen folgende Möglichkeiten:
 +
 [TIP]
 ====
-Das Neuzuordnen von Angriffen steht TW-Forge Silber und Gold Accounts zur Verfügung und kann maximal einmal pro Stunde ausgeführt werden.
+Das Neuzuordnen von Angriffen kann maximal einmal pro Stunde ausgeführt werden.
 ====
 * *Anpassen der Ankunftszeit* von geplanten Angriffen (AGs, Zwischencleaner) auf bereits laufende Befehle (siehe unten).
 
 ==== Ankunftszeiten anpassen
-
-[TIP]
-====
-Das Anpassen der Ankunftszeiten steht TW-Forge Gold Accounts zur Verfügung.
-====
 
 Im Tab *Ankunftszeiten anpassen* der Veröffentlichung können bereits geplante Angriffe (z.B. AGs oder Zwischencleaner) auf die tatsächlichen Ankunftszeiten bereits laufender Angriffe (z.B. der Offs) angepasst werden.
 

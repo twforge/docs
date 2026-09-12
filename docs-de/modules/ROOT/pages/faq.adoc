@@ -12,8 +12,8 @@ Nutze die Suche (Browser: `Strg` + `F`), um schnell Antworten auf deine Fragen z
 
 === Warum kann ich kein Stammeskonstrukt erstellen?
 
-Man benötigt dafür einen Premium-Zugang.
-Für weitere Informationen klicke xref:premium.adoc[hier].
+Während der Open Beta kann jeder Nutzer ein Stammeskonstrukt gründen.
+Bist du bereits Mitglied eines Konstruktes, musst du dieses zuerst verlassen, bevor du ein eigenes gründen kannst.
 
 === Warum können meine Member die Berichte nicht sehen?
 

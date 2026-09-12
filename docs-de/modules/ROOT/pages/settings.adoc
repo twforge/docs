@@ -9,6 +9,11 @@
 Auf dieser Seite werden alle verfügbaren weltenübergreifenden Einstellungen in TW Forge erklärt.
 Einstellungen beeinflussen die Anzeige von ausgewerteten Angriffen, die Darstellung im Interface, Discord-Verbindungen und Benachrichtigungen.
 
+Du erreichst die Einstellungen über das Kontosymbol oben rechts in der Kopfzeile unter *Einstellungen*.
+Die Startseite des Dialogs zeigt eine Übersicht aller Bereiche, links (bzw. auf dem Smartphone oben) wechselst du zwischen Allgemein, Angriffe, Planer, Discord und Benachrichtigungen.
+
+NOTE: Anzeigename, verknüpfte Welten, E-Mail-Adresse und Passwort verwaltest du nicht hier, sondern in deinem xref:getting-started.adoc#profil[Profil].
+
 toc::[]
 
 == Allgemein
@@ -26,15 +31,6 @@ Zur Auswahl stehen:
 
 Die gewählte Einstellung wirkt sich ausschließlich auf die Darstellung der Benutzeroberfläche aus und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
 
-== Account
-
-image::settings/account_settings.png[Accounteinstellungen in TW Forge]
-
-Unter diesem Punkt werden accountbezogene Einstellungen vorgenommen.
-
-- Einsicht / Änderung des Anzeigenamens
-- Einsicht / Einstellbarkeit von verknüpften Welten
-
 == Angriffe
 
 image::settings/angriffe_settings.png[Einstellung der farblichen Markierungen für eingehende Angriffe]
@@ -42,7 +38,8 @@ image::settings/angriffe_settings.png[Einstellung der farblichen Markierungen f�
 Unter diesem Punkt kann definiert werden, ab welchen maximal errechneten Truppen TW-Forge die farblichen Markierungen für die Incs vornimmt.
 Diese Einstellbarkeit sorgt dafür, dass individuelle Präferenzen umgesetzt werden können.
 
-"Kleine Angriffe" können durch den Regler angepasst werden, diese verschiebt dann wiederum die Untergrenze für klein-mittlere Angriffe, der Regler der klein-mittleren Angriffe verschiebt wiederum die eigene Obergrenze sowie die Untergrenze für mittlere Incs usw.
+Es gibt vier Kategorien: *Klein*, *Klein-Mittel*, *Mittel* und *Groß*.
+Über die Regler legst du die Schwellwerte zwischen den Kategorien fest: Der Regler für "Klein" verschiebt die Untergrenze für klein-mittlere Angriffe, der Regler der klein-mittleren Angriffe verschiebt wiederum die eigene Obergrenze sowie die Untergrenze für mittlere Incs usw.
 
 Die Einstellungen, welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf die Anzeige auf TW-Forge unter xref:features/analyser.adoc#filterung[Angriffe] als auch auf die Anzeige Ingame durch das erlaubte Userscript.
 
@@ -64,10 +61,15 @@ a| image::settings/discord_connected_account.png[Discord verknüpft,width=100%]
 
 Unter diesem Punkt kannst du zunächst deinen Discord Account verknüpfen.
 Hierzu einfach auf den Button drücken, im Browser mit deinem Discord Account anmelden und der Verknüpfung zustimmen.
-So sind die Accounts erfolgreich verknüpft.
+So sind die Accounts erfolgreich verknüpft und der verknüpfte Discord-Account wird angezeigt.
 
-Jetzt kannst du entweder die Verknüpfung wieder löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzufügen.
-Außerdem kannst du hier dem Community-Discord "TW-Forge" joinen, um Fragen zu stellen sowie Feedback einzubringen.
+Anschließend stehen dir drei Buttons zur Verfügung:
+
+* *Discord Bot hinzufügen* - Fügt den xref:features/discordbot.adoc[TW-Forge Bot] zu einem Discord-Server (Stammesdiscord oder Accountdiscord) hinzu.
+* *Community Discord* - Bringt dich auf den Community-Discord "TW-Forge", um Fragen zu stellen sowie Feedback einzubringen.
+* *Verknüpfung löschen* - Hebt die Verknüpfung mit deinem Discord-Account wieder auf.
+
+Die Verknüpfung ist außerdem Voraussetzung für <<benachrichtigungen,Benachrichtigungen>> per Discord.
 
 == Benachrichtigungen[[benachrichtigungen]]
 

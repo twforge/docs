@@ -68,7 +68,7 @@ Auf Wachturm-Welten wird zusätzlich die Wachturm-Erkennung angezeigt.
 * Unter *Ziele* kann überprüft werden, wie viele Angriffe auf welchen Spieler bzw. welches Dorf geplant worden sind.
 Hierbei kann überprüft werden, ob alle Ziele mit den unter xref:features/action-planner/targets.adoc[Ziele] definierten Angriffszahlen abgedeckt werden konnten und welche Dörfer ggf. nicht vollständig bzw. gar nicht abgedeckt werden konnten.
 
-[TIP,role=premium_gold]
+[TIP]
 ====
 Über *Koordinatenliste* können die Herkunfts- bzw. Zielkoordinaten der Berechnung als Liste kopiert werden.
 ====
@@ -88,11 +88,6 @@ TIP: Dieser ist nur für kurzfristiges Überprüfen gedacht. Für das Bereitstel
 Mehr Informationen dazu findest du xref:features/action-planner/overview.adoc#campaigns[hier].
 
 == Ablehnungsübersicht – "Warum so wenige Angriffe?"[[ablehnungsuebersicht]]
-
-[TIP,role=premium_gold]
-====
-Die Ablehnungsübersicht steht TW-Forge Gold Accounts zur Verfügung.
-====
 
 Wenn die aktuellste Berechnung weniger Angriffe gefunden hat als gewünscht, erscheint oberhalb der Tabelle der aufklappbare Bereich *"Warum so wenige Angriffe?"*.
 Er zeigt, aus welchen Gründen Kombinationen aus Herkunfts- und Zieldorf bei der Berechnung nicht berücksichtigt werden konnten.

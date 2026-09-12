@@ -26,5 +26,4 @@ Dort werden alle technischen Details zentral gepflegt und dokumentiert.
 == Hinweise zur Nutzung
 
 Die Nutzung der APIs kann abhängig vom Funktionsumfang und Zugriffstyp an bestimmte Voraussetzungen oder Berechtigungen gebunden sein.
-Einige APIs sind für jeden zugänglich, andere sind Premium-Nutzern vorbehalten.
 Details hierzu sind ebenfalls in der API-Dokumentation beschrieben.

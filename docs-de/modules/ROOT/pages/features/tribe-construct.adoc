@@ -21,11 +21,6 @@ toc::[]
 
 == Stammeskonstrukt gründen
 
-[TIP,role=premium_silver]
-====
-Dieses Feature steht nur TW-Forge Silver und TW-Forge Gold Accounts zur Verfügung.
-====
-
 Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planung, Rechteverwaltung und das Teilen von Daten zwischen mehreren Accounts.
 
 == Einem Stammeskonstrukt beitreten
