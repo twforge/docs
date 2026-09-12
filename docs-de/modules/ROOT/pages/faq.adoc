@@ -12,13 +12,15 @@ Nutze die Suche (Browser: `Strg` + `F`), um schnell Antworten auf deine Fragen z
 
 === Warum kann ich kein Stammeskonstrukt erstellen?
 
-Während der Open Beta kann jeder Nutzer ein Stammeskonstrukt gründen.
-Bist du bereits Mitglied eines Konstruktes, musst du dieses zuerst verlassen, bevor du ein eigenes gründen kannst.
+Während der Open Beta kann jeder Nutzer ein Stammeskonstrukt gründen - auch, wenn er bereits Mitglied eines anderen Konstrukts ist.
+Bist du bereits in einem Konstrukt, findest du den Punkt *Neuer Stamm* im Stammes-Dropdown oben auf der Seite.
+Häufigster Grund für eine Fehlermeldung ist ein bereits vergebener Tag: Der Tag muss auf der Welt eindeutig sein und 3 bis 6 Zeichen ohne Sonderzeichen haben (siehe xref:features/tribe-construct.adoc#gruenden[Stammeskonstrukt gründen]).
 
 === Warum können meine Member die Berichte nicht sehen?
 
 Das liegt vermutlich daran, dass ihr euch entweder nicht im gleichen Konstrukt befindet, oder dass die betreffenden Member noch nicht das erforderliche Mindest-Rechtelevel (Mitglied) besitzen.
-Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#members[hier].
+Neu angenommene Mitglieder haben immer zunächst das Level *Gast* und müssen von der Führung unter *Mitglieder* hochgestuft werden.
+Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#rechtelevel[hier].
 
 === Warum laggt es bei mir, wenn ich im Aktionsplaner eine Aktion planen will?
 

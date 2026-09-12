@@ -1,9 +1,9 @@
-﻿= Stammeskonstrukt - Organisation und Management des Stammeskonstrukts
+= Stammeskonstrukt - Organisation und Management des Stammeskonstrukts
 :page-title: Stammeskonstrukt
-:description: Organisation des Stammeskonstruktes inkl. Membermanagement, Rollenmanagement, Stammestruppen einlesen, Angaben prüfen uvm.
-:keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Truppenimport, Planungsvorbereitung
+:description: Organisation des Stammeskonstruktes inkl. Gründung, Beitritt, Rechtelevel, Membermanagement, Stammestruppen, Abfrage, Diplomatie, Bündnisse, Aktivitätsübersicht und Discord.
+:keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Rollen, Gast, Mitglied, Planer, Führung, Gründer, Truppenimport, Diplomatie, Bündnis, Invite Link, Discord
 :toc: macro
-:toclevels: 1
+:toclevels: 2
 :toc-title: Inhalt
 
 Unter dem Menüpunkt *Stammeskonstrukt* kann ein Stammeskonstrukt erstellt und verwaltet werden.
@@ -12,225 +12,343 @@ Das Stammeskonstrukt vereint die gemeinsame Verwendung von TW Forge durch mehrer
 Dabei werden unter anderem folgende Informationen und Funktionen im Konstrukt gebündelt:
 
 * Hochgeladene Berichte und eingehende Angriffe werden innerhalb des Konstrukts geteilt.
-* Abfragen für Aktionen berücksichtigen Abschickzeiten und weitere accountbezogene Angaben.
-* Berechnete Aktionen (Angriffspläne) können im Konstrukt geteilt und gemeinsam weiterbearbeitet werden.
-* Verwaltung von Diplomatie und Bündnissen zu anderen Stammeskonstrukten.
-* Zentrale Übersicht über Aktivität (Uploads) der Mitglieder.
+* Abfragen für Aktionen (Abschickzeiten, AGs, nicht verfügbare Offs) laufen im Konstrukt zusammen.
+* Berechnete Aktionspläne können im Konstrukt veröffentlicht und gemeinsam getabbt werden.
+* Diplomatie (Verbündete, Neutrale, Feinde) wird zentral gepflegt und überall in TW Forge verwendet.
+* Bündnisse mit anderen Stammeskonstrukten erlauben das Teilen von Berichten und Angriffen über Stammesgrenzen hinweg.
+* Zentrale Übersicht, wer wann zuletzt Berichte und Angriffe hochgeladen hat.
+
+Ein Stammeskonstrukt ist immer an eine Welt gebunden und muss nicht dem Ingame-Stamm entsprechen: Es können z.B. mehrere Ingame-Stämme (Haupt- und Nebenstamm) in einem Konstrukt zusammengefasst werden.
 
 toc::[]
 
-== Stammeskonstrukt gründen
+== Stammeskonstrukt gründen[[gruenden]]
 
-Ein Stammeskonstrukt bildet die organisatorische Grundlage für gemeinsame Planung, Rechteverwaltung und das Teilen von Daten zwischen mehreren Accounts.
+Bist du auf einer Welt noch in keinem Konstrukt, findest du unter *Stammeskonstrukt* den Button *Stamm erstellen*.
+Bist du bereits Mitglied eines Konstrukts, erreichst du das Formular über das *+*-Symbol neben dem Stammesnamen bzw. über den Eintrag *Neuer Stamm* im Stammes-Dropdown.
 
-== Einem Stammeskonstrukt beitreten
+Für ein neues Konstrukt müssen zwei Angaben gemacht werden:
 
-Um einem Stammeskonstrukt beizutreten, benötigst du einen Invite Link, der von deiner Stammesführung oder einem bereits beigetretenen Stammesmitglied erstellt werden kann.
-Um beizutreten, klicke auf den Link und es öffnet sich ein Browserfenster, in dem du auf "beim Stammeskonstrukt bewerben" klicken musst.
-Wenn dies erfolgreich ist, ist alles Erforderliche getan - du musst jetzt nur noch von der Stammesführung freigeschaltet werden.
-Sobald du freigeschaltet bist, werden deine Berichte und Angriffe automatisch mit dem Stamm geteilt und du erhältst Zugriffsrechte, die dem dir von der SF zugewiesenen Rechtelevel entsprechen.
+* *Tag*: 3 bis 6 Zeichen, keine Sonderzeichen. Der Tag muss auf der Welt eindeutig sein.
+* *Name*: 5 bis 48 Zeichen, keine Sonderzeichen.
+
+Nach einem Klick auf *Stamm erstellen* ist das Konstrukt angelegt und du bist automatisch *Gründer* (siehe xref:#rechtelevel[Rechtelevel]).
+Anschließend kannst du über xref:#invite-links[Invite Links] Mitglieder einladen.
+
+NOTE: Du musst kein bestehendes Konstrukt verlassen, um ein neues zu gründen.
+Ein Account kann mehreren Konstrukten gleichzeitig angehören; zwischen ihnen wechselst du über das Dropdown oben auf der Seite.
+
+IMPORTANT: Während der Open Beta kann jeder ein Stammeskonstrukt gründen.
+Nach der Beta ist das Gründen ein xref:premium.adoc[Premium-Feature]; der Beitritt zu einem bestehenden Konstrukt bleibt für alle möglich.
+
+== Einem Stammeskonstrukt beitreten[[beitreten]]
+
+Um einem Stammeskonstrukt beizutreten, benötigst du einen *Invite Link*.
+Diesen kann jedes Mitglied des Konstrukts erstellen (siehe xref:#invite-links[Invite Links]).
+
+. Öffne den Link. Du siehst, zu welchem Konstrukt (Name und Tag) er gehört.
+. Klicke auf *Beitritt anfragen*.
+. Deine Anfrage erscheint bei der Stammesführung unter xref:#members[Mitglieder]. Bis sie bearbeitet ist, kannst du sie über den Link jederzeit mit *Anfrage zurückziehen* zurücknehmen.
+. Sobald die Führung deine Anfrage annimmt, erhältst du eine Benachrichtigung und das Konstrukt erscheint bei dir unter *Stammeskonstrukt*.
+
+Neue Mitglieder werden zunächst immer mit dem Rechtelevel *Gast* angenommen.
+Die Führung stuft dich danach auf das passende Level hoch (siehe xref:#rechtelevel[Rechtelevel]).
+
+TIP: Ist ein Link abgelaufen oder bereits verbraucht, wird das beim Öffnen angezeigt.
+Bitte in dem Fall die Führung um einen neuen Link.
 
 TIP: Man kann auch mehreren Stammeskonstrukten gleichzeitig angehören.
-Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit beiden Stammeskonstrukten geteilt.
+Hochgeladene Berichte sowie eingehende Angriffe werden automatisch mit allen Konstrukten geteilt, in denen du Mitglied bist.
 
-== Übersicht
+== Übersicht[[uebersicht]]
 
-Hier kannst du dein Stammeskonstrukt verlassen oder, sofern du Gründer-Rechte hast, diese auflösen.
+image::features/tribe-construct/tribe_uebersicht.png[Übersichtsseite mit Banner (Name, Tag, Rolle), Verbündeten-Chips und der Karte Stammverwaltung]
 
-// Platzhalter, wofür ist Übersicht noch gut?
+Die *Übersicht* ist die Startseite deines Konstrukts.
+Oben siehst du Name, Tag und deine eigene Rolle sowie die als Verbündete eingetragenen Stämme aus der xref:#diplomacy[Diplomatie].
+
+Über die Buttons im Kopfbereich erreichst du die häufigsten Aktionen direkt:
+
+* *Invite Link erstellen* - öffnet den Dialog aus xref:#invite-links[Invite Links].
+* *Bündnisanfragen verwalten* - springt zu den offenen Anfragen unter xref:#alliances[Bündnisse].
+* *Stamm umbenennen* (ab Führung) - Name und Tag ändern. Für den Tag gelten dieselben Regeln wie beim Gründen.
+* *Discord verwalten* - zeigt die verknüpften Discord-Server (siehe xref:#discord[Discord]).
+
+Unter *Stammverwaltung* findest du:
+
+* *Stamm verlassen* - entfernt dich aus dem Konstrukt. Deine bereits geteilten Berichte und Angriffe bleiben dem Konstrukt erhalten.
+* *Stamm auflösen* (nur Gründer) - löscht das Konstrukt inklusive aller Mitgliedschaften, Truppen, Diplomatie und Bündnisse.
+
+IMPORTANT: Ein Gründer kann das Konstrukt nur verlassen, wenn es mindestens einen weiteren Gründer gibt.
+Um die Leitung abzugeben, ernenne unter xref:#members[Mitglieder] zuerst einen weiteren Gründer und verlasse das Konstrukt danach.
 
 == Mitglieder[[members]]
 
-Im Bereich *Mitglieder* verwaltest du alle Accounts, die zum Stammeskonstrukt gehören.
-Hier können Mitglieder angenommen werden und das Rechtelevel einzelner Mitglieder angepasst werden.
-Um sicherzustellen, dass nur Accounts angenommen werden, die tatsächlich zu deinem Stamm gehören, werden bei der Beitrittsanfrage sowohl der TW-Forge Account als auch der verknüpfte ingame Account angezeigt.
-Um auf eine ausstehende Beitrittsanfrage aufmerksam zu machen, wird mit einer Notification über dem Menüpunkt "Mitglieder" darauf hingewiesen.
+image::features/tribe-construct/tribe_mitglieder.png[Mitgliederliste mit den Spalten Name, Beigetreten, Account und Stufe sowie den Bearbeiten-Icons]
 
-Das Rechtesystem ist *aufeinander aufbauend*: Alles, was ein Mitglied kann, kann ein Planer automatisch ebenfalls (und so weiter).
+Im Bereich *Mitglieder* siehst du alle Accounts des Konstrukts mit Beitrittsdatum und dem verknüpften Ingame-Account.
+Die Spalte *Stufe* (das Rechtelevel) wird nur ab Führung angezeigt.
+
+=== Beitrittsanfragen
+
+Offene Beitrittsanfragen werden oberhalb der Mitgliederliste angezeigt; zusätzlich erhält der Tab *Mitglieder* ein Badge mit der Anzahl offener Anfragen.
+Zu jeder Anfrage siehst du den TW-Forge-Account und den verknüpften Ingame-Account, damit du prüfen kannst, ob die Person tatsächlich zu deinem Stamm gehört.
+
+Annehmen (Haken) fügt den Account als *Gast* hinzu, Ablehnen (Kreuz) entfernt die Anfrage.
+Beides ist ab *Führung* möglich.
+
+=== Rechtelevel bearbeiten
+
+Ab *Führung* kannst du das Rechtelevel einzelner Mitglieder über das Stift-Symbol ändern oder Mitglieder aus dem Konstrukt entfernen.
+Über die Checkboxen lassen sich mehrere Mitglieder auswählen und gemeinsam auf ein Level setzen.
+
+Dabei gelten folgende Regeln:
+
+* Du kannst nur Mitglieder bearbeiten, deren Level *maximal so hoch wie dein eigenes* ist.
+* Du kannst nur Level vergeben, die *maximal so hoch wie dein eigenes* sind. Führung kann also weitere Führungen ernennen, aber keine Gründer.
+* Nur ein *Gründer* kann weitere Gründer ernennen. Es können mehrere Gründer existieren.
+* Dein eigenes Level kannst du nicht ändern.
 
 === Rechtelevel[[rechtelevel]]
 
-==== Gastrechte
+Das Rechtesystem ist *aufeinander aufbauend*: Jedes Level kann alles, was die Level darunter können.
 
-Gästerechte sind Teil des Konstrukts, haben jedoch *keine Einsicht* in Berichte oder eingehende Angriffe des Stammes.
+.Sichtbarkeit der Bereiche nach Rechtelevel
+[cols="3,1,1,1,1,1", options="header"]
+|===
+| Bereich | Gast | Mitglied | Planer | Führung | Gründer
+
+| Übersicht, Diplomatie ansehen | ✓ | ✓ | ✓ | ✓ | ✓
+| Mitglieder, Invite Links, Discord | | ✓ | ✓ | ✓ | ✓
+| Truppen, Abfrage | | | ✓ | ✓ | ✓
+| Bündnisse, Datenbank, Diplomatie bearbeiten, Beitrittsanfragen, Umbenennen | | | | ✓ | ✓
+| Stamm auflösen, Gründer ernennen | | | | | ✓
+|===
+
+==== Gast
+
+Gäste sind Teil des Konstrukts, haben jedoch *keine Einsicht* in die Daten des Stammes.
 
 * Teilt die *eigenen* Berichte und eingehenden Angriffe mit dem Stamm
-* Keine Einsicht auf die Berichte-Datenbank
-* Keine Einsicht auf eingehende Angriffe (Incs) des Stammes
-* Teilen von Abfrageinformationen mit dem Stamm (AGs, Zeiten etc.)
+* Kann eigene Angaben in der xref:features/planner/inquiry.adoc[Abfrage] machen (AGs, Zeiten, nicht verfügbare Offs)
+* Kann Aktionspläne empfangen, die für den eigenen Account veröffentlicht wurden
+* Keine Einsicht in die Berichte-Datenbank und die eingehenden Angriffe des Stammes
 
 ==== Mitglied
 
 Mitglieder haben Zugriff auf die gemeinsamen Informationen des Konstrukts:
 
-* Einsicht auf alle eingehenden Angriffe (Incs) auf den Stamm
+* Einsicht in alle eingehenden Angriffe (Incs) auf den Stamm
 * Einsicht in die vollständige Berichte-Datenbank
-* Erstellen von einmalig nutzbaren Invite-Links für das Stammeskonstrukt
+* Teilnahme am xref:features/tabulator.adoc[Tabulator]
+* Erstellen von Invite Links (fest 1 Tag gültig, 1 Verwendung)
+* Einsicht in die verknüpften Discord-Server
 
 ==== Planer
 
 Planer-Rechte erweitern den Zugriff um planungsrelevante Funktionen:
 
-* Einlesen von Stammestruppen
-* Einsicht auf erstellte Pläne
-* Interaktionsmöglichkeit mit Plänen (z. B. Abhängigkeiten, Anpassungen)
-* Möglichkeit zur Planveröffentlichung für das gesamte Konstrukt
-* Möglichkeit zum Eintragen von Zeiten für andere Accounts des Konstrukts
+* Einlesen und Verwalten von xref:#troops[Stammestruppen]
+* Einsicht in die xref:#inquiry[Abfrage] aller Mitglieder und Eintragen von Zeiten für andere Accounts
+* Stammestruppen auf der xref:features/map.adoc[Karte] sehen
+* Erstellen und Veröffentlichen von Plänen im xref:features/action-planner/overview.adoc[Aktionsplaner]
 
 ==== Führung
 
 Führung übernimmt organisatorische und diplomatische Verwaltungsaufgaben:
 
-* Verwalten von Mitgliedern
-* Eintragen und Ändern von Diplomatie
-* Einstellbarkeit zur Teilung von Stammesinformationen mit einem anderen Stamm (Bündnisse)
-* Einsicht, wann zuletzt Berichte/Angriffe von Mitgliedern hochgeladen wurden
-* Erstellung von Invite-Links für das Stammeskonstrukt
-* Verwaltung der verknüpften Discord-Server
+* Annehmen und Ablehnen von Beitrittsanfragen
+* Ändern von Rechteleveln und Entfernen von Mitgliedern (bis einschließlich Führung)
+* Eintragen und Ändern der xref:#diplomacy[Diplomatie]
+* Verwalten von xref:#alliances[Bündnissen] mit anderen Konstrukten
+* Einsicht in die xref:#statistics[Datenbank-Statistik] (wer hat wann zuletzt hochgeladen)
+* Invite Links mit frei wählbarer Gültigkeit und Verwendungsanzahl; Einsicht in alle Links
+* Umbenennen des Konstrukts
+* Löschen von Discord-Verknüpfungen
 
 ==== Gründer
 
 Gründer-Rechte umfassen die höchste Kontrolle über das Konstrukt:
 
-* Möglichkeit zum Auflösen des Stammeskonstrukts
+* Ernennen weiterer Gründer
+* Auflösen des Stammeskonstrukts
 
 == Truppen[[troops]]
 
-Im Bereich *Truppen* können Stammestruppen eingelesen und aktualisiert werden.
-Das Einlesen erfolgt über ein erlaubtes Net-SL-Script.
+Im Bereich *Truppen* (ab Planer) können die Truppen des gesamten Stammes eingelesen werden.
+Sie werden für die xref:features/action-planner/source.adoc#dorftruppen[Aktionsplanung] und die xref:features/map.adoc[Karte] verwendet.
+Das Einlesen erfolgt über ein erlaubtes Schnellleisten-Script.
 
-TIP: Du benötigst das erlaubte Net-Schnellleisten Script, welches du unter folgendem Link finden kannst:
-https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/[tribe-troop-counter]
+TIP: Du benötigst das erlaubte Schnellleisten-Script *tribe-troop-counter*, das du im Forum findest:
+https://forum.tribalwars.net/index.php?threads/download-tribe-info.285469/[Download Tribe Info].
+Der Link ist auch direkt auf der Truppen-Seite hinterlegt (*Foren-Thread*).
 
-=== Benutzung des Userscripts
+=== Truppen mit dem Script auslesen
 
-Um die Truppen mit dem Schnellleistenscript auszulesen, füge zunächst das oben verlinkte Schnellleistenscript in deine Browser-Schnellleiste oder in die Schnellleiste in "Die Stämme" ein, indem du den Code aus dem Punkt "Quickbar Entry" in die Schnellleiste einfügst.
+Füge zunächst den Code aus dem Punkt *Quickbar Entry* des Forumsbeitrags in deine Browser-Schnellleiste oder in die Schnellleiste in "Die Stämme" ein.
 
-image::features/tribe-construct/script-installieren.png[Script Importieren]
+image::features/tribe-construct/script-installieren.png[Script als Schnellleisten-Eintrag einfügen]
 
-TIP: Um das Script benutzen zu können und Truppeninformationen zu erhalten, benötigst du mindestens Stammesführungsrechte in deinem Stamm.
-Außerdem kannst du die Truppen nur auslesen, wenn die Stammesmitglieder unter Einstellungen->Stammeseinstellungen ihre Truppen / Verteidigung für die SF freigegeben haben.
+TIP: Um das Script benutzen zu können, benötigst du ingame mindestens Stammesführungsrechte.
+Außerdem kannst du die Truppen nur auslesen, wenn die Stammesmitglieder unter *Einstellungen → Stammeseinstellungen* ihre Truppen bzw. Verteidigung für die Stammesführung freigegeben haben.
 
-Danach gehe auf **Stamm->Mitglieder**.
-Dort klickst du dann auf das Schnellleistenscript entweder in deiner Browserbar oder in der Schnellleiste in "Die Stämme", je nachdem wo du es eingefügt hast.
-Danach sollte sich folgendes Fenster öffnen:
+Gehe danach ingame auf *Stamm → Mitglieder* und klicke auf den Schnellleisten-Eintrag.
+Es öffnet sich folgendes Fenster:
 
-image::features/tribe-construct/tribe-info-script.png[Tribe-Info-Script]
+image::features/tribe-construct/tribe-info-script.png[Dialog des Tribe-Info-Scripts mit der Auswahl Troops / Defenses]
 
-Hier kannst du auswählen, ob du entweder die zum Dorf gehörenden Truppen "Troops" auslesen möchtest, oder die im Dorf stehenden Truppen "Defenses".
-Sollten Filter eingestellt sein, so lösche alle Filter, bis keiner mehr angezeigt wird.
-Jetzt klicke auf "Read Data" und warte, bis das Script alle Truppen ausgelesen hat (je nach Dorfmenge dauert dies zwischen 5 und 30 Sekunden).
-Du solltest jetzt einen Output erzeugt haben, der in etwa folgendermaßen aussieht:
+Hier wählst du, ob die zum Dorf gehörenden Truppen (*Troops*) oder die im Dorf stehenden Truppen (*Defenses*) ausgelesen werden sollen.
+Sollten Filter eingestellt sein, lösche alle Filter, bis keiner mehr angezeigt wird.
+Klicke dann auf *Read Data* und warte, bis das Script alle Truppen ausgelesen hat (je nach Dorfmenge 5 bis 30 Sekunden).
+Der Output sieht in etwa so aus:
 
-image::features/tribe-construct/tribe-info-script-example-troops.png[Beispielauslesung des Scripts]
+image::features/tribe-construct/tribe-info-script-example-troops.png[Beispiel-Output des Scripts mit einer Zeile pro Dorf]
 
-TIP: Hierbei können ein bekanntes Problem auftreten.
-Bei der ersten benutzung des Scripts kann es sein, dass das Outputfeld lediglich den Header (Coords, Player, ...) enthält.
-Der Fix hierfür ist, in der Scriptübersicht (Screenshot 1) einmal das Feld "Read defenses in the village" auszuwählen, und dann wieder auf das Feld "Read troops of the village" zu klicken - dies sollte in den meisten Fällen das Problem fixen.
+TIP: Bekanntes Problem: Bei der ersten Benutzung des Scripts kann es sein, dass das Outputfeld lediglich den Header (Coords, Player, ...) enthält.
+Wähle in dem Fall im Script-Dialog einmal *Read defenses in the village* aus und danach wieder *Read troops of the village* - das behebt das Problem in den meisten Fällen.
 
-WARNING: Das Script funktioniert nur bis 1000 Dörfer pro Spieler, alles über dieser Anzahl wird nicht ausgelesen.
+WARNING: Das Script funktioniert nur bis 1000 Dörfer pro Spieler, alles darüber wird nicht ausgelesen.
 
-Wenn du den korrekten Output erzeugt hast, kann danach entweder die Datei als .csv Datei abgespeichert werden und danach in TW-Forge importiert werden (Datei öffnen->Strg A ->Strg C, TW Forge/Stammeskonstrukte/Truppen öffnen, Ctrl V) oder direkt aus der Vorschau kopiert und auf dem gleichen Weg in TW Forge eingefügt werden.
+=== Truppen in TW Forge einfügen
 
-TIP: Wenn du die Datei als .csv abgespeichert hast und du siehst, dass bei einigen Spielern anstatt von Truppenzahlen Fragezeichen("?") stehen, liegt das daran, dass der Spieler entweder seine Truppen oder seine Verteidigung nicht mit dem Stamm teilt.
+image::features/tribe-construct/import-troops.png[Truppen-Seite in TW Forge mit Textfeld, Typ-Auswahl und Speichern-Button]
 
-Auf TW-Forge kann ausgewählt werden, ob die eingefügten Truppen als "Truppen" oder als "Verteidigung" abgespeichert werden.
+Kopiere den Output des Scripts (direkt aus der Vorschau oder aus der gespeicherten .csv-Datei mit `Strg` + `A`, `Strg` + `C`) und füge ihn auf TW Forge unter *Stammeskonstrukt → Truppen* in das Textfeld ein.
+Wähle unter *Typ*, ob die Daten als *Truppen* oder als *Verteidigung* gespeichert werden sollen, und klicke auf *Speichern*.
 
-image::features/tribe-construct/import-troops.png[Truppenimport in TW-Forge]
+Die eingelesenen Daten werden darunter in zwei Tabellen (*Truppen* und *Verteidigung*) angezeigt.
+
+IMPORTANT: *Speichern überschreibt* alle bisherigen Einträge des gewählten Typs.
+Willst du mehrere Ingame-Stämme verplanen, füge die Outputs aller Stämme *nacheinander in dasselbe Textfeld* ein und klicke erst am Ende einmal auf *Speichern*.
+
+TIP: Stehen bei einzelnen Spielern anstelle von Truppenzahlen Fragezeichen (`?`), teilt der Spieler seine Truppen bzw. Verteidigung ingame nicht mit dem Stamm.
 
 TIP: Du bist nicht verpflichtet, Truppen als Truppen und Verteidigung als Verteidigung hochzuladen.
-Es kann teilweise von Vorteil sein, bei Aktionsplanungen auch Dorfverteidigung als Dorftruppen hochzuladen.
-Die Templatefunktion unter Aktionsplaner->Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteidigung als Truppen hochzuladen, wenn du dieses Feature nutzen willst.
-
-// hier noch später den Aktionsplaner/Herkunftsseite verlinken
-// Ist das verständlich formuliert? find es iwie nicht so ganz schön
+Der Truppen-Filter im Aktionsplaner unter xref:features/action-planner/source.adoc#dorftruppen[Herkunft → Dorftruppen] arbeitet ausschließlich mit dem Datensatz *Truppen*.
+Willst du dort auch mit Deff planen (z.B. für UT-Aktionen), lies die Verteidigung mit dem Script aus und speichere sie zusätzlich als *Truppen*.
 
 == Abfrage[[inquiry]]
 
-Im Bereich *Abfrage* siehst du, welche Accounts Angaben hinterlegt haben, z. B.:
+image::features/tribe-construct/tribe_inquiry.png[Abfrage-Übersicht mit Filterleiste und Tabelle links, Panel "Zeiten hinzufügen" mit Kalender rechts]
 
-* Abschickzeiten
-* AGs
-* nicht verfügbare Offs
+Im Bereich *Abfrage* (ab Planer) siehst du gesammelt, was die Mitglieder des Konstrukts in ihrer eigenen xref:features/planner/inquiry.adoc[Abfrage] hinterlegt haben:
+
+* *Zeiten* - Abschickzeiten pro Tag
+* *AGs* - Dörfer mit Adelsgeschlechtern und deren Anzahl
+* *Pala Offs* - Dörfer, in denen die Off mit dem Paladin läuft (nur auf Welten mit aktivem Paladin)
+* *Nicht verfügbare Offs* - Dörfer, die nicht verplant werden sollen
+
+Ein Klick auf einen Spieler klappt die Details mit den einzelnen Dörfern und dem Zeitpunkt der letzten Aktualisierung auf.
+Diese Angaben werden bei der Planung im Aktionsplaner unter xref:features/action-planner/source.adoc[Herkunft] und xref:features/action-planner/send-and-arrival-time.adoc[Zeiten] berücksichtigt.
 
 === Filter
 
-Du kannst die Einträge filtern, um veraltete Angaben auszublenden:
+Über die Filterleiste blendest du veraltete Angaben aus:
 
-* Filterung nach Alter der Eintragungen
-* Alternativ: Von-/Bis-Filter für einen genauen Zeitraum
+* *Max Alter* - nur Einträge anzeigen, die nicht älter als die angegebene Zeit sind
+* *Von Datum* / *Bis Datum* - nur Einträge innerhalb eines Zeitraums anzeigen
 
 === Zeiten hinzufügen
 
-Zusätzlich können Zeiten für einen oder mehrere Accounts/Stämme ergänzt werden.
-Das ist besonders nützlich, wenn:
+Über das Uhr-Symbol kannst du Abschickzeiten für andere Accounts eintragen, z.B. wenn Standardzeiten für den ganzen Stamm gesetzt werden sollen oder einzelne Accounts vergessen haben, Zeiten anzugeben.
 
-* Standardzeiten gesetzt werden sollen
-* einzelne Accounts vergessen haben, Zeiten anzugeben
+. Suche über das Eingabefeld einen *Stamm* oder einzelne *Spieler* und füge sie der Liste hinzu. Beides kann kombiniert werden.
+. Wähle im Kalender einen oder mehrere Tage aus.
+. Gib das Zeitfenster mit *Von* und *Bis* an und bestätige.
+
+Die Zeiten erscheinen danach bei den betroffenen Accounts genauso, als hätten sie sie selbst eingetragen.
 
 == Diplomatie[[diplomacy]]
 
-Im Bereich *Diplomatie* wird Stammesdiplomatie gepflegt.
-Hier können Stämme als
+image::features/tribe-construct/tribe_diplo.png[Die drei Spalten Verbündete, Neutral und Feinde mit farbig markierten Einträgen]
 
-* Verbündete
-* Neutrale
-* Feinde
+Im Bereich *Diplomatie* wird die Stammesdiplomatie gepflegt.
+Sie ist für alle Mitglieder (auch Gäste) sichtbar, bearbeiten kann sie die *Führung*.
 
-eingetragen und farblich markiert werden.
+In den drei Spalten *Verbündete*, *Neutrale* und *Feinde* können über das *+*-Symbol sowohl ganze *Stämme* als auch einzelne *Spieler* eingetragen werden.
+Jeder Eintrag erhält eine Farbe, die sich nachträglich anpassen lässt; über das Kreuz wird ein Eintrag wieder entfernt.
 
-Diese Markierungen werden unter anderem angezeigt:
+Die Diplomatie wird an vielen Stellen in TW Forge verwendet:
 
-* auf der Karte: xref:features/map.adoc[Karte]
-* im Aktionsplaner: xref:features/action-planner/overview.adoc[Aktionsplaner]
+* xref:features/map.adoc[Karte] - Dörfer werden in der Farbe des Eintrags markiert
+* xref:features/dashboard.adoc[Dashboard] - die Dominanz wird nach Verbündeten, Feinden und Neutralen gruppiert
+* xref:features/reports.adoc[Berichte] - der Berichte-Punkt (grün/rot/blau) wird aus der Perspektive des eigenen Stammes und seiner Verbündeten bestimmt
+* xref:features/analyser.adoc[Angriffe] und xref:features/tabulator.adoc[Tabulator] - Filterung nach Herkunft der Angriffe
+* Benachrichtigungen - bei zerstörter Unterstützung werden Verbündete berücksichtigt
+
+TIP: Die Diplomatie gilt pro Konstrukt.
+Auf der Übersichtsseite werden die als Verbündete eingetragenen Stämme direkt angezeigt.
 
 == Bündnisse[[alliances]]
 
-Im Bereich *Bündnisse* können Bündnisse mit anderen TW-Forge-Stammeskonstrukten eingegangen werden.
+// TODO: Wenn wir mal ein BND haben SCREENSHOT: features/tribe-construct/buendnisse.png - Bündnisseite mit Einladungslink, offenen Bündnisanfragen und der Liste aktiver Bündnisse
 
-Für jedes Bündnis kann definiert werden:
+Im Bereich *Bündnisse* (ab Führung) können Bündnisse mit anderen *TW-Forge-Stammeskonstrukten* eingegangen werden.
+Ein Bündnis erlaubt es, Berichte und eingehende Angriffe über Konstruktgrenzen hinweg zu teilen, ohne dass die Mitglieder beider Stämme in einem gemeinsamen Konstrukt sein müssen.
 
-* ob Berichte und eingehende Angriffe geteilt werden sollen
-* ob beim Teilen von Berichten die eigenen Informationen versteckt werden sollen
+NOTE: Ein Bündnis in TW Forge ist unabhängig von der xref:#diplomacy[Diplomatie].
+Die Diplomatie bestimmt, wie ein Stamm angezeigt wird; das Bündnis bestimmt, welche Daten geteilt werden.
 
-=== Ablauf: Bündnis-Anfrage
+=== Bündnis eingehen
 
-Das Bündnis wird über einen Link-Prozess hergestellt:
+Das Bündnis wird über einen Einladungslink hergestellt:
 
-. Konstrukt A erstellt einen Link und sendet ihn an Konstrukt B.
-. Konstrukt B erstellt über den Link eine Anfrage.
-. Konstrukt A nimmt die Anfrage an.
-. Danach können die Sharing-Einstellungen (Berichte/Angriffe) und optional das Verstecken von Informationen konfiguriert werden.
+. Konstrukt A erstellt unter *Einladungslink* über das *+*-Symbol einen Link und sendet ihn an die Führung von Konstrukt B.
+. Die Führung von Konstrukt B öffnet den Link, wählt unter *Anfragen mit* ihr Konstrukt aus und stellt die Anfrage.
+. Bei Konstrukt A erscheint die Anfrage unter *Bündnisanfragen* (zusätzlich mit Badge am Tab). Die Führung nimmt sie an oder lehnt sie ab; abgelehnte Anfragen werden automatisch entfernt.
+. Danach erscheint das Bündnis bei beiden Konstrukten in der Liste und die Freigaben können konfiguriert werden.
 
-=== Transparenz der Einstellungen
+TIP: Für die Anfrage über den Link muss der öffnende Account in der Führung seines Konstrukts sein.
 
-Jede Seite kann die aktuellen Einstellungen der anderen Seite einsehen.
-Damit sollen asymmetrische Einstellungen (z. B. nur eine Seite teilt) sofort erkennbar sein.
+=== Freigaben konfigurieren
 
-// Es wäre denke gut, wenn das einseitige Ändern der Einstellungen entweder dazu führt, dass die andere Seite auch automatisch angepasst wird, oder dass man eine Notification bekommt, dass man es mitbekommt.
+Über das Einstellungs-Symbol am Bündnis legt *jede Seite für sich* fest, was sie dem Partner freigibt:
+
+* *Bericht-Zugriff gewähren* - der Bündnispartner kann die Berichte deines Konstrukts sehen.
+* *Eigene Dorfinfos verstecken* - der Partner sieht die Berichte, aber Truppen- und Verteidigungsinformationen zu den Dörfern deines eigenen Stammes werden ausgeblendet. Informationen über die Gegnerseite bleiben sichtbar.
+* *Angriffe-Zugriff gewähren* - der Partner kann die eingehenden Angriffe deines Konstrukts einsehen und mit seinen eigenen vergleichen.
+
+Direkt daneben werden die aktuellen Einstellungen der Gegenseite schreibgeschützt angezeigt.
+So ist sofort erkennbar, wenn nur eine Seite teilt.
+
+NOTE: Berichte und Angriffe aus einem Bündnis werden in den jeweiligen Übersichten zusammen mit den eigenen Daten angezeigt.
+
+=== Bündnis beenden
+
+Über das Symbol *Bündnis auflösen* kann jede Seite das Bündnis jederzeit beenden.
+Ab diesem Zeitpunkt sind die Daten des Partners nicht mehr sichtbar.
 
 == Datenbank[[statistics]]
 
-Im Bereich *Datenbank* wird die Aktivität der Mitglieder sichtbar gemacht:
+// TODO: Wenn wir mal statistiken haben SCREENSHOT: features/tribe-construct/datenbank.png - Die Statistik-Karten "Berichte hochgeladen" und "Angriffe eingelesen"
 
-* welche Accounts wie viele Berichte hochgeladen haben
-* welche Accounts wie viele Angriffe eingelesen haben
-* wann dies zuletzt stattgefunden hat
+Im Bereich *Datenbank* (ab Führung) wird die Aktivität der Mitglieder sichtbar gemacht.
+Es gibt zwei Bereiche, *Berichte hochgeladen* und *Angriffe eingelesen*, jeweils aufgeschlüsselt nach *TW-Forge-User* und nach *Ingame-Spieler* mit Anzahl und *Letzter Upload*.
 
-So kann überprüft werden, wer über längere Zeit keine Daten mehr eingelesen hat.
+So kannst du prüfen, wer über längere Zeit keine Daten mehr eingelesen hat, und gezielt nachfragen.
 
 == Invite Links[[invite-links]]
 
-Im Bereich *Invite Links* können Einladungslinks für das Stammeskonstrukt erstellt werden.
+Im Bereich *Invite Links* (ab Mitglied) werden Einladungslinks für das Konstrukt erstellt und verwaltet.
+Über das *+*-Symbol öffnet sich der Dialog *Neuen Link erstellen*; der fertige Link lässt sich über das Kopieren-Symbol in die Zwischenablage übernehmen.
 
-Invite Links können eingeschränkt werden durch:
+Was du einstellen kannst, hängt von deinem Rechtelevel ab:
 
-* Gültigkeitsdauer
-* maximale Anzahl an Benutzungen
+* *Mitglied* und *Planer*: Der Link ist fest *1 Tag* gültig und kann *einmal* verwendet werden. Du siehst nur deine eigenen Links und kannst nur diese löschen.
+* *Führung* und *Gründer*: *Gültig für Tage* und *Maximale Verwendungen* sind frei wählbar; bleibt ein Feld leer, gilt keine Begrenzung. Du siehst alle Links des Konstrukts und kannst jeden löschen.
+
+In der Liste siehst du zu jedem Link den Code, *Gültig bis* und die bisherigen *Verwendungen* (bei begrenzten Links als "genutzt / maximal").
+
+TIP: Wer über einen Link beitritt, stellt zunächst nur eine Beitrittsanfrage.
+Die Freischaltung erfolgt weiterhin durch die Führung unter xref:#members[Mitglieder].
 
 == Discord[[discord]]
 
-Im Bereich *Discord* können verknüpfte Discord-Server eingesehen und verwaltet werden.
-Hier wird die Verbindung zwischen TW Forge und Discord organisiert.
+Im Bereich *Discord* (ab Mitglied) siehst du, welche Discord-Server mit dem Konstrukt verknüpft sind, inklusive des Channels, aus dem Berichte automatisch übernommen werden.
+Ab Führung können Verknüpfungen hier auch wieder gelöscht werden.
 
+Ist noch kein Server verknüpft, führt dich der Button *Discord Bot einladen!* zu den xref:settings.adoc#discord[Discord-Einstellungen].
+Dort verbindest du deinen Discord-Account und lädst den Bot auf euren Server ein.
+Anschließend wird der Server mit dem Befehl `/tribe set <welt> <Konstrukt> [channel]` auf dem Discord-Server mit dem Konstrukt verknüpft.
 
+Alle Funktionen des Bots (Berichte umformatieren, Bericht des Tages, Benachrichtigungen) sind unter xref:features/discordbot.adoc[Discord-Bot] beschrieben.
