@@ -7,7 +7,7 @@
 :toc-title: Inhalt
 
 
-// hier einen Screenshot von einer Angriffseite, die befüllt ist und verschiedene Informationen enthält
+// TODO: hier einen Screenshot von einer Angriffseite, die befüllt ist und verschiedene Informationen enthält
 
 Die Seite *Angriffe* dient als zentrale Angriffsübersicht in TW Forge.
 Hier werden alle eingelesenen und hochgeladenen eingehenden Angriffe (Incs) gesammelt dargestellt und automatisiert ausgewertet.
@@ -42,7 +42,7 @@ Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwe
 Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern.
 Sofern ein Angriff durch einen dieser Faktoren eingeschränkt werden kann, wird die Erklärung, durch welche Information der Inc eingeschätzt wird, in einem Informationsfeld angezeigt.
 
-// Hier noch einen Screenshot einügen, an dem man ein Beispiel für die Information in dem "I" erkennen kann
+// TODO: Hier noch einen Screenshot einügen, an dem man ein Beispiel für die Information in dem "I" erkennen kann
 
 == Konfiguration der Bewertungsgrenzen
 
@@ -101,7 +101,7 @@ Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
 
 Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
 
-== Upload
+== Upload[[upload]]
 
 Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden.
 Dies geschieht über das Submenü "Import".
@@ -119,4 +119,8 @@ image::features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-An
 
 image::features/analyser/sos_twforge_paste_analyser.png[Einfügen auf TW-Forge]
 
+== Tabulator
 
+Über das Submenü *Tabulator* können hochgeladene Angriffe gemeinsam mit Mitspielern getabbt werden.
+TW Forge verteilt die Tabs dabei automatisch auf die Dörfer aller Teilnehmer und erstellt daraus fertige Abschickpläne.
+Alle Details findest du auf der Seite xref:features/tabulator.adoc[Tabulator].

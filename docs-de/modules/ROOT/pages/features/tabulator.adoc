@@ -1,0 +1,230 @@
+= Tabulator - Angriffe gemeinsam tabben
+:page-navtitle: Tabulator
+:description: Der Tabulator verteilt Tabs für eingehende Angriffe automatisch auf die Dörfer aller Teilnehmer und erstellt daraus Abschickpläne.
+:keywords: Tabulator, Tabben, Tabs, Incs, Unterstützung, Deff, Abschickplan, SOS-Anfrage
+:toc: macro
+:toclevels: 2
+:toc-title: Inhalt
+
+Der *Tabulator* ist ein Untermenü der xref:features/analyser.adoc[Angriffe] und hilft dabei, eingehende Angriffe gemeinsam mit anderen Spielern zu *tabben*.
+Beim Tabben wird eine kleine Unterstützung so getimt, dass sie in derselben Sekunde wie der Angriff eintrifft.
+Da Unterstützungen vor Angriffen abgearbeitet werden, steht die Deff beim Einschlag bereits im Dorf und der Angriff läuft in die Truppen.
+
+Der Tabulator nimmt dir dabei die aufwendige Verteilung ab:
+Du importierst die Angriffe, lädst Mitspieler ein, jeder gibt an, welche Truppen er aus welchen Dörfern bereitstellen kann, und TW Forge berechnet, wer wann von wo welchen Tab schicken muss.
+Das Ergebnis landet als fertiger xref:features/planner/plans.adoc[Angriffsplan] bei jedem Teilnehmer.
+
+NOTE: Als Teilnehmer können nur Spieler eingeladen werden, die sich im selben xref:features/tribe-construct.adoc[Stammeskonstrukt] befinden.
+
+toc::[]
+
+== Anfrage erstellen
+
+image::features/tabulator/tabulator_incs_einlesen.png[Tabulator-Übersicht mit dem Panel "Angriffe Tabben" und der Liste bestehender Anfragen]
+
+Unter *Angriffe → Tabulator* findest du oben das Panel *Angriffe Tabben* und darunter alle Tab-Anfragen, an denen du beteiligt bist - egal ob du sie selbst erstellt hast oder dazu eingeladen wurdest.
+
+Eine neue Tab-Anfrage wird aus einer ingame erstellten *SOS-Anfrage* erzeugt.
+Der Ablauf ist derselbe wie beim xref:features/analyser.adoc#upload[Upload von Angriffen]:
+
+. Gehe ingame auf *Eintreffend*, markiere die Angriffe, die getabbt werden sollen, und klicke auf *Unterstützung anfordern*.
+. Kopiere den kompletten Text der SOS-Anfrage.
+. Füge ihn in das Feld *SOS Anfrage* ein und klicke auf *Erstellen*.
+
+Die Anfrage wird angelegt, die enthaltenen Angriffe werden importiert und du landest direkt im ersten Schritt der Anfrage.
+Die Anfrage trägt automatisch deinen Spielernamen, in der Liste wird zusätzlich das Erstellungsdatum angezeigt.
+Ziel-Tab-Größe, Minimum, Maximum und Def-Äquivalent werden aus deiner letzten Anfrage übernommen, das Zeitfenster startet standardmäßig ab jetzt und endet in einer Stunde.
+
+TIP: Die Angriffe werden gleichzeitig auch in der normalen xref:features/analyser.adoc[Angriffsübersicht] hinterlegt, du musst sie also nicht doppelt hochladen.
+
+Über die drei Punkte am Ende jeder Zeile in der Liste stehen dir je nach Rolle folgende Aktionen zur Verfügung:
+
+* *Öffnen* - Anfrage aufrufen und den Ablauf fortsetzen
+* *Löschen* - Anfrage inklusive aller Teilnehmer und Ergebnisse entfernen (nur Ersteller)
+* *Verlassen* - Anfrage als Teilnehmer verlassen
+* *Beitreten* / *Ablehnen* - eine offene Einladung annehmen oder ablehnen
+
+== Ablauf einer Tab-Anfrage
+
+Eine geöffnete Anfrage wird als Schrittfolge dargestellt, die du über *Weiter* oder direkt über die Schrittleiste durchläufst.
+Welche Schritte du siehst, hängt von deiner Rolle ab:
+
+[cols="2,1,1",options="header"]
+|===
+| Schritt | Ersteller | Teilnehmer
+| Angriffe | ✓ | ✓
+| Teilnehmer | ✓ |
+| Einstellungen | ✓ |
+| Truppen | ✓ | ✓
+| Meine Einstellungen | ✓ | ✓
+| Übersicht | ✓ | ✓
+| Ergebnis | ✓ | ✓ (nach der Berechnung)
+|===
+
+Der Ersteller ist automatisch selbst Teilnehmer und wählt ebenfalls eigene Truppen aus.
+
+Alle Eingaben in den Schritten *Einstellungen*, *Truppen* und *Meine Einstellungen* werden *automatisch gespeichert*, sobald du den Schritt verlässt.
+Sind die Eingaben unvollständig oder ungültig, wirst du gefragt, ob du den Schritt trotzdem verlassen möchtest - in diesem Fall gehen die Änderungen verloren.
+
+=== Angriffe
+
+image::features/tabulator/tabulator_incs_überprüfen.png[Schritt 1: Liste der Angriffe mit Zieldorf, Einheit, Ankunft und verbleibender Zeit]
+
+Im ersten Schritt siehst du alle Angriffe, die getabbt werden sollen, mit *Zieldorf*, langsamster *Einheit*, *Ankunft* und der *verbleibenden* Zeit bis zum Einschlag.
+
+Als Ersteller kannst du einzelne Angriffe über das Papierkorb-Symbol aus der Anfrage entfernen, z.B. erkannte Fakes.
+
+=== Teilnehmer
+
+image::features/tabulator/tabulator_spieler_einladen.png[Schritt 2: Teilnehmer einladen]
+
+Im Schritt *Teilnehmer* lädt der Ersteller Mitspieler ein.
+Angezeigt werden alle Spieler des eigenen Stammeskonstrukts, die noch nicht eingeladen wurden.
+Hake die gewünschten Spieler an - über die Checkbox im Tabellenkopf auch alle auf einmal - und klicke unterhalb der Liste auf *Spieler einladen*.
+
+Rechts neben der Auswahl erscheint die Tabelle *Bereits eingeladen* mit allen Teilnehmern und ihrem aktuellen Status.
+Hier kannst du Teilnehmer bei Bedarf auch wieder entfernen.
+Die Statuswerte bedeuten:
+
+* *Ausstehend* - Einladung wurde noch nicht beantwortet
+* *Abgelehnt* - Einladung wurde abgelehnt
+* *Wählt Truppen* - Teilnehmer befindet sich in der Truppenauswahl
+* *Einstellungen* - Teilnehmer bearbeitet seine persönlichen Einstellungen
+* *Bereit* - Teilnehmer hat alle Schritte abgeschlossen und wird bei der Berechnung berücksichtigt
+
+Eingeladene Spieler erhalten eine xref:settings.adoc#benachrichtigungen[Benachrichtigung] und beim nächsten Aufruf von TW Forge ein Popup, über das sie die Einladung direkt annehmen oder ablehnen können.
+Mit *Später* bleibt die Einladung offen und kann jederzeit in der Tabulator-Übersicht angenommen werden.
+
+=== Einstellungen
+
+image::features/tabulator/tabulator_zielgrößen.png[Schritt 3: Globale Einstellungen der Tab-Anfrage]
+
+Diese Einstellungen legt der Ersteller fest, sie gelten für *alle Teilnehmer* der Anfrage.
+
+In der oberen Zeile:
+
+* *Icon* - Symbol, mit dem die erzeugten Befehle im Angriffsplan bzw. der Workbench dargestellt werden.
+* *Def-Äquivalent akzeptieren* - Ist der Schalter aktiv, müssen die Tabs nicht exakt den definierten Einheiten entsprechen, sondern nur dieselbe Verteidigungsstärke erreichen.
+So kann z.B. eine gewünschte Speerträger-Tab auch durch Schwertkämpfer oder schwere Kavallerie abgedeckt werden.
+* *UT Boost* - *Nein* ignoriert Unterstützungsboosts, *Ja* berücksichtigt alle Einträge der xref:features/planner/support_boosts.adoc[UT-Boost-Datenbank] bei der Laufzeitberechnung, *Nur eigene* ausschließlich deine eigenen Einträge.
+
+Darunter die Truppenvorgaben, jeweils pro Einheit:
+
+* *Ziel Tab-Größe* - Wie viele Truppen insgesamt pro Angriff getabbt werden sollen.
+Dieser Wert wird auf die Tabs aller Teilnehmer aufgeteilt.
+* *Minimale Tab-Größe* - Mindestanzahl an Truppen, die ein einzelner Tab enthalten muss.
+Verhindert, dass der Tabulator viele winzige Befehle erzeugt.
+* *Maximale Tab-Größe* - Maximale Anzahl an Truppen, die ein einzelner Tab enthalten darf.
+* *Zeitfenster* - *Früheste* und *späteste Abschickzeit*.
+Es werden nur Befehle erzeugt, deren Abschickzeit innerhalb dieses Fensters liegt.
+Die früheste Abschickzeit muss in der Zukunft liegen.
+
+TIP: Teilnehmer können Minimum, Maximum und Zeitfenster in ihren persönlichen Einstellungen weiter einschränken, aber nicht über die globalen Vorgaben hinaus erweitern.
+
+=== Truppen
+
+image::features/tabulator/tabulator_truppen_auswahl_1.png[Schritt 4: Workbench Template und erweiterte Filter]
+
+Im Schritt *Truppen* wählt jeder Teilnehmer aus, aus welchen Dörfern er welche Truppen für Tabs bereitstellt.
+Grundlage sind die unter xref:features/account.adoc#truppen[Account → Truppen] hochgeladenen Dorftruppen - über den Button *Truppen hochladen* gelangst du direkt dorthin.
+
+==== Workbench Template
+
+Das *Workbench Template* wird auf die Truppen aller Dörfer angewendet und bestimmt, welche Einheiten überhaupt zur Verfügung stehen.
+Standardmäßig sind die defensiven Einheiten mit `alle` vorbelegt.
+Du kannst das Template anpassen, um z.B. nur die halben Dorftruppen (`alle/2`) oder nur bestimmte Einheiten freizugeben.
+Mit *Mögliche Truppen laden* wird die Dorfliste anhand des Templates neu berechnet.
+
+NOTE: Das Template wirkt nur auf Dörfer, die noch nicht ausgewählt sind.
+Bereits angehakte Dörfer behalten ihre individuell eingetragenen Truppenwerte.
+
+==== Erweiterte Filter
+
+Der aufklappbare Bereich *Erweiterte Filter* schränkt die Dorfliste weiter ein:
+
+* *Mindestanzahl pro Dorf* - Dörfer, in denen weniger Truppen stehen als hier angegeben, werden nicht angeboten.
+* *Frontentfernung* - Über *Hinzufügen* trägst du gegnerische Stämme oder Spieler ein, zu denen ein Mindestabstand eingehalten werden soll.
+Dörfer, die näher an der Front liegen, werden ausgeschlossen.
+Beim ersten Öffnen werden automatisch alle im Stammeskonstrukt als *Feind* hinterlegten Stämme und Spieler mit einer Entfernung von 5 Feldern vorgeschlagen.
+Die Einstellungen für *Entfernung*, *Min Nachbarn* und *Radius* funktionieren wie im Aktionsplaner unter xref:features/action-planner/source.adoc#definition_frontlinie[Frontentfernung] beschrieben.
+
+Unterhalb der Filter findest du den Schalter *Verplante abziehen*: Ist er aktiv, werden Truppen, die bereits in anderen Angriffsplänen verplant sind, von den verfügbaren Truppen abgezogen.
+
+==== Dorftabelle
+
+image::features/tabulator/tabulator_truppen_auswahl_2.png[Schritt 4: Dorftabelle mit ausgewählten Dörfern und editierbaren Truppen]
+
+Die Tabelle zeigt alle Dörfer, die nach Template und Filtern infrage kommen:
+
+* Über die Checkbox wählst du ein Dorf aus, über die Checkbox im Tabellenkopf alle auf einmal.
+* Bei angehakten Dörfern werden die Truppenfelder editierbar und du kannst die Anzahl pro Einheit manuell anpassen.
+Nicht ausgewählte Dörfer zeigen die verfügbaren Truppen nur zur Information an.
+* *Verbleibend* - Zeit, bis das Dorf den nächsten Angriff nicht mehr rechtzeitig erreichen kann.
+Einheiten, die bereits keinen Angriff mehr erreichen, werden durchgestrichen dargestellt.
+
+Es muss mindestens ein Dorf ausgewählt sein und die eingetragenen Truppen dürfen nicht negativ oder null sein.
+
+=== Meine Einstellungen
+
+image::features/tabulator/tabulator_finale_settings.png[Schritt 5: Persönliche Einstellungen mit Laufzeiten und maximaler Laufzeit]
+
+Diese Einstellungen gelten *nur für dich* und müssen innerhalb der globalen Vorgaben des Erstellers liegen.
+Zur Orientierung wird unter *Gesucht pro Angriff* die vom Ersteller gewünschte Ziel-Tab-Größe angezeigt.
+
+* *Laufzeiten* - Wähle die Einheiten aus, mit deren Geschwindigkeit deine Tabs laufen dürfen.
+Der Tabulator versucht immer zuerst die schnellste ausgewählte Einheit und weicht auf langsamere aus, wenn diese den Angriff nicht mehr erreicht.
+* *Maximale Laufzeit* - Befehle mit längerer Laufzeit werden für dich nicht erzeugt.
+Der Schieberegler reicht von 25 Minuten bis zu 3 Tagen.
+
+Sobald die Anfrage mehr als einen Teilnehmer hat, erscheinen zusätzlich:
+
+* *Minimale Tab-Größe* / *Maximale Tab-Größe* (optional) - Eigene Unter- und Obergrenze pro Tab, die globalen Vorgaben werden jeweils daneben angezeigt.
+* *Zeitfenster* - Eigene früheste und späteste Abschickzeit, z.B. wenn du nur bis zu einer bestimmten Uhrzeit online bist.
+
+=== Übersicht
+
+image::features/tabulator/tabulator_übersicht_vor_berechnung.png[Schritt 6: Übersicht mit Anzahl der Angriffe, Teilnehmer und deren Status]
+
+Die *Übersicht* fasst die Anfrage zusammen: Anzahl der *Angriffe*, Anzahl der *Teilnehmer* und unter *Teilnehmer Status* der Stand jedes einzelnen Teilnehmers.
+Über den Pfeil in der Spalte *Aktionen* klappst du die persönlichen Einstellungen und die ausgewählten Herkunftsdörfer samt Truppen eines Teilnehmers auf.
+
+Sobald du diesen Schritt erreichst, wird dein Status auf *Bereit* gesetzt.
+
+Der Ersteller startet hier über *Berechnung starten* die Verteilung.
+Berücksichtigt werden dabei nur Teilnehmer mit dem Status *Bereit*.
+Die Berechnung kann beliebig oft wiederholt werden, z.B. wenn weitere Teilnehmer fertig geworden sind - vorherige Ergebnisse werden dabei überschrieben.
+
+WARNING: Wird die Berechnung erneut gestartet, nachdem Teilnehmer ihre Befehle bereits in einen Angriffsplan übernommen haben, passen die alten Pläne nicht mehr zum neuen Ergebnis.
+
+=== Ergebnis
+
+image::features/tabulator/tabulator_berechnung_fertig.png[Schritt 7: Ergebnis mit Ziel-Übersicht und eigenen Befehlen]
+
+Nach der Berechnung erhalten alle Teilnehmer eine Benachrichtigung und finden im Schritt *Ergebnis* ihre Befehle.
+
+Die *Ziel-Übersicht* (sichtbar für den Ersteller) zeigt oben die Anzahl der *Ziele*, die Gesamtzahl der erzeugten *Tabs* und die durchschnittliche *Abdeckung*.
+In der Tabelle darunter siehst du pro Angriff die *Ankunft*, die *Anzahl* der zugeordneten Tabs, die erreichte *Abdeckung* in Prozent und die insgesamt eintreffenden Truppen - im Tabellenkopf wird zum Vergleich die Ziel-Tab-Größe angezeigt.
+Ziele ohne passende Truppen stehen mit 0% und *Keine* in der Liste.
+
+*Meine Befehle* listet alle Tabs, die du selbst schicken musst: *Herkunft*, *Ziel*, *Einheit* (langsamste Einheit des Befehls), *Typ*, *Truppen*, *Abschickzeit* und *Ankunft*.
+
+Über *Speichern* übernimmst du deine Befehle in einen Angriffsplan.
+Im Popup kannst du entweder einen *neuen Plan* anlegen oder die Befehle an einen *bestehenden Plan* anhängen.
+Anschließend gelangst du über *Zum Plan* jederzeit zum zugehörigen xref:features/planner/plans.adoc[Angriffsplan], aus dem heraus die Tabs wie gewohnt abgeschickt werden können.
+
+== Wie verteilt der Tabulator?
+
+Für alle, die wissen wollen, was bei der Berechnung passiert - die wichtigsten Regeln:
+
+* Es werden nur Dörfer von Teilnehmern mit Status *Bereit* verwendet.
+* Ein Tab wird nie aus dem Zieldorf selbst geschickt, und pro Dorf, Ziel und Ankunftszeit wird höchstens ein Tab erzeugt.
+* Pro Teilnehmer werden maximal zwei Befehle mit exakt derselben Abschicksekunde erzeugt, damit die Tabs auch praktisch abschickbar sind.
+* Die Abschickzeit ergibt sich aus Ankunftszeit des Angriffs minus Laufzeit.
+Sie muss innerhalb des globalen Zeitfensters und - bei mehreren Teilnehmern - innerhalb des persönlichen Zeitfensters liegen.
+Aktive UT-Boosts (Stammesfähigkeiten und Sigille) verkürzen die Laufzeit entsprechend.
+* Die Größe eines Tabs ist das Minimum aus den verfügbaren Truppen des Dorfes, der maximalen Tab-Größe und dem, was am Ziel noch fehlt.
+Unterschreitet ein Dorf die minimale Tab-Größe, wird es für dieses Ziel nicht verwendet.
+* Bei aktivem *Def-Äquivalent* wird statt der exakten Einheiten die Verteidigungsstärke verglichen.
+Der Tabulator versucht zuerst eine exakte Übereinstimmung und greift nur dann auf äquivalente Einheiten zurück, wenn kein passendes Dorf gefunden wurde.
+* Truppen, die für einen Tab verwendet werden, stehen für weitere Tabs nicht mehr zur Verfügung.
+Die Verteilung endet, sobald alle Ziele die Ziel-Tab-Größe erreicht haben oder keine passenden Truppen mehr übrig sind.

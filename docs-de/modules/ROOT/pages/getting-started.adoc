@@ -35,7 +35,8 @@ Den Code, welcher in das Profil kopiert werden musste, kann nun wieder entfernt 
 
 Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfügbaren Features:
 
-* *xref:features/analyser.adoc[Angriffe]* - Eingehende Angriffe einlesen und auswerten
+* *Start* - Das xref:features/dashboard.adoc[Dashboard] mit deinen Statistiken, der Dominanz auf der Welt und den Top Berichten
+* *xref:features/analyser.adoc[Angriffe]* - Eingehende Angriffe einlesen und auswerten, gemeinsam mit dem xref:features/tabulator.adoc[Tabulator] tabben
 * *xref:features/reports.adoc[Berichte]* - Hochladen und Durchsuchen von Berichten
 * *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
 * *Planner* – Übersicht über

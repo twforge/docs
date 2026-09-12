@@ -1,0 +1,63 @@
+= Dashboard - Startseite deiner Welt
+:page-navtitle: Dashboard
+:description: Das Dashboard zeigt nach der Weltauswahl deine Statistiken, deinen Verlauf, die Dominanz auf der Welt und die besten Berichte aus dem Berichtechannel.
+:keywords: Dashboard, Startseite, Statistiken, Rang, Punkte, Dörfer, Dominanz, Top Berichte
+:toc: macro
+:toclevels: 1
+:toc-title: Inhalt
+
+image::features/dashboard/dashboard_uebersicht.png[Dashboard einer Welt mit Statistiken, Verlauf und Dominanz]
+
+Das *Dashboard* ist die Startseite jeder Welt.
+Du erreichst es über den Menüpunkt *Start*, sobald du eine Welt ausgewählt hast.
+Es fasst die wichtigsten Informationen zu deinem Account und der Welt auf einen Blick zusammen.
+
+toc::[]
+
+== Deine Statistiken
+
+Die Kachel *Deine Statistiken* zeigt deinen aktuellen *Rang*, deine *Punkte* und deine *Dorfanzahl* auf der Welt.
+
+Hat sich ein Wert in den letzten 24 Stunden verändert, wird die Veränderung als kleines Badge in der Ecke der jeweiligen Box angezeigt - grün bei Verbesserung, rot bei Verschlechterung.
+Beim Überfahren des Badges mit der Maus siehst du zusätzlich die Veränderung der letzten Woche.
+
+=== Verlauf
+
+Unterhalb der Statistiken wird der *Verlauf* deines Accounts als Diagramm dargestellt.
+Über die Umschalter wählst du, ob *Rang*, *Punkte* oder *Dörfer* angezeigt werden, über die Auswahl *Zeitraum* den betrachteten Zeitraum:
+
+* *Tag* - die letzten 24 Stunden
+* *Woche* - die letzten 7 Tage
+* *Monat* - der letzte Monat
+* *Komplett* - der gesamte gespeicherte Verlauf
+
+== Dominanz
+
+Die Kachel *Dominanz* zeigt, wie sich die Dörfer der Welt auf die Stämme verteilen - links als Liste, rechts als Kreisdiagramm.
+Grundlage ist der Anteil der Dörfer eines Stammes an allen Dörfern der Welt.
+
+Bist du Mitglied eines xref:features/tribe-construct.adoc[Stammeskonstrukts], werden die Stämme anhand der dort hinterlegten xref:features/tribe-construct.adoc#diplomacy[Diplomatie] gruppiert:
+
+* *Verbündete* - alle als Verbündete eingetragenen Stämme
+* *Feinde* - alle als Feinde eingetragenen Stämme
+* *Neutral* - alle als neutral eingetragenen Stämme
+* *Sonstige* - alle übrigen Dörfer.
+Darin werden die größten nicht zugeordneten Stämme einzeln aufgeführt, stammeslose Spieler sowie der Rest werden zusammengefasst.
+
+Jede Gruppe lässt sich aufklappen, um die einzelnen Stämme zu sehen, jeder Stamm wiederum, um die zugehörigen Spieler mit ihrer Dorfanzahl zu sehen.
+Stämme und Spieler sind direkt mit ihren Profilen verlinkt.
+
+Ohne Stammeskonstrukt bzw. ohne hinterlegte Diplomatie werden stattdessen die größten Stämme der Welt aufgelistet.
+
+TIP: Auf Welten mit *Dominanz-Siegbedingung* wird im Kreisdiagramm zusätzlich das *Ziel* (die für den Sieg benötigte Dorfanzahl) sowie der *Rest* eingezeichnet.
+So siehst du auf einen Blick, wie weit die Verbündeten noch von der Siegbedingung entfernt sind.
+
+== Top Berichte
+
+Unterhalb der Dominanz werden die besten Berichte aus dem Berichtechannel deines Stammesdiscords angezeigt.
+Voraussetzung ist ein eingerichteter xref:features/discordbot.adoc[Discord-Bot], über den Berichte gepostet und mit Daumen hoch / Daumen runter bewertet werden.
+
+Angezeigt werden der *Bericht des Tages*, der *Bericht der Woche* und der *Bericht des Monats* - jeweils der Bericht mit den meisten positiven Bewertungen im entsprechenden Zeitraum (siehe xref:features/discordbot.adoc[Bericht des Tages / der Woche / des Monats]).
+Jede Karte zeigt die Anzahl der positiven und negativen Bewertungen, die daraus berechnete Zustimmungsquote und einen Link, der dich direkt zur Nachricht auf Discord bringt.
+
+Solange noch keine Berichte bewertet wurden, bleibt der Bereich leer.
