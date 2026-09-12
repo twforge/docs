@@ -145,7 +145,7 @@ image::features/tribe-construct/import-troops.png[Truppenimport in TW-Forge]
 
 TIP: Du bist nicht verpflichtet, Truppen als Truppen und Verteidigung als Verteidigung hochzuladen.
 Es kann teilweise von Vorteil sein, bei Aktionsplanungen auch Dorfverteidigung als Dorftruppen hochzuladen.
-Die Templatefunktion unter Aktionsplaner->Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteidigung als Truppen hochzuladen, sollte man dieses Feature nutzen wollen.
+Die Templatefunktion unter Aktionsplaner->Herkunftsdörfer benutzt immer nur die Dorftruppen, weshalb es notwendig ist, auch Verteidigung als Truppen hochzuladen, wenn du dieses Feature nutzen willst.
 
 // hier noch später den Aktionsplaner/Herkunftsseite verlinken
 // Ist das verständlich formuliert? find es iwie nicht so ganz schön
