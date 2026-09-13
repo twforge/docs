@@ -20,7 +20,7 @@ Nachdem das Skript eingefügt worden ist, muss in den Stämme Einstellungen unte
 
 
 Bevor das Eingabefeld bestätigt werden kann, muss noch zwischen "User" und "SF" entschieden werden.
-Hier kann jeder Nutzer sowohl User als auch SF problemlos auswählen, SF zeigt mehr Informationen an, der Nutzer muss aber nicht teil der SF sein.
+Du kannst sowohl User als auch SF problemlos auswählen - SF zeigt mehr Informationen an, du musst dafür aber nicht Teil der SF sein.
 
 == Nutzung des Userscripts
 

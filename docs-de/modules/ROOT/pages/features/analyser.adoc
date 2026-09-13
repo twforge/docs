@@ -1,20 +1,85 @@
 = Angriffe - Übersicht und Bewertung eingehender Incs
 :page-navtitle: Angriffe
 :description: Zentrale Übersicht zur Anzeige, Bewertung und Filterung eingehender Angriffe (Incs) in TW Forge.
-:keywords: Angriffe, Incs, Gefahrenbewertung, Filter, Offgröße
+:keywords: Angriffe, Incs, Gefahrenbewertung, Filter, Offgröße, Heatmap, Export, SOS-Anfrage
 :toc: macro
 :toclevels: 1
 :toc-title: Inhalt
 
-
-// hier einen Screenshot von einer Angriffseite, die befüllt ist und verschiedene Informationen enthält
-
 Die Seite *Angriffe* dient als zentrale Angriffsübersicht in TW Forge.
 Hier werden alle eingelesenen und hochgeladenen eingehenden Angriffe (Incs) gesammelt dargestellt und automatisiert ausgewertet.
 
+Die Seite ist in fünf Tabs gegliedert:
+
+* *<<uebersicht,Übersicht>>* - Aggregierte Auswertung aller eingehenden Angriffe des Stammes
+* *<<angriffe,Angriffe>>* - Tabelle aller einzelnen Incs mit Bewertung und Filter
+* *<<export,Export>>* - Koordinatenlisten nach Bewertung zum Umbenennen der Angriffe im Spiel
+* *xref:features/tabulator.adoc[Tabulator]* - Angriffe gemeinsam mit Mitspielern tabben
+* *<<upload,Import>>* - Eingehende Angriffe per SOS-Anfrage hochladen
+
 toc::[]
 
-== Anzeige und Interpretation der Angriffe
+== Übersicht[[uebersicht]]
+
+image::features/analyser/inc-overview.png[Übersicht der eingehenden Angriffe mit dem Balkendiagramm pro Account]
+
+Die Übersicht fasst alle eingehenden Angriffe zusammen, die von dir oder Mitgliedern deines Stammeskonstruktes hochgeladen wurden.
+Sie beantwortet auf einen Blick, *wer* wie stark angegriffen wird, *wann* die Angriffe einschlagen und *woher* sie kommen.
+
+Auf Wachturm-Welten kannst du oben rechts zwischen zwei Sichten umschalten:
+
+* *Bewertung* - Die Angriffe werden nach der von TW Forge errechneten Gefahrenbewertung eingeordnet (siehe <<bewertung,Anzeige und Interpretation der Bewertung>>).
+* *WT erkannt* - Es werden nur Angriffe eingeordnet, die bereits von einem Wachturm erkannt wurden.
+Diese entsprechen mit Sicherheit der angezeigten Größe.
+
+=== Eingehende Angriffe pro Account
+
+Das Balkendiagramm zeigt für jeden angegriffenen Account die Gesamtzahl der Angriffe sowie die Aufteilung nach Bewertung: *Fake*, *verm. Fake*, *potentielle Mittel*, *potentielle Off* und *AGs*.
+Über die Pfeile am Rand bzw. das Mausrad blätterst du durch weitere Accounts, wenn mehr Accounts angegriffen werden, als auf einmal angezeigt werden können.
+
+=== Ankunftszeiten
+
+image::features/analyser/inc-overview-2.png[Ankunftszeiten-Timeline, Herkunft der Angriffe, fehlende Incs und Heatmap]
+
+Die Timeline zeigt, wie viele Angriffe zu welchem Zeitpunkt einschlagen.
+Über die Checkboxen blendest du einzelne Bewertungskategorien ein oder aus, über die Auswahl *Alle Spieler* beschränkst du die Anzeige auf einen einzelnen Account.
+Mit dem Mausrad oder durch Ziehen des Reglers unter dem Diagramm zoomst du in einen bestimmten Zeitraum hinein.
+
+=== Herkunft der Angriffe
+
+Die Tabelle listet auf, aus welchen Stämmen bzw. von welchen Spielern die Angriffe stammen - umschaltbar über *Stamm* / *Spieler*.
+Pro Zeile siehst du die Gesamtzahl und die Aufteilung nach Bewertung (Symbole in der Kopfzeile, Tooltip zeigt die Kategorie).
+Über *Alle anzeigen* klappst du die vollständige Liste auf.
+
+=== Fehlende Incs
+
+Diese Liste zeigt alle Accounts, die im geschätzten Einschlagsgebiet liegen, zum Stamm eines Mitglieds deines Stammeskonstruktes gehören und in den letzten Stunden keine Angriffe hochgeladen haben.
+Neben dem Account steht der Zeitpunkt des letzten Uploads.
+So erkennt die Stammesführung schnell, wessen Incs noch fehlen.
+
+=== Heatmap
+
+Die Karte zeigt die Verteilung der Angriffe farblich als Heatmap - umschaltbar zwischen:
+
+* *Ziel* - Wo schlagen die Angriffe ein?
+* *Herkunft* - Von wo werden die Angriffe geschickt?
+* *Einschlagsgebiet* - Das aus den Angriffen geschätzte Gebiet, in dem der Gegner aktuell aktiv ist.
+
+TIP: Die gleiche Heatmap findest du auch als Layer auf der xref:features/map.adoc#heatmap[Karte].
+
+== Angriffe[[angriffe]]
+
+image::features/analyser/inc-list.png[Tabelle der eingehenden Angriffe mit Filterleiste]
+
+Im Tab *Angriffe* werden alle eingelesenen Incs einzeln aufgelistet.
+Pro Angriff siehst du Größe, Einheit, Bewertung, Name, Ziel, Herkunft, Angreifer, Verteidiger, Ankunft, Abschickzeit und die verbleibende Laufzeit.
+
+* Ein Klick auf eine Zeile zeigt den Laufzeit-Fortschritt des Angriffs als Balken an.
+* Über die Checkboxen wählst du mehrere Angriffe aus und kannst sie über die Symbole in der Kopfzeile gemeinsam *bearbeiten* (z.B. umbenennen) oder *löschen*.
+* Ein Zähler in Klammern hinter dem Herkunftsdorf, z.B. `(3)`, zeigt an, dass aus diesem Dorf mehrere Angriffe laufen.
+* Ein Notiz-Symbol am Herkunftsdorf zeigt, dass zu diesem Dorf eine xref:features/reports.adoc#dorfnotizen[Dorfnotiz] hinterlegt ist. Der Tooltip zeigt den Inhalt.
+
+=== Anzeige und Interpretation der Bewertung[[bewertung]]
 
 Jeder Angriff wird von TW Forge anhand einer *maximal möglichen Offgröße* interpretiert.
 Diese maximale Offgröße wird anhand der Kennzahl "maximale Äxte" / "maximale LKav" angegeben.
@@ -26,7 +91,17 @@ Auf Basis dieser Berechnung wird jedem Angriff eine *Gefahrenbewertung* zugewies
 * *Orange* - mittelgroße mögliche Off
 * *Rot* - große mögliche Off
 
-== Faktoren der Gefahrenbewertung
+NOTE: Bei der Bewertung handelt es sich immer um einen Worst-Case.
+Wenn keine Infos über das Herkunftsdorf bekannt sind oder es ein bekanntes Offdorf mit theoretisch vollen Truppen ist, wird der Angriff als "potentielle Off" eingestuft.
+
+Neben der Bewertung können zusätzliche Symbole erscheinen:
+
+* *Wachturm-Symbol* - Der Angriff wurde von einem Wachturm erkannt, die angezeigte Größe ist damit sicher (nur auf Wachturm-Welten).
+* *Schwert-Symbol* - Das Herkunftsdorf ist als Deff-Dorf bekannt, der Angriff wird daher als "klein" bewertet.
+
+Fährst du mit der Maus über die Bewertung, zeigt ein Tooltip die *maximal errechneten Truppen* sowie die *Truppen, die zum Abschickzeitpunkt bereits unterwegs waren*.
+
+=== Faktoren der Gefahrenbewertung
 
 Die Bewertung eines Angriffs basiert unter anderem auf folgenden Faktoren:
 
@@ -39,84 +114,80 @@ Verluste aus vorherigen Kämpfen werden berücksichtigt.
 * *Bereits eingeschlagene Angriffe*
 Ist eine Off bereits unterwegs oder eingeschlagen, kann sie nicht mehrfach verwendet werden.
 
+* *Bekannte Deff-Dörfer*
+Herkunftsdörfer, die aus Berichten als Deff-Dorf bekannt sind, werden als klein bewertet.
+
 Diese Informationen werden kombiniert, um eine möglichst realistische Einschätzung der maximal möglichen Angriffsstärke zu liefern.
-Sofern ein Angriff durch einen dieser Faktoren eingeschränkt werden kann, wird die Erklärung, durch welche Information der Inc eingeschätzt wird, in einem Informationsfeld angezeigt.
+Grundlage sind die Berichte in der xref:features/reports.adoc[Berichte-Datenbank] - je mehr Berichte dein Stamm hochlädt, desto genauer wird die Bewertung.
 
-// Hier noch einen Screenshot einügen, an dem man ein Beispiel für die Information in dem "I" erkennen kann
-
-== Konfiguration der Bewertungsgrenzen
+=== Konfiguration der Bewertungsgrenzen
 
 Die Schwellenwerte für die einzelnen Gefahrenstufen (*Grün*, *Gelb*, *Orange*, *Rot*) sind frei konfigurierbar.
-Sie können unter xref:../settings.adoc#angriffe[Settings -> Angriffe] individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
+Sie können unter xref:settings.adoc#angriffe[Einstellungen → Angriffe] individuell angepasst werden, um sie an die Spielweise oder individuelle Präferenzen anzupassen.
 
-== Filter- und Sortiermöglichkeiten[[filterung]]
+=== Filter- und Sortiermöglichkeiten[[filterung]]
 
-Die Angriffsübersicht bietet umfangreiche Filterfunktionen, um große Mengen an Incs gezielt auszuwerten.
+Die Filterleiste oberhalb der Tabelle bietet folgende Möglichkeiten:
 
-=== Filter nach Benennung
+* *Name* - Freie Textsuche in der Inc-Bezeichnung, z.B. „Ramme tabben“
+* *Suche* - Filter nach Herkunft oder Ziel: Spieler, Stamm oder Koordinate
+* *Größe* - Filter nach bekannter, sichtbarer Incgröße (wenn Befehle einsehbar sind bzw. der Wachturm den Angriff erkannt hat)
+* *Bewertung* - Filter nach der von TW Forge errechneten Maximalgröße: klein (grün), mittel (gelb), mittelgroß (orange) und groß (rot)
+* *Einheit* - Filter nach Laufzeit bzw. Einheitentyp, z.B. Späher oder Rammen
+* *Eigene* - Zeigt nur die Angriffe an, die du selbst hochgeladen hast
+* *Eigener Account* - Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen
 
-image::features/analyser/filter_by_name_analyser.png[Filterung nach Name]
+Die letzten beiden Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
+Über die Spaltenköpfe lässt sich die Tabelle zusätzlich sortieren.
 
-* z. B. „Ramme tabben“
-* freie Textsuche in der Inc-Bezeichnung
+== Export[[export]]
 
-=== Filter nach Herkunft oder Ziel
+image::features/analyser/inc-export.png[Export-Tab mit den vier Koordinatenlisten und der Anleitung zum Umbenennen]
 
-image::features/analyser/filter_by_herkunft-or-ziel_analyser.png[Filterung nach Herkunt oder Ziel]
+Der Tab *Export* stellt die Herkunftsdörfer aller eingelesenen Angriffe als Koordinatenlisten bereit, gruppiert nach Bewertung:
 
-* nach *Spieler*
-* nach *Stamm*
-* nach *Koordinate*
+* *Fake* - Frisch geadeltes Dorf, Off tot oder Off noch unterwegs
+* *Wahrscheinlich Fake* - Bekannte Deff-Dörfer
+* *Mittel* - Mögliche mittlere Off
+* *Potentiell Off* - Mögliche volle Off
 
-=== Filter nach bestätigter Inc-Größe
+Über das Kopieren-Symbol übernimmst du die jeweilige Liste in die Zwischenablage.
+Bleiben die Listen leer, liegen in der Berichte-Datenbank keine Informationen vor, aus denen sich für die eingelesenen Angriffe eine Bewertung ableiten lässt.
 
-image::features/analyser/filter_by_known_size_analyser.png[Filterung nach bekannter Größe]
+=== Angriffe im Spiel umbenennen
 
-* bekannte, sichtbare Incgrößen (wenn Befehle einsehbar sind)
-* Filterung nach klein (grün), mittelgroß (orange) und groß (rot)
+In Kombination mit dem legalen Userscript "Angriffe umbenennen" aus der DE-Userscript-Sammlung (Link im Export-Tab) benennst du so eine große Zahl an Angriffen im Spiel auf einmal um:
 
-=== Filter nach von TW-Forge errechneten Maximalgrößen
+. Kopiere die "Fake"-Dörfer aus der Box in die Zwischenablage.
+. Öffne in Die Stämme die Incübersicht (Eingehende Angriffe → Angriffe).
+. Drücke `o`, um das Script zu öffnen.
+. Drücke einmal auf "Dorfinformationen löschen".
+. Kopiere alle Koordinaten aus der Zwischenablage in das "Import"-Feld.
+. Fülle den Infotext aus - der Text wird an die aktuelle Inc-Benennung angefügt, empfehlenswert sind die Überschriften der Boxen, z.B. "Fake" oder "vermutlich Fake".
+. Drücke auf "Angriffe umbenennen".
+. Gehe die Seite durch und drücke bei allen Angriffen, die ein "Umbenennen"-Feld geöffnet haben, auf "Umbenennen".
+. Wiederhole den Vorgang (außer Schritt 4) für jede der vier Boxen.
 
-image::features/analyser/filter_by_calculated_max_size_analyser.png[Filterung nach maximaler Offgröße]
+TIP: Angriffe, die sowohl als Fake als auch als Off angezeigt werden, solltest du genauer betrachten - abhängig von der Abschickzeit können sie ein sicherer Fake sein, müssen es aber nicht.
 
-* Filterung nach klein (grün), mittel (gelb), mittelgroß (orange) und groß (rot)
+== Import[[upload]]
 
-=== Filter nach Laufzeit / Einheitentyp
+Damit die eingehenden Angriffe ausgewertet werden können, müssen sie von dir selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden.
+Dies geschieht über den Tab *Import*.
 
-image::features/analyser/filter_by_unit_type_analyser.png[Filterung nach Einheitentyp]
+image::features/analyser/inc-import.png[Import-Tab mit dem Eingabefeld für die SOS-Anfrage]
 
-* z. B. Späher / Rammen
+Hierzu muss eine SOS-Anfrage im Spiel erstellt und dann in TW Forge importiert werden:
 
-== Eigene Angriffe und Account-Bezug
+. Gehe in "Die Stämme" auf *Eintreffend*, markiere die gewünschten Incs und drücke auf *Unterstützung anfordern*.
+. Kopiere den gesamten Text der SOS-Anfrage.
+. Füge den Text in TW Forge im Tab *Import* in das Feld *Eingehende Angriffe* ein und bestätige.
 
-image::features/analyser/filter_by_own_account_or_upload_analyser.png[Filterung nach eigenem Upload oder eigenem Account]
-
-Zusätzlich können Angriffe nach persönlichem Bezug gefiltert werden:
-
-* *Eigene*
-Zeigt nur die Angriffe an, die vom aktuellen Nutzer selbst hochgeladen wurden.
-
-* *Eigener Account*
-Zeigt alle Angriffe, die den aktuell ausgewählten Account betreffen.
-
-Diese Filter erleichtern insbesondere die persönliche Nachverfolgung und Koordination in größeren Stämmen.
-
-== Upload
-
-Damit die eingehenden Angriffe in der Tabelle aufgeführt werden können, müssen diese entweder von dem User selbst oder einem anderen Mitglied des Stammeskonstruktes hochgeladen werden.
-Dies geschieht über das Submenü "Import".
-
-image::features/analyser/upload_incs_analyser.png[Incs hochladen]
-
-Hierzu muss eine SOS-Anfrage erstellt werden und dann in TW Forge importiert werden.
-Zum Erstellen der SOS-Anfrage geh in "Die-Stämme"ingame auf "Eintreffend", markiere die gewünschten Incs und dann drücke auf "Unterstützung anfordern".
-
-image::features/analyser/create_sos_request_1_analyser.png[Erstellen einer SOS-Anfrage]
-
-Danach muss der gesamte Text der SOS-Anfrage kopiert und auf TW-Forge eingefügt werden.
-
-image::features/analyser/create_sos_request_2_analyser.png[Kopieren einer SOS-Anfrage]
-
-image::features/analyser/sos_twforge_paste_analyser.png[Einfügen auf TW-Forge]
+Unter *Import Ergebnis* siehst du anschließend, wie viele Angriffe eingelesen wurden.
 
 
+== Tabulator
+
+Über den Tab *Tabulator* können hochgeladene Angriffe gemeinsam mit Mitspielern getabbt werden.
+TW Forge verteilt die Tabs dabei automatisch auf die Dörfer aller Teilnehmer und erstellt daraus fertige Abschickpläne.
+Alle Details findest du auf der Seite xref:features/tabulator.adoc[Tabulator].

@@ -1,50 +1,140 @@
 = Aktionsplaner - Berechnen
 :page-navtitle: Aktionsplaner - Berechnen
 :description: Tool zur Erstellung von Angriffsplänen von einzelnen Accounts bis hin zu Plänen für ganze Stämme
-:keywords: Planung, Offaktionen, Angriffspläne, Berechnung, Random, Systematisch, Ziele
+:keywords: Planung, Offaktionen, Angriffspläne, Berechnung, Zufällig, Laufzeit, Ablehnungsgründe, Ziele
 :toc: macro
 :toclevels: 2
 :toc-title: Inhalt
 
-Im finalen Screen können sowohl der Berechnungsalgorithmus als auch der Berechnungspool ausgewählt werden.
+Auf der Seite "Berechnungen" wird der finale Abschickplan berechnet.
+Hier wird der Berechnungsalgorithmus ausgewählt, die Berechnung gestartet und das Ergebnis überprüft.
 
-[TIP,role=premium_gold]
-====
-Der systematische Berechnungsalgorithmus und der (dafür benötigte) dedicated Berechnungspool sind nur für TWForge-Gold Nutzer verfügbar.
-====
+toc::[]
 
-Für weitere Informationen zu den Berechnungsalgorithmen und dem Berechnungspool schaue xref:features/action-planner/overview.adoc#berechnungsalgorithmus_rechenkapazitäten[hier.]
+== Berechnung konfigurieren
+
+Unter *Berechnungsalgorithmus* wählst du, wie die Angriffe verteilt werden sollen:
+
+* *Zufällig*: komplett zufällige Verteilung – sehr schnell, aber ggf. keine optimale Abdeckung.
+* *Laufzeit minimiert*: optimale Abdeckung bei möglichst kurzen Laufzeiten.
+* *Laufzeit maximiert*: optimale Abdeckung bei möglichst langen Laufzeiten.
+* *Wachturmerkennung minimiert* und *Wachturm und Laufzeit minimiert*: nur bei aktivierter xref:features/action-planner/watchtower.adoc[Wachturmplanung].
+
+Der gewählte Algorithmus wird im Plan gespeichert und für die nächste Berechnung vorausgewählt.
+Eine ausführliche Beschreibung der Algorithmen sowie Informationen zum Berechnungsbudget findest du xref:features/action-planner/overview.adoc#berechnungsalgorithmus_rechenkapazitäten[hier].
+
+Mit *Berechnen* wird die Berechnung gestartet.
+Während der Berechnung zeigt ein Fortschrittsbalken in der Tabelle den aktuellen Stand; laufende Berechnungen können über das Zeilenmenü abgebrochen werden.
+
+image::features/action-planner/berechnungen/berechnungen_algorithmen.png[Auswahl des Berechnungsalgorithmus]
+
+TIP: Wenn ein Plan eine Abschickzeit-Abhängigkeit hat und nicht alle gewünschten Angriffe gefunden wurden, erscheint oberhalb das Angebot *"Möchtest du automatisiert weitere Angriffe suchen?"*. Damit startest du eine xref:features/action-planner/overview.adoc#cleaner-berechnung[Cleaner-Berechnung].
 
 == Verwaltung deiner Berechnungen
 
-image:features/action-planner/berechnen/uebersicht_berechnungen.png[Übersicht Berechnungen]
 
-Nachdem ein Plan erfolgreich berechnet worden ist, ist hier eine Übersicht aller berechneter Pläne sichtbar.
-Durch ein Klicken auf die drei Punkte können die einzelnen Berechnungen genauer betrachtet werden bzw. mit dem Plan interagiert werden.
+Die Seite hat zwei Tabs:
+
+* *Berechnungen*: Alle aktiven Berechnungen des Plans. Die oberste ist immer die aktuellste und wird bei Veröffentlichungen verwendet.
+* *Archiviert*: Gelöschte Berechnungen, die wiederhergestellt werden können.
+
+Die Tabelle zeigt pro Berechnung:
+
+* *Berechnung #*: fortlaufende Nummer.
+* *Datum*: Zeitpunkt der letzten Aktualisierung.
+* *Berechnung*: der verwendete Algorithmus.
+* *Status*: z.B. wartend, in Berechnung, abgeschlossen.
+Ein *Warnsymbol* bedeutet, dass der Plan zu groß ist, um vollständig berechnet zu werden – die Anzahl der Berechnungsmöglichkeiten wurde begrenzt (siehe xref:features/action-planner/overview.adoc#berechnungsbudget[Berechnungsbudget]).
+* *Angriffe*: berechnete / gewünschte Angriffe. Wurden weniger Angriffe gefunden als gewünscht, hilft die xref:#ablehnungsuebersicht[Ablehnungsübersicht] weiter.
+
+Durch ein Klicken auf die drei Punkte kann mit der jeweiligen Berechnung interagiert werden:
+
+=== Abbrechen
+
+Eine laufende Berechnung kann abgebrochen werden.
 
 === Löschen
 
-Der Plan kann gelöscht werden.
-Sollte der Plan aus Versehen gelöscht worden sein, so kann er über das Archiv wiederhergestellt werden.
+Die Berechnung wird archiviert.
+Sollte sie aus Versehen gelöscht worden sein, kann sie über den Tab "Archiviert" mit *Wiederherstellen* zurückgeholt werden.
 
-=== Herkunft
+=== Dörfer
 
-Durch Herkunft kann geschaut werden, für welchen Account wie viele Angriffe verplant worden sind.
-Außerdem kann durch ein Klicken auf das Zeichentool rechts auf der Karte angezeigt werden, von wo der Account wohin läuft.
+Öffnet ein Fenster mit zwei Tabellen: *Herkunft* und *Ziele*.
 
-=== Ziele
-
-Unter Ziele kann überprüft werden, wie viele Angriffe auf welches Ziel geplant worden sind.
+* Unter *Herkunft* siehst du für jeden Account, wie viele Angriffe verplant werden konnten (berechnet / ermittelt).
+Über die Spalte *Einzeichnen* kann auf der Karte angezeigt werden, von wo der Account wohin läuft.
+Auf Wachturm-Welten wird zusätzlich die Wachturm-Erkennung angezeigt.
+* Unter *Ziele* kann überprüft werden, wie viele Angriffe auf welchen Spieler bzw. welches Dorf geplant worden sind.
 Hierbei kann überprüft werden, ob alle Ziele mit den unter xref:features/action-planner/targets.adoc[Ziele] definierten Angriffszahlen abgedeckt werden konnten und welche Dörfer ggf. nicht vollständig bzw. gar nicht abgedeckt werden konnten.
+
+[TIP]
+====
+Über *Koordinatenliste* können die Herkunfts- bzw. Zielkoordinaten der Berechnung als Liste kopiert werden.
+====
+
+image::features/action-planner/berechnungen/berechnungen_doerfer.png[Dörfer-Popup einer Berechnung mit Herkunft- und Ziele-Tabelle]
 
 === Angriffe
 
-Unter Angriffe wird ein Fenster geöffnet, in welchem man eine Übersicht der berechneten Angriffe sehen kann.
-Durch das Suchfeld oben kann nach spezifischen Dörfern, Spielern oder Stämmen gesucht werden.
+Unter Angriffe wird eine Seite geöffnet, auf der alle berechneten Angriffe mit Herkunft, Ziel, Abschick- und Ankunftszeit aufgelistet sind.
+Über den Filter kann nach spezifischen Dörfern, Spielern oder Stämmen gesucht werden.
 
-=== WB-Exports
+=== Workbench Export
 
-Unter WB-Exports werden dir alle berechneten WB-Exports bereitgestellt
+Kopiert den Workbench-Export der Berechnung in die Zwischenablage.
 
-TIP: Diese sind nur für kurzfristiges überprüfen gedacht, für das Bereitstellen von Angriffsplänen müssen diese veröffentlicht werden.
-Mehr Informationen dazu findest du xref:features/action-planner/overview.adoc#_veröffentlichungen_von_plänen[hier.]
+TIP: Dieser ist nur für kurzfristiges Überprüfen gedacht. Für das Bereitstellen von Angriffsplänen müssen diese veröffentlicht werden.
+Mehr Informationen dazu findest du xref:features/action-planner/overview.adoc#campaigns[hier].
+
+== Ablehnungsübersicht – "Warum so wenige Angriffe?"[[ablehnungsuebersicht]]
+
+Wenn die aktuellste Berechnung weniger Angriffe gefunden hat als gewünscht, erscheint oberhalb der Tabelle der aufklappbare Bereich *"Warum so wenige Angriffe?"*.
+Er zeigt, aus welchen Gründen Kombinationen aus Herkunfts- und Zieldorf bei der Berechnung nicht berücksichtigt werden konnten.
+
+Pro Grund werden angezeigt:
+
+* *Verlorene Kapazität*: wie viele mögliche Angriffe (gewichtet nach maximaler Angriffsanzahl) durch diesen Grund entfallen sind.
+* *Kombinationen*: die Anzahl der betroffenen Herkunft→Ziel-Paare.
+* *Top Ziel-Spieler*: die Zielspieler, bei denen durch diesen Grund am meisten Kapazität verloren ging.
+
+Mögliche Gründe:
+
+[cols="1,2"]
+|===
+| Grund | Bedeutung
+
+| Blockiert durch Abhängigkeit
+| Die Kombination wurde bereits in einem Plan verwendet, zu dem eine Abhängigkeit besteht.
+
+| Moral
+| Die Moral der Kombination liegt unter der im Plan eingestellten Mindestmoral.
+
+| Punkteverhältnis
+| Das Punkteverhältnis der beiden Spieler verstößt gegen die Angriffsregeln der Welt.
+
+| Max. Entfernung
+| Die Laufzeit liegt außerhalb des möglichen Bereichs (relevant bei AG-Max-Range).
+
+| Wachturm
+| Der Angriff würde außerhalb der in der xref:features/action-planner/watchtower.adoc[Wachturmplanung] erlaubten Erkennungszeit liegen.
+
+| Zeitfenster
+| Es gibt keine passende Kombination aus Abschickzeit des Spielers und Ankunftszeitfenster.
+
+| Rücklaufzeit (Abhängigkeit)
+| Die Truppen wären laut Rückkehrzeit-Abhängigkeit noch nicht wieder zu Hause.
+
+| Abschickzeit-Abhängigkeit
+| Die Abschickzeit liegt außerhalb des in der Abschickzeit-Abhängigkeit erlaubten Abstands.
+
+| Casual Punkteverhältnis
+| Das Punkteverhältnis überschreitet das im Plan eingestellte xref:features/action-planner/overview.adoc#casual-schutz[Casual-Limit].
+|===
+
+TIP: Die häufigste Ursache für "0 Angriffe" sind fehlende Abschickzeiten der Spieler. Prüfe in diesem Fall die Abdeckung unter xref:features/action-planner/send-and-arrival-time.adoc#abschickzeiten[Abschickzeiten] oder aktiviere "Von Spielern angegebene Abschickzeiten ignorieren".
+
+
+== Plan duplizieren
+
+Unten auf der Seite kann der Plan über *Plan duplizieren* als neuer Entwurf kopiert werden (siehe xref:features/action-planner/overview.adoc#_aktionspläne_und_planungsgruppen[Aktionspläne und Planungsgruppen]).

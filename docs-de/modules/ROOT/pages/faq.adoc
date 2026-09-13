@@ -8,28 +8,99 @@
 Nutze die Suche (Browser: `Strg` + `F`), um schnell Antworten auf deine Fragen zu finden.
 ====
 
-== Fragen und Antworten:
+== Konto und Anmeldung
+
+=== Ich habe mein Passwort vergessen, was kann ich tun?
+
+Klicke auf der Anmeldeseite auf *Passwort vergessen?*, gib deine E-Mail-Adresse ein und klicke auf *Link senden*.
+Du erhältst eine E-Mail mit einem Link, über den du ein neues Passwort festlegen kannst.
+Aus Datenschutzgründen wird nicht angezeigt, ob zu der Adresse ein Konto existiert - prüfe also die Schreibweise, falls keine E-Mail ankommt.
+Die genauen Schritte findest du unter xref:getting-started.adoc#_passwort_vergessen[Passwort vergessen].
+
+=== Die Bestätigungs-E-Mail kommt nicht an
+
+Schau zuerst in deinen Spam-Ordner.
+Ist dort nichts, öffne dein xref:getting-started.adoc#profil[Profil] und prüfe, ob die hinterlegte E-Mail-Adresse korrekt ist.
+Dort kannst du die Adresse korrigieren und über *E-Mail bestätigen* eine neue Bestätigungs-E-Mail anfordern.
+
+=== Kann ich meinen Anzeigenamen nachträglich ändern?
+
+Ja, den Namen kannst du jederzeit in deinem xref:getting-started.adoc#profil[Profil] ändern.
+Erlaubt sind 4 bis 32 Zeichen, nur Buchstaben und Zahlen.
+
+=== Wie verknüpfe ich einen weiteren Ingame-Account oder eine andere Welt?
+
+Öffne über das Kontosymbol oben rechts den Punkt *Welten* und wähle *Weiteren Welten beitreten*.
+Für jede Welt musst du deinen Ingame-Account einmalig über den Code in deinem Ingame-Profil bestätigen, siehe xref:getting-started.adoc#verknuepfung[Verknüpfung mit dem Ingame Account].
+
+== Stammeskonstrukt
 
 === Warum kann ich kein Stammeskonstrukt erstellen?
 
-Man benötigt dafür einen Premium-Zugang.
-Für weitere Informationen klicke xref:premium.adoc[hier].
+Während der Open Beta kann jeder Nutzer ein Stammeskonstrukt gründen - auch, wenn er bereits Mitglied eines anderen Konstrukts ist.
+Bist du bereits in einem Konstrukt, findest du den Punkt *Neuer Stamm* im Stammes-Dropdown oben auf der Seite.
+Häufigster Grund für eine Fehlermeldung ist ein bereits vergebener Tag: Der Tag muss auf der Welt eindeutig sein und 3 bis 6 Zeichen ohne Sonderzeichen haben (siehe xref:features/tribe-construct.adoc#gruenden[Stammeskonstrukt gründen]).
 
 === Warum können meine Member die Berichte nicht sehen?
 
 Das liegt vermutlich daran, dass ihr euch entweder nicht im gleichen Konstrukt befindet, oder dass die betreffenden Member noch nicht das erforderliche Mindest-Rechtelevel (Mitglied) besitzen.
-Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#members[hier].
-
-=== Warum laggt es bei mir, wenn ich im Aktionsplaner eine Aktion planen will?
-
-Gehe sicher, dass bei dir in den Browsereinstellungen die Hardwarebeschleunigung eingeschaltet ist.
+Neu angenommene Mitglieder haben immer zunächst das Level *Gast* und müssen von der Führung unter *Mitglieder* hochgestuft werden.
+Für weitere Informationen zu den Berechtigungen im Stamm findest du xref:features/tribe-construct.adoc#rechtelevel[hier].
 
 === Warum kann meine Stammesführung meine eingetragenen Abschickzeiten / AGs nicht sehen?
 
 Das liegt in den meisten Fällen daran, dass du dem Stammeskonstrukt in TW-Forge noch nicht beigetreten bist.
 
+== Aktionsplaner
+
+=== Warum laggt es bei mir, wenn ich im Aktionsplaner eine Aktion planen will?
+
+Gehe sicher, dass bei dir in den Browsereinstellungen die Hardwarebeschleunigung eingeschaltet ist.
+
 === Mein Plan errechnet keine Angriffe, was habe ich falsch gemacht?
 
-Hierfür kann es viele Gründe geben. Einer der häufigsten Gründe ist, dass keine Abschickzeiten angeben sind. Dies kann durch ein Auswählen der Checkbox "Eingetragene Abschickzeiten ignorieren" umgangen werden.
+Hierfür kann es viele Gründe geben. Einer der häufigsten Gründe ist, dass keine Abschickzeiten angegeben sind. Dies kann durch ein Auswählen der Checkbox "Von Spielern angegebene Abschickzeiten ignorieren" unter Abschickzeiten umgangen werden.
+Wurden weniger Angriffe gefunden als gewünscht, zeigt die xref:features/action-planner/calculations.adoc#ablehnungsuebersicht[Ablehnungsübersicht "Warum so wenige Angriffe?"] auf der Berechnungsseite, welche Gründe (z.B. Moral, Zeitfenster, Abhängigkeiten) dafür verantwortlich sind.
 
-// TODO
+== Berichte und Angriffe
+
+=== Ich sehe den Tab "Wachturm" unter Berichte nicht
+
+Der Tab und die Wachturm-Datenbank gibt es nur auf Welten, auf denen der Wachturm als Gebäude verfügbar ist.
+Auf allen anderen Welten wird er ausgeblendet, siehe xref:features/reports.adoc#wachturm[Wachturm].
+
+=== Warum werden meine importierten Berichte nicht in die Datenbank übernommen?
+
+Der Import akzeptiert veröffentlichte Berichtslinks oder das Export-Format `[report]…[/report]`.
+Unterhalb des Eingabefelds siehst du pro Bericht, ob der Import erfolgreich war.
+Über Discord landen nur Berichte in der Datenbank, wenn der Server mit dem Konstrukt verknüpft ist und die Nachricht in einem freigegebenen Channel gepostet wurde, siehe xref:features/reports.adoc#import_reports[Import von Berichten].
+
+=== Wie bekomme ich meine eingehenden Angriffe in TW Forge?
+
+Markiere im Spiel unter *Eintreffend* die gewünschten Angriffe, klicke auf *Unterstützung anfordern* und kopiere den Text der SOS-Anfrage in den Tab *Import* unter *Angriffe*.
+Die Schritte im Detail findest du unter xref:features/analyser.adoc#upload[Import].
+
+== Benachrichtigungen und Discord
+
+=== Wie aktiviere ich Push-Benachrichtigungen?
+
+. Öffne *Einstellungen → Benachrichtigungen → Push-Empfänger* und registriere den aktuellen Browser.
+Erlaube die Benachrichtigungen, wenn der Browser nachfragt.
+. Aktiviere anschließend in der Benachrichtigungs-Matrix die Spalte *Push* für die gewünschten Ereignisse.
+
+Push-Benachrichtigungen werden pro Browser bzw. Gerät registriert; auf dem Smartphone hilft es, TW Forge über "Zum Startbildschirm hinzufügen" zu installieren.
+Mehr dazu unter xref:settings.adoc#push-empfaenger[Push-Empfänger].
+
+=== Der Discord-Bot reagiert nicht auf Berichte in meinem Server
+
+Prüfe, ob der Bot auf dem Server eingeladen und über den Befehl mit deinem Konstrukt bzw. Account verknüpft ist.
+Ist beim Verknüpfen ein Channel angegeben worden, werden nur Berichte aus diesem Channel übernommen.
+Das Setup ist unter xref:features/discordbot.adoc[Discord-Bot] beschrieben.
+
+== Userscript
+
+=== Das Userscript wird im Spiel nicht geladen
+
+Häufigste Ursache ist, dass im Browser der Entwicklermodus für Erweiterungen nicht eingeschaltet ist.
+Prüfe außerdem, ob der API-Key aus TW Forge korrekt in den Stämme-Einstellungen unter *Spieloptionen → Datenbanksettings* eingetragen ist.
+Details findest du unter xref:features/userscript.adoc[Userscript].

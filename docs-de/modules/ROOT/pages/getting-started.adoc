@@ -1,49 +1,90 @@
 = Erste Schritte
+:description: Registrierung, Login, Profil und Verknüpfung deines Ingame-Accounts mit TW Forge
+:keywords: Registrieren, Anmelden, Login, Passwort vergessen, E-Mail bestätigen, Profil, Welt hinzufügen, Verknüpfung
 
 Diese Anleitung führt dich durch die Einrichtung von TW Forge und das Hinzufügen deiner ersten Welt.
 
 == Konto erstellen
 
-. Gehe zu https://twforge.net[twforge.net]
-. Klicke auf **Jetzt anmelden**, danach melde dich entweder mit einem bereits bestehenden Konto an oder Registriere ein neues.
+. Gehe zu https://twforge.net[twforge.net] und klicke auf **Jetzt loslegen!**
+. Auf der Anmeldeseite klickst du unten auf **Registrieren**.
+. Gib deine E-Mail-Adresse und ein Passwort ein, wiederhole das Passwort und klicke auf **Registrieren**.
+. Wähle einen **Namen** für dein Konto (4–32 Zeichen, nur Buchstaben und Zahlen).
+Der Name wird anderen Spielern angezeigt, wenn du in TW Forge mit ihnen interagierst, und kann später jederzeit im <<profil,Profil>> geändert werden.
+. Danach landest du in der Weltauswahl und kannst deine erste Welt hinzufügen.
 
 WARNING: Jeder Spieler muss seinen eigenen Account erstellen, Accountsharing ist untersagt und kann zum Ausschluss von TW-Forge führen.
+
+TIP: Bestätige nach der Registrierung deine E-Mail-Adresse.
+Öffne dazu dein <<profil,Profil>> und klicke unter *Anmeldung* auf **E-Mail bestätigen**.
+Du erhältst eine E-Mail mit einem Bestätigungslink - schau auch im Spam-Ordner nach, falls sie nicht ankommt.
+
+=== Anmelden
+
+Wenn du bereits ein Konto hast, meldest du dich auf der Anmeldeseite mit E-Mail-Adresse und Passwort an.
+Über das Augen-Symbol im Passwortfeld kannst du dir das eingegebene Passwort anzeigen lassen.
+
+=== Passwort vergessen
+
+. Klicke auf der Anmeldeseite auf **Passwort vergessen?**
+. Gib deine E-Mail-Adresse ein und klicke auf **Link senden**.
+. Du erhältst eine E-Mail mit einem Link, über den du ein neues Passwort festlegen kannst.
+
+NOTE: Aus Datenschutzgründen wird nicht angezeigt, ob zu der eingegebenen E-Mail-Adresse ein Konto existiert.
+Sollte nach einigen Minuten keine E-Mail eingegangen sein, prüfe deinen Spam-Ordner und die Schreibweise der Adresse.
 
 == Eine Welt hinzufügen
 
 Nach dem Login siehst du die Weltauswahl.
+Dort werden alle Welten angezeigt, mit denen dein Account bereits verknüpft ist, inklusive Rang, Punkten und Dörfern.
 
-. Wähle deine gewünschte Welt aus (z.B. de250, de251)
-. Folge den Anweisungen um dein Konto zu verbinden
+. Wähle unter *Weiteren Welten beitreten* die gewünschte Welt aus (z.B. de250, de251).
+. Folge den Anweisungen, um deinen Ingame-Account zu verknüpfen (siehe <<verknuepfung,Verknüpfung mit dem Ingame Account>>).
 
-TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln.
+TIP: Du kannst mehrere Welten hinzufügen und jederzeit zwischen ihnen wechseln - entweder über die Weltauswahl auf der Startseite oder über das Kontosymbol in der Kopfzeile unter *Welten*.
 
 === Verknüpfung von TW-Forge mit dem Ingame Account[[verknuepfung]]
 
 Um TW-Forge nutzen zu können, musst du deinen TW-Forge Account mit deinem Ingame-"Die-Stämme"-Account verknüpfen.
 Das funktioniert folgendermaßen:
 
-. Gib deinen Spielernamen ein und drücke auf "Nächster Schritt"
-. Logge dich in "die Stämme" ein und öffne dein Profil.
-Füge den in TW-Forge angezeigten Code in dein Profil ein und klicke auf Speichern.
+. Gib deinen Spielernamen ein und drücke auf **Nächster Schritt**.
+Du musst Zugriff auf diesen Account haben.
+. Kopiere den angezeigten Code, logge dich in "Die Stämme" ein und öffne dein Profil.
+Füge den Code in dein Profil ein und klicke auf Speichern.
 Hierbei muss das Profil nicht leer sein, du kannst den Code einfach zu dem bestehenden Profil hinzufügen.
-. Drücke in TW-Forge auf "Überprüfen".
+. Drücke in TW-Forge auf **Überprüfen**.
 Wenn du alle Schritte korrekt ausgeführt hast, ist dein Profil jetzt korrekt verbunden - **Herzlichen Glückwunsch**, du kannst TW-Forge jetzt nutzen.
-Den Code, welcher in das Profil kopiert werden musste, kann nun wieder entfernt werden.
+Den Code, welcher in das Profil kopiert werden musste, kannst du nun wieder entfernen.
+
+== Profil[[profil]]
+
+Dein Profil erreichst du über das Kontosymbol oben rechts in der Kopfzeile unter *Profil*.
+Dort findest du zwei Bereiche:
+
+* *Profil* - Anzeigename ändern, verknüpfte Welten einsehen und einzelne Verknüpfungen wieder löschen.
+Unter *Anmeldung* siehst du deine E-Mail-Adresse und ob sie bestätigt ist, kannst die E-Mail-Adresse oder das Passwort ändern (jeweils mit Eingabe des aktuellen Passworts) und die Bestätigungs-E-Mail erneut anfordern.
+* *Berechnungen* - Übersicht über dein monatliches Berechnungsbudget für den xref:features/action-planner/overview.adoc[Aktionsplaner] (gesamt, genutzt, verbleibend) sowie der Berechnungsverlauf.
+
+Über das gleiche Menü gelangst du außerdem zu den xref:settings.adoc[Einstellungen], zur Weltauswahl, zu den Release Notes und zum Logout.
 
 == Navigation auf der Website
 
 Sobald du eine Welt hinzugefügt hast, siehst du das Hauptmenü mit allen verfügbaren Features:
 
-* *xref:features/analyser.adoc[Angriffe]* - Eingehende Angriffe einlesen und auswerten
+* *Start* - Das xref:features/dashboard.adoc[Dashboard] mit deinen Statistiken, der Dominanz auf der Welt und den Top Berichten
+* *xref:features/analyser.adoc[Angriffe]* - Eingehende Angriffe einlesen und auswerten, gemeinsam mit dem xref:features/tabulator.adoc[Tabulator] tabben
 * *xref:features/reports.adoc[Berichte]* - Hochladen und Durchsuchen von Berichten
 * *xref:features/map.adoc[Karte]* - Interaktive Weltkarte
-* *Planner* – Übersicht über
+* *Planer* – Übersicht über
 **xref:features/planner/plans.adoc[Angriffspläne]**, deine
 **xref:features/planner/inquiry.adoc[Abfragen]**, die **xref:features/planner/support_boosts.adoc[UT-Boost-DB]** und Start des
 **xref:features/action-planner/overview.adoc[Aktionsplaners]**
+* *xref:features/account.adoc[Account]* - Truppen einlesen, Urlaubsvertretung und Discord-Verknüpfung des Ingame-Accounts
 * *xref:features/tribe-construct.adoc[Stammeskonstrukt]* - Erstelle ein Stammeskonstrukt oder tritt einem bestehenden Konstrukt bei!
 * *xref:features/userscript.adoc[Userscript]* - Angriffs-Auswertung ingame anzeigen
+
+Am unteren Ende des Menüs findest du *Was ist neu?* (die Release Notes, neue Einträge werden mit einem Badge markiert), den Link zum Community-Discord, die Hilfe sowie Impressum, Datenschutz und AGB.
 
 Klicke auf ein Feature im Menü, um loszulegen.
 

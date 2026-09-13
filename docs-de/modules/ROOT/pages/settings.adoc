@@ -1,13 +1,18 @@
 = Einstellungen - Personalisierung von TW-Forge
 :page-navtitle: Einstellungen
 :description: Globale Einstellungen, die Weltenübergreifend für den TW-Forge Account gelten
-:keywords: Einstellungen, Settings, Lightmode, Darkmode, Discord, Farben, Tabellen
+:keywords: Einstellungen, Settings, Lightmode, Darkmode, Discord, Farben, Tabellen, Benachrichtigungen, Push
 :toc: macro
 :toclevels: 1
 :toc-title: Inhalt
 
 Auf dieser Seite werden alle verfügbaren weltenübergreifenden Einstellungen in TW Forge erklärt.
-Einstellungen beeinflussen die Anzeige von ausgewerteten Angriffen, die Darstellung im Interface, Discord-Verbindungen und Notifications.
+Einstellungen beeinflussen die Anzeige von ausgewerteten Angriffen, die Darstellung im Interface, Discord-Verbindungen und Benachrichtigungen.
+
+Du erreichst die Einstellungen über das Kontosymbol oben rechts in der Kopfzeile unter *Einstellungen*.
+Die Startseite des Dialogs zeigt eine Übersicht aller Bereiche, links (bzw. auf dem Smartphone oben) wechselst du zwischen Allgemein, Angriffe, Planer, Discord und Benachrichtigungen.
+
+NOTE: Anzeigename, verknüpfte Welten, E-Mail-Adresse und Passwort verwaltest du nicht hier, sondern in deinem xref:getting-started.adoc#profil[Profil].
 
 toc::[]
 
@@ -26,23 +31,15 @@ Zur Auswahl stehen:
 
 Die gewählte Einstellung wirkt sich ausschließlich auf die Darstellung der Benutzeroberfläche aus und hat keinen Einfluss auf Funktionen, Berechnungen oder gespeicherte Daten.
 
-== Account
-
-image::settings/account_settings.png[Accounteinstellungen in TW Forge]
-
-Unter diesem Punkt werden accountbezogene Einstellungen vorgenommen.
-
-- Einsicht / Änderung des Anzeigenamens
-- Einsicht / Einstellbarkeit von verknüpften Welten
-
-== Angriffe
+== Angriffe[[angriffe]]
 
 image::settings/angriffe_settings.png[Einstellung der farblichen Markierungen für eingehende Angriffe]
 
 Unter diesem Punkt kann definiert werden, ab welchen maximal errechneten Truppen TW-Forge die farblichen Markierungen für die Incs vornimmt.
 Diese Einstellbarkeit sorgt dafür, dass individuelle Präferenzen umgesetzt werden können.
 
-"Kleine Angriffe" können durch den Regler angepasst werden, diese verschiebt dann wiederum die Untergrenze für klein-mittlere Angriffe, der Regler der klein-mittleren Angriffe verschiebt wiederum die eigene Obergrenze sowie die Untergrenze für mittlere Incs usw.
+Es gibt vier Kategorien: *Klein*, *Klein-Mittel*, *Mittel* und *Groß*.
+Über die Regler legst du die Schwellwerte zwischen den Kategorien fest: Der Regler für "Klein" verschiebt die Untergrenze für klein-mittlere Angriffe, der Regler der klein-mittleren Angriffe verschiebt wiederum die eigene Obergrenze sowie die Untergrenze für mittlere Incs usw.
 
 Die Einstellungen, welche Farbe wann angezeigt wird, hat sowohl Auswirkungen auf die Anzeige auf TW-Forge unter xref:features/analyser.adoc#filterung[Angriffe] als auch auf die Anzeige Ingame durch das erlaubte Userscript.
 
@@ -62,10 +59,84 @@ a| image::settings/discord_no_connection_settings.png[Keine Discordverknüpfung,
 a| image::settings/discord_connected_account.png[Discord verknüpft,width=100%]
 |===
 
-Unter diesem Punkt kann zunächst ein Discord Account verknüpft werden.
-Hierzu einfach auf den Button drücken und im Browser seinen Discord Account anmelden und der Verknüpfung zustimmen.
-So sind die Accounts erfolgreich verknüpft.
+Unter diesem Punkt kannst du zunächst deinen Discord Account verknüpfen.
+Hierzu einfach auf den Button drücken, im Browser mit deinem Discord Account anmelden und der Verknüpfung zustimmen.
+So sind die Accounts erfolgreich verknüpft und der verknüpfte Discord-Account wird angezeigt.
 
-Jetzt hat man die Möglichkeit, entweder die Verknüpfung wieder zu löschen oder den Discord Bot zu einem Discord-Server (entweder Stammesdiscord oder Accountdiscord) hinzuzufügen.
-Außerdem besteht hier die Möglichkeit, dem Community-Discord "TW-Forge" zu joinen, um Fragen zu stellen sowie Feedback einzubringen.
+Anschließend stehen dir drei Buttons zur Verfügung:
+
+* *Discord Bot hinzufügen* - Fügt den xref:features/discordbot.adoc[TW-Forge Bot] zu einem Discord-Server (Stammesdiscord oder Accountdiscord) hinzu.
+* *Community Discord* - Bringt dich auf den Community-Discord "TW-Forge", um Fragen zu stellen sowie Feedback einzubringen.
+* *Verknüpfung löschen* - Hebt die Verknüpfung mit deinem Discord-Account wieder auf.
+
+Die Verknüpfung ist außerdem Voraussetzung für <<benachrichtigungen,Benachrichtigungen>> per Discord.
+
+== Benachrichtigungen[[benachrichtigungen]]
+
+image::features/benachrichtigungen/benachrichtigungen_matrix.png[Einstellungen → Benachrichtigungen mit der Matrix der Kanäle Web, Push und Discord]
+
+TW Forge informiert dich über wichtige Ereignisse wie neue Angriffspläne, Tabulator-Einladungen oder Beitrittsanfragen im Stammeskonstrukt.
+Unter diesem Punkt legst du fest, *welche* Ereignisse dich erreichen sollen und über *welchen Kanal*.
+
+=== Kanäle
+
+Es stehen drei Kanäle zur Verfügung:
+
+* *Web* - Die Benachrichtigung erscheint in TW Forge selbst.
+Über das Glocken-Symbol in der Kopfzeile öffnest du die Liste deiner Benachrichtigungen, kannst sie als gelesen markieren, löschen oder per Klick direkt zur betreffenden Seite springen.
+* *Push* - Die Benachrichtigung wird als Browser-Push-Nachricht an alle registrierten Browser gesendet, auch wenn TW Forge gerade nicht geöffnet ist.
+Voraussetzung ist mindestens ein registrierter Browser (siehe <<push-empfaenger,Push-Empfänger>>).
+* *Discord* - Die Benachrichtigung wird dir per Direktnachricht vom TW Forge Bot auf Discord zugestellt.
+Voraussetzung ist ein verknüpfter Discord-Account (siehe <<discord,Discord>>).
+
+Solange Push bzw. Discord noch nicht eingerichtet sind, bleiben die entsprechenden Spalten ausgegraut.
+Ein Klick auf die Spaltenüberschrift bringt dich direkt zur jeweiligen Einrichtung.
+
+=== Benachrichtigungen konfigurieren
+
+Die Matrix listet alle verfügbaren Benachrichtigungen gruppiert nach Modul auf.
+Pro Zeile aktivierst oder deaktivierst du die einzelnen Kanäle über die Checkboxen.
+Das Info-Symbol neben dem Namen erklärt, wann die jeweilige Benachrichtigung ausgelöst wird.
+
+[cols="1,2,3",options="header"]
+|===
+| Gruppe | Benachrichtigung | Wird ausgelöst, wenn ...
+| Account | Account verknüpft | sich ein Nutzer neu mit deinem Account verknüpft oder eine Verknüpfung gelöscht wird
+.2+| Analyser | Angriffsbewertung herabgestuft | die Bewertung eines Angriffs dank neu hochgeladener Informationen herabgestuft werden konnte
+| Tabulator Einladung | du zu einer xref:features/tabulator.adoc[Tabulator]-Anfrage eingeladen wurdest
+.4+| Planer | Neuer Angriffsplan | ein neuer xref:features/planner/plans.adoc[Angriffsplan] für dich verfügbar ist
+| Abschickfenster beginnt | ein von dir erstelltes Abschickfenster bevorsteht, in dem Befehle geschickt werden müssen
+| Abschick-Erinnerung | eine in einem konkreten Plan eingestellte Erinnerung fällig wird
+| Support-Boost hinzugefügt | ein neuer Eintrag in der xref:features/planner/support_boosts.adoc[UT-Boost-Datenbank] angelegt wurde
+| Berichte | Truppen rausgeadelt | in deiner Nähe Truppen rausgeadelt wurden (zusammengefasst über 24 Stunden)
+.2+| Stammeskonstrukt | Beitrittsanfragen | eine Beitrittsanfrage gestellt, zurückgezogen, angenommen oder abgelehnt wurde
+| Bündnisanfragen | eine Bündnisanfrage gestellt, angenommen oder abgelehnt bzw. ein Bündnis aufgelöst wurde
+|===
+
+NOTE: Einige Benachrichtigungen sind für den Kanal *Web* verpflichtend und können dort nicht deaktiviert werden, z.B. Einladungen und Anfragen, auf die du reagieren musst.
+Die entsprechende Checkbox ist in diesem Fall ausgegraut.
+
+=== Einstellungen pro Welt
+
+Standardmäßig gelten die Einstellungen *global* für alle verknüpften Welten.
+Über die Auswahl *Welt* kannst du die Einstellungen für eine einzelne Welt abweichend festlegen, z.B. um auf einer Nebenwelt keine Push-Nachrichten zu erhalten.
+
+* Zeilen mit dem Badge *Global* verwenden die globale Einstellung.
+* Sobald du eine Checkbox für eine Welt änderst, erhält die Zeile das Badge *Überschrieben*.
+* Über das Undo-Symbol verwirfst du die weltbezogene Einstellung und übernimmst wieder die globale.
+
+=== Push-Empfänger[[push-empfaenger]]
+
+Push-Benachrichtigungen werden pro Browser bzw. Gerät registriert.
+Im Tab *Push-Empfänger* fügst du den aktuell verwendeten Browser hinzu:
+
+. Vergib eine *Bezeichnung*, um den Browser später wiederzuerkennen (z.B. "Laptop" oder "Handy").
+. Klicke auf *Browser registrieren* und erlaube die Benachrichtigungen, wenn der Browser nachfragt.
+
+Unter *Registrierte Browser* siehst du alle bisher hinzugefügten Geräte und kannst sie über das Papierkorb-Symbol wieder entfernen.
+Ist der aktuelle Browser bereits registriert, wird das entsprechend angezeigt.
+
+TIP: Auf dem Smartphone lohnt es sich, TW Forge über "Zum Startbildschirm hinzufügen" als App zu installieren, damit Push-Benachrichtigungen zuverlässig ankommen.
+
+NOTE: Meldet der Browser, dass Push-Benachrichtigungen nicht verfügbar sind, unterstützt er diese Funktion nicht oder sie ist in den Browser-Einstellungen deaktiviert.
 

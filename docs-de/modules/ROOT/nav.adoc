@@ -2,9 +2,11 @@
 * xref:getting-started.adoc[Erste Schritte]
 * xref:settings.adoc[Einstellungen]
 * Features
+** xref:features/dashboard.adoc[Dashboard]
 ** xref:features/reports.adoc[Berichte]
 ** xref:features/map.adoc[Karte]
 ** xref:features/analyser.adoc[Angriffe]
+** xref:features/tabulator.adoc[Tabulator]
 ** xref:features/discordbot.adoc[DC-Bot]
 ** Planer
 *** xref:features/planner/plans.adoc[Angriffspläne]
@@ -18,9 +20,8 @@
 *** xref:features/action-planner/source.adoc[Herkunft]
 *** xref:features/action-planner/targets.adoc[Ziele]
 *** xref:features/action-planner/send-and-arrival-time.adoc[Zeiten]
+*** xref:features/action-planner/watchtower.adoc[Wachturm]
 *** xref:features/action-planner/calculations.adoc[Berechnen]
 * xref:faq.adoc[FAQ]
 * xref:premium.adoc[Premium-Features]
 * xref:api.adoc[API]
-// hier kommt noch mehr
-

@@ -1,11 +1,12 @@
 = Premium-Features - TW Forge Silber und TW Forge Gold
 :page-navtitle: Premium-Features
 :description: Auflistung und Erklärung der premium-exklusiven Features
-:keywords: Premium, Stamm gründen, Silber, Gold, Zeiten anpassen, Cleaner Berechnung
-:toc: macro
-:toclevels: 1
-:toc-title: Inhalt
+:keywords: Premium, Silber, Gold, Open Beta
 
-Hier findest du eine Auflistung von allen Premium-Vorteilen, die du durch das Buchen von TW Forge Silber und TW Forge Gold erhältst.
+IMPORTANT: TW Forge befindet sich aktuell in der *Open Beta*.
+Während dieser Phase stehen *alle Funktionen allen Nutzern kostenlos* zur Verfügung - es gibt derzeit keine Einschränkungen durch Premium-Stufen.
 
-NOTE: TW Forge befindet sich aktuell in der geschlossenen Beta-Phase. Daher können die beschriebenen Premium-Features noch nicht erworben werden und stehen nur ausgewählten User für weitere Fragen tritt dem xref:https://discord.gg/PYr9Sb7UHm[TW-Forge Discord] bei.
+Für die Zeit nach der Beta sind die Premium-Stufen *TW Forge Silber* und *TW Forge Gold* geplant.
+Sobald diese verfügbar sind, findest du hier eine Auflistung aller Premium-Vorteile.
+
+Bei Fragen dazu komm gerne auf unseren https://discord.gg/PYr9Sb7UHm[TW-Forge Discord].

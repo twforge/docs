@@ -1,0 +1,43 @@
+= Aktionsplaner - Wachturm
+:page-navtitle: Aktionsplaner - Wachturm
+:description: Wachtürme des Gegners bei der Angriffsplanung berücksichtigen
+:keywords: Planung, Offaktionen, Angriffspläne, Wachturm, WT, Erkennung
+:toc: macro
+:toclevels: 2
+:toc-title: Inhalt
+
+Auf Welten mit Wachturm erscheint im Aktionsplaner zwischen *Ankunftszeit* und *Berechnungen* der zusätzliche Schritt *Wachturm*.
+Hier kann die Wachturmplanung aktiviert werden, um die Wachtürme des Gegners in die Planung zu integrieren.
+
+toc::[]
+
+== Funktionsweise
+
+Ein Wachturm erkennt eingehende Angriffe abhängig von seiner Stufe eine bestimmte Zeit vor dem Einschlag.
+Bei aktivierter Wachturmplanung berechnet der Aktionsplaner für jede Kombination aus Herkunfts- und Zieldorf, wie lange vor dem Einschlag der Angriff von den gegnerischen Wachtürmen erkannt würde, und berücksichtigt das bei der Auswahl der Angriffe.
+
+IMPORTANT: Grundlage ist die Wachturm-Datenbank unter xref:features/reports.adoc#wachturm[Berichte → Wachturm]. Nur dort eingetragene Wachtürme (manuell gemeldet oder aus Berichten übernommen) können berücksichtigt werden.
+
+== Einstellungen
+
+image::features/action-planner/wachturm/wachturm_einstellungen.png[Einstellungen der Wachturmplanung]
+
+* *Wachturm aktivieren*: Schaltet die Wachturmplanung für diesen Plan ein.
+* *Wachtürme berücksichtigen*:
+** *Alle*: Alle in der Wachturm-Datenbank des Stammeskonstrukts eingetragenen Wachtürme.
+** *Nur eigene*: Nur die von dir selbst gemeldeten Wachtürme.
+* *Max Zeit erkannt (Std)*: Wie viele Stunden vor dem Einschlag die Angriffe *frühestens* erkannt werden dürfen.
+Kombinationen, bei denen der Angriff früher erkannt würde, werden bei der Berechnung ausgeschlossen.
+* *Min Zeit erkannt (Std)*: Wie viele Stunden vor dem Einschlag die Angriffe *auf jeden Fall* erkannt sein sollen.
+Relevant für Ablenkangriffe, die bewusst früh erkannt werden sollen.
+
+Kombinationen, die außerhalb des eingestellten Bereichs liegen, tauchen in der xref:features/action-planner/calculations.adoc#ablehnungsuebersicht[Ablehnungsübersicht] unter dem Grund "Wachturm" auf.
+
+== Berechnungsalgorithmen
+
+Bei aktivierter Wachturmplanung stehen auf der Seite xref:features/action-planner/calculations.adoc[Berechnungen] zwei zusätzliche Algorithmen zur Verfügung:
+
+* *Wachturmerkennung minimiert*: Minimiert die Zeit, in der ein Angriff von den gegnerischen Wachtürmen erkannt wird.
+* *Wachturm und Laufzeit minimiert*: Minimiert die Kombination aus Laufzeit und Wachturm-Erkennung – optimal für kurze Laufzeit und späte Erkennung.
+
+Im Dörfer-Popup einer Berechnung wird unter *Herkunft* zusätzlich pro Account die Wachturm-Erkennung angezeigt.
