@@ -114,7 +114,7 @@ Mögliche Gründe:
 | Das Punkteverhältnis der beiden Spieler verstößt gegen die Angriffsregeln der Welt.
 
 | Max. Entfernung
-| Die Laufzeit liegt außerhalb des möglichen Bereichs (z.B. zu weit für das Abschick-/Ankunftsfenster).
+| Die Laufzeit liegt außerhalb des möglichen Bereichs (relevant bei AG-Max-Range).
 
 | Wachturm
 | Der Angriff würde außerhalb der in der xref:features/action-planner/watchtower.adoc[Wachturmplanung] erlaubten Erkennungszeit liegen.
