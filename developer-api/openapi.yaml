@@ -296,10 +296,24 @@ paths:
         - incoming-attacks
       summary: Get a page of incoming attacks.
       operationId: getIncomingAttacks
-      description: Page of incoming attacks the current user is allowed to see. Includes attacks imported by other users.
+      description: |
+        Page of still-upcoming incoming attacks the current user is allowed to see, soonest arrival first. Includes
+        attacks imported by other users.
       parameters:
         - $ref: '#/components/parameters/page'
         - $ref: '#/components/parameters/pageSize'
+        - name: defender-id
+          in: query
+          required: false
+          description: Only return attacks against the given players.
+          explode: false
+          schema:
+            type: array
+            uniqueItems: true
+            maxItems: 100
+            items:
+              type: integer
+              format: int64
         - name: village-id
           in: query
           required: false
@@ -392,7 +406,7 @@ components:
         type: integer
         format: int32
         default: 10
-        maximum: 200
+        maximum: 1000
     world:
       name: world
       in: path
@@ -820,10 +834,14 @@ components:
         - unit
         - targetId
         - sourceId
+        - sourceX
+        - sourceY
         - attackerId
+        - attackerName
         - arrival
         - sendTime
         - actions
+        - attackCount
       properties:
         id:
           type: integer
@@ -838,9 +856,17 @@ components:
         sourceId:
           type: integer
           format: int32
+        sourceX:
+          type: integer
+          format: int32
+        sourceY:
+          type: integer
+          format: int32
         attackerId:
           type: integer
           format: int64
+        attackerName:
+          type: string
         defenderId:
           type: integer
           format: int64
@@ -862,6 +888,15 @@ components:
           $ref: '#/components/schemas/AttackSize'
         rating:
           $ref: '#/components/schemas/AttackRating'
+        commandId:
+          type: integer
+          format: int64
+          description: >-
+            The game's command id, usable as an exact match key for attack rows in the game UI.
+            Absent for attacks imported from plain SoS requests.
+        attackCount:
+          type: integer
+          format: int32
     AttackRating:
       type: object
       required:
