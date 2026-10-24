@@ -86,13 +86,13 @@ Um die Leitung abzugeben, ernenne unter xref:#members[Mitglieder] zuerst einen w
 
 image::features/tribe-construct/tribe_mitglieder.png[Mitgliederliste mit den Spalten Name, Beigetreten, Account und Stufe sowie den Bearbeiten-Icons]
 
-Im Bereich *Mitglieder* siehst du alle Accounts des Konstrukts mit Beitrittsdatum und dem verknüpften Ingame-Account.
+Im Bereich *Mitglieder* siehst du alle Accounts des Konstrukts mit Beitrittsdatum, dem verknüpften Ingame-Account und dessen Ingame-Stamm.
 Die Spalte *Stufe* (das Rechtelevel) wird nur ab Führung angezeigt.
 
 === Beitrittsanfragen
 
 Offene Beitrittsanfragen werden oberhalb der Mitgliederliste angezeigt; zusätzlich erhält der Tab *Mitglieder* ein Badge mit der Anzahl offener Anfragen.
-Zu jeder Anfrage siehst du den TW-Forge-Account und den verknüpften Ingame-Account, damit du prüfen kannst, ob die Person tatsächlich zu deinem Stamm gehört.
+Zu jeder Anfrage siehst du den TW-Forge-Account, den verknüpften Ingame-Account und dessen Ingame-Stamm, damit du prüfen kannst, ob die Person tatsächlich zu deinem Stamm gehört.
 
 Annehmen (Haken) fügt den Account als *Gast* hinzu, Ablehnen (Kreuz) entfernt die Anfrage.
 Beides ist ab *Führung* möglich.
@@ -383,7 +383,9 @@ TIP: Für die Anfrage über den Link muss der öffnende Account in der Führung 
 Über das Einstellungs-Symbol am Bündnis legt *jede Seite für sich* fest, was sie dem Partner freigibt:
 
 * *Bericht-Zugriff gewähren* - der Bündnispartner kann die Berichte deines Konstrukts sehen.
+Darüber werden auch die gemeldeten *Wachtürme* und *Kirchen* geteilt.
 * *Eigene Dorfinfos verstecken* - der Partner sieht die Berichte, aber Truppen- und Verteidigungsinformationen zu den Dörfern deines eigenen Stammes werden ausgeblendet. Informationen über die Gegnerseite bleiben sichtbar.
+Das gilt ebenso für die Gebäude: Wachtürme und Kirchen in den Dörfern deiner eigenen Stämme bleiben dann verborgen.
 * *Angriffe-Zugriff gewähren* - der Partner kann die eingehenden Angriffe deines Konstrukts einsehen und mit seinen eigenen vergleichen.
 
 Direkt daneben werden die aktuellen Einstellungen der Gegenseite schreibgeschützt angezeigt.

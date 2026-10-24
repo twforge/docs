@@ -46,6 +46,7 @@ Die Tabelle zeigt pro Berechnung:
 * *Datum*: Zeitpunkt der letzten Aktualisierung.
 * *Berechnung*: der verwendete Algorithmus.
 * *Status*: z.B. wartend, in Berechnung, abgeschlossen.
+Eine Berechnung, die nicht abgeschlossen werden kann – etwa weil der Plan zu groß ist –, endet mit *Fehlgeschlagen*.
 Ein *Warnsymbol* bedeutet, dass der Plan zu groß ist, um vollständig berechnet zu werden – die Anzahl der Berechnungsmöglichkeiten wurde begrenzt (siehe xref:features/action-planner/overview.adoc#berechnungsbudget[Berechnungsbudget]).
 * *Angriffe*: berechnete / gewünschte Angriffe. Wurden weniger Angriffe gefunden als gewünscht, hilft die xref:#ablehnungsuebersicht[Ablehnungsübersicht] weiter.
 
