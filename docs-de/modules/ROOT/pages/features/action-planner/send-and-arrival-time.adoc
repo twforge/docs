@@ -17,7 +17,7 @@ image::features/action-planner/zeiten/zeiten_abschickzeiten.png[Abschickzeiten m
 
 Hier können die Abschickzeiten für den Angriffsplan eingestellt werden.
 
-=== Abschickzeitfenster
+=== Abschickzeitfenster[[abschickzeitfenster]]
 
 Zunächst werden die Grenzbereiche der Planung (von ... bis ...) festgelegt.
 Es wird mindestens ein Fenster benötigt, es können aber auch mehrere einzelne Fenster eingegeben werden.
@@ -26,9 +26,18 @@ Die eingetragenen Fenster können direkt in der Liste bearbeitet werden.
 
 WARNING: Beginnt ein Fenster in der Vergangenheit, wird es mit einem Warnsymbol markiert. Angriffe können nur für zukünftige Abschickzeiten berechnet werden.
 
-=== Einstellungen
+=== Einstellungen[[einstellungen]]
 
-* *Von Spielern angegebene Abschickzeiten ignorieren*: Innerhalb der angegebenen Fenster werden normalerweise nur die von dir oder deinem Stamm über die xref:features/planner/inquiry.adoc[Abfrage] angegebenen Abschickzeiten berücksichtigt.
+* *Abfrage*: Hier wählst du aus, aus welcher xref:features/planner/inquiry.adoc[Abfrage] die Abschickzeiten der Spieler stammen sollen.
+Der Plan verwendet dann ausschließlich die in dieser Abfrage eingetragenen Zeiten; Spieler ohne Zeiten darin gelten als nicht verfügbar.
+Zur Auswahl stehen alle Abfragen der Stammeskonstrukte, in denen du die xref:features/tribe-construct.adoc#rechtelevel[Planer]-Berechtigung hast, gruppiert nach Konstrukt.
++
+Mit *Keine Abfrage* dürfen alle Spieler in den gesamten <<abschickzeitfenster,Abschickzeitfenstern>> des Plans abschicken.
+Das Gleiche passiert, wenn die gewählte Abfrage später gelöscht wird.
++
+NOTE: Es zählt alles, was in der Abfrage eingetragen ist - unabhängig davon, ob der Spieler schon fertig gemeldet hat.
+
+* *Von Spielern angegebene Abschickzeiten ignorieren*: Innerhalb der angegebenen Fenster werden normalerweise nur die Abschickzeiten aus der gewählten Abfrage berücksichtigt.
 Sollten keine Zeiten angegeben sein, können keine Angriffe berechnet werden.
 Wenn du innerhalb der angegebenen Fenster permanent abschicken möchtest, aktiviere diese Checkbox – die als Grenzwert eingetragenen Zeitfenster werden dann zu 100 % verplant.
 
