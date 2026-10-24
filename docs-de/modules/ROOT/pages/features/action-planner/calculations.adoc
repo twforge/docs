@@ -19,6 +19,8 @@ Unter *Berechnungsalgorithmus* wählst du, wie die Angriffe verteilt werden soll
 * *Laufzeit minimiert*: optimale Abdeckung bei möglichst kurzen Laufzeiten.
 * *Laufzeit maximiert*: optimale Abdeckung bei möglichst langen Laufzeiten.
 * *Wachturmerkennung minimiert* und *Wachturm und Laufzeit minimiert*: nur bei aktivierter xref:features/action-planner/watchtower.adoc[Wachturmplanung].
+* *AG-Trains mit minimierter Laufzeit*: nur wenn die Einheit des Plans das Adelsgeschlecht ist.
+Ein Herkunftsdorf schickt möglichst mehrere AGs auf dasselbe Ziel, die dort gemeinsam ankommen.
 
 Der gewählte Algorithmus wird im Plan gespeichert und für die nächste Berechnung vorausgewählt.
 Eine ausführliche Beschreibung der Algorithmen sowie Informationen zum Berechnungsbudget findest du xref:features/action-planner/overview.adoc#berechnungsalgorithmus_rechenkapazitäten[hier].
