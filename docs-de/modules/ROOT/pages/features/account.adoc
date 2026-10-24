@@ -83,7 +83,7 @@ xref:../getting-started.adoc#verknuepfung[Getting Started] - jedoch nicht im Hau
 
 Nach erfolgreicher Einrichtung stehen folgende Möglichkeiten zur Verfügung:
 
-* Hinterlegen von Zeiten für Urlaubsvertretungs-Accounts unter xref:features/planner/inquiry.adoc[Planer → Abfrage]
+* Ausfüllen von xref:features/planner/inquiry.adoc[Abfragen] für die vertretenen Accounts unter *Planer → Abfragen* - Zeiten lassen sich dort für mehrere eigene Accounts in einem Durchgang eintragen
 * Zugriff auf Abschickpläne für diese Accounts unter xref:features/planner/plans.adoc[Planer → Angriffspläne]
 
 == Discord

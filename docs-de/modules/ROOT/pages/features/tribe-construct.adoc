@@ -1,7 +1,7 @@
 = Stammeskonstrukt - Organisation und Management des Stammeskonstrukts
 :page-title: Stammeskonstrukt
-:description: Organisation des Stammeskonstruktes inkl. Gründung, Beitritt, Rechtelevel, Membermanagement, Stammestruppen, Abfrage, Diplomatie, Bündnisse, Aktivitätsübersicht und Discord.
-:keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Rollen, Gast, Mitglied, Planer, Führung, Gründer, Truppenimport, Diplomatie, Bündnis, Invite Link, Discord
+:description: Organisation des Stammeskonstruktes inkl. Gründung, Beitritt, Rechtelevel, Membermanagement, Stammestruppen, Abfragen, Diplomatie, Bündnisse, Aktivitätsübersicht und Discord.
+:keywords: Stamm, Gründen, Konstrukt, Rechteverwaltung, Rechte, Rollen, Gast, Mitglied, Planer, Führung, Gründer, Truppenimport, Abfrage, Abfragen, Teilnehmer, Diplomatie, Bündnis, Invite Link, Discord
 :toc: macro
 :toclevels: 2
 :toc-title: Inhalt
@@ -12,7 +12,7 @@ Das Stammeskonstrukt vereint die gemeinsame Verwendung von TW Forge durch mehrer
 Dabei werden unter anderem folgende Informationen und Funktionen im Konstrukt gebündelt:
 
 * Hochgeladene Berichte und eingehende Angriffe werden innerhalb des Konstrukts geteilt.
-* Abfragen für Aktionen (Abschickzeiten, AGs, nicht verfügbare Offs) laufen im Konstrukt zusammen.
+* Abfragen für Aktionen (Abschickzeiten, AGs, Pala-Offs, nicht verfügbare Offs) werden im Konstrukt erstellt und laufen dort zusammen.
 * Berechnete Aktionspläne können im Konstrukt veröffentlicht und gemeinsam getabbt werden.
 * Diplomatie (Verbündete, Neutrale, Feinde) wird zentral gepflegt und überall in TW Forge verwendet.
 * Bündnisse mit anderen Stammeskonstrukten erlauben das Teilen von Berichten und Angriffen über Stammesgrenzen hinweg.
@@ -120,7 +120,7 @@ Das Rechtesystem ist *aufeinander aufbauend*: Jedes Level kann alles, was die Le
 
 | Übersicht, Diplomatie ansehen | ✓ | ✓ | ✓ | ✓ | ✓
 | Mitglieder, Invite Links, Discord | | ✓ | ✓ | ✓ | ✓
-| Truppen, Abfrage | | | ✓ | ✓ | ✓
+| Truppen, Abfragen | | | ✓ | ✓ | ✓
 | Bündnisse, Datenbank, Diplomatie bearbeiten, Beitrittsanfragen, Umbenennen | | | | ✓ | ✓
 | Stamm auflösen, Gründer ernennen | | | | | ✓
 |===
@@ -130,7 +130,7 @@ Das Rechtesystem ist *aufeinander aufbauend*: Jedes Level kann alles, was die Le
 Gäste sind Teil des Konstrukts, haben jedoch *keine Einsicht* in die Daten des Stammes.
 
 * Teilt die *eigenen* Berichte und eingehenden Angriffe mit dem Stamm
-* Kann eigene Angaben in der xref:features/planner/inquiry.adoc[Abfrage] machen (AGs, Zeiten, nicht verfügbare Offs)
+* Kann eigene Angaben in xref:features/planner/inquiry.adoc[Abfragen] machen, zu denen er eingeladen wurde (AGs, Zeiten, nicht verfügbare Offs)
 * Kann Aktionspläne empfangen, die für den eigenen Account veröffentlicht wurden
 * Keine Einsicht in die Berichte-Datenbank und die eingehenden Angriffe des Stammes
 
@@ -149,7 +149,7 @@ Mitglieder haben Zugriff auf die gemeinsamen Informationen des Konstrukts:
 Planer-Rechte erweitern den Zugriff um planungsrelevante Funktionen:
 
 * Einlesen und Verwalten von xref:#troops[Stammestruppen]
-* Einsicht in die xref:#inquiry[Abfrage] aller Mitglieder und Eintragen von Zeiten für andere Accounts
+* Erstellen und Verwalten von xref:#inquiry[Abfragen], Einsicht in die Angaben aller Teilnehmer und Nachtragen für andere Accounts
 * Stammestruppen auf der xref:features/map.adoc[Karte] sehen
 * Erstellen und Veröffentlichen von Plänen im xref:features/action-planner/overview.adoc[Aktionsplaner]
 
@@ -227,36 +227,114 @@ TIP: Du bist nicht verpflichtet, Truppen als Truppen und Verteidigung als Vertei
 Der Truppen-Filter im Aktionsplaner unter xref:features/action-planner/source.adoc#dorftruppen[Herkunft → Dorftruppen] arbeitet ausschließlich mit dem Datensatz *Truppen*.
 Willst du dort auch mit Deff planen (z.B. für UT-Aktionen), lies die Verteidigung mit dem Script aus und speichere sie zusätzlich als *Truppen*.
 
-== Abfrage[[inquiry]]
+== Abfragen[[inquiry]]
 
-image::features/tribe-construct/tribe_inquiry.png[Abfrage-Übersicht mit Filterleiste und Tabelle links, Panel "Zeiten hinzufügen" mit Kalender rechts]
+// TODO: SCREENSHOT: features/tribe-construct/tribe_inquiries.png - Übersicht "Abfragen" mit Statusfilter und der Tabelle der Abfragen
 
-Im Bereich *Abfrage* (ab Planer) siehst du gesammelt, was die Mitglieder des Konstrukts in ihrer eigenen xref:features/planner/inquiry.adoc[Abfrage] hinterlegt haben:
+Im Bereich *Abfragen* (ab Planer) sammelst du die Daten, die du für eine Aktion brauchst: *Abschickzeiten*, *AGs*, *Pala-Offs* und *nicht verfügbare Offs*.
 
-* *Zeiten* - Abschickzeiten pro Tag
-* *AGs* - Dörfer mit Adelsgeschlechtern und deren Anzahl
-* *Pala Offs* - Dörfer, in denen die Off mit dem Paladin läuft (nur auf Welten mit aktivem Paladin)
-* *Nicht verfügbare Offs* - Dörfer, die nicht verplant werden sollen
+Jede Abfrage gehört dem Konstrukt. Du legst fest, was abgefragt wird und bis wann, und lädst Spieler dazu ein.
+Die Teilnehmer werden benachrichtigt und tragen ihre Daten selbst ein - wie das für sie aussieht, steht unter xref:features/planner/inquiry.adoc[Planer → Abfragen].
+Du siehst den Fortschritt, kannst erinnern und Angaben für Teilnehmer nachtragen.
 
-Ein Klick auf einen Spieler klappt die Details mit den einzelnen Dörfern und dem Zeitpunkt der letzten Aktualisierung auf.
-Diese Angaben werden bei der Planung im Aktionsplaner unter xref:features/action-planner/source.adoc[Herkunft] und xref:features/action-planner/send-and-arrival-time.adoc[Zeiten] berücksichtigt.
+NOTE: Abfragen anlegen und verwalten darf jeder ab <<rechtelevel,Planer>>.
+Ein Planer sieht alle Abfragen seines Konstrukts, nicht nur die eigenen.
 
-=== Filter
+=== Liste der Abfragen
 
-Über die Filterleiste blendest du veraltete Angaben aus:
+Die Tabelle listet die Abfragen des Konstrukts mit *Aktion* (dem Namen), *Status*, *Auszufüllen bis*, *Fortschritt* (wie viele Teilnehmer fertig gemeldet haben), *Abgefragt* und *Erstellt*.
+Über die Schalter darüber filterst du nach *Alle*, *Offen*, *Frist erreicht* und *Geschlossen*.
 
-* *Max Alter* - nur Einträge anzeigen, die nicht älter als die angegebene Zeit sind
-* *Von Datum* / *Bis Datum* - nur Einträge innerhalb eines Zeitraums anzeigen
+Über das Zeilenmenü wird eine Abfrage *geöffnet*, *bearbeitet* oder *gelöscht*.
 
-=== Zeiten hinzufügen
+WARNING: Beim Löschen gehen alle Angaben der Teilnehmer mit verloren.
+Aktionspläne, die diese Abfrage als Quelle verwenden, planen danach ohne Abfrage - alle Spieler dürfen dann in den gesamten Abschickzeiten des Plans abschicken.
 
-Über das Uhr-Symbol kannst du Abschickzeiten für andere Accounts eintragen, z.B. wenn Standardzeiten für den ganzen Stamm gesetzt werden sollen oder einzelne Accounts vergessen haben, Zeiten anzugeben.
+=== Neue Abfrage erstellen
 
-. Suche über das Eingabefeld einen *Stamm* oder einzelne *Spieler* und füge sie der Liste hinzu. Beides kann kombiniert werden.
-. Wähle im Kalender einen oder mehrere Tage aus.
-. Gib das Zeitfenster mit *Von* und *Bis* an und bestätige.
+Über *Neue Abfrage* legst du eine Abfrage an.
 
-Die Zeiten erscheinen danach bei den betroffenen Accounts genauso, als hätten sie sie selbst eingetragen.
+// TODO: SCREENSHOT: features/tribe-construct/tribe_inquiry_create.png - Formular "Neue Abfrage" mit Einstellungen, Regeln und Teilnehmerauswahl
+
+*Einstellungen*
+
+* *Name der Aktion* - unter diesem Namen sehen die Teilnehmer die Abfrage.
+* *Hinweis für die Teilnehmer* (optional) - wird den Teilnehmern beim Ausfüllen angezeigt.
+* *Auszufüllen bis* (optional) - die Frist.
+Ohne Frist bleibt die Abfrage offen, bis du sie schließt.
+* *Abgefragt wird* - welche Bereiche die Teilnehmer ausfüllen sollen: *Zeiten*, *AGs*, *Nicht verfügbare Offs* und, auf Welten mit mehreren Paladinen und Paladin-Skills, *Pala-Offs*.
+
+IMPORTANT: Mit einer Frist können *Zeiten erst ab der Frist* eingetragen werden.
+Setze die Frist also vor den Zeitraum, für den du Zeiten brauchst.
+
+*Regeln (optional)*
+
+Die Regeln geben den Teilnehmern vor, was du erwartest:
+
+* *Zeitraum* - die Tage, für die Zeiten angegeben werden sollen, z.B. die Tage der geplanten Aktion (höchstens 100 Tage).
+* *Min. Zeiten pro Tag* - wie viele getrennte Zeitfenster ein Teilnehmer pro Tag mindestens angeben soll.
+* *Ziel-Abdeckung* - welcher Anteil des Zeitraums mit Zeiten abgedeckt sein soll.
+Über mehrere Tage verteilt sind 5-10 % realistisch.
+
+NOTE: Regeln werden nicht erzwungen.
+Wer darunter liegt, bekommt beim Eintragen eine Warnung, kann aber trotzdem fertigmelden - in der Teilnehmerliste erscheint er dann als *Unvollständig*.
+
+*Teilnehmer*
+
+Über *Ausgangspunkt* startest du leer oder als *Kopie* einer bestehenden Abfrage.
+Eine Kopie übernimmt Einstellungen und Teilnehmer; auf Wunsch zusätzlich die bereits eingetragenen *Dörfer* und *Zeiten*.
+Übernommen wird nur, was in beiden Abfragen vorkommt; Zeiten vor der Frist der neuen Abfrage fallen weg.
+
+Darunter suchst du nach *Spielern oder Stämmen* und wählst die Teilnehmer aus - maximal 500 pro Abfrage.
+Mit *Erstellen* wird die Abfrage angelegt und alle Teilnehmer werden benachrichtigt.
+
+=== Eine Abfrage verwalten
+
+image::features/tribe-construct/tribe_inquiry_detail.png[Detailseite einer geschlossenen Abfrage mit Frist, abgefragten Bereichen, den Kennzahlen "Fertig gemeldet" und "Ø Abdeckung" sowie der Teilnehmertabelle mit Filtern, Status, Abdeckung und Hinweisen]
+
+Der Kopf der Abfrage zeigt Name, Status, Frist, was abgefragt wird, den Zeitraum, die geforderte Abdeckung und wer sie erstellt hat.
+Dazu kommen zwei Kennzahlen: *Fertig gemeldet* (wie viele Teilnehmer durch sind) und die *Ø Abdeckung* aller Teilnehmer im Vergleich zum Ziel.
+
+Über die Schaltflächen daneben:
+
+* *Frist ändern* bzw. *Frist setzen*
+* *Jetzt schließen* - die Abfrage nimmt keine Änderungen der Teilnehmer mehr an
+* *Wieder öffnen* - eine geschlossene Abfrage wird wieder freigegeben; ist das wegen der abgelaufenen Frist nicht direkt möglich, setzt du zuerst eine neue Frist
+* *Bearbeiten* und *Löschen*
+
+TIP: Wird beim Bearbeiten ein abgefragter Bereich abgewählt, bleiben die bereits eingetragenen Daten erhalten und werden nur ausgeblendet.
+
+Eine Abfrage läuft dabei durch die Status *Offen* → *Frist erreicht* → *Geschlossen*:
+Nach Ablauf der Frist können die Teilnehmer ihre Daten noch 48 Stunden ändern, sofern du die Abfrage nicht vorher schließt.
+Ist sie geschlossen, können nur noch Planer Daten ändern.
+
+=== Teilnehmer
+
+Darunter steht die Teilnehmertabelle mit *Spieler*, *Stamm*, *Status*, *Abdeckung*, *Hinweise* (welche Bereiche noch fehlen oder welche Regel nicht erfüllt ist) und *Aktualisiert* (letzte Änderung durch den Spieler oder dessen UV).
+
+Gefiltert wird über die Suche, die Schalter *Alle*, *Nicht fertig gemeldet*, *Fertig gemeldet*, *Unvollständig* und *Nicht erreichbar* sowie über die Auswahl eines einzelnen Hinweises.
+
+Ein Klick auf einen Spieler klappt seine Daten auf. Dort siehst du seine Dörfer und Zeiten und kannst sie für ihn *nachtragen oder korrigieren*.
+
+Über die Kopfzeile der Tabelle:
+
+* *Erinnern* - benachrichtigt alle Teilnehmer erneut, die noch nicht fertig gemeldet haben
+* *Teilnehmer hinzufügen* - lädt weitere Spieler nachträglich ein
+* *Dörferlisten* - öffnet ein Menü mit je einem Eintrag pro abgefragtem Bereich samt Anzahl der gemeldeten Dörfer; über *Kopieren* landet die Koordinatenliste des Bereichs in der Zwischenablage
+
+Mit den Checkboxen markierst du mehrere Teilnehmer und kannst dann *Zeiten hinzufügen*, sie *als fertig gemeldet markieren*, gezielt *erinnern*, ihre *Namen kopieren* (als Liste oder BB-Code) oder sie *entfernen*.
+
+NOTE: Teilnehmer mit dem Filter *Nicht erreichbar* haben keinen verknüpften Account (auch keine xref:features/account.adoc#uv[UV]) im Konstrukt.
+Sie werden nicht benachrichtigt und können die Abfrage nicht selbst ausfüllen - ihre Daten musst du eintragen.
+
+TIP: Unabhängig von der manuellen Erinnerung werden säumige Teilnehmer 24 Stunden vor Ablauf der Frist automatisch erinnert.
+
+=== Abfrage im Aktionsplaner verwenden
+
+Eine Abfrage wirkt nicht automatisch, sondern wird im Plan ausgewählt:
+
+* Unter xref:features/action-planner/send-and-arrival-time.adoc#einstellungen[Zeiten → Einstellungen] bestimmst du, aus welcher Abfrage die *Abschickzeiten* der Spieler stammen.
+* Unter xref:features/action-planner/source.adoc#ags_importieren[Herkunft] übernimmst du *AGs* und *Pala-Offs* als Herkunftsdörfer oder schließt *nicht verfügbare Offs* aus.
 
 == Diplomatie[[diplomacy]]
 

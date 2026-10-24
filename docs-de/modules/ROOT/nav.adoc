@@ -10,7 +10,7 @@
 ** xref:features/discordbot.adoc[DC-Bot]
 ** Planer
 *** xref:features/planner/plans.adoc[Angriffspläne]
-*** xref:features/planner/inquiry.adoc[Abfrage]
+*** xref:features/planner/inquiry.adoc[Abfragen]
 *** xref:features/planner/support_boosts.adoc[UT-Boost-Datenbank]
 ** xref:features/account.adoc[Account]
 ** xref:features/tribe-construct.adoc[Stammeskonstrukt]
