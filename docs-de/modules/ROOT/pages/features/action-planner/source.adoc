@@ -50,9 +50,14 @@ TIP: Sollten später noch Truppenfilter hinzugefügt werden, können manuelle He
 
 Des Weiteren können hier die vom Stamm gemeldeten AGs eingefügt werden.
 Dies geschieht über den Button *"Gemeldete AGs einfügen"*.
-Durch einen Klick auf diesen Button öffnet sich ein Fenster, in dem die über die xref:features/planner/inquiry.adoc[Abfrage] gemeldeten AGs pro Spieler aufgelistet sind.
+Durch einen Klick auf diesen Button öffnet sich ein Fenster, in dem du zunächst die xref:features/planner/inquiry.adoc[Abfrage] auswählst, deren Meldungen übernommen werden sollen.
+Zur Auswahl stehen alle Abfragen der Stammeskonstrukte, in denen du die xref:features/tribe-construct.adoc#rechtelevel[Planer]-Berechtigung hast.
+Danach werden die in dieser Abfrage gemeldeten AGs pro Spieler aufgelistet.
 Über "Max Alter" können veraltete Meldungen ausgeblendet werden; zu jedem Spieler wird angezeigt, wann er seine Angaben zuletzt bearbeitet hat.
 Die gewünschten Spieler werden per Checkbox ausgewählt und übernommen.
+
+NOTE: Die hier gewählte Abfrage gilt nur für diesen Import.
+Welche Abfrage die *Abschickzeiten* des Plans liefert, stellst du unter xref:features/action-planner/send-and-arrival-time.adoc#einstellungen[Zeiten → Einstellungen] ein.
 
 TIP: Der Name, der hinter den jeweiligen AGs steht, bezieht sich auf den Account, der die AGs angegeben hat, nicht auf die Ingame-Accounts, zu denen die angegebenen AGs gehören.
 
@@ -60,16 +65,16 @@ Nachdem die Einzel-AGs eingefügt worden sind, können diese über die Buttons *
 Dazu die betroffenen Dörfer markieren und den passenden Button klicken.
 Sollte die Zahl nicht genau für die jeweilige Train-Anzahl aufgehen (z.B. 23 AGs), so wird abgerundet (23 AGs → 5 4er-Trains).
 
-TIP: Auf Welten mit mehreren Paladinen und Paladin-Skills gibt es zusätzlich den Button *"Pala-OFFs einfügen"*, mit dem die in der Abfrage gemeldeten Paladin-Offs als Herkunftsdörfer übernommen werden können.
+TIP: Auf Welten mit mehreren Paladinen und Paladin-Skills gibt es zusätzlich den Button *"Pala-OFFs einfügen"*, mit dem die in einer Abfrage gemeldeten Paladin-Offs als Herkunftsdörfer übernommen werden können.
 
-=== Dörfer ausschließen
+=== Dörfer ausschließen[[doerfer_ausschliessen]]
 
 Sollen explizit Dörfer nicht verplant werden (z.B. weil gewisse Offs noch nicht zu Hause sind), können diese manuell ausgeplant werden.
 Hierzu bieten sich zwei Möglichkeiten:
 
 . *Ausschließen von Dörfern über eine Koordinatenliste*
-. *Ausschließen über "Nicht verfügbare Offs ignorieren"*: Die Mitglieder des Konstrukts haben die Möglichkeit, über ihre xref:features/planner/inquiry.adoc[personalisierte Abfrage] Dörfer anzugeben, die nicht verplant werden sollen.
-Diese können auf die gleiche Weise eingefügt werden wie die xref:#ags_importieren[AGs].
+. *Ausschließen über "Nicht verfügbare Offs ignorieren"*: Die Teilnehmer einer xref:features/planner/inquiry.adoc[Abfrage] können darin Dörfer angeben, die nicht verplant werden sollen.
+Diese werden auf die gleiche Weise eingefügt wie die xref:#ags_importieren[AGs]: Abfrage auswählen, Spieler per Checkbox markieren, übernehmen.
 
 == Frontentfernung
 

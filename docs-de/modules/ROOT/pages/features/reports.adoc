@@ -110,7 +110,18 @@ Existiert bereits ein Eintrag, kannst du ihn überschreiben.
 
 Die Tabelle zeigt pro Dorf die gemeldete Stufe, wer den Wachturm gemeldet hat und wann.
 Über den Filter suchst du nach Spieler, Stamm oder Dorf, mit *Nur eigene* beschränkst du die Liste auf deine Einträge.
-Einträge lassen sich einzeln oder per Mehrfachauswahl bearbeiten und löschen; über das Menü einer Zeile öffnest du den zugehörigen Bericht.
+Einträge lassen sich einzeln oder per Mehrfachauswahl bearbeiten und entfernen; über das Menü einer Zeile öffnest du den zugehörigen Bericht.
+
+=== Zerstörte Wachtürme
+
+Ein Wachturm verschwindet automatisch aus der Liste, von der xref:features/map.adoc[Karte] und aus dem xref:features/action-planner/watchtower.adoc[Planer], sobald ein neuerer, für dich sichtbarer Bericht das Dorf ohne Wachturm zeigt.
+
+Beim Entfernen eines Eintrags hast du außerdem die Wahl:
+
+* *Zurückziehen* - löscht deine Meldung, als hättest du sie nie gemacht.
+* *Existiert nicht mehr* - meldet, dass der Wachturm weg ist. Dann werden auch ältere Meldungen anderer zu diesem Dorf nicht mehr angezeigt.
+
+NOTE: Sind die gewählten Einträge ohnehin schon als "existiert nicht mehr" gemeldet, bleibt nur das Zurückziehen übrig.
 
 == Import von Berichten in die Datenbank[[import_reports]]
 

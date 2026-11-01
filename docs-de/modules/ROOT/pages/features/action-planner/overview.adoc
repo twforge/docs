@@ -255,6 +255,13 @@ Minimiert die Kombination aus Laufzeit und Wachturm-Erkennung – optimal für k
 
 TIP: Für die Wachturm-Algorithmen müssen die Wachtürme des Gegners in der xref:features/reports.adoc[Wachturm-Datenbank] eingetragen sein.
 
+Ist die Einheit des Plans das *Adelsgeschlecht*, kommt ein weiterer Algorithmus dazu:
+
+[start=6]
+. *AG-Trains mit minimierter Laufzeit*
+Bündelt Adelsgeschlechter zu AG-Trains: Ein Herkunftsdorf schickt möglichst mehrere AGs auf dasselbe Ziel, die dort gemeinsam ankommen.
+Die Abdeckung bleibt optimal – es werden also weiterhin so viele Angriffe wie möglich geplant –, danach bevorzugt der Algorithmus möglichst wenige Dorf-Ziel-Paare und kurze Laufzeiten.
+
 Welcher Berechnungsalgorithmus Sinn ergibt, hängt vom Ziel des jeweiligen Plans ab.
 Bei sehr großen Plänen ist *Zufällig* am schnellsten; die laufzeitoptimierten Algorithmen liefern dafür ein deutlich besseres Ergebnis.
 
