@@ -1,8 +1,11 @@
 openapi: 3.0.3
 info:
   title: TW Forge Developer API
-  description: TW Forge API for Tribalwars developers.
-  version: 1.0.0
+  description: |
+    TW Forge API for Tribalwars developers.
+
+    Enumerations may gain new values without a major version change of the API, so clients must tolerate values unknown to them.
+  version: 1.2.0
   contact:
     name: TWForge
     url: https://github.com/twforge
@@ -94,6 +97,69 @@ paths:
           $ref: '#/components/responses/badRequest'
         401:
           $ref: '#/components/responses/unauthorized'
+  /reports/tw/worlds/{world}/villages/{villageId}/dossier:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: villageId
+        in: path
+        required: true
+        description: The game's village id.
+        schema:
+          type: integer
+          format: int32
+    get:
+      tags:
+        - village-dossier
+      summary: Get the dossier for a village.
+      description: >-
+        Aggregates the current user's authorized village classifications and recent reports into a
+        compact read model.
+      operationId: getVillageDossier
+      responses:
+        200:
+          description: The village dossier.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/VillageDossier'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+        404:
+          $ref: '#/components/responses/notFound'
+  /reports/tw/worlds/{world}/reports/{reportId}:
+    parameters:
+      - $ref: '#/components/parameters/world'
+      - name: reportId
+        in: path
+        required: true
+        description: The report's id, as carried by every `DossierReportRef`.
+        schema:
+          type: integer
+          format: int64
+    get:
+      tags:
+        - battle-report
+      summary: Get a single battle report.
+      description: >-
+        One stored battle report in full. Everything describing one side of the fight is omitted when
+        that side's data may not be shown to the current user, e.g. because an allied tribe opted out of
+        sharing internal data.
+      operationId: getBattleReport
+      responses:
+        200:
+          description: The report. An absent field was either not part of the report or is not visible.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BattleReport'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
+        404:
+          $ref: '#/components/responses/notFound'
   /planner/tw/worlds/{world}/support-boosts/players/{playerId}/tribe-skill-activations:
     parameters:
       - $ref: '#/components/parameters/world'
@@ -382,6 +448,46 @@ paths:
           $ref: '#/components/responses/badRequest'
         401:
           $ref: '#/components/responses/unauthorized'
+  /analyser/tw/worlds/{world}/incoming-attacks/csv-imports:
+    parameters:
+      - $ref: '#/components/parameters/world'
+    post:
+      tags:
+        - incoming-attacks
+      summary: Import incoming attacks from a CSV export.
+      operationId: importIncomingAttacksCsv
+      description: |
+        Imports incoming attacks as the current user. Unlike an SOS request, each attack carries its game command id.
+
+        The first line is the header `commandId,source,target,player,arrivalEpochMilli,size,name`, matched
+        case-insensitively. Each further line is one attack:
+        - `commandId`: the game command id.
+        - `source`, `target`: the game ids of the source and target village.
+        - `player`: the game id of the attacker.
+        - `arrivalEpochMilli`: the arrival as epoch milliseconds.
+        - `size`: an `AttackSize` (case-insensitive), or empty if unknown.
+        - `name`: the command name. It may contain commas if quoted; quotes inside are doubled.
+
+        Lines that cannot be parsed, attacks already arrived and attacks with an unknown village or attacker are
+        skipped, as are further lines with a command id already listed. Attacks the user imported before are updated. At most
+        1000 attacks per request, and 15000 per user and world within 12 hours.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ImportIncomingAttacksCsvRequest'
+      responses:
+        200:
+          description: The imported attacks.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ImportedIncomingAttacks'
+        400:
+          $ref: '#/components/responses/badRequest'
+        401:
+          $ref: '#/components/responses/unauthorized'
 components:
   securitySchemes:
     defaultApiKey:
@@ -427,6 +533,12 @@ components:
             $ref: '#/components/schemas/ErrorResponse'
     unauthorized:
       description: The API key supplied in the Authorization header is not valid.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorResponse'
+    notFound:
+      description: The resource does not exist or is not visible to the current user.
       content:
         application/json:
           schema:
@@ -944,6 +1056,419 @@ components:
       additionalProperties:
         type: integer
         format: int32
+    VillageDossier:
+      type: object
+      description: Everything known about one village.
+      required:
+        - reports
+        - troopsOutside
+        - notes
+      properties:
+        orientation:
+          $ref: '#/components/schemas/VillageOrientation'
+        lastConquest:
+          type: string
+          format: date-time
+        buildings:
+          $ref: '#/components/schemas/DossierBuildings'
+        reports:
+          $ref: '#/components/schemas/DossierReports'
+        troopsOutside:
+          type: array
+          items:
+            $ref: '#/components/schemas/DossierTroopsOutside'
+          description: >-
+            Troop movements of this village that are still travelling home, soonest arrival first.
+        notes:
+          type: array
+          maxItems: 10
+          description: The 10 most recently changed notes for this village, newest first.
+          items:
+            $ref: '#/components/schemas/DossierNote'
+    DossierBuildings:
+      type: object
+      description: >
+        Newest known building levels of the village. A level of 0 means the building was observed to be missing, an
+        absent level that it is unknown. Absent as a whole when none of them is known.
+      properties:
+        watchtowerLevel:
+          type: integer
+          format: int32
+          minimum: 0
+        churchLevel:
+          type: integer
+          format: int32
+          minimum: 0
+        firstChurch:
+          type: boolean
+          description: Whether the church is a first church. Absent unless a church of level 1 or higher is known.
+    DossierReports:
+      type: object
+      required:
+        - latest
+      properties:
+        latest:
+          type: array
+          maxItems: 10
+          description: The 10 latest reports about this village, newest first.
+          items:
+            $ref: '#/components/schemas/DossierReportRef'
+        bestTroop:
+          $ref: '#/components/schemas/DossierBestTroopReport'
+        bestDefense:
+          allOf:
+            - $ref: '#/components/schemas/DossierReportRef'
+          description: >-
+            The newest report revealing the village's defense state: a visible garrison, wall or
+            catapult damage, or a large arrived attack.
+    DossierBestTroopReport:
+      type: object
+      description: >-
+        The report best characterizing the village's own army: the one showing the most attributable farm population.
+      required:
+        - report
+        - seenPopulation
+      properties:
+        report:
+          $ref: '#/components/schemas/DossierReportRef'
+        seenPopulation:
+          type: integer
+          format: int32
+          description: Attributable farm population seen in the report.
+    VillageOrientation:
+      type: string
+      enum:
+        - OFFENSIVE
+        - DEFENSIVE
+    DossierTroopsOutside:
+      description: One army of this village still on its way home (i.e. the survivors of an attack it sent).
+      type: object
+      required:
+        - units
+        - asOf
+        - estimatedReturn
+        - report
+      properties:
+        units:
+          $ref: '#/components/schemas/Troops'
+        asOf:
+          description: The time of the fight the survivors are returning from.
+          type: string
+          format: date-time
+        estimatedReturn:
+          description: When the units is expected home.
+          type: string
+          format: date-time
+        report:
+          allOf:
+            - $ref: '#/components/schemas/DossierReportRef'
+          description: The report these numbers were read from.
+    DossierReportRef:
+      type: object
+      required:
+        - id
+        - time
+        - name
+        - icons
+      properties:
+        id:
+          type: integer
+          format: int64
+        time:
+          type: string
+          format: date-time
+        name:
+          type: string
+        icons:
+          type: array
+          items:
+            $ref: '#/components/schemas/DossierReportIcon'
+        dot:
+          $ref: '#/components/schemas/ReportDot'
+        attackSize:
+          $ref: '#/components/schemas/AttackSize'
+        sourceVillageId:
+          type: integer
+          format: int32
+        targetVillageId:
+          type: integer
+          format: int32
+    DossierReportIcon:
+      type: string
+      enum:
+        - KNIGHT
+        - SNOB
+        - SPY
+    DossierNote:
+      type: object
+      description: >-
+        A note kept on this village. `note` and `addedByUser` are free text written by players and
+        must be rendered as text, never as markup.
+      required:
+        - note
+        - addedByUser
+        - lastModifiedAt
+      properties:
+        note:
+          type: string
+        addedByUser:
+          type: string
+        lastModifiedAt:
+          type: string
+          format: date-time
+        type:
+          $ref: '#/components/schemas/DossierNoteType'
+    DossierNoteType:
+      type: string
+      enum:
+        - OFFENSIVE
+        - DEFENSIVE
+    BattleReport:
+      type: object
+      description: A stored battle report.
+      required:
+        - id
+        - name
+        - title
+        - time
+        - luck
+        - morale
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        title:
+          type: string
+        time:
+          type: string
+          format: date-time
+        luck:
+          type: number
+          format: double
+        morale:
+          type: integer
+          format: int32
+        dot:
+          $ref: '#/components/schemas/ReportDot'
+        attackSize:
+          $ref: '#/components/schemas/AttackSize'
+        attacker:
+          $ref: '#/components/schemas/Player'
+        attackerVillage:
+          $ref: '#/components/schemas/Village'
+        attackerQuantity:
+          $ref: '#/components/schemas/Troops'
+        attackerLosses:
+          $ref: '#/components/schemas/Troops'
+        attackerReligious:
+          type: boolean
+        attackEffects:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReportEffect'
+        defender:
+          $ref: '#/components/schemas/Player'
+        defenderVillage:
+          $ref: '#/components/schemas/Village'
+        defenderQuantity:
+          $ref: '#/components/schemas/Troops'
+        defenderLosses:
+          $ref: '#/components/schemas/Troops'
+        defenderReligious:
+          type: boolean
+        defenderEffects:
+          type: array
+          items:
+            $ref: '#/components/schemas/ReportEffect'
+        resources:
+          allOf:
+            - $ref: '#/components/schemas/ReportResources'
+          description: Resources seen in the village by a scouting attack.
+        buildings:
+          type: object
+          description: Building levels seen by a scouting attack, keyed by the game's building id.
+          additionalProperties:
+            type: integer
+            format: int32
+        unitsOutside:
+          $ref: '#/components/schemas/Troops'
+        haul:
+          allOf:
+            - $ref: '#/components/schemas/ReportResources'
+          description: Resources actually carried off.
+        catapultDamage:
+          $ref: '#/components/schemas/BuildingDamage'
+        ramDamage:
+          $ref: '#/components/schemas/WallDamage'
+        loyalty:
+          $ref: '#/components/schemas/Loyalty'
+        killedSupports:
+          type: array
+          items:
+            $ref: '#/components/schemas/KilledSupport'
+    Player:
+      type: object
+      required:
+        - id
+        - name
+        - villages
+        - points
+        - rank
+        - deleted
+      properties:
+        id:
+          type: integer
+          format: int64
+        name:
+          type: string
+        tribeId:
+          type: integer
+          format: int32
+        villages:
+          type: integer
+          format: int32
+        points:
+          type: integer
+          format: int32
+        rank:
+          type: integer
+          format: int32
+        deleted:
+          type: boolean
+    Village:
+      type: object
+      required:
+        - id
+        - name
+        - x
+        - y
+        - points
+        - bonus
+      properties:
+        id:
+          type: integer
+          format: int32
+        name:
+          type: string
+        x:
+          type: integer
+          format: int32
+        y:
+          type: integer
+          format: int32
+        playerId:
+          type: integer
+          format: int64
+        points:
+          type: integer
+          format: int32
+        bonus:
+          type: integer
+          format: int32
+    ReportResources:
+      type: object
+      required:
+        - wood
+        - stone
+        - iron
+      properties:
+        wood:
+          type: integer
+          format: int32
+        stone:
+          type: integer
+          format: int32
+        iron:
+          type: integer
+          format: int32
+    ReportEffect:
+      type: object
+      required:
+        - type
+        - strength
+      properties:
+        type:
+          $ref: '#/components/schemas/ReportEffectType'
+        strength:
+          type: integer
+          format: int32
+        unit:
+          type: string
+    ReportEffectType:
+      type: string
+      enum:
+        - ITEM
+        - FLAG_ATTACK
+        - FLAG_DEFENSE
+        - ATTACK
+        - DEFENSE
+        - STEALTH
+        - AWARENESS
+        - BUILDING_DAMAGE
+        - WALL_NERF
+        - WALL_EFFECTIVENESS
+        - RESIST_DEMOLITION
+        - LOYALTY
+    BuildingDamage:
+      type: object
+      required:
+        - building
+        - levelBefore
+        - levelAfter
+      properties:
+        building:
+          type: string
+        levelBefore:
+          type: integer
+          format: int32
+        levelAfter:
+          type: integer
+          format: int32
+    WallDamage:
+      type: object
+      required:
+        - levelBefore
+        - levelAfter
+      properties:
+        levelBefore:
+          type: integer
+          format: int32
+        levelAfter:
+          type: integer
+          format: int32
+    Loyalty:
+      type: object
+      required:
+        - before
+        - after
+      properties:
+        before:
+          type: integer
+          format: int32
+        after:
+          type: integer
+          format: int32
+    KilledSupport:
+      type: object
+      required:
+        - village
+        - units
+      properties:
+        village:
+          $ref: '#/components/schemas/Village'
+        units:
+          $ref: '#/components/schemas/Troops'
+    ReportDot:
+      type: string
+      enum:
+        - GREEN
+        - YELLOW
+        - RED
+        - BLUE
+        - RED_YELLOW
+        - RED_BLUE
     ImportIncomingAttacksSosRequest:
       type: object
       required:
@@ -952,6 +1477,23 @@ components:
         sosRequest:
           type: string
     ParsedSosRequest:
+      type: object
+      required:
+        - attacks
+      properties:
+        attacks:
+          type: array
+          items:
+            $ref: '#/components/schemas/IncomingAttack'
+    ImportIncomingAttacksCsvRequest:
+      type: object
+      required:
+        - csv
+      properties:
+        csv:
+          type: string
+          minLength: 1
+    ImportedIncomingAttacks:
       type: object
       required:
         - attacks
