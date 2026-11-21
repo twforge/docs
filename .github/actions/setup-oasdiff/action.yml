@@ -1,0 +1,34 @@
+name: Setup oasdiff
+description: Downloads a pinned oasdiff release, verifies it against a pinned SHA-256 checksum and adds it to PATH.
+
+# The checksum is pinned here instead of read from the release's checksums.txt: a file downloaded from the same
+# release as the archive would not detect a replaced release. When updating, change both inputs together and take
+# the checksum from at least two sources (e.g. `sha256sum` of the download and the release's checksums.txt, or the
+# asset digest from the GitHub releases API).
+
+inputs:
+  version:
+    description: oasdiff version (without leading v)
+    default: '1.39.0'
+  sha256:
+    description: SHA-256 of oasdiff_<version>_linux_amd64.tar.gz
+    default: '71a85930728f367a2086077b7ae1411319421549d18473a3e8258b6451520433'
+
+runs:
+  using: composite
+  steps:
+    - shell: bash
+      env:
+        VERSION: ${{ inputs.version }}
+        SHA256: ${{ inputs.sha256 }}
+      run: |
+        set -euo pipefail
+        dir="$RUNNER_TEMP/oasdiff"
+        archive="oasdiff_${VERSION}_linux_amd64.tar.gz"
+        mkdir -p "$dir"
+        cd "$dir"
+        curl -fsSLO "https://github.com/oasdiff/oasdiff/releases/download/v${VERSION}/${archive}"
+        echo "${SHA256}  ${archive}" | sha256sum --check --strict
+        tar -xzf "$archive" oasdiff
+        echo "$dir" >> "$GITHUB_PATH"
+        ./oasdiff --version

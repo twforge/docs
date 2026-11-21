@@ -17,8 +17,8 @@ content:
 
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
-    snapshot: true
+    # Vendored Antora Default UI (pinned, no download at build time), see antora-ui/README.md
+    url: ./antora-ui/ui-bundle.zip
   supplemental_files: ./supplemental-ui
 
 output:

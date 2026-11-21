@@ -1,0 +1,19 @@
+extends:
+  - recommended
+
+rules:
+  operation-operationId: error
+  operation-summary: warn
+  tag-description: warn
+  info-contact: off
+  info-license: off
+
+  # Nothing is removed within an API version, so nothing sunsets. Also, oasdiff silently accepts removing elements
+  # whose x-sunset date has passed, which would bypass the no-breaking-changes check.
+  rule/no-x-sunset:
+    subject:
+      type: any
+      property: x-sunset
+    assertions:
+      defined: false
+    message: x-sunset is not allowed. Deprecated elements stay until the next API version (a new /api/vN spec file).

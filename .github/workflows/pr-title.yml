@@ -1,0 +1,26 @@
+name: PR Title
+
+# PRs are squash-merged with the PR title as commit message; release-please derives versions and the changelog of the
+# API contract from these messages, so titles must follow Conventional Commits (e.g. "feat: add village endpoint").
+# Don't use "!" or "BREAKING CHANGE" (not enforced here): breaking API changes need a new /api/vN spec file, and
+# release-please would propose a major version. README.md (Versioning) describes how to correct it.
+
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - edited
+      - synchronize
+
+permissions: {}
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read
+    steps:
+      - uses: amannn/action-semantic-pull-request@c5e23b7e584519ee15caa684cf60d056aa9f035f # v6.1.3
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
