@@ -5,7 +5,7 @@ info:
     TW Forge API for Tribalwars developers.
 
     Enumerations may gain new values without a major version change of the API, so clients must tolerate values unknown to them.
-  version: 1.0.0 # x-release-please-version
+  version: 1.1.0 # x-release-please-version
   contact:
     name: TWForge
     url: https://github.com/twforge
