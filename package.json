@@ -2,17 +2,32 @@
   "name": "twforge-docs",
   "version": "1.0.0",
   "private": true,
+  "devEngines": {
+    "packageManager": {
+      "name": "npm",
+      "version": ">=11.10.0",
+      "onFail": "error"
+    }
+  },
   "scripts": {
     "lint:api": "redocly lint developer-api/openapi.yaml",
+    "lint:api:ci": "npm run lint:api -- --format github-actions",
+    "api:bundle": "redocly bundle developer-api/openapi.yaml -o build/developer-api-package/openapi.yaml && redocly bundle developer-api/openapi.yaml -o build/developer-api-package/openapi.json",
+    "api:types": "openapi-typescript build/developer-api-package/openapi.yaml -o build/developer-api-package/index.d.ts",
+    "api:build": "npm run lint:api && npm run api:package",
+    "api:package": "npm run api:bundle && npm run api:types && node scripts/api-contract.mjs package",
+    "api:check-compat": "npm run api:package && node scripts/api-contract.mjs check-compat",
+    "api:ci": "npm run lint:api:ci && npm run api:check-compat",
     "build": "antora antora-playbook.yml --log-level=debug",
-    "check-minor-updates": "npx npm-check-updates --upgrade --target \"minor\"",
-    "check-major-updates": "npx npm-check-updates --upgrade --target \"latest\""
+    "check-minor-updates": "npx npm-check-updates --upgrade --target \"minor\" --cooldown 7",
+    "check-major-updates": "npx npm-check-updates --upgrade --target \"latest\" --cooldown 7"
   },
   "devDependencies": {
     "@antora/cli": "^3.1.14",
     "@antora/site-generator": "^3.1.14",
     "@redocly/cli": "^2.19.1",
     "mkdirp": "^3.0.1",
+    "openapi-typescript": "^7.13.0",
     "swagger-ui-dist": "^5.31.1"
   },
   "dependencies": {

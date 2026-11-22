@@ -1,0 +1,118 @@
+name: Release API Contract
+
+# Releases the Developer API contract (developer-api/) as the npm package @twforge/developer-api with release-please;
+# see README.md ("Releasing"). The contract checks run on every PR, including the release PR; this workflow only builds
+# and publishes.
+#
+# release-please uses a GitHub App token, so CI runs on its release PRs (pushes made with GITHUB_TOKEN trigger no
+# workflows). The `build` job installs dependencies and builds the package with read-only permissions; only the
+# `publish` job, which installs nothing and runs no repository code, may publish to npm and change the release.
+
+on:
+  push:
+    branches:
+      - main
+
+permissions: {}
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    outputs:
+      release-created: ${{ steps.release.outputs['developer-api--release_created'] }}
+      tag: ${{ steps.release.outputs['developer-api--tag_name'] }}
+    steps:
+      - name: Create GitHub App token
+        id: app-token
+        uses: actions/create-github-app-token@f418cff399f7aef4c2f0ad47e25ca7a6abbdd6fc # v3.4.0
+        with:
+          client-id: ${{ vars.RELEASE_APP_CLIENT_ID }}
+          private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+          permission-contents: write
+          permission-pull-requests: write
+          permission-issues: write  # release-please labels its PRs
+
+      - name: Run release-please
+        id: release
+        uses: googleapis/release-please-action@45996ed1f6d02564a971a2fa1b5860e934307cf7 # v5.0.0
+        with:
+          token: ${{ steps.app-token.outputs.token }}
+          config-file: release-please-config.json
+          manifest-file: .release-please-manifest.json
+
+  build:
+    needs: release-please
+    if: needs.release-please.outputs.release-created == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout release tag
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
+        with:
+          ref: ${{ needs.release-please.outputs.tag }}
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '26'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build package
+        run: npm run api:package
+
+      - name: Upload package
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: developer-api-package
+          path: build/developer-api-package
+          if-no-files-found: error
+          retention-days: 7
+
+  publish:
+    needs: [release-please, build]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write  # attach files to the GitHub release
+      id-token: write  # npm trusted publishing / provenance
+    env:
+      DIST: ${{ runner.temp }}/dist
+    steps:
+      - name: Download package
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
+        with:
+          name: developer-api-package
+          path: package
+
+      - name: Setup Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '26'
+          registry-url: 'https://registry.npmjs.org'
+
+      # --ignore-scripts: the package has no lifecycle scripts; make sure none run with publish permissions.
+      - name: Pack
+        run: npm pack ./package --ignore-scripts --pack-destination "$DIST"
+
+      # Attached before publishing (--clobber makes it repeatable), so a failed step never leaves a published version
+      # behind and "Re-run failed jobs" just works.
+      - name: Attach package and spec to the GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+          TAG: ${{ needs.release-please.outputs.tag }}
+        run: gh release upload "$TAG" "$DIST"/*.tgz package/openapi.yaml package/openapi.json --clobber
+
+      # Uses npm trusted publishing (OIDC) once configured on npmjs.com; NPM_TOKEN is only needed until then.
+      - name: Publish to npm
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: npm publish "$DIST"/*.tgz --ignore-scripts

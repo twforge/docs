@@ -1,0 +1,5 @@
+api-path-removed-with-deprecation err
+api-removed-with-deprecation err
+request-parameter-removed-with-deprecation err
+request-property-removed-with-deprecation err
+response-required-property-removed-with-deprecation err

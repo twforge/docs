@@ -1,0 +1,35 @@
+{
+  "name": "@twforge/developer-api",
+  "version": "0.0.0-set-from-openapi-info-version",
+  "description": "OpenAPI contract and TypeScript types for the TW Forge Developer API.",
+  "license": "MIT",
+  "homepage": "https://docs.twforge.net/developer-api/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twforge/docs.git",
+    "directory": "developer-api/npm"
+  },
+  "keywords": ["twforge", "tribalwars", "openapi", "api-contract"],
+  "type": "module",
+  "sideEffects": false,
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./openapi.yaml": "./openapi.yaml",
+    "./openapi.json": "./openapi.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "openapi.yaml",
+    "openapi.json"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}

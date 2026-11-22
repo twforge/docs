@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: TW Forge Developer API
   description: TW Forge API for Tribalwars developers.
-  version: 1.0.0
+  version: 1.0.0 # x-release-please-version
   contact:
     name: TWForge
     url: https://github.com/twforge

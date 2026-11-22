@@ -1,0 +1,18 @@
+# oasdiff policy for the Developer API contract (developer-api/openapi.yaml).
+# Passed explicitly to oasdiff by scripts/api-contract.mjs (`npm run api:check-compat`).
+# Keys are the oasdiff CLI flag names, see `oasdiff breaking --help`. The failure threshold (WARN) is set by
+# scripts/api-contract.mjs: breaking and potentially breaking changes are never allowed within a spec file.
+
+# oasdiff normally accepts removing an endpoint, parameter or property after it was deprecated ("sanctioned"
+# removals). We don't: deprecated elements stay until the next API version (a new /api/vN spec file).
+# oasdiff also skips removals whose x-sunset date has passed, so x-sunset is forbidden by a lint rule in redocly.yaml.
+severity-levels: ./oasdiff-levels.txt
+
+# The base spec is read from the base branch (`<merge-base>:developer-api/openapi.yaml`), so $refs to other files
+# would be resolved from the working tree for both versions and their changes would go unnoticed. Refuse them, so
+# splitting the spec into several files requires adapting the tooling first (e.g. bundling the base revision).
+allow-external-refs: false
+
+# Accept specific, intentional findings that are not actually breaking (one oasdiff message per line):
+# err-ignore: ./oasdiff-err-ignore.txt
+# warn-ignore: ./oasdiff-warn-ignore.txt
