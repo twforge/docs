@@ -7,3 +7,9 @@ updates:
       interval: weekly
     commit-message:
       prefix: ci
+    # One PR for all actions: some only work in matching versions (upload-/download-artifact,
+    # upload-pages-artifact/deploy-pages), and the artifact actions only run in release.yml, which PR checks don't cover.
+    groups:
+      github-actions:
+        patterns:
+          - '*'
