@@ -172,16 +172,18 @@ Releases are made by the `Release API Contract` workflow with release-please:
    (generated, don't edit by hand). Changes to `developer-api/swagger-ui/` (the Swagger UI page on GitHub Pages, not
    part of the package) don't trigger a release.
 2. Merging the release PR creates the tag `api-vX.Y.Z` and the GitHub release. The workflow then builds the package,
-   attaches the package and spec to the release and publishes the package to npm (last, so a failure never leaves
-   a published version behind).
+   attaches the package and spec to the release and stages the package on npm (`npm stage publish`, last, so a
+   failure never leaves a staged version behind).
+3. A maintainer approves the staged version with 2FA: on npmjs.com (package page → *Staged Packages*), or with
+   `npm stage list @twforge/developer-api` and `npm stage approve <stage-id>`. Only then is it public. The workflow
+   run's summary repeats these steps.
 
-Nobody pushes `api-v*` tags by hand. If building or publishing fails, use **Re-run failed jobs** (not "Re-run all
-jobs", which would skip publishing because the release already exists). A published version is never changed or
-removed; mistakes are corrected with a new release.
+CI can never make a version public on its own: npm only lets it stage, and approving needs a maintainer's 2FA.
 
-The first release is `1.0.0` (`initial-version` in `release-please-config.json`). `bootstrap-sha` there makes
-release-please ignore the history before the release setup; it has no effect once the first release exists and can
-then be removed.
+Nobody pushes `api-v*` tags by hand. If building or staging fails, use **Re-run failed jobs** (not "Re-run all
+jobs", which would skip publishing because the release already exists). If a staged version is rejected
+(`npm stage reject <stage-id>`), re-run the `publish` job of the release run to stage it again (within the 7-day
+artifact retention). A published version is never changed or removed; mistakes are corrected with a new release.
 
 ### Repository setup
 
@@ -191,8 +193,12 @@ then be removed.
   *Pull requests* and *Issues* set to read and write, and install it on this repository. Store its client ID as the
   Actions variable `RELEASE_APP_CLIENT_ID` and a private key as the Actions secret `RELEASE_APP_PRIVATE_KEY`. With the
   default `GITHUB_TOKEN`, no checks would run on release PRs.
-- **npm:** configure trusted publishing for `@twforge/developer-api` on npmjs.com with the workflow `release.yml`
-  (until then, the `NPM_TOKEN` secret is used).
+- **npm:** the workflow only stages versions (staged publishing, npm 11.15+); maintainers approve them with 2FA.
+  - Configure trusted publishing for `@twforge/developer-api` on npmjs.com (package settings → *Trusted Publisher* →
+    GitHub Actions): organization `twforge`, repository `docs`, workflow `release.yml`, no environment, allowed
+    actions only `npm stage publish` (neither `npm publish` nor `npm dist-tag`). A new trusted publisher expires if
+    it is not used within 2 days, so recreate it shortly before merging a release PR if it was never used.
+  - *Publishing access*: "Require two-factor authentication and disallow tokens". No npm token is used anywhere.
 
 ## Resources
 
