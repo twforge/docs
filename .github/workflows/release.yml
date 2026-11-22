@@ -6,7 +6,10 @@ name: Release API Contract
 #
 # release-please uses a GitHub App token, so CI runs on its release PRs (pushes made with GITHUB_TOKEN trigger no
 # workflows). The `build` job installs dependencies and builds the package with read-only permissions; only the
-# `publish` job, which installs nothing and runs no repository code, may publish to npm and change the release.
+# `publish` job, which installs nothing and runs no repository code, may stage the package on npm and change the release.
+#
+# The package is staged (`npm stage publish`), not published: it only goes live when a maintainer approves it with 2FA
+# on npmjs.com, see README.md ("Releasing").
 
 on:
   push:
@@ -102,8 +105,8 @@ jobs:
           mkdir -p "$RUNNER_TEMP/dist"
           npm pack ./package --ignore-scripts --pack-destination "$RUNNER_TEMP/dist"
 
-      # Attached before publishing (--clobber makes it repeatable), so a failed step never leaves a published version
-      # behind and "Re-run failed jobs" just works.
+      # Attached before staging (--clobber makes it repeatable), so a failed step never leaves a staged version behind
+      # and "Re-run failed jobs" just works.
       - name: Attach package and spec to the GitHub release
         env:
           GH_TOKEN: ${{ github.token }}
@@ -111,8 +114,21 @@ jobs:
           TAG: ${{ needs.release-please.outputs.tag }}
         run: gh release upload "$TAG" "$RUNNER_TEMP/dist"/*.tgz package/openapi.yaml package/openapi.json --clobber
 
-      # Uses npm trusted publishing (OIDC) once configured on npmjs.com; NPM_TOKEN is only needed until then.
-      - name: Publish to npm
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish "$RUNNER_TEMP/dist"/*.tgz --ignore-scripts
+      # Staged publishing (npm 11.15+): the version is uploaded but stays private until a maintainer approves it with
+      # 2FA, so neither this workflow nor its credentials can make a version public on their own.
+      # Authenticates with npm trusted publishing (OIDC, allowed action "npm stage publish" only); there is no npm token.
+      # The tarball path must start with "./": npm reads "dist/x.tgz" as a GitHub shorthand.
+      - name: Stage on npm
+        run: |
+          cd "$RUNNER_TEMP/dist"
+          npm stage publish ./*.tgz --provenance --ignore-scripts
+
+      - name: Summary
+        run: |
+          spec="$(node -p "const p = require('./package/package.json'); p.name + '@' + p.version")"
+          {
+            echo "### \`$spec\` is staged on npm"
+            echo
+            echo "It is not public yet. Approve it with 2FA on npmjs.com (package page → *Staged Packages*), or with"
+            echo "\`npm stage list $spec\` and \`npm stage approve <stage-id>\`."
+          } >> "$GITHUB_STEP_SUMMARY"
