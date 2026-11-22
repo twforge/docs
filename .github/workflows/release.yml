@@ -83,8 +83,6 @@ jobs:
     permissions:
       contents: write  # attach files to the GitHub release
       id-token: write  # npm trusted publishing / provenance
-    env:
-      DIST: ${{ runner.temp }}/dist
     steps:
       - name: Download package
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
@@ -100,7 +98,9 @@ jobs:
 
       # --ignore-scripts: the package has no lifecycle scripts; make sure none run with publish permissions.
       - name: Pack
-        run: npm pack ./package --ignore-scripts --pack-destination "$DIST"
+        run: |
+          mkdir -p "$RUNNER_TEMP/dist"
+          npm pack ./package --ignore-scripts --pack-destination "$RUNNER_TEMP/dist"
 
       # Attached before publishing (--clobber makes it repeatable), so a failed step never leaves a published version
       # behind and "Re-run failed jobs" just works.
@@ -109,10 +109,10 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           GH_REPO: ${{ github.repository }}
           TAG: ${{ needs.release-please.outputs.tag }}
-        run: gh release upload "$TAG" "$DIST"/*.tgz package/openapi.yaml package/openapi.json --clobber
+        run: gh release upload "$TAG" "$RUNNER_TEMP/dist"/*.tgz package/openapi.yaml package/openapi.json --clobber
 
       # Uses npm trusted publishing (OIDC) once configured on npmjs.com; NPM_TOKEN is only needed until then.
       - name: Publish to npm
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-        run: npm publish "$DIST"/*.tgz --ignore-scripts
+        run: npm publish "$RUNNER_TEMP/dist"/*.tgz --ignore-scripts
