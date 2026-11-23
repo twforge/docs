@@ -1,12 +1,100 @@
 = Discord-Bot
 :page-navtitle: Discordbot
 :description: Verknüpfung von Funktionen der Datenbank mit Stammes- und Accountdiscords
-:keywords: Discord, Verknüpfung, Berichte, Notifications,
+:keywords: Discord, Verknüpfung, Berichte, Notifications, Befehle, Commands, Karte, Features, Bericht-Channel
 :toc: macro
 :toclevels: 1
 :toc-title: Inhalt
 
-NOTE: Der Discord-Bot umfasst momentan nur sehr eingeschränkte Funktionen. Diese werden im weiteren Verlauf der Entwicklung von TW-Forge noch erweitert.
+Der Discord-Bot verbindet einen Stammes- oder Account-Discord mit TW Forge: Er wandelt gepostete Berichte in Bilder um, verlinkt Koordinaten und SOS-Anfragen, erstellt Weltkarten und stellt Benachrichtigungen zu.
+
+[NOTE]
+====
+*Alle Befehle im Überblick*
+
+Befehle und Optionen sind übersetzt: Je nach Sprache deines Discord-Clients siehst du die deutschen oder die englischen Namen.
+Auf dieser Seite stehen durchgehend die deutschen.
+Pflicht-Optionen sind mit `*` markiert, alle übrigen sind optional.
+
+[cols="2,2,3,3",options="header"]
+|===
+| Befehl (Deutsch) | Befehl (Englisch) | Optionen | Wofür
+
+| `/stamm set`
+| `/tribe set`
+| `welt:*` (`world:`) +
+`stamm:*` (`tribe:`) +
+`channel:`
+| <<_setup_des_discord_bots,Server oder Channel mit einem Stammeskonstrukt verbinden>>
+
+| `/stamm clear`
+| `/tribe clear`
+| `channel:`
+| Verbindung zum Stammeskonstrukt wieder aufheben
+
+| `/spieler set`
+| `/player set`
+| `welt:*` (`world:`) +
+`channel:`
+| <<_setup_des_discord_bots,Server oder Channel mit einem einzelnen Account verbinden>>
+
+| `/spieler clear`
+| `/player clear`
+| `channel:`
+| Verbindung zum Account wieder aufheben
+
+| `/map`
+| `/map`
+| `stamm:` (`tribe:`) +
+`spieler:` (`player:`) +
+`zentrum:` (`center:`) +
+`radius:` +
+`kontinent:` (`continent:`) +
+`top:` +
+`top-spieler:` (`top-player:`) +
+`legende:` (`legend:`)
+| <<_weltkarten_erstellen,Weltkarten-Bild erstellen>>
+
+| `/features list`
+| `/features list`
+| -
+| <<_bot_features_ein_und_ausschalten,Zeigen, welche automatischen Reaktionen hier aktiv sind>>
+
+| `/features enable` +
+`/features disable`
+| `/features enable` +
+`/features disable`
+| `feature:*`
+| <<_bot_features_ein_und_ausschalten,Eine automatische Reaktion ein- oder ausschalten>>
+
+| `/bericht-channel set`
+| `/report-channel set`
+| `channel:*`
+| <<_bericht_channel_festlegen,Alle Bericht-Screenshots des Stammes in einem Channel sammeln>>
+
+| `/bericht-channel clear`
+| `/report-channel clear`
+| -
+| Wieder im ursprünglichen Channel antworten
+
+| `/bericht-des-tages set`
+| `/report-of-the-day set`
+| `channel:*`
+| Channel festlegen, in dem der <<_bericht_des_tages_der_woche_des_monats,Bericht des Tages>> gepostet wird
+
+| `/bericht-des-tages clear`
+| `/report-of-the-day clear`
+| -
+| Bericht des Tages wieder deaktivieren
+
+| `/tab`
+| `/tab`
+| `text:*`
+| Eine Tab-Anfrage mit dem eingefügten Angriffs-Text an die Stammesmitglieder stellen
+|===
+
+`/stamm`, `/spieler` und `/features` sind in Discord standardmäßig nur für Server-Administratoren sichtbar; über die Discord-Servereinstellungen lassen sie sich weiteren Rollen freigeben.
+====
 
 toc::[]
 
@@ -18,12 +106,16 @@ Hier musst du dich zunächst mit deinem Discord verbinden.
 Danach kannst du den Discord-Bot zu bestehenden Servern einladen und hinzufügen.
 
 Nachdem der Discord Bot zum Server hinzugefügt worden ist, muss er noch mit der Datenbank verknüpft werden.
-Dies geschieht über den Command `/tribe set <welt> <Konstrukt> [opt. channel]`.
+Dies geschieht über den Command `/stamm set welt:<Welt> stamm:<Konstrukt> [channel:<Channel>]`.
 
 TIP: Es werden nur Konstrukte angezeigt, bei denen du mindestens xref:features/tribe-construct.adoc#rechtelevel[Führung] bist.
-Für Accountdiscords muss lediglich `/player set <welt> [opt. channel]` eingetragen werden.
+Für Accountdiscords muss lediglich `/spieler set welt:<Welt> [channel:<Channel>]` eingetragen werden.
 
 Die beschränkung des Channels bezieht sich nur darauf, ob Berichte gewisser Channel direkt in die DB übernommen werden sollen.
+
+Mit `/stamm clear` bzw. `/spieler clear` wird eine Verbindung wieder aufgehoben.
+
+NOTE: Ein Server kann entweder mit einem Stammeskonstrukt oder mit einem Spieler verbunden sein, nicht mit beidem.
 
 == Berichte umformatieren
 
@@ -42,4 +134,90 @@ Zusätzlich bietet der umformatierte Bericht in Bildform die Möglichkeit, mit D
 Der Bericht, der am Ende des Tages die meisten Daumen hoch erhalten hat, wird als Bericht des Tages gewertet und nochmal gepostet.
 Selbiges gilt für Berichte der Woche, des Monats und des Jahres.
 Des Weiteren werden die Berichte mit den meisten Reaktionen auch auf der TWForge-Startseite angezeigt.
+
+== Bericht-Channel festlegen
+
+Standardmäßig antwortet der Bot auf einen geposteten Bericht in dem Channel, in dem er gepostet wurde.
+Stattdessen können alle Bericht-Screenshots eines Stammes an einer Stelle gesammelt werden:
+
+`/bericht-channel set channel:<Channel>`
+
+Ab dann werden Bericht-Screenshots aus allen Channels dieses Stammes dorthin gesendet, zusammen mit einem Link zurück zur ursprünglichen Nachricht.
+Links, die direkt im Bericht-Channel gepostet werden, erhalten weiterhin eine Antwort an Ort und Stelle.
+
+Mit `/bericht-channel clear` kehrst du zum Antworten im ursprünglichen Channel zurück.
+
+* Der Befehl funktioniert nur auf Servern, die mit einem Stammeskonstrukt verbunden sind, und nur für dessen xref:features/tribe-construct.adoc#rechtelevel[Führung].
+* Jeder Stamm kann genau einen Bericht-Channel haben.
+* Wird der eingestellte Channel gelöscht, antwortet der Bot wieder im ursprünglichen Channel.
+
+== Weltkarten erstellen
+
+Mit `/map` erstellt der Bot auf Anfrage ein Bild der Weltkarte.
+Ist ein Stammeskonstrukt mit dem Channel verbunden, werden dessen xref:features/tribe-construct.adoc#diplomacy[Diplomatie-Farben] automatisch auf die Karte gezeichnet.
+
+Ohne Optionen zeichnet der Befehl eine Gesamtübersicht der Welt. Über die Optionen schränkst du ein, was hervorgehoben und welcher Ausschnitt gezeichnet wird:
+
+[cols="1,2"]
+|===
+| Option | Bedeutung
+
+| `stamm:`
+| Mit Semikolon getrennte Stammes-Tags oder -Namen, die hervorgehoben werden.
+
+| `spieler:`
+| Mit Semikolon getrennte Spielernamen, die hervorgehoben werden.
+
+| `zentrum:`
+| Zentrumskoordinate des Ausschnitts, z.B. `500\|500`.
+
+| `radius:`
+| Halbe Breite des Ausschnitts um das Zentrum in Feldern (1-999). Gilt nur zusammen mit `zentrum:`.
+
+| `kontinent:`
+| Kontinent, der gezeichnet werden soll, z.B. `K55`. Kann nicht mit `zentrum:` kombiniert werden.
+
+| `top:`
+| Hebt die besten N Stämme nach Rang hervor (1-25). Der Rang wird mit angezeigt.
+
+| `top-spieler:`
+| Hebt die besten N Spieler nach Rang hervor (1-25).
+
+| `legende:`
+| Zeigt eine Legende an, statt die Namen farbig auf der Karte zu zeichnen.
+|===
+
+NOTE: Der Befehl braucht ein verbundenes Stammeskonstrukt oder einen verbundenen Spieler, damit klar ist, welche Welt gezeichnet werden soll.
+
+== Bot-Features ein- und ausschalten
+
+Die automatischen Reaktionen des Bots lassen sich direkt in Discord steuern:
+
+* `/features list` - zeigt alle Features und ob sie hier aktiv sind
+* `/features enable feature:<Feature>` - aktiviert ein Feature
+* `/features disable feature:<Feature>` - deaktiviert ein Feature
+
+Zur Auswahl stehen:
+
+[cols="1,2"]
+|===
+| Feature | Bedeutung
+
+| Koordinaten-Links
+| Koordinaten in Nachrichten werden automatisch verlinkt.
+
+| SOS-Anfrage-Links
+| SOS-Anfragen werden automatisch verlinkt.
+
+| Berichte-Import
+| Gepostete Berichte werden in die Datenbank übernommen.
+
+| Berichte-Antworten
+| Gepostete Berichte werden als Bild aufbereitet beantwortet.
+|===
+
+Der Befehl gilt immer für die Verbindung, die in dem Channel wirkt, in dem du ihn benutzt: die Verbindung dieses Channels, falls es eine gibt, sonst die serverweite Verbindung.
+
+NOTE: `/features` ist in Discord standardmäßig nur für Server-Administratoren sichtbar; über die Discord-Servereinstellungen kann der Befehl weiteren Rollen freigegeben werden.
+Zusätzlich prüft TW Forge die Rechte im Konstrukt: Ansehen darf jedes Mitglied des verknüpften Stammes, ändern nur die xref:features/tribe-construct.adoc#rechtelevel[Führung].
 

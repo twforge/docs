@@ -81,10 +81,10 @@ Als Ersteller kannst du einzelne Angriffe über das Papierkorb-Symbol aus der An
 image::features/tabulator/tabulator_spieler_einladen.png[Schritt 2: Teilnehmer einladen]
 
 Im Schritt *Teilnehmer* lädt der Ersteller Mitspieler ein.
-Angezeigt werden alle Spieler des eigenen Stammeskonstrukts, die noch nicht eingeladen wurden.
+Angezeigt werden alle Spieler des eigenen Stammeskonstrukts, die noch nicht eingeladen wurden, jeweils mit ihrem Ingame-Stamm.
 Hake die gewünschten Spieler an - über die Checkbox im Tabellenkopf auch alle auf einmal - und klicke unterhalb der Liste auf *Spieler einladen*.
 
-Rechts neben der Auswahl erscheint die Tabelle *Bereits eingeladen* mit allen Teilnehmern und ihrem aktuellen Status.
+Rechts neben der Auswahl erscheint die Tabelle *Bereits eingeladen* mit allen Teilnehmern, ihrem Ingame-Stamm und ihrem aktuellen Status.
 Hier kannst du Teilnehmer bei Bedarf auch wieder entfernen.
 Die Statuswerte bedeuten:
 
